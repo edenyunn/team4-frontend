@@ -1,7 +1,9 @@
 <template>
   <nav>
-    <RouterLink to="/">Home</RouterLink>
-    <RouterLink to="/movies">Movie</RouterLink>
+    <RouterLink to="/">Match</RouterLink>
+    <RouterLink to="/movies">Timeline</RouterLink>
+    <RouterLink to="/movies">Cast</RouterLink>
+    <RouterLink to="/movies">Original</RouterLink>
   </nav>
   <RouterView />
 </template>

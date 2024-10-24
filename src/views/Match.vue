@@ -25,11 +25,11 @@
     <!-- 채팅 창 영역 -->
     <div class="chat-box">
       <div
-        v-for="(message, index) in messages"
+        v-for="(chat, index) in chatHistory"
         :key="index"
-        :class="['chat-bubble', message.isUser ? 'user-bubble' : 'bot-bubble']"
+        :class="['chat-bubble', chat.isUser ? 'user-bubble' : 'bot-bubble']"
       >
-        {{ message.text }}
+        {{ chat.message }}
       </div>
     </div>
 
@@ -37,7 +37,7 @@
     <footer class="footer">
       <input
         type="text"
-        v-model="newMessage"
+        v-model="userInput"
         placeholder="메시지"
         @keyup.enter="sendMessage"
         class="message-input"
@@ -48,20 +48,31 @@
 </template>
 
 <script>
+import axios from 'axios'
+const BASE_URL = 'http://127.0.0.1:5000/'
+
 export default {
   data() {
     return {
-      newMessage: "", // 새로운 메시지를 저장
-      messages: [], // 채팅 메시지 목록
+      userInput: "", // 새로운 메시지를 저장
+      chatHistory: [], // 채팅 메시지 목록
       isSidebarOpen: false, // 사이드바 열림 여부
     };
   },
   methods: {
-    sendMessage() {
-      if (this.newMessage.trim() !== "") {
+    async sendMessage() {
+      if (this.userInput.trim() !== "") {
         // 메시지가 비어 있지 않을 때만 전송
-        this.messages.push({ text: this.newMessage, isUser: true }); // 보낸 메시지는 사용자 메시지로 분류
-        this.newMessage = ""; // 입력 창을 비움
+        this.chatHistory.push({ message: this.userInput, isUser: true }); // 보낸 메시지는 사용자 메시지로 분류
+        // URL 로 요청을 보냄. [axios 앞에는 await가 필요하다.]
+        const res = await axios.post('http://127.0.0.1:5000/', {
+        message: this.userInput,
+      })          
+        // 받은 응답메시지를 chatHistory 추가함
+        const llmOutput = { isUser: false, message: res.data.llm }
+        this.chatHistory.push(llmOutput)
+        // 입력 창을 비움
+        this.userInput = ""; 
       }
     },
     toggleSidebar() {

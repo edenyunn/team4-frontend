@@ -3,7 +3,10 @@
     <!-- 상단바 -->
     <header class="header">
       <div class="logo-container">
-        <img class="logo" src="@/assets/mock-logo.png" alt="로고" />
+        <!-- RouterLink로 감싸서 이미지에 라우팅(링크) 적용 -->
+        <RouterLink to="/match">
+          <img class="logo" src="@/assets/mock-logo.png" alt="POV 로고">
+        </RouterLink>
       </div>
       <button class="sidebar-button" @click="toggleSidebar">
         &#9776; <!-- 작대기 세 개 아이콘 -->
@@ -23,24 +26,15 @@
 
     <!-- 채팅 창 영역 -->
     <div class="chat-box">
-      <div
-        v-for="(chat, index) in chatHistory"
-        :key="index"
-        :class="['chat-bubble', chat.isUser ? 'user-bubble' : 'bot-bubble']"
-      >
+      <div v-for="(chat, index) in chatHistory" :key="index"
+        :class="['chat-bubble', chat.isUser ? 'user-bubble' : 'bot-bubble']">
         {{ chat.message }}
       </div>
     </div>
 
     <!-- 프롬프트 입력 영역 -->
     <footer class="footer">
-      <input
-        type="text"
-        v-model="userInput"
-        placeholder="메시지"
-        @keyup.enter="sendMessage"
-        class="message-input"
-      />
+      <input type="text" v-model="userInput" placeholder="메시지" @keyup.enter="sendMessage" class="message-input" />
       <button @click="sendMessage" class="send-button">➤</button>
     </footer>
   </div>
@@ -65,13 +59,13 @@ export default {
         this.chatHistory.push({ message: this.userInput, isUser: true }); // 보낸 메시지는 사용자 메시지로 분류
         // URL 로 요청을 보냄. [axios 앞에는 await가 필요하다.]
         const res = await axios.post(BASE_URL, {
-        message: this.userInput,
-      })          
+          message: this.userInput,
+        })
         // 받은 응답메시지를 chatHistory 추가함
         const llmOutput = { isUser: false, message: res.data.llm }
         this.chatHistory.push(llmOutput)
         // 입력 창을 비움
-        this.userInput = ""; 
+        this.userInput = "";
       }
     },
     toggleSidebar() {
@@ -83,7 +77,8 @@ export default {
 
 <style scoped>
 /* 검은색 배경에 흰색 글씨, 화면을 꽉 채움 */
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   height: 100%;
@@ -170,33 +165,41 @@ html, body {
   padding: 10px;
   overflow-y: auto;
   display: flex;
-  flex-direction: column; /* 말풍선을 세로로 쌓이도록 설정 */
+  flex-direction: column;
+  /* 말풍선을 세로로 쌓이도록 설정 */
 }
 
 .chat-bubble {
-  background-color: #4f4f4f; /* 짙은 회색 말풍선 */
+  background-color: #4f4f4f;
+  /* 짙은 회색 말풍선 */
   color: white;
   padding: 10px;
   border-radius: 10px;
   margin-bottom: 10px;
-  max-width: 80%; /* 말풍선 최대 너비 설정 */
+  max-width: 80%;
+  /* 말풍선 최대 너비 설정 */
   display: inline-block;
   word-wrap: break-word;
   overflow-wrap: break-word;
-  white-space: normal; /* 말풍선 안에서 줄바꿈 허용 */
+  white-space: normal;
+  /* 말풍선 안에서 줄바꿈 허용 */
 }
 
 
 .user-bubble {
-  background-color: #858585; /* 사용자 말풍선 색 (파란색) */
+  background-color: #858585;
+  /* 사용자 말풍선 색 (파란색) */
   color: white;
-  margin-left: auto; /* 오른쪽 정렬 */
+  margin-left: auto;
+  /* 오른쪽 정렬 */
 }
 
 .bot-bubble {
-  background-color: #4f4f4f; /* 봇 말풍선 색 (짙은 회색) */
+  background-color: #4f4f4f;
+  /* 봇 말풍선 색 (짙은 회색) */
   color: white;
-  margin-right: auto; /* 왼쪽 정렬 */
+  margin-right: auto;
+  /* 왼쪽 정렬 */
 }
 
 /* 프롬프트 입력창 스타일 */
@@ -217,7 +220,8 @@ html, body {
 }
 
 .message-input::placeholder {
-  color: #aaa; /* 옅은 글씨로 '메시지' 표시 */
+  color: #aaa;
+  /* 옅은 글씨로 '메시지' 표시 */
 }
 
 .send-button {

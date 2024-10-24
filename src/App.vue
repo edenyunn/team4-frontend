@@ -1,7 +1,6 @@
 <template>
   <nav>
     <RouterLink to="/match">Match</RouterLink>
-    <RouterLink to="/prompt">Prompt</RouterLink>
     <RouterLink to="/movies">Timeline</RouterLink>
     <RouterLink to="/movies">Cast</RouterLink>
     <RouterLink to="/movies">Original</RouterLink>

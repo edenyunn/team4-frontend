@@ -15,7 +15,6 @@
       <button class="close-sidebar" @click="toggleSidebar">X 닫기</button>
       <div class="sidebar-menu">
         <RouterLink to="/match" class="menu-item">Match</RouterLink>
-        <RouterLink to="/prompt" class="menu-item">Prompt</RouterLink>
         <RouterLink to="/movies" class="menu-item">Timeline</RouterLink>
         <RouterLink to="/cast" class="menu-item">Cast</RouterLink>
         <RouterLink to="/original" class="menu-item">Original</RouterLink>

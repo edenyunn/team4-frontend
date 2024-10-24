@@ -3,13 +3,12 @@
     <!-- 상단바 -->
     <header class="header">
       <div class="logo-container">
-        <!-- RouterLink로 감싸서 이미지에 라우팅(링크) 적용 -->
         <RouterLink to="/match">
           <img class="logo" src="@/assets/mock-logo.png" alt="POV 로고">
         </RouterLink>
       </div>
       <button class="sidebar-button" @click="toggleSidebar">
-        &#9776; <!-- 작대기 세 개 아이콘 -->
+        &#9776;
       </button>
     </header>
 
@@ -30,12 +29,14 @@
         :class="['chat-bubble', chat.isUser ? 'user-bubble' : 'bot-bubble']">
         {{ chat.message }}
       </div>
+      <!-- 로딩 모션 -->
+      <div v-if="isLoading" class="loading-spinner"></div>
     </div>
 
     <!-- 프롬프트 입력 영역 -->
     <footer class="footer">
-      <input type="text" v-model="userInput" placeholder="메시지" @keyup.enter="sendMessage" class="message-input" />
-      <button @click="sendMessage" class="send-button">➤</button>
+      <input type="text" v-model="userInput" placeholder="메시지" @keyup.enter="sendMessage" class="message-input" :disabled="isLoading" />
+      <button @click="sendMessage" class="send-button" :disabled="isLoading">➤</button>
     </footer>
   </div>
 </template>
@@ -50,6 +51,7 @@ export default {
       userInput: "", // 새로운 메시지를 저장
       chatHistory: [], // 채팅 메시지 목록
       isSidebarOpen: false, // 사이드바 열림 여부
+      isLoading: false, // 로딩 상태
     };
   },
   methods: {
@@ -57,15 +59,22 @@ export default {
       if (this.userInput.trim() !== "") {
         // 메시지가 비어 있지 않을 때만 전송
         this.chatHistory.push({ message: this.userInput, isUser: true }); // 보낸 메시지는 사용자 메시지로 분류
-        // URL 로 요청을 보냄. [axios 앞에는 await가 필요하다.]
-        const res = await axios.post(BASE_URL, {
-          message: this.userInput,
-        })
-        // 받은 응답메시지를 chatHistory 추가함
-        const llmOutput = { isUser: false, message: res.data.llm }
-        this.chatHistory.push(llmOutput)
-        // 입력 창을 비움
-        this.userInput = "";
+        this.isLoading = true; // 로딩 상태 시작
+        // this.userInput = ""; // 입력창 비활성화
+
+        try {
+          // URL 로 요청을 보냄
+          const res = await axios.post(BASE_URL, {
+            message: this.userInput,
+          });
+          // 받은 응답메시지를 chatHistory에 추가함
+          this.chatHistory.push({ isUser: false, message: res.data.llm });
+        } catch (error) {
+          console.error("Error sending message:", error);
+        } finally {
+          this.isLoading = false; // 로딩 상태 끝
+          this.userInput = ''
+        }
       }
     },
     toggleSidebar() {
@@ -200,6 +209,33 @@ body {
   color: white;
   margin-right: auto;
   /* 왼쪽 정렬 */
+}
+
+/* 로딩 애니메이션 */
+.loading-spinner {
+  border: 4px solid rgba(255, 255, 255, 0.3); /* 회색 테두리 */
+  border-left-color: #ffffff; /* 흰색 테두리 */
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  animation: spin 1s linear infinite;
+  margin: auto;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* 프롬프트 입력창 글자 숨김 */
+.message-input[disabled] {
+  background-color: #444;
+  cursor: not-allowed;
+  color: transparent; /* 글자 숨김 */
 }
 
 /* 프롬프트 입력창 스타일 */

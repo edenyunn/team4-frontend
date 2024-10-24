@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
-import Timelinefigma from '@/views/Timelinefigma.vue'
+import Timeline from '@/views/Timeline.vue'
 import Match from '@/views/Match.vue'
 
 const router = createRouter({
@@ -12,7 +12,7 @@ const router = createRouter({
     },
     {
       path: '/movies',
-      component: Timelinefigma
+      component: Timeline
     },
     {
       path: '/match',

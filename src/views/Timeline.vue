@@ -2,7 +2,7 @@
   <div class="page-container">
     <div class="timeline-container">
       <!-- 메인 타임라인 선 -->
-      <div class="main-timeline-line"></div>
+      <div style="width: 100%; height: 100%; transform: rotate(90deg); transform-origin: 0 0; border: 0.40px white solid"></div>
 
       <!-- 연도와 사건명 마커들 -->
       <div 

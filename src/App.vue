@@ -1,9 +1,10 @@
 <template>
   <nav>
     <RouterLink to="/match">Match</RouterLink>
-    <RouterLink to="/movies">Timeline</RouterLink>
+    <RouterLink to="/movies">Timelinefigma</RouterLink>
     <RouterLink to="/movies">Cast</RouterLink>
     <RouterLink to="/movies">Original</RouterLink>
+    
   </nav>
   <RouterView />
 </template>

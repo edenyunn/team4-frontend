@@ -65,7 +65,7 @@ export default {
         // 메시지가 비어 있지 않을 때만 전송
         this.chatHistory.push({ message: this.userInput, isUser: true }); // 보낸 메시지는 사용자 메시지로 분류
         // URL 로 요청을 보냄. [axios 앞에는 await가 필요하다.]
-        const res = await axios.post('http://127.0.0.1:5000/', {
+        const res = await axios.post(BASE_URL, {
         message: this.userInput,
       })          
         // 받은 응답메시지를 chatHistory 추가함

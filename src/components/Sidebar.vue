@@ -40,11 +40,22 @@
     flex-direction: column;
   }
   
+  .menu-item {
+    padding-left: 20px; /* 들여쓰기 추가 */
+    color: white;
+    text-decoration: none;
+    margin: 8px 0;
+  }
+  
+  .menu-item:hover {
+    text-decoration: underline; /* 선택 사항: 마우스를 올렸을 때 스타일 추가 */
+  }
+  
   .close-sidebar {
     background: none;
     border: none;
     color: white;
-    font-size: 18px;
+    font-size: 15px;
     cursor: pointer;
   }
   </style>

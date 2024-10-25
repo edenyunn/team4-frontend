@@ -26,15 +26,12 @@
 </template>
 
 <script>
-import Sidebar from '@/components/Sidebar.vue';
-import Header from '@/components/Header.vue';
 
 import axios from 'axios'
 const BASE_URL = 'http://127.0.0.1:5000/'
 
 export default {
   components: {
-    Header, Sidebar, // 불러온 Sidebar 컴포넌트를 등록합니다.
   },
   data() {
     return {
@@ -90,18 +87,6 @@ body {
   margin: 0;
   position: relative;
   overflow: hidden;
-}
-
-/* 사이드바 스타일 */
-.sidebar-button {
-  font-size: 24px;
-  background: none;
-  border: none;
-  color: white;
-  cursor: pointer;
-}
-.sidebar.closed {
-  transform: translateX(100%);
 }
 
 /* 가이드 박스 */

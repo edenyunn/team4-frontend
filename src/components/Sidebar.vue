@@ -3,8 +3,9 @@
     <div v-if="isSidebarOpen" class="sidebar">
       <button class="close-sidebar" @click="$emit('toggle-sidebar')">X 닫기</button>
       <div class="sidebar-menu">
-        <RouterLink to="/match" class="menu-item">Match</RouterLink>
+        <RouterLink to="/search" class="menu-item">Search</RouterLink>
         <RouterLink to="/movies" class="menu-item">Timeline</RouterLink>
+        <RouterLink to="/inside" class="menu-item">Inside</RouterLink>
         <RouterLink to="/cast" class="menu-item">Cast</RouterLink>
         <RouterLink to="/original" class="menu-item">Original</RouterLink>
       </div>

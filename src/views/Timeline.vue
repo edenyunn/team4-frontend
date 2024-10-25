@@ -1,9 +1,5 @@
 <template>
   <div class="dark-container">
-    <!-- 헤더 컴포넌트 사용 -->
-    <Header :isSidebarOpen="isSidebarOpen" @toggle-sidebar="toggleSidebar" />
-    <!-- 사이드바 컴포넌트 사용 -->
-    <Sidebar :isSidebarOpen="isSidebarOpen" @toggle-sidebar="toggleSidebar" />
 
     <!-- Welcome Section -->
     <div class="welcome-section">
@@ -49,7 +45,6 @@ export default {
   },
   data() {
     return {
-      isSidebarOpen: false, // 사이드바 열림 여부
     };
   },
   setup() {
@@ -59,9 +54,6 @@ export default {
     }
   },
   methods: {
-    toggleSidebar() {
-      this.isSidebarOpen = !this.isSidebarOpen; // 사이드바 열림/닫힘 토글
-    },
 }}
 </script>
 
@@ -75,37 +67,9 @@ export default {
   margin: 0;
 }
 
-/* 상단바 스타일 */
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-  left: 0;
-  right: 0;
-  background-color: #000000;
-  position: relative;
-}
-
-/* 로고 중앙 정렬 */
-.povlogo-container {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.povlogo {
-  height: 40px;
-}
-
 .icons {
   display: flex;
   gap: 4px;
-}
-
-.logo {
-  font-size: 24px;
-  font-weight: bold;
 }
 
 .menu-button {
@@ -122,17 +86,16 @@ export default {
   margin: 4px 0;
 }
 
+/* 웰컴 박스 */
 .welcome-section {
   padding: 40px 20px;
   text-align: center;
 }
-
 .welcome-title {
   font-size: 36px;
   font-weight: bold;
   margin-bottom: 16px;
 }
-
 .welcome-subtitle {
   font-size: 20px;
   font-weight: 500;

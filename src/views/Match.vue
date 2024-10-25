@@ -1,9 +1,11 @@
 <template>
   <div class="my-container">
-    <!-- 헤더 컴포넌트 사용 -->
-    <Header :isSidebarOpen="isSidebarOpen" @toggle-sidebar="toggleSidebar" />
-    <!-- 사이드바 컴포넌트 사용 -->
-    <Sidebar :isSidebarOpen="isSidebarOpen" @toggle-sidebar="toggleSidebar" />
+
+    <!-- guide Section -->
+    <div class="guide-section">
+      <h1 class="guide-title">Welcome to<br/>POV</h1>
+      <h2 class="guide-subtitle">한국 근현대사 관련 영화를 질문해주시면<br/>해당 영화를 타임라인에서 찾아드립니다.</h2>
+    </div>
 
     <!-- 채팅 창 영역 -->
     <div class="chat-box">
@@ -38,7 +40,6 @@ export default {
     return {
       userInput: "", // 새로운 메시지를 저장
       chatHistory: [], // 채팅 메시지 목록
-      isSidebarOpen: false, // 사이드바 열림 여부
       isLoading: false, // 로딩 상태
     };
   },
@@ -64,9 +65,6 @@ export default {
           this.userInput = ''
         }
       }
-    },
-    toggleSidebar() {
-      this.isSidebarOpen = !this.isSidebarOpen; // 사이드바 열림/닫힘 토글
     },
   },
 };
@@ -94,19 +92,6 @@ body {
   overflow: hidden;
 }
 
-/* 로고 중앙 정렬 */
-.povlogo-container {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.povlogo {
-  height: 40px;
-}
-
-
-
 /* 사이드바 스타일 */
 .sidebar-button {
   font-size: 24px;
@@ -117,6 +102,22 @@ body {
 }
 .sidebar.closed {
   transform: translateX(100%);
+}
+
+/* 가이드 박스 */
+.guide-section {
+  padding: 40px 20px;
+  text-align: center;
+}
+.guide-title {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+.guide-subtitle {
+  font-size: 20px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.8);
 }
 
 /* 채팅박스 스타일 */
@@ -237,10 +238,6 @@ body {
   .send-button {
     font-size: 18px;
     margin-left: 5px;
-  }
-
-  .povlogo {
-    height: 30px;
   }
 }
 </style>

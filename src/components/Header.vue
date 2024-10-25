@@ -25,8 +25,9 @@
   padding: 10px;
   left: 0;
   right: 0;
-  background-color: #000000;
+  background-color: #222222;
   position: relative;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5); /* 하얀 실선 불투명도 조절 */
 }
   
   .povlogo-container {

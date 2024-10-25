@@ -1,237 +1,225 @@
 <template>
-  <div class="timeline-container">
-    <!-- 메인 타임라인 선 -->
-    <div class="main-timeline-line"></div>
-    
-    <!-- 타임라인 아이템 -->
-    <div 
-      v-for="(movie, index) in movies" 
-      :key="index" 
-      class="timeline-item"
-      :class="{ 'right-aligned': index % 2 !== 0 }"
-    >
-      <!-- 컨텐츠 영역 -->
-      <div class="timeline-content">
-        <!-- 연결선과 마커 추가 -->
-        <div class="content-marker">
-          <div class="marker-dot"></div>
-          <div class="marker-line"></div>
+  <div class="dark-container">
+    <!-- Status Bar -->
+    <div class="status-bar">
+      <div class="time">9:41</div>
+      <div class="icons">
+        <div class="signal"></div>
+        <div class="wifi"></div>
+        <div class="battery"></div>
+      </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+      <div class="logo">POV</div>
+      <button class="menu-button">
+        <div class="menu-line"></div>
+        <div class="menu-line"></div>
+        <div class="menu-line"></div>
+      </button>
+    </header>
+
+    <!-- Welcome Section -->
+    <div class="welcome-section">
+      <h1 class="welcome-title">Welcome to<br/>POV</h1>
+      <h2 class="welcome-subtitle">Major Films in Modern Korean History</h2>
+    </div>
+
+    <!-- Timeline Section -->
+    <div class="timeline-section">
+      <div class="timeline-line"></div>
+      
+      <!-- Timeline Items -->
+      <div v-for="(movie, index) in movies" :key="index" class="timeline-item" 
+           :class="{ 'item-left': index % 2 === 0, 'item-right': index % 2 !== 0 }">
+        <!-- Year Marker -->
+        <div class="year-marker">
+          <span class="year">{{ movie.eventYear }}</span>
+          <span class="event">{{ movie.event }}</span>
         </div>
 
+        <!-- Movie Card -->
         <div class="movie-card">
           <img :src="movie.imageUrl" :alt="movie.title" class="movie-poster">
-          <div class="movie-info">
-            <h3>{{ movie.title }}</h3>
-            <p>{{ movie.summary }}</p>
-          </div>
+          <p class="movie-summary">{{ movie.summary }}</p>
         </div>
-      </div>
-
-      <!-- 연도와 사건명 마커 -->
-      <div class="timeline-marker">
-        <div class="year">{{ movie.eventYear }}</div>
-        <div class="event-name">{{ movie.eventName }}</div>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import { ref } from 'vue'
+import movies from '@/assets/movies.js'
+
 export default {
-  data() {
+  name: 'TimelineFigma',
+  setup() {
+    const moviesList = ref(movies)
     return {
-      movies: [
-        {
-          eventYear: "1919",
-          eventName: "3·1 운동",
-          title: "김좌진 속에 울려퍼진 개가리 울음소리",
-          summary: "독립군의 항일 무장투쟁",
-          imageUrl: "poster1.jpg"
-        },
-        {
-          eventYear: "1919",
-          eventName: "3·1 운동",
-          title: "신이 부기었다, 적은 결코 없었다",
-          summary: "독립군의 항일 무장투쟁",
-          imageUrl: "poster2.jpg"
-        },
-      ]
-    };
+      movies: moviesList
+    }
   }
-};
+}
 </script>
 
 <style scoped>
-.timeline-container {
-  position: relative;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 40px 20px;
-  background-color: #000000;
+.dark-container {
+  background-color: #222222;
+  min-height: 100vh;
   color: white;
+  font-family: 'Raleway', sans-serif;
+  padding: 0;
+  margin: 0;
 }
 
-/* 메인 타임라인 선 */
-.main-timeline-line {
+.status-bar {
+  height: 44px;
+  padding: 0 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #222222;
+}
+
+.time {
+  font-weight: 600;
+}
+
+.icons {
+  display: flex;
+  gap: 4px;
+}
+
+.header {
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.menu-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+}
+
+.menu-line {
+  width: 24px;
+  height: 2px;
+  background-color: white;
+  margin: 4px 0;
+}
+
+.welcome-section {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.welcome-title {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.welcome-subtitle {
+  font-size: 20px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.timeline-section {
+  position: relative;
+  padding: 20px;
+}
+
+.timeline-line {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: translateX(-50%);
+}
+
+.timeline-item {
+  display: flex;
+  margin-bottom: 60px;
+  position: relative;
+}
+
+.year-marker {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  width: 1px;
-  height: 100%;
-  background-color: white;
-  top: 0;
-  z-index: 1;
-}
-
-/* 타임라인 아이템 */
-.timeline-item {
-  position: relative;
-  margin-bottom: 60px;
-  width: 100%;
-  display: flex;
-  justify-content: flex-start;
-  min-height: 300px;
-}
-
-/* 연도와 사건명 마커 스타일 */
-.timeline-marker {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 2;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #000000;
-  padding: 15px 0;
+  background-color: #222222;
+  padding: 8px;
 }
 
 .year {
-  color: white;
+  font-size: 24px;
   font-weight: bold;
-  font-size: 2em;
-  margin-bottom: 8px;
-  background-color: #000000;
-  padding: 0 10px;
 }
 
-.event-name {
-  color: white;
-  font-size: 0.9em;
-  text-align: center;
-  white-space: nowrap;
-  background-color: #000000;
-  padding: 0 10px;
+.event {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.8);
 }
 
-/* 오른쪽 정렬 아이템 */
-.timeline-item.right-aligned {
-  justify-content: flex-end;
-}
-
-/* 컨텐츠 영역 */
-.timeline-content {
-  width: 45%;
-  position: relative;
-}
-
-/* 새로 추가된 마커와 연결선 스타일 */
-.content-marker {
-  position: absolute;
-  top: 50%;
-  z-index: 1;
-}
-
-.timeline-item:not(.right-aligned) .content-marker {
-  right: -30px;
-}
-
-.timeline-item.right-aligned .content-marker {
-  left: -30px;
-}
-
-.marker-dot {
-  width: 8px;
-  height: 8px;
-  background-color: white;
-  border-radius: 50%;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.marker-line {
-  height: 1px;
-  background-color: white;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.timeline-item:not(.right-aligned) .marker-line {
-  right: 8px;
-  width: 22px;
-}
-
-.timeline-item.right-aligned .marker-line {
-  left: 8px;
-  width: 22px;
-}
-
-/* 영화 카드 스타일 */
 .movie-card {
-  background-color: transparent;
-  overflow: hidden;
+  width: 20%;
+  border-radius: 8px;
+}
+
+.item-left .movie-card {
+  margin-right: auto;
+}
+
+.item-right .movie-card {
+  margin-left: auto;
 }
 
 .movie-poster {
   width: 100%;
   height: auto;
-  object-fit: cover;
+  border-radius: 4px;
 }
 
-.movie-info {
-  padding: 15px 0;
+.movie-summary {
+  margin-top: 8px;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.8);
 }
 
-.movie-info h3 {
-  font-size: 1.2em;
-  margin-bottom: 8px;
-  font-weight: bold;
-  color: white;
-}
-
-.movie-info p {
-  color: #cccccc;
-}
-
-/* 반응형 스타일 */
-@media screen and (max-width: 768px) {
-  .timeline-container {
-    padding: 20px 10px;
-  }
-
-  .timeline-content {
+@media (max-width: 768px) {
+  .movie-card {
     width: 80%;
   }
-
-  .main-timeline-line {
+  
+  .timeline-line {
     left: 20px;
   }
-
-  .timeline-item,
-  .timeline-item.right-aligned {
-    justify-content: flex-end;
+  
+  .year-marker {
+    left: 20px;
+    align-items: flex-start;
+  }
+  
+  .item-left .movie-card,
+  .item-right .movie-card {
     margin-left: 40px;
-  }
-
-  .timeline-marker {
-    left: 20px;
-  }
-
-  .content-marker {
-    display: none;
   }
 }
 </style>

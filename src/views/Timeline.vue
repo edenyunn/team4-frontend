@@ -1,20 +1,9 @@
 <template>
   <div class="dark-container">
-    <!-- 상단바 -->
-    <header class="header">
-      <div class="povlogo-container">
-        <RouterLink to="/match">
-          <img class="povlogo" src="@/assets/mock-logo.png" alt="POV 로고">
-        </RouterLink>
-      </div>
-      <button class="sidebar-button" @click="toggleSidebar">
-        &#9776;
-      </button>
-    </header>
-
+    <!-- 헤더 컴포넌트 사용 -->
+    <Header :isSidebarOpen="isSidebarOpen" @toggle-sidebar="toggleSidebar" />
     <!-- 사이드바 컴포넌트 사용 -->
     <Sidebar :isSidebarOpen="isSidebarOpen" @toggle-sidebar="toggleSidebar" />
-
 
     <!-- Welcome Section -->
     <div class="welcome-section">
@@ -48,13 +37,15 @@
 <script>
 import { ref } from 'vue'
 import movies from '@/assets/movies.js'
+
+import Header from '@/components/Header.vue';
 import Sidebar from '@/components/Sidebar.vue';
 
 
 export default {
   name: 'Timeline',
   components: {
-    Sidebar, // 불러온 Sidebar 컴포넌트를 등록합니다.
+    Header, Sidebar, // 불러온 Sidebar 컴포넌트를 등록합니다.
   },
   data() {
     return {

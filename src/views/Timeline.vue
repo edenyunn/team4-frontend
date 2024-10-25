@@ -123,7 +123,7 @@ export default {
 }
 
 .event {
-  font-size: 20px;
+  font-size: 17px;
   color: rgba(255, 255, 255, 0.8);
 }
 

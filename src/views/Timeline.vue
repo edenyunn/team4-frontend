@@ -2,7 +2,7 @@
   <div class="dark-container">
     <!-- Status Bar -->
     <div class="status-bar">
-      <div class="time">9:41</div>
+      <div class="time"></div>
       <div class="icons">
         <div class="signal"></div>
         <div class="wifi"></div>
@@ -54,7 +54,7 @@ import { ref } from 'vue'
 import movies from '@/assets/movies.js'
 
 export default {
-  name: 'TimelineFigma',
+  name: 'Timeline',
   setup() {
     const moviesList = ref(movies)
     return {

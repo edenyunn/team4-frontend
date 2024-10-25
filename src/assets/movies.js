@@ -3,6 +3,7 @@ import 항거 from '@/assets/posters/항거.jpg'
 import 봉오동전투 from '@/assets/posters/봉오동전투.jpg'
 import 밀정 from '@/assets/posters/밀정.jpg'
 import 박열 from '@/assets/posters/박열.jpg'
+import 덕혜옹주 from '@/assets/posters/덕혜옹주.jpg'
 import 암살 from '@/assets/posters/암살.jpg'
 import 동주 from '@/assets/posters/동주.jpg'
 import 태극기휘날리며 from '@/assets/posters/태극기휘날리며.jpg'
@@ -35,19 +36,19 @@ export default [
     { id: 3, title: '', eventYear: 1920, event: '봉오동전투', summary: '산이 무기였다, 적은 길을 잃었다', imageUrl: 봉오동전투 },
     { id: 4, title: '', eventYear: 1923, event: '황옥 경부 폭탄사건', summary: '이중 스파이일까, 아니면 진정한 애국자일까?', imageUrl: 밀정 },
     { id: 5, title: '', eventYear: 1923, event: '박열 재판', summary: '조선의 미친놈, 일본 법정을 뒤집다', imageUrl: 박열 },
-    { id: 6, title: '', eventYear: 1931, event: '만주사변', summary: '', imageUrl: 'https://search.pstatic.net/common?type=o&size=176x264&quality=85&direct=true&src=https%3A%2F%2Fs.pstatic.net%2Fmovie.phinf%2F20160805_159%2F1470378561223pYzbp_JPEG%2Fmovie_image.jpg%3Ftype%3Dw640_2' },
+    { id: 6, title: '', eventYear: 1931, event: '만주사변', summary: '', imageUrl: 덕혜옹주 },
     { id: 7, title: '', eventYear: 1932, event: '우가키 조선총독 암살 작전', summary: '목표는 하나, 조국을 위한 암살', imageUrl: 암살 },
     { id: 8, title: '', eventYear: 1939, event: '중일전쟁', summary: '', imageUrl: 'https://search.pstatic.net/common?type=o&size=174x242&quality=85&direct=true&src=https%3A%2F%2Fs.pstatic.net%2Fmovie.phinf%2F20111224_109%2F13246554789677iLlv_JPEG%2Fmovie_image.jpg%3Ftype%3Dw640_2' },
     { id: 9, title: '', eventYear: 1942, event: '조선어학회 사건', summary: '', imageUrl: 'https://search.pstatic.net/common?type=o&size=176x264&quality=85&direct=true&src=https%3A%2F%2Fs.pstatic.net%2Fmovie.phinf%2F20181227_80%2F1545901137289EGbWK_JPEG%2Fmovie_image.jpg%3Ftype%3Dw640_2' },
-    { id: 10, title: '', eventYear: 1944, event: '윤동주 형무소 수감', summary: '추가예정', imageUrl: 동주 },
+    { id: 10, title: '', eventYear: 1944, event: '윤동주 형무소 수감', summary: '짧았던 청춘, 영원한 시', imageUrl: 동주 },
     { id: 11, title: '', eventYear: 1945, event: '일본의 패망과 광복', summary: '', imageUrl: 'https://search.pstatic.net/common?type=o&size=176x264&quality=85&direct=true&src=https%3A%2F%2Fs.pstatic.net%2Fmovie.phinf%2F20170726_24%2F1501035701931zYdMD_JPEG%2Fmovie_image.jpg%3Ftype%3Dw640_2' },
     { id: 12, title: '', eventYear: 1947, event: '보스턴 마라톤 우승', summary: '', imageUrl: 'https://search.pstatic.net/common?type=o&size=176x264&quality=85&direct=true&src=https%3A%2F%2Fs.pstatic.net%2Fmovie.phinf%2F20230927_32%2F1695790185763mU0aR_JPEG%2Fmovie_image.jpg%3Ftype%3Dw640_2' },
-    { id: 13, title: '', eventYear: 1950.08, event: '다부동 전투', summary: '추가예정', imageUrl: 태극기휘날리며 },
+    { id: 13, title: '', eventYear: 1950.08, event: '다부동 전투', summary: '돌아온다고 약속했잖아요', imageUrl: 태극기휘날리며 },
     { id: 14, title: '', eventYear: 1950.08, event: '포항 전투', summary: '포화 소리에 묻힌 그들의 청춘', imageUrl: 포화속으로 },
     { id: 15, title: '', eventYear: 1950.09, event: '장사상륙작전', summary: '', imageUrl: 'https://search.pstatic.net/common?type=o&size=176x264&quality=85&direct=true&src=https%3A%2F%2Fs.pstatic.net%2Fmovie.phinf%2F20190821_138%2F1566362458427V6Usp_JPEG%2Fmovie_image.jpg%3Ftype%3Dw640_2' },
     { id: 16, title: '', eventYear: 1950.09, event: '인천상륙작전', summary: '기적? 그건 작전이었다', imageUrl: 인천상륙작전 },
     { id: 17, title: '', eventYear: 1950.11, event: '중공군 개입', summary: '', imageUrl: 'https://search.pstatic.net/common?type=o&size=176x264&quality=85&direct=true&src=https%3A%2F%2Fs.pstatic.net%2Fmovie.phinf%2F20111222_184%2F1324548976401Dstma_JPEG%3Ftype%3Dw640_2' },
-    { id: 18, title: '', eventYear: 1953, event: '휴전 협정', summary: '추가예정', imageUrl: 고지전 },
+    { id: 18, title: '', eventYear: 1953, event: '휴전 협정', summary: '산은 기억한다, 헛되이 흘린 젊은 피를', imageUrl: 고지전 },
     { id: 19, title: '', eventYear: 1960, event: '4·19혁명', summary: '‘대머리 그 남자’의 은밀한 헤어컷', imageUrl: 효자동이발사 },
     { id: 20, title: '', eventYear: 1963, event: '서독 광부 파견', summary: 'K-아버지 주름살', imageUrl: 국제시장 },
     { id: 21, title: '', eventYear: 1968, event: '1·21사태', summary: '국가가 버린 31명의 살인 병기', imageUrl: 실미도 },

@@ -2,9 +2,9 @@
   <div class="my-container">
     <!-- 상단바 -->
     <header class="header">
-      <div class="logo-container">
+      <div class="povlogo-container">
         <RouterLink to="/match">
-          <img class="logo" src="@/assets/mock-logo.png" alt="POV 로고">
+          <img class="povlogo" src="@/assets/mock-logo.png" alt="POV 로고">
         </RouterLink>
       </div>
       <button class="sidebar-button" @click="toggleSidebar">
@@ -116,16 +116,19 @@ body {
 }
 
 /* 로고 중앙 정렬 */
-.logo-container {
+.povlogo-container {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
 }
 
-.logo {
+.povlogo {
   height: 40px;
 }
 
+
+
+/* 사이드바 스타일 */
 .sidebar-button {
   font-size: 24px;
   background: none;
@@ -133,9 +136,6 @@ body {
   color: white;
   cursor: pointer;
 }
-
-/* 사이드바 스타일 */
-
 .sidebar.closed {
   transform: translateX(100%);
 }
@@ -260,7 +260,7 @@ body {
     margin-left: 5px;
   }
 
-  .logo {
+  .povlogo {
     height: 30px;
   }
 }

@@ -1,14 +1,20 @@
 <template>
   <div class="dark-container">
-    <!-- Header -->
+    <!-- 상단바 -->
     <header class="header">
-      <div class="logo">POV</div>
-      <button class="menu-button">
-        <div class="menu-line"></div>
-        <div class="menu-line"></div>
-        <div class="menu-line"></div>
+      <div class="povlogo-container">
+        <RouterLink to="/match">
+          <img class="povlogo" src="@/assets/mock-logo.png" alt="POV 로고">
+        </RouterLink>
+      </div>
+      <button class="sidebar-button" @click="toggleSidebar">
+        &#9776;
       </button>
     </header>
+
+    <!-- 사이드바 컴포넌트 사용 -->
+    <Sidebar :isSidebarOpen="isSidebarOpen" @toggle-sidebar="toggleSidebar" />
+
 
     <!-- Welcome Section -->
     <div class="welcome-section">
@@ -42,16 +48,30 @@
 <script>
 import { ref } from 'vue'
 import movies from '@/assets/movies.js'
+import Sidebar from '@/components/Sidebar.vue';
+
 
 export default {
   name: 'Timeline',
+  components: {
+    Sidebar, // 불러온 Sidebar 컴포넌트를 등록합니다.
+  },
+  data() {
+    return {
+      isSidebarOpen: false, // 사이드바 열림 여부
+    };
+  },
   setup() {
     const moviesList = ref(movies)
     return {
       movies: moviesList
     }
-  }
-}
+  },
+  methods: {
+    toggleSidebar() {
+      this.isSidebarOpen = !this.isSidebarOpen; // 사이드바 열림/닫힘 토글
+    },
+}}
 </script>
 
 <style scoped>
@@ -64,30 +84,32 @@ export default {
   margin: 0;
 }
 
-.status-bar {
-  height: 44px;
-  padding: 0 16px;
+/* 상단바 스타일 */
+.header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #222222;
+  padding: 10px;
+  left: 0;
+  right: 0;
+  background-color: #000000;
+  position: relative;
 }
 
-.time {
-  font-weight: 600;
+/* 로고 중앙 정렬 */
+.povlogo-container {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.povlogo {
+  height: 40px;
 }
 
 .icons {
   display: flex;
   gap: 4px;
-}
-
-.header {
-  padding: 16px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .logo {
@@ -193,6 +215,18 @@ export default {
   color: rgba(255, 255, 255, 0.8);
 }
 
+/* 사이드바 스타일 */
+.sidebar-button {
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+.sidebar.closed {
+  transform: translateX(100%);
+}
+
 @media (max-width: 768px) {
   .movie-card {
     width: 80%;
@@ -212,4 +246,7 @@ export default {
     margin-left: 40px;
   }
 }
+
+
+
 </style>

@@ -2,8 +2,8 @@
   <nav>
     <RouterLink to="/match">Match</RouterLink>
     <RouterLink to="/movies">Timeline</RouterLink>
-    <RouterLink to="/movies">Cast</RouterLink>
-    <RouterLink to="/movies">Original</RouterLink>
+    <RouterLink to="/cast">Cast</RouterLink>
+    <RouterLink to="/original">Original</RouterLink>
     
   </nav>
   <RouterView />

@@ -1,15 +1,5 @@
 <template>
   <div class="dark-container">
-    <!-- Status Bar -->
-    <div class="status-bar">
-      <div class="time"></div>
-      <div class="icons">
-        <div class="signal"></div>
-        <div class="wifi"></div>
-        <div class="battery"></div>
-      </div>
-    </div>
-
     <!-- Header -->
     <header class="header">
       <div class="logo">POV</div>

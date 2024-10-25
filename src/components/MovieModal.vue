@@ -1,15 +1,30 @@
 <!-- components/MovieModal.vue -->
 <template>
-  <div v-if="isOpen" class="modal-overlay" @click="closeModal">
-    <div class="modal-content" @click.stop>
-      <button class="modal-close" @click="closeModal">&times;</button>
-      <h1>{{ movie?.title || '' }}</h1>
-      <div class="modal-body">
-        <img :src="movie?.imageUrl" :alt="movie?.title" class="modal-image">
-        <p>{{ movie?.event }}</p>
-        <p>{{ movie?.summary }}</p>
+  <div v-if="isOpen" class="modal show d-block" tabindex="-1">
+    <div class="modal-dialog modal-fullscreen">
+      <div class="modal-content bg-dark text-white">
+        <div class="modal-header border-secondary">
+          <h1 class="modal-title fs-4">{{ movie?.title || '' }}</h1>
+          <button 
+            type="button" 
+            class="btn-close btn-close-white" 
+            aria-label="Close"
+            @click="closeModal"
+          ></button>
+        </div>
+        <div class="modal-body">
+          <img 
+            :src="movie?.imageUrl" 
+            :alt="movie?.title" 
+            class="modal-image img-fluid mb-3"
+          >
+          <h5 class="mb-3">{{ movie?.event }}</h5>
+          <p class="movie-description">{{ movie?.summary }}</p>
+        </div>
       </div>
     </div>
+    <!-- Backdrop -->
+    <div class="modal-backdrop show" @click="closeModal"></div>
   </div>
 </template>
 
@@ -31,8 +46,10 @@ export default {
     isOpen(newValue) {
       if (newValue) {
         document.body.style.overflow = 'hidden'
+        document.body.classList.add('modal-open')
       } else {
         document.body.style.overflow = 'auto'
+        document.body.classList.remove('modal-open')
       }
     }
   },
@@ -45,56 +62,77 @@ export default {
 </script>
 
 <style scoped>
-.modal-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.8);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-}
-
 .modal-content {
-  background-color: #222222;
-  padding: 2rem;
-  border-radius: 8px;
-  max-width: 90%;
-  max-height: 90vh;
-  overflow-y: auto;
-  position: relative;
-}
-
-.modal-close {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  background: none;
   border: none;
-  color: white;
-  font-size: 24px;
-  cursor: pointer;
-  padding: 0.5rem;
+  min-height: 100vh;
 }
 
 .modal-image {
-  max-width: 100%;
-  height: auto;
-  margin: 1rem 0;
+  max-width: 40%;
+  max-height: 50vh;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+/* Custom backdrop style */
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Modal animation */
+.modal.show {
+  display: block;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Fix z-index stacking */
+.modal {
+  z-index: 1050;
+}
+
+.modal-backdrop {
+  z-index: 1040;
+}
+
+/* Optimize layout for fullscreen */
+.modal-header {
+  padding: 1rem 2rem;
 }
 
 .modal-body {
-  margin-top: 1rem;
+  padding: 2rem;
+  overflow-y: auto;
 }
 
-@media (max-width: 768px) {
-  .modal-content {
-    width: 95%;
-    margin: 1rem;
+.modal-title {
+  font-size: 1.5rem;
+}
+
+@media (max-width: 576px) {
+  .modal-header {
     padding: 1rem;
+  }
+  
+  .modal-body {
+    padding: 1rem;
+  }
+  
+  .modal-title {
+    font-size: 1.25rem;
   }
 }
 </style>

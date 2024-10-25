@@ -34,14 +34,10 @@
 import { ref } from 'vue'
 import movies from '@/assets/movies.js'
 
-import Header from '@/components/Header.vue';
-import Sidebar from '@/components/Sidebar.vue';
-
 
 export default {
   name: 'Timeline',
   components: {
-    Header, Sidebar, // 불러온 Sidebar 컴포넌트를 등록합니다.
   },
   data() {
     return {
@@ -72,19 +68,6 @@ export default {
   gap: 4px;
 }
 
-.menu-button {
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 8px;
-}
-
-.menu-line {
-  width: 24px;
-  height: 2px;
-  background-color: white;
-  margin: 4px 0;
-}
 
 /* 웰컴 박스 */
 .welcome-section {

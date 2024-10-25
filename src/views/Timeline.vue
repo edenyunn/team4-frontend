@@ -1,6 +1,6 @@
+<!-- Timeline.vue -->
 <template>
   <div class="dark-container">
-
     <!-- Welcome Section -->
     <div class="welcome-section">
       <h1 class="welcome-title">Welcome to<br/>POV</h1>
@@ -22,35 +22,60 @@
 
         <!-- Movie Card -->
         <div class="movie-card">
-          <img :src="movie.imageUrl" :alt="movie.title" class="movie-poster">
+          <img 
+            :src="movie.imageUrl" 
+            :alt="movie.title" 
+            class="movie-poster"
+            @click="openModal(movie)"
+          >
           <p class="movie-summary">{{ movie.summary }}</p>
         </div>
       </div>
     </div>
+
+    <!-- Movie Modal -->
+    <MovieModal 
+      :is-open="isModalOpen"
+      :movie="selectedMovie"
+      @close="closeModal"
+    />
   </div>
 </template>
 
 <script>
 import { ref } from 'vue'
 import movies from '@/assets/movies.js'
-
+import MovieModal from '@/components/MovieModal.vue'
 
 export default {
   name: 'Timeline',
   components: {
-  },
-  data() {
-    return {
-    };
+    MovieModal
   },
   setup() {
     const moviesList = ref(movies)
-    return {
-      movies: moviesList
+    const isModalOpen = ref(false)
+    const selectedMovie = ref(null)
+
+    const openModal = (movie) => {
+      selectedMovie.value = movie
+      isModalOpen.value = true
     }
-  },
-  methods: {
-}}
+
+    const closeModal = () => {
+      isModalOpen.value = false
+      selectedMovie.value = null
+    }
+
+    return {
+      movies: moviesList,
+      isModalOpen,
+      selectedMovie,
+      openModal,
+      closeModal
+    }
+  }
+}
 </script>
 
 <style scoped>
@@ -146,6 +171,12 @@ export default {
   width: 100%;
   height: auto;
   border-radius: 4px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.movie-poster:hover {
+  transform: scale(1.05);
 }
 
 .movie-summary {

@@ -4,6 +4,7 @@
     <!-- guide Section -->
     <div class="guide-section">
       <h1 class="guide-title">Welcome to<br/>POV</h1>
+      <br/>
       <h2 class="guide-subtitle">한국 근현대사 관련 영화를 질문해주시면<br/>해당 영화를 타임라인에서 찾아드립니다.</h2>
     </div>
 

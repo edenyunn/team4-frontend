@@ -15,7 +15,7 @@ export default {
   components: {
     Header, Sidebar, // 불러온 컴포넌트를 등록합니다.
   },
-  data() {
+    data() {
     return {
       isSidebarOpen: false, // 사이드바 열림 여부
     };

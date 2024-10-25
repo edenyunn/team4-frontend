@@ -1,5 +1,4 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
 import Timeline from '@/views/Timeline.vue'
 import Search from '@/views/Search.vue'
 import Inside from '@/views/Inside.vue'
@@ -11,7 +10,7 @@ const router = createRouter({
   routes: [
     {
       path: '/',
-      component: HomeView
+      component: Timeline
     },
     {
       path: '/movies',

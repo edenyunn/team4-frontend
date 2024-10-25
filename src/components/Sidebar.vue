@@ -3,13 +3,13 @@
     <div v-if="isSidebarOpen" class="sidebar">
       <button class="close-sidebar" @click="$emit('toggle-sidebar')">X 닫기</button>
       <div class="sidebar-menu">
-        <RouterLink to="/search" class="menu-item">
-          Search
-          <span class="small-subtitle">영화 길잡이</span>
-        </RouterLink>
         <RouterLink to="/movies" class="menu-item">
           Timeline
           <span class="small-subtitle">POV 타임라인</span>
+        </RouterLink>
+        <RouterLink to="/search" class="menu-item">
+          Search
+          <span class="small-subtitle">AI 영화 길잡이</span>
         </RouterLink>
         <RouterLink to="/inside" class="menu-item">
           Inside

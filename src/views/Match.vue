@@ -12,16 +12,8 @@
       </button>
     </header>
 
-    <!-- 사이드바 -->
-    <div v-if="isSidebarOpen" class="sidebar">
-      <button class="close-sidebar" @click="toggleSidebar">X 닫기</button>
-      <div class="sidebar-menu">
-        <RouterLink to="/match" class="menu-item">Match</RouterLink>
-        <RouterLink to="/movies" class="menu-item">Timeline</RouterLink>
-        <RouterLink to="/cast" class="menu-item">Cast</RouterLink>
-        <RouterLink to="/original" class="menu-item">Original</RouterLink>
-      </div>
-    </div>
+    <!-- 사이드바 컴포넌트 사용 -->
+    <Sidebar :isSidebarOpen="isSidebarOpen" @toggle-sidebar="toggleSidebar" />
 
     <!-- 채팅 창 영역 -->
     <div class="chat-box">
@@ -42,10 +34,15 @@
 </template>
 
 <script>
+import Sidebar from '@/components/Sidebar.vue';
+
 import axios from 'axios'
 const BASE_URL = 'http://127.0.0.1:5000/'
 
 export default {
+  components: {
+    Sidebar, // 불러온 Sidebar 컴포넌트를 등록합니다.
+  },
   data() {
     return {
       userInput: "", // 새로운 메시지를 저장
@@ -138,34 +135,9 @@ body {
 }
 
 /* 사이드바 스타일 */
-.sidebar {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 250px;
-  height: 100%;
-  background-color: #333;
-  color: white;
-  padding: 10px;
-  z-index: 100;
-  transition: transform 0.3s ease;
-}
-
-.sidebar-menu {
-  display: flex;
-  flex-direction: column;
-}
 
 .sidebar.closed {
   transform: translateX(100%);
-}
-
-.close-sidebar {
-  background: none;
-  border: none;
-  color: white;
-  font-size: 18px;
-  cursor: pointer;
 }
 
 /* 채팅박스 스타일 */

@@ -118,12 +118,12 @@ export default {
 }
 
 .year {
-  font-size: 24px;
+  font-size: 30px;
   font-weight: bold;
 }
 
 .event {
-  font-size: 14px;
+  font-size: 20px;
   color: rgba(255, 255, 255, 0.8);
 }
 
@@ -134,10 +134,12 @@ export default {
 
 .item-left .movie-card {
   margin-right: auto;
+  margin-left: 20%;
 }
 
 .item-right .movie-card {
   margin-left: auto;
+  margin-right: 20%;
 }
 
 .movie-poster {

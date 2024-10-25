@@ -1,15 +1,5 @@
 <template>
   <div class="dark-container">
-    <!-- Status Bar -->
-    <div class="status-bar">
-      <div class="time">9:41</div>
-      <div class="icons">
-        <div class="signal"></div>
-        <div class="wifi"></div>
-        <div class="battery"></div>
-      </div>
-    </div>
-
     <!-- Header -->
     <header class="header">
       <div class="logo">POV</div>
@@ -54,7 +44,7 @@ import { ref } from 'vue'
 import movies from '@/assets/movies.js'
 
 export default {
-  name: 'TimelineFigma',
+  name: 'Timeline',
   setup() {
     const moviesList = ref(movies)
     return {

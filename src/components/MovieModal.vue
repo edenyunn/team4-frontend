@@ -12,15 +12,21 @@
           ></button>
         </div>
         <div class="modal-body">
-          <img 
-            :src="movie?.imageUrl" 
-            :alt="movie?.title" 
-            class="modal-image img-fluid mb-3"
-          />
-          <h5 class="mb-3">{{ movie?.eventYear }}&nbsp;{{ movie?.event }}</h5>
-          <p class="movie-description">{{ movie?.summary }}</p>
+          <!-- Centering Wrapper for the image, h5, and p elements -->
+          <div class="text-center">
+            <div class="d-flex justify-content-center mb-3"> <!-- Image centering -->
+              <img 
+                :src="movie?.imageUrl" 
+                :alt="movie?.title" 
+                class="modal-image img-fluid"
+              />
+            </div>
+            <h5 class="mb-3">{{ movie?.eventYear }}&nbsp;{{ movie?.event }}</h5>
+            <p class="movie-description">{{ movie?.summary }}</p>
+          </div>
           <br>
-          <div v-html="renderedMarkdown"></div>
+          <!-- Non-centered HTML content -->
+          <div v-html="renderedHTML"></div>
         </div>
       </div>
     </div>
@@ -28,9 +34,6 @@
 </template>
 
 <script>
-import { marked } from 'marked';
-import { loadMarkdown } from '@/utils/markdownLoader'
-
 export default {
   name: 'MovieModal',
   props: {
@@ -45,13 +48,17 @@ export default {
   },
   data() {
     return {
-      renderedMarkdown: ''
+      renderedHTML: ''
     };
   },
-  async updated () {
-    
-    const content = await loadMarkdown(this.movie?.id || 1)
-    this.renderedMarkdown = content
+  async updated() {
+    const id = this.movie?.id || 1;
+    const response = await fetch(`/src/assets/movie-html/${id}.html`); // 파일 경로 수정
+    if (response.ok) {
+      this.renderedHTML = await response.text();
+    } else {
+      console.error('Failed to load HTML content');
+    }
   },
   
   methods: {
@@ -61,7 +68,6 @@ export default {
   }
 };
 </script>
-
 
 <style scoped>
 .modal-image {

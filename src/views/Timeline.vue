@@ -213,7 +213,7 @@ html, body {
 }
 
 /* 모바일 버전 스타일 */
-@media (max-width: 768px) {
+@media (max-width: 800px) {
   .dark-container {
     max-width: 430px;
     margin: 0 auto;

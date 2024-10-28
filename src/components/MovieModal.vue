@@ -60,11 +60,6 @@ export default {
 </script>
 
 <style scoped>
-.modal-content {
-  border: none;
-  min-height: 100vh;
-}
-
 .modal-image {
   max-width: 40%;
   max-height: 50vh;

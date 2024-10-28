@@ -12,13 +12,16 @@
           ></button>
         </div>
         <div class="modal-body">
-          <img 
-            :src="movie?.imageUrl" 
-            :alt="movie?.title" 
-            class="modal-image img-fluid mb-3"
-          />
-          <h5 class="mb-3">{{ movie?.eventYear }}&nbsp;{{ movie?.event }}</h5>
-          <p class="movie-description">{{ movie?.summary }}</p>
+          <!-- 포스터, 연도, 사건, 타임라인텍스트 중앙정렬 -->
+          <div class="content-center">
+            <img 
+              :src="movie?.imageUrl" 
+              :alt="movie?.title" 
+              class="modal-image img-fluid mb-3"
+            />
+            <h5 class="mb-3">{{ movie?.eventYear }}&nbsp;{{ movie?.event }}</h5>
+            <p class="movie-description">{{ movie?.summary }}</p>
+          </div>
           <br>
           <div v-html="renderedHTML"></div>
         </div>

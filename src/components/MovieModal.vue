@@ -23,8 +23,6 @@
         </div>
       </div>
     </div>
-    <!-- Backdrop -->
-    <div class="modal-backdrop show" @click="closeModal"></div>
   </div>
 </template>
 

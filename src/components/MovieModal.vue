@@ -1,4 +1,3 @@
-<!-- components/MovieModal.vue -->
 <template>
   <div v-if="isOpen" class="modal show d-block" tabindex="-1">
     <div class="modal-dialog modal-fullscreen">
@@ -17,18 +16,21 @@
             :src="movie?.imageUrl" 
             :alt="movie?.title" 
             class="modal-image img-fluid mb-3"
-          >
-          <h5 class="mb-3">{{ movie?.event }}</h5>
+          />
+          <h5 class="mb-3">{{ movie?.eventYear }}&nbsp;{{ movie?.event }}</h5>
           <p class="movie-description">{{ movie?.summary }}</p>
+          <br>
+          <div v-html="renderedMarkdown"></div>
         </div>
       </div>
     </div>
-    <!-- Backdrop -->
-    <div class="modal-backdrop show" @click="closeModal"></div>
   </div>
 </template>
 
 <script>
+import { marked } from 'marked';
+import { loadMarkdown } from '@/utils/markdownLoader'
+
 export default {
   name: 'MovieModal',
   props: {
@@ -41,32 +43,27 @@ export default {
       default: null
     }
   },
-  emits: ['close'],
-  watch: {
-    isOpen(newValue) {
-      if (newValue) {
-        document.body.style.overflow = 'hidden'
-        document.body.classList.add('modal-open')
-      } else {
-        document.body.style.overflow = 'auto'
-        document.body.classList.remove('modal-open')
-      }
-    }
+  data() {
+    return {
+      renderedMarkdown: ''
+    };
   },
+  async updated () {
+    
+    const content = await loadMarkdown(this.movie?.id || 1)
+    this.renderedMarkdown = content
+  },
+  
   methods: {
     closeModal() {
-      this.$emit('close')
+      this.$emit('close');
     }
   }
-}
+};
 </script>
 
-<style scoped>
-.modal-content {
-  border: none;
-  min-height: 100vh;
-}
 
+<style scoped>
 .modal-image {
   max-width: 40%;
   max-height: 50vh;
@@ -74,17 +71,6 @@ export default {
   border-radius: 4px;
 }
 
-/* Custom backdrop style */
-.modal-backdrop {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.8);
-}
-
-/* Modal animation */
 .modal.show {
   display: block;
   animation: fadeIn 0.3s ease-in-out;
@@ -99,7 +85,6 @@ export default {
   }
 }
 
-/* Fix z-index stacking */
 .modal {
   z-index: 1050;
 }
@@ -108,7 +93,6 @@ export default {
   z-index: 1040;
 }
 
-/* Optimize layout for fullscreen */
 .modal-header {
   padding: 1rem 2rem;
 }

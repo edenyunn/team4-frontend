@@ -12,17 +12,20 @@
           ></button>
         </div>
         <div class="modal-body">
-          <!-- 포스터, 연도, 사건, 타임라인텍스트 중앙정렬 -->
-          <div class="content-center">
-            <img 
-              :src="movie?.imageUrl" 
-              :alt="movie?.title" 
-              class="modal-image img-fluid mb-3"
-            />
+          <!-- Centering Wrapper for the image, h5, and p elements -->
+          <div class="text-center">
+            <div class="d-flex justify-content-center mb-3"> <!-- Image centering -->
+              <img 
+                :src="movie?.imageUrl" 
+                :alt="movie?.title" 
+                class="modal-image img-fluid"
+              />
+            </div>
             <h5 class="mb-3">{{ movie?.eventYear }}&nbsp;{{ movie?.event }}</h5>
             <p class="movie-description">{{ movie?.summary }}</p>
           </div>
           <br>
+          <!-- Non-centered HTML content -->
           <div v-html="renderedHTML"></div>
         </div>
       </div>

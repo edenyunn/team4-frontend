@@ -79,6 +79,16 @@ export default {
 </script>
 
 <style scoped>
+/* 맨 위에 추가 */
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #222222;
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* PC 버전은 그대로 유지 */
 .dark-container {
   background-color: #222222;
   min-height: 100vh;
@@ -125,12 +135,6 @@ export default {
   transform: translateX(-50%);
 }
 
-.timeline-item {
-  display: flex;
-  margin-bottom: 60px;
-  position: relative;
-}
-
 .year-marker {
   position: absolute;
   left: 50%;
@@ -138,18 +142,21 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #222222;
   padding: 8px;
+  z-index: 2;
 }
 
 .year {
   font-size: 30px;
   font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 
 .event {
   font-size: 17px;
   color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 
 .movie-card {
@@ -167,6 +174,13 @@ export default {
   margin-right: 20%;
 }
 
+/* 타임라인 아이템 간격 조정 */
+.timeline-item {
+  display: flex;
+  margin-bottom: 100px;  /* 아이템 간 간격 늘림 */
+  position: relative;
+}
+
 .movie-poster {
   width: 100%;
   height: auto;
@@ -181,7 +195,7 @@ export default {
 
 .movie-summary {
   margin-top: 8px;
-  font-size: 14px;
+  font-size: 7px;
   color: rgba(255, 255, 255, 0.8);
 }
 
@@ -193,30 +207,80 @@ export default {
   color: white;
   cursor: pointer;
 }
+
 .sidebar.closed {
   transform: translateX(100%);
 }
 
+/* 모바일 버전 스타일 */
 @media (max-width: 768px) {
+  .dark-container {
+    max-width: 430px;
+    margin: 0 auto;
+  }
+
   .movie-card {
-    width: 80%;
+    width: 45%;
   }
   
   .timeline-line {
-    left: 20px;
+    left: 50%;
   }
   
   .year-marker {
-    left: 20px;
-    align-items: flex-start;
+    width: 120px;
+    z-index: 2;
   }
-  
-  .item-left .movie-card,
+
+  .year {
+    font-size: 15px;
+    margin-bottom: 4px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  }
+
+  .event {
+    font-size: 7px;
+    text-align: center;
+    word-wrap: break-word;
+    white-space: normal;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    line-height: 1.2;
+    max-width: 110px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  }
+
+  .item-left .movie-card {
+    margin-right: auto;
+    margin-left: 5%;
+    margin-top: 50px;
+  }
+
   .item-right .movie-card {
-    margin-left: 40px;
+    margin-left: auto;
+    margin-right: 5%;
+    margin-top: 50px;
+  }
+
+  .timeline-item {
+    margin-bottom: 80px;
   }
 }
 
+/* 더 작은 화면 대응 */
+@media (max-width: 480px) {
+  .movie-card {
+    width: 50%;
+  }
 
+  .year {
+    font-size: 20px;
+  }
 
+  .event {
+    font-size: 12px;
+  }
+}
 </style>

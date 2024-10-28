@@ -28,5 +28,19 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
+/* 여기에 추가 */
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #222222;
+  min-height: 100vh;
+  width: 100%;
+}
+
+#app {
+  background-color: #222222;
+  min-height: 100vh;
+  width: 100%;
+}
 </style>

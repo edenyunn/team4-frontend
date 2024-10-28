@@ -20,7 +20,7 @@
           <h5 class="mb-3">{{ movie?.eventYear }}&nbsp;{{ movie?.event }}</h5>
           <p class="movie-description">{{ movie?.summary }}</p>
           <br>
-          <div v-html="renderedMarkdown"></div>
+          <div v-html="renderedHTML"></div>
         </div>
       </div>
     </div>
@@ -28,8 +28,6 @@
 </template>
 
 <script>
-import { loadMarkdown } from '@/utils/markdownLoader'
-
 export default {
   name: 'MovieModal',
   props: {
@@ -44,13 +42,17 @@ export default {
   },
   data() {
     return {
-      renderedMarkdown: ''
+      renderedHTML: ''
     };
   },
-  async updated () {
-    
-    const content = await loadMarkdown(this.movie?.id || 1)
-    this.renderedMarkdown = content
+  async updated() {
+    const id = this.movie?.id || 1;
+    const response = await fetch(`./${id}.html`);
+    if (response.ok) {
+      this.renderedHTML = await response.text();
+    } else {
+      console.error('Failed to load HTML content');
+    }
   },
   
   methods: {
@@ -60,7 +62,6 @@ export default {
   }
 };
 </script>
-
 
 <style scoped>
 .modal-image {

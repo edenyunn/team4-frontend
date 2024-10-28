@@ -28,7 +28,7 @@
             class="movie-poster"
             @click="openModal(movie)"
           >
-          <p class="movie-summary">{{ movie.summary }}</p>
+          <p class="movie-summary text-center">{{ movie.summary }}</p>
         </div>
       </div>
     </div>

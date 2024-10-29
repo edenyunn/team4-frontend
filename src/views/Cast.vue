@@ -104,4 +104,11 @@ export default {
   max-width: 100%;
   height: auto;
 }
+
+/* 모바일 화면 크기일 때 세로 정렬 */
+@media (max-width: 768px) {
+  .gallery-container {
+    flex-direction: column;
+  }
+}
 </style>

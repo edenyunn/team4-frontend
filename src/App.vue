@@ -50,4 +50,19 @@ html, body {
     font-weight: normal;
     font-style: normal;
 }
+
+@font-face {
+    font-family: 'NotoSansKR-VariableFont_wght';
+    src: url('@/assets/fonts/NotoSansKR-VariableFont_wght.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PretendardVariable';
+    src: url('/web/static/fonts/PretendardVariable.ttf') format('truetype');
+    font-weight: 1 999; /* PretendardVariable의 가변 굵기 범위 */
+    font-style: normal;
+    font-display: swap;
+}
 </style>

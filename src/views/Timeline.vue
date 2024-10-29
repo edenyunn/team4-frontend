@@ -111,14 +111,14 @@ html, body {
 }
 .welcome-title {
   font-size: 36px;
-  font-weight: bold;
+  font-weight: 500;
   font-family: 'BlackHanSans-Regular';
   margin-bottom: 16px;
 }
 .welcome-subtitle {
   font-size: 20px;
-  font-weight: 500;
-  font-family: 'BlackHanSans-Regular';
+  font-weight: 150;
+  font-family: 'NotoSansKR-VariableFont_wght';
   color: rgba(255, 255, 255, 0.8);
 }
 
@@ -151,11 +151,13 @@ html, body {
 .year {
   font-size: 30px;
   font-weight: bold;
+  font-family: 'NotoSansKR-VariableFont_wght';
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 
 .event {
   font-size: 17px;
+  font-family: 'NotoSansKR-VariableFont_wght';
   color: rgba(255, 255, 255, 0.8);
   text-align: center;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);

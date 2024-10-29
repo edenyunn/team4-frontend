@@ -79,9 +79,12 @@ export default {
 .gallery-container {
   display: flex;
   justify-content: space-evenly;
+  align-items: center; /* 세로 중앙 정렬 */
+  min-height: 100vh; /* 화면 높이의 100% 사용 */
   padding: 1rem;
   background-color: var(--dark-bg, #1a1a1a);
 }
+
 
 .gallery-item {
   background: none;

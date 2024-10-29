@@ -14,7 +14,7 @@
         :class="['chat-bubble', chat.isUser ? 'user-bubble' : 'bot-bubble']">
         {{ chat.message }}
 
-        <img v-for="movie in chat.movies" :key="movie.id" :src="movie.imageUrl" :alt="movie.title"
+        <img v-for="movie in relatedMovies" :key="movie.id" :src="movie.imageUrl" :alt="movie.title"
           class="movie-poster" />
 
       </div>
@@ -46,7 +46,13 @@ export default {
       userInput: "", // 새로운 메시지를 저장
       chatHistory: [], // 채팅 메시지 목록
       isLoading: false, // 로딩 상태
+      movieIds: []
     };
+  },
+  computed: {
+    relatedMovies() {
+      return this.movieIds.forEach(id => movies.find(movie => movie.id === id))
+    }
   },
   methods: {
     async sendMessage() {
@@ -54,7 +60,6 @@ export default {
         // 메시지가 비어 있지 않을 때만 전송
         this.chatHistory.push({ message: this.userInput, isUser: true }); // 보낸 메시지는 사용자 메시지로 분류
         this.isLoading = true; // 로딩 상태 시작
-        // this.userInput = ""; // 입력창 비활성화
 
         try {
           // URL 로 요청을 보냄
@@ -63,17 +68,18 @@ export default {
           });
 
           // 서버로부터 받은 응답 메시지와 movie_ids를 가져옴
+          console.log(res.data)
           const botMessage = res.data.llm;
-          const movieIds = res.data.movie_ids;
-
+          this.movieIds = res.data.movie_ids;
           // movies.js의 데이터를 불러오면서 require를 통해 동적 이미지 경로 적용
-          const movieData = movieIds.map(id => {
-            const movie = movies.find(movie => movie.id === id);
-            return { ...movie }; // imageUrl은 이미 movies.js에서 import된 상태
-          });
+          
+          // const movieData = movieIds.map(id => {
+          //   const movie = movies.find(movie => movie.id === id);
+          //   return { ...movie }; // imageUrl은 이미 movies.js에서 import된 상태
+          // });
 
           // 받은 응답메시지를 chatHistory에 추가함
-          this.chatHistory.push({ isUser: false, message: botMessage, movies: movieData });
+          this.chatHistory.push({ isUser: false, message: botMessage, movies: [...this.relatedMovies] });
         } catch (error) {
           console.error("Error sending message:", error);
         } finally {

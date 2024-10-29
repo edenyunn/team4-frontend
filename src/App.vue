@@ -43,4 +43,11 @@ html, body {
   min-height: 100vh;
   width: 100%;
 }
+
+@font-face {
+    font-family: 'BlackHanSans-Regular';
+    src: url('@/assets/fonts/BlackHanSans-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
 </style>

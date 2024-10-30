@@ -149,14 +149,14 @@ html, body {
 }
 
 .year {
-  font-size: 30px;
+  font-size: 10px;
   font-weight: bold;
   font-family: 'NotoSansKR-VariableFont_wght';
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 
 .event {
-  font-size: 17px;
+  font-size: 10px;
   font-family: 'NotoSansKR-VariableFont_wght';
   color: rgba(255, 255, 255, 0.8);
   text-align: center;
@@ -198,8 +198,8 @@ html, body {
 }
 
 .movie-summary {
-  margin-top: 8px;
-  font-size: 7px;
+  margin-top: 0px;
+  font-size: 4.5px;
   color: rgba(255, 255, 255, 0.8);
 }
 
@@ -237,13 +237,13 @@ html, body {
   }
 
   .year {
-    font-size: 15px;
+    font-size: 10px;
     margin-bottom: 4px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
   }
 
   .event {
-    font-size: 7px;
+    font-size: 5px;
     text-align: center;
     word-wrap: break-word;
     white-space: normal;
@@ -270,21 +270,6 @@ html, body {
 
   .timeline-item {
     margin-bottom: 80px;
-  }
-}
-
-/* 더 작은 화면 대응 */
-@media (max-width: 480px) {
-  .movie-card {
-    width: 50%;
-  }
-
-  .year {
-    font-size: 20px;
-  }
-
-  .event {
-    font-size: 12px;
   }
 }
 </style>

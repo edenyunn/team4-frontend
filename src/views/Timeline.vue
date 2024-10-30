@@ -103,7 +103,6 @@ html, body {
   gap: 4px;
 }
 
-
 /* 웰컴 박스 */
 .welcome-section {
   padding: 40px 20px;
@@ -119,7 +118,7 @@ html, body {
   font-size: 20px;
   font-weight: 150;
   font-family: 'NotoSansKR-VariableFont_wght';
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255);
 }
 
 .timeline-section {
@@ -133,7 +132,7 @@ html, body {
   top: 0;
   bottom: 0;
   width: 1px;
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgb(255, 255, 255);
   transform: translateX(-50%);
 }
 
@@ -159,7 +158,7 @@ html, body {
 .event {
   font-size: 13.7px;
   font-family: 'NotoSansKR-VariableFont_wght';
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255);
   text-align: center;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
   background-color: #222222; /* 배경색 추가 */
@@ -187,6 +186,7 @@ html, body {
   display: flex;
   margin-bottom: 100px;  /* 아이템 간 간격 늘림 */
   position: relative;
+  align-items: center;
 }
 
 .movie-poster {
@@ -202,9 +202,9 @@ html, body {
 }
 
 .movie-summary {
-  margin-top: 0x;
+  margin-top: 10px;
   font-size: 14px;
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255);
   white-space: pre-line;
 }
 

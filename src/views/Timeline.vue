@@ -144,38 +144,42 @@ html, body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 8px;
   z-index: 2;
 }
 
 .year {
-  font-size: 10px;
+  font-size: 25px;
   font-weight: bold;
   font-family: 'NotoSansKR-VariableFont_wght';
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  background-color: #222222; /* 배경색 추가 */
+  padding: 0 10px; /* 좌우 패딩 추가 */
 }
 
 .event {
-  font-size: 10px;
+  font-size: 13.7px;
   font-family: 'NotoSansKR-VariableFont_wght';
   color: rgba(255, 255, 255, 0.8);
   text-align: center;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  background-color: #222222; /* 배경색 추가 */
+  padding: 0 10px; /* 좌우 패딩 추가 */
+  white-space: pre-line;
 }
 
 .movie-card {
-  width: 20%;
+  width: 35%;
   border-radius: 8px;
 }
 
 .item-left .movie-card {
   margin-right: auto;
-  margin-left: 20%;
+  margin-left: 1%;
 }
 
 .item-right .movie-card {
   margin-left: auto;
-  margin-right: 20%;
+  margin-right: 1%;
 }
 
 /* 타임라인 아이템 간격 조정 */
@@ -198,9 +202,10 @@ html, body {
 }
 
 .movie-summary {
-  margin-top: 0px;
-  font-size: 4.5px;
+  margin-top: 0x;
+  font-size: 14px;
   color: rgba(255, 255, 255, 0.8);
+  white-space: pre-line;
 }
 
 /* 사이드바 스타일 */
@@ -217,7 +222,7 @@ html, body {
 }
 
 /* 모바일 버전 스타일 */
-@media (max-width: 800px) {
+@media (max-width: 0px) {
   .dark-container {
     max-width: 430px;
     margin: 0 auto;
@@ -226,6 +231,12 @@ html, body {
   .movie-card {
     width: 45%;
   }
+
+  .movie-summary {
+  margin-top: 0px;
+  font-size: 6.9px;
+  color: rgba(255, 255, 255, 0.8);
+}
   
   .timeline-line {
     left: 50%;

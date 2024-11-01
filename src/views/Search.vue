@@ -3,9 +3,9 @@
 
     <!-- guide Section -->
     <div class="guide-section">
-      <h1 class="guide-title">Welcome to<br />POV</h1>
-      <br />
-      <h2 class="guide-subtitle">한국 근현대사 관련 영화를 질문해주시면<br />해당 영화를 타임라인에서 찾아드립니다.</h2>
+      <h1 class="guide-title">Welcome to<br/>POV</h1>
+      <br/>
+      <h2 class="guide-subtitle">한국 근현대사 관련 영화를 질문해주시면<br/>해당 영화를 타임라인에서 찾아드립니다.</h2>
     </div>
 
     <!-- 채팅 창 영역 -->
@@ -13,10 +13,6 @@
       <div v-for="(chat, index) in chatHistory" :key="index"
         :class="['chat-bubble', chat.isUser ? 'user-bubble' : 'bot-bubble']">
         {{ chat.message }}
-
-        <img v-for="movie in relatedMovies" :key="movie.id" :src="movie.imageUrl" :alt="movie.title"
-          class="movie-poster" />
-
       </div>
       <!-- 로딩 모션 -->
       <div v-if="isLoading" class="loading-spinner"></div>
@@ -24,19 +20,16 @@
 
     <!-- 프롬프트 입력 영역 -->
     <footer class="footer">
-      <input type="text" v-model="userInput" placeholder="메시지" @keyup.enter="sendMessage" class="message-input"
-        :disabled="isLoading" />
+      <input type="text" v-model="userInput" placeholder="메시지" @keyup.enter="sendMessage" class="message-input" :disabled="isLoading" />
       <button @click="sendMessage" class="send-button" :disabled="isLoading">➤</button>
     </footer>
   </div>
 </template>
 
 <script>
-import movies from '@/assets/movies.js';  // assets 폴더 경로 지정
 
 import axios from 'axios'
 const BASE_URL = 'http://127.0.0.1:5000/'
-
 
 export default {
   components: {
@@ -46,13 +39,7 @@ export default {
       userInput: "", // 새로운 메시지를 저장
       chatHistory: [], // 채팅 메시지 목록
       isLoading: false, // 로딩 상태
-      movieIds: []
     };
-  },
-  computed: {
-    relatedMovies() {
-      return this.movieIds.forEach(id => movies.find(movie => movie.id === id))
-    }
   },
   methods: {
     async sendMessage() {
@@ -60,26 +47,15 @@ export default {
         // 메시지가 비어 있지 않을 때만 전송
         this.chatHistory.push({ message: this.userInput, isUser: true }); // 보낸 메시지는 사용자 메시지로 분류
         this.isLoading = true; // 로딩 상태 시작
+        // this.userInput = ""; // 입력창 비활성화
 
         try {
           // URL 로 요청을 보냄
           const res = await axios.post(BASE_URL, {
             message: this.userInput,
           });
-
-          // 서버로부터 받은 응답 메시지와 movie_ids를 가져옴
-          console.log(res.data)
-          const botMessage = res.data.llm;
-          this.movieIds = res.data.movie_ids;
-          // movies.js의 데이터를 불러오면서 require를 통해 동적 이미지 경로 적용
-          
-          // const movieData = movieIds.map(id => {
-          //   const movie = movies.find(movie => movie.id === id);
-          //   return { ...movie }; // imageUrl은 이미 movies.js에서 import된 상태
-          // });
-
           // 받은 응답메시지를 chatHistory에 추가함
-          this.chatHistory.push({ isUser: false, message: botMessage, movies: [...this.relatedMovies] });
+          this.chatHistory.push({ isUser: false, message: res.data.llm });
         } catch (error) {
           console.error("Error sending message:", error);
         } finally {
@@ -119,13 +95,11 @@ body {
   padding: 40px 20px;
   text-align: center;
 }
-
 .guide-title {
   font-size: 36px;
   font-weight: bold;
   margin-bottom: 16px;
 }
-
 .guide-subtitle {
   font-size: 20px;
   font-weight: 500;
@@ -175,21 +149,10 @@ body {
   /* 왼쪽 정렬 */
 }
 
-.movie-poster {
-  width: 100px;
-  height: auto;
-  margin: 5px;
-  border-radius: 8px;
-}
-
-s
-
 /* 로딩 애니메이션 */
 .loading-spinner {
-  border: 4px solid rgba(255, 255, 255, 0.3);
-  /* 회색 테두리 */
-  border-left-color: #ffffff;
-  /* 흰색 테두리 */
+  border: 4px solid rgba(255, 255, 255, 0.3); /* 회색 테두리 */
+  border-left-color: #ffffff; /* 흰색 테두리 */
   border-radius: 50%;
   width: 24px;
   height: 24px;
@@ -201,7 +164,6 @@ s
   0% {
     transform: rotate(0deg);
   }
-
   100% {
     transform: rotate(360deg);
   }
@@ -211,8 +173,7 @@ s
 .message-input[disabled] {
   background-color: #444;
   cursor: not-allowed;
-  color: transparent;
-  /* 글자 숨김 */
+  color: transparent; /* 글자 숨김 */
 }
 
 /* 프롬프트 입력창 스타일 */

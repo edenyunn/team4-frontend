@@ -138,11 +138,14 @@ html, body {
 .year-marker {
   position: absolute;
   left: 50%;
-  transform: translateX(-50%);
+  top: 40%;
+  transform: translate(-50%, -50%);
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 3px;
   z-index: 2;
+  width: auto;
 }
 
 .year {
@@ -165,6 +168,7 @@ html, body {
   padding: 0 10px; /* 좌우 패딩 추가 */
   letter-spacing: -0.4px; /* 자간 줄이기 */
   white-space: pre-line;
+  margin-top: -10px;
 }
 
 .movie-card {
@@ -203,7 +207,7 @@ html, body {
 }
 
 .movie-summary {
-  margin-top: 0px;
+  margin-top: 10px;
   font-size: 48px;
   font-weight: light;
   font-family: 'BookkMyungjo_Light';

@@ -109,14 +109,14 @@ html, body {
 }
 .welcome-title {
   font-size: 48px;
-  font-weight: 500;
-  font-family: 'BlackHanSans-Regular';
+  font-weight: bold;
+  font-family: 'Raleway', sans-serif;
   margin-bottom: 16px;
 }
 .welcome-subtitle {
   font-size: 48px;
   font-weight: 150;
-  font-family: 'NotoSansKR-VariableFont_wght';
+  font-family: 'Raleway', sans-serif;
   color: rgba(255, 255, 255);
 }
 
@@ -148,7 +148,7 @@ html, body {
 .year {
   font-size: 48px;
   font-weight: bold;
-  font-family: 'NotoSansKR-VariableFont_wght';
+  font-family: 'Pretendard-SemiBold';
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
   background-color: #222222; /* 배경색 추가 */
   padding: 0 10px; /* 좌우 패딩 추가 */
@@ -156,7 +156,8 @@ html, body {
 
 .event {
   font-size: 48px;
-  font-family: 'NotoSansKR-VariableFont_wght';
+  font-weight: medium;
+  font-family: 'Pretendard-Medium';
   color: rgba(255, 255, 255);
   text-align: center;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
@@ -201,8 +202,10 @@ html, body {
 }
 
 .movie-summary {
-  margin-top: 20px;
+  margin-top: 0px;
   font-size: 48px;
+  font-weight: light;
+  font-family: 'BookkMyungjoOTF_Light';
   color: rgba(255, 255, 255);
   white-space: pre-line;
 }
@@ -222,10 +225,10 @@ html, body {
 
 /* 아이폰 화면(430px 이하)에서의 고정값 */
 @media screen and (max-width: 431px) {
-  .welcome-title { font-size: 24px; }
-  .welcome-subtitle { font-size: 19px; }
-  .year { font-size: 15px; }
-  .event { font-size: 8px; }
+  .welcome-title { font-size: 36px; }
+  .welcome-subtitle { font-size: 18px; }
+  .year { font-size: 25px; }
+  .event { font-size: 10px; }
   .movie-summary { font-size: 8px; }
   .movie-card { width: 120px; }
   .timeline-item { margin-bottom: 20px; }

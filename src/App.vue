@@ -45,6 +45,22 @@ html, body {
 }
 
 @font-face {
+    font-family: 'Pretendard-SemiBold';
+    src: url('@/assets/fonts/Pretendard-Bold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard-Medium';
+    src: url('@/assets/fonts/Pretendard-Medium.otf') format('opentype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
     font-family: 'BlackHanSans-Regular';
     src: url('@/assets/fonts/BlackHanSans-Regular.ttf') format('truetype');
     font-weight: normal;
@@ -58,10 +74,11 @@ html, body {
     font-style: normal;
 }
 
+/* BookkMyungjo 폰트 추가 */
 @font-face {
-    font-family: 'PretendardVariable';
-    src: url('/web/static/fonts/PretendardVariable.ttf') format('truetype');
-    font-weight: 1 999; /* PretendardVariable의 가변 굵기 범위 */
+    font-family: 'BookkMyungjo_Light';
+    src: url('@/assets/fonts/BookkMyungjo_Light.ttf') format('opentype');
+    font-weight: normal;
     font-style: normal;
     font-display: swap;
 }

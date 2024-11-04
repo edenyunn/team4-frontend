@@ -147,11 +147,11 @@ html, body {
 
 .year {
   font-size: 48px;
-  font-weight: bold;
   font-family: 'Pretendard-SemiBold';
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
   background-color: #222222; /* 배경색 추가 */
   padding: 0 10px; /* 좌우 패딩 추가 */
+  letter-spacing: -1px; /* 자간 줄이기 */
 }
 
 .event {
@@ -163,6 +163,7 @@ html, body {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
   background-color: #222222; /* 배경색 추가 */
   padding: 0 10px; /* 좌우 패딩 추가 */
+  letter-spacing: -0.4px; /* 자간 줄이기 */
   white-space: pre-line;
 }
 
@@ -205,7 +206,7 @@ html, body {
   margin-top: 0px;
   font-size: 48px;
   font-weight: light;
-  font-family: 'BookkMyungjoOTF_Light';
+  font-family: 'BookkMyungjo_Light';
   color: rgba(255, 255, 255);
   white-space: pre-line;
 }
@@ -227,10 +228,10 @@ html, body {
 @media screen and (max-width: 431px) {
   .welcome-title { font-size: 36px; }
   .welcome-subtitle { font-size: 18px; }
-  .year { font-size: 25px; }
-  .event { font-size: 10px; }
-  .movie-summary { font-size: 8px; }
-  .movie-card { width: 120px; }
+  .year { font-size: 30px; }
+  .event { font-size: 11px; }
+  .movie-summary { font-size: 9px; }
+  .movie-card { width: 110px; }
   .timeline-item { margin-bottom: 20px; }
 }
 
@@ -239,7 +240,7 @@ html, body {
  .welcome-title { font-size: 24px; }
  .welcome-subtitle { font-size: 19px; }
  .year { font-size: 15px; }
- .event { font-size: 10px; }
+ .event { font-size: 9px; }
  .movie-summary { font-size: 10px; }
  .movie-card { width: 135px; }
  .timeline-item { margin-bottom: 20px; }

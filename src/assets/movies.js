@@ -78,7 +78,7 @@ export default [
     { id: 26, title: '남산의 부장들', eventYear: 1979, event: '10·26사태', summary: '당신의 저녁 식사가 정치적 \n음모의 무대가 된다면?', imageUrl: 남산의부장들 },
     { id: 27, title: '그때 그 사람들', event: '10·26사태', summary: '남산에 계신 부장님들보다는 \n훨씬 유머러스하네요', imageUrl: 그때그사람들 },
     { id: 28, title: '행복의 나라', event: '12·12사태', summary: '', imageUrl: 행복의나라 },
-    { id: 29, title: '서울의 봄', event: '12·12사태', summary: '1979년 12월, 누구도 \n예상하지 못한 생일잔치', imageUrl: 서울의봄 },
+    { id: 29, title: '서울의 봄', event: '12·12사태', summary: '누구도 예상 못한 생일잔치', imageUrl: 서울의봄 },
     { id: 30, title: '화려한 휴가', eventYear: 1980, event: '5·18민주화운동', summary: '전혀 화려하지 않았던 휴가', imageUrl: 화려한휴가 },
     { id: 31, title: '택시운전사', event: '5·18민주화운동', summary: '노 광주, 노 민주(주의)', imageUrl: 택시운전사 },
     { id: 32, title: '박하사탕', event: '5·18민주화운동', summary: '', imageUrl: 박하사탕 },

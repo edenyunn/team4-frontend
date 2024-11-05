@@ -53,6 +53,20 @@ html, body {
 }
 
 @font-face {
+    font-family: 'Raleway-Bold';
+    src: url('@/assets/fonts/Raleway-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Raleway-SemiBold';
+    src: url('@/assets/fonts/Raleway-SemiBold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
     font-family: 'Pretendard-Medium';
     src: url('@/assets/fonts/Pretendard-Medium.otf') format('opentype');
     font-weight: 500;

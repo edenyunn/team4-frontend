@@ -2,10 +2,11 @@
   <div class="my-container">
 
     <!-- guide Section -->
-    <div class="guide-section">
-      <h1 class="guide-title">Welcome to<br/>POV</h1>
+    <div class="welcome-section">
+      <h1 class="welcome-title">Welcome to<br/>POV</h1>
       <br/>
-      <h2 class="guide-subtitle">한국 근현대사 관련 영화를 질문해주시면<br/>해당 영화를 타임라인에서 찾아드립니다.</h2>
+      <h2 class="welcome-subtitle">한국 근현대사 관련 영화를 질문해주시면 해당 영화를 타임라인에서 찾아드립니다.</h2>
+      <div class="divider"></div> <!-- 새로 추가된 구분선 -->
     </div>
 
     <!-- 채팅 창 영역 -->
@@ -91,19 +92,28 @@ body {
 }
 
 /* 가이드 박스 */
-.guide-section {
+.welcome-section {
   padding: 40px 20px;
   text-align: center;
 }
-.guide-title {
+.welcome-title {
   font-size: 36px;
   font-weight: bold;
+  font-family: 'Raleway-Bold';
   margin-bottom: 16px;
 }
-.guide-subtitle {
+.welcome-subtitle {
   font-size: 20px;
-  font-weight: 500;
-  color: rgba(255, 255, 255, 0.8);
+  font-weight: 150;
+  font-family: 'Raleway-SemiBold';
+  color: rgba(255, 255, 255);
+}
+/* 구분선 스타일 */
+.divider {
+  width: calc(100% + 40px); /* 컨테이너보다 좌우로 20px씩 더 길게 */
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.5);
+  margin: 20px -20px; /* 음수 마진으로 좌우로 확장 */
 }
 
 /* 채팅박스 스타일 */

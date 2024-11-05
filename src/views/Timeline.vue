@@ -5,6 +5,7 @@
     <div class="welcome-section">
       <h1 class="welcome-title">Welcome to<br/>POV</h1>
       <h2 class="welcome-subtitle">Major Films in Modern Korean History</h2>
+      <div class="divider"></div> <!-- 새로 추가된 구분선 -->
     </div>
 
     <!-- Timeline Section -->
@@ -110,14 +111,23 @@ html, body {
 .welcome-title {
   font-size: 48px;
   font-weight: bold;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Raleway-Bold';
   margin-bottom: 16px;
+  letter-spacing: -1px;
 }
 .welcome-subtitle {
   font-size: 48px;
   font-weight: 150;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Raleway-SemiBold';
   color: rgba(255, 255, 255);
+  letter-spacing: -1px;
+}
+/* 구분선 스타일 */
+.divider {
+  width: calc(100% + 40px); /* 컨테이너보다 좌우로 20px씩 더 길게 */
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.5);
+  margin: 20px -20px; /* 음수 마진으로 좌우로 확장 */
 }
 
 .timeline-section {
@@ -168,7 +178,7 @@ html, body {
   padding: 0 10px; /* 좌우 패딩 추가 */
   letter-spacing: -0.4px; /* 자간 줄이기 */
   white-space: pre-line;
-  margin-top: -10px;
+  margin-top: -8px;
 }
 
 .movie-card {

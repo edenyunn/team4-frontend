@@ -1,5 +1,12 @@
 <template>
-  <div class="gallery-container">
+  <div class="dark-container">
+    <!-- Welcome Section -->
+    <div class="welcome-section">
+      <h1 class="welcome-title">POV<br/>INSIDE</h1>
+      <h2 class="welcome-subtitle">Major Films in Modern Korean History</h2>
+      <div class="divider"></div> <!-- 새로 추가된 구분선 -->
+    </div>
+
     <button
       v-for="(image, name) in images"
       :key="name"
@@ -24,14 +31,14 @@
 </template>
 
 <script>
-import { defineAsyncComponent } from 'vue';
-import pov1950Logo from '@/assets/pov1950logo.png';
-import pov1979Logo from '@/assets/pov1979logo.png';
-import pov1980Logo from '@/assets/pov1980logo.png';
+import { defineAsyncComponent } from "vue";
+import pov1950Logo from "@/assets/pov1950logo.png";
+import pov1979Logo from "@/assets/pov1979logo.png";
+import pov1980Logo from "@/assets/pov1980logo.png";
 
 export default {
-  name: 'ModalGallery',
-  
+  name: "ModalGallery",
+
   data() {
     return {
       isModalOpen: false,
@@ -40,19 +47,19 @@ export default {
       images: {
         Pov1950: pov1950Logo,
         Pov1979: pov1979Logo,
-        Pov1980: pov1980Logo
-      }
+        Pov1980: pov1980Logo,
+      },
     };
   },
 
   computed: {
     currentModal() {
       if (!this.currentComponent) return null;
-      
-      return defineAsyncComponent(() => 
+
+      return defineAsyncComponent(() =>
         import(`@/components/${this.currentComponent}.vue`)
       );
-    }
+    },
   },
 
   methods: {
@@ -70,14 +77,42 @@ export default {
       this.isModalOpen = false;
       this.currentComponent = null;
       this.modalProps = {};
-    }
-  }
+    },
+  },
 };
 </script>
 
 <style scoped>
+/* 웰컴 박스 */
+.welcome-section {
+  padding: 40px 20px;
+  text-align: left;
+}
+.welcome-title {
+  font-size: 36px;
+  font-weight: bold;
+  font-family: "Raleway-Bold";
+  margin-bottom: 16px;
+  letter-spacing: -1px;
+}
+.welcome-subtitle {
+  font-size: 18px;
+  font-weight: 150;
+  font-family: "Raleway-SemiBold";
+  color: rgba(255, 255, 255);
+  letter-spacing: -1px;
+}
+/* 구분선 스타일 */
+.divider {
+  width: calc(100% + 40px); /* 컨테이너보다 좌우로 20px씩 더 길게 */
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.5);
+  margin: 20px -20px; /* 음수 마진으로 좌우로 확장 */
+}
+
 .gallery-container {
   display: flex;
+  flex-direction: column;
   justify-content: space-evenly;
   align-items: center; /* 세로 중앙 정렬 */
   min-height: 100vh; /* 화면 높이의 100% 사용 */
@@ -85,6 +120,16 @@ export default {
   background-color: var(--dark-bg, #1a1a1a);
 }
 
+/* 갤러리 그리드 */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4rem;
+  padding: 2rem;
+  justify-items: center;
+  align-items: center;
+  min-height: calc(100vh - 200px); /* welcome section 높이를 고려한 조정 */
+}
 
 .gallery-item {
   background: none;
@@ -92,6 +137,8 @@ export default {
   cursor: pointer;
   padding: 0.5rem;
   transition: transform 0.2s ease;
+  width: 100%;
+  max-width: 506px; /* Cast.vue와 비슷한 크기로 조정 */
 }
 
 .gallery-item:hover,
@@ -102,8 +149,9 @@ export default {
 }
 
 .gallery-item img {
-  max-width: 100%;
+  width: 65%;
   height: auto;
+  object-fit: cover;
 }
 
 /* 모바일 화면 크기일 때 세로 정렬 */

@@ -14,7 +14,7 @@
               @click="toggleMusic"
             >
               <i :class="isPlaying ? 'bi bi-pause-fill' : 'bi bi-play-fill'"></i>
-              OST 재생하기
+              OST 재생
             </button>
             <button 
               type="button" 
@@ -147,6 +147,9 @@ export default {
 }
 
 .modal.show {
+  font-size: 15px;
+  font-weight: 150;
+  font-family: 'Raleway-SemiBold';
   display: block;
   animation: fadeIn 0.3s ease-in-out;
 }

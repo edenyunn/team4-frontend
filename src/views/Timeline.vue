@@ -3,8 +3,8 @@
   <div class="dark-container">
     <!-- Welcome Section -->
     <div class="welcome-section">
-      <h1 class="welcome-title">Welcome to<br/>POV</h1>
-      <h2 class="welcome-subtitle">Major Films in Modern Korean History</h2>
+      <h1 class="welcome-title">Welcome to POV</h1>
+      <h2 class="welcome-subtitle">한국어로 하자</h2>
       <div class="divider"></div> <!-- 새로 추가된 구분선 -->
     </div>
 
@@ -128,6 +128,7 @@ html, body {
   height: 1px;
   background-color: rgba(255, 255, 255, 0.5);
   margin: 20px -20px; /* 음수 마진으로 좌우로 확장 */
+  margin-top: 55px;
 }
 
 .timeline-section {
@@ -143,6 +144,7 @@ html, body {
   width: 1px;
   background-color: rgb(255, 255, 255);
   transform: translateX(-50%);
+  margin-top: -60px;
 }
 
 .year-marker {

@@ -2,8 +2,8 @@
   <div class="dark-container">
     <!-- Welcome Section -->
     <div class="welcome-section">
-      <h1 class="welcome-title">Actor<br/>Universe</h1>
-      <h2 class="welcome-subtitle">Connecting Character Worlds</h2>
+      <h1 class="welcome-title">Cast</h1>
+      <h2 class="welcome-subtitle">Korean Actor Universe</h2>
       <div class="divider"></div> <!-- 새로 추가된 구분선 -->
     </div>
 
@@ -108,6 +108,7 @@ export default {
   height: 1px;
   background-color: rgba(255, 255, 255, 0.5);
   margin: 20px -20px; /* 음수 마진으로 좌우로 확장 */
+  margin-top: 55px;
 }
 
 .gallery-container {

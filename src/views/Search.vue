@@ -3,9 +3,9 @@
 
     <!-- guide Section -->
     <div class="welcome-section">
-      <h1 class="welcome-title">Welcome to<br/>POV</h1>
+      <h1 class="welcome-title">Search</h1>
       <br/>
-      <h2 class="welcome-subtitle">한국 근현대사 관련 영화를 질문해주시면 해당 영화를 타임라인에서 찾아드립니다.</h2>
+      <h2 class="welcome-subtitle">한국 근현대사 관련 영화를 질문해주시면<br/> 해당 영화를 타임라인에서 찾아드립니다.</h2>
       <div class="divider"></div> <!-- 새로 추가된 구분선 -->
     </div>
 
@@ -94,16 +94,16 @@ body {
 /* 가이드 박스 */
 .welcome-section {
   padding: 40px 20px;
-  text-align: center;
+  text-align: left;
 }
 .welcome-title {
   font-size: 36px;
   font-weight: bold;
   font-family: 'Raleway-Bold';
-  margin-bottom: 16px;
+  margin-bottom: -8px;
 }
 .welcome-subtitle {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 150;
   font-family: 'Raleway-SemiBold';
   color: rgba(255, 255, 255);
@@ -114,6 +114,7 @@ body {
   height: 1px;
   background-color: rgba(255, 255, 255, 0.5);
   margin: 20px -20px; /* 음수 마진으로 좌우로 확장 */
+  margin-top: 55px;
 }
 
 /* 채팅박스 스타일 */
@@ -141,7 +142,6 @@ body {
   white-space: normal;
   /* 말풍선 안에서 줄바꿈 허용 */
 }
-
 
 .user-bubble {
   background-color: #858585;

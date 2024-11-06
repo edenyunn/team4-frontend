@@ -2,7 +2,7 @@
   <div class="dark-container">
     <!-- Welcome Section -->
     <div class="welcome-section">
-      <h1 class="welcome-title">POV<br/>INSIDE</h1>
+      <h1 class="welcome-title">Inside</h1>
       <h2 class="welcome-subtitle">Major Films in Modern Korean History</h2>
       <div class="divider"></div> <!-- 새로 추가된 구분선 -->
     </div>
@@ -92,7 +92,7 @@ export default {
   font-size: 36px;
   font-weight: bold;
   font-family: "Raleway-Bold";
-  margin-bottom: 16px;
+  margin-bottom: 8px;
   letter-spacing: -1px;
 }
 .welcome-subtitle {
@@ -108,6 +108,7 @@ export default {
   height: 1px;
   background-color: rgba(255, 255, 255, 0.5);
   margin: 20px -20px; /* 음수 마진으로 좌우로 확장 */
+  margin-top: 55px;
 }
 
 .gallery-container {

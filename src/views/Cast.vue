@@ -2,8 +2,8 @@
   <div class="dark-container">
     <!-- Welcome Section -->
     <div class="welcome-section">
-      <h1 class="welcome-title">POV<br/>CAST</h1>
-      <h2 class="welcome-subtitle">Major Films in Modern Korean History</h2>
+      <h1 class="welcome-title">Actor<br/>Universe</h1>
+      <h2 class="welcome-subtitle">Connecting Character Worlds</h2>
       <div class="divider"></div> <!-- 새로 추가된 구분선 -->
     </div>
 

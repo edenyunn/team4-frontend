@@ -14,7 +14,7 @@
               @click="toggleMusic"
             >
               <i :class="isPlaying ? 'bi bi-pause-fill' : 'bi bi-play-fill'"></i>
-              배경음악
+              OST 재생하기
             </button>
             <button 
               type="button" 
@@ -136,7 +136,7 @@ export default {
 
 /* 버튼 그룹 스타일 */
 .d-flex.align-items-center {
-  margin-right: 1rem; /* 오른쪽 여백 추가 */
+  margin-right: 0.1rem; /* 오른쪽 여백 추가 */
 }
 
 .modal-image {

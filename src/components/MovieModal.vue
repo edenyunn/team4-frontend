@@ -175,4 +175,29 @@ export default {
   height: 0;
   overflow: hidden;
 }
+
+/* 추가할 반응형 비디오 컨테이너 스타일 */
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 비율 */
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  margin: 1rem 0;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* 모바일 화면에서의 조정 */
+@media screen and (max-width: 768px) {
+  .video-container {
+    margin: 0.5rem 0;
+  }
+}
 </style>

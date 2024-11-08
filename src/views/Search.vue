@@ -5,7 +5,7 @@
     <div class="welcome-section">
       <h1 class="welcome-title">Search</h1>
       <br/>
-      <h2 class="welcome-subtitle">한국 근현대사 관련 영화를 질문해주시면<br/> 해당 영화를 타임라인에서 찾아드립니다.</h2>
+      <h2 class="welcome-subtitle">한국 현대사를 다룬 영화,<br/> 알고 싶은 사건과 인물로 탐색하세요.</h2>
       <div class="divider"></div> <!-- 새로 추가된 구분선 -->
     </div>
 

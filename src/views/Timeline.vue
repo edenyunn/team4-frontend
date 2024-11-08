@@ -4,7 +4,7 @@
     <!-- Welcome Section -->
     <div class="welcome-section">
       <h1 class="welcome-title">Welcome to POV</h1>
-      <h2 class="welcome-subtitle">한국어로 하자</h2>
+      <h2 class="welcome-subtitle">한국 현대사 영화와 실제 사건을<br/>한눈에 연결하는 타임라인</h2>
       <div class="divider"></div> <!-- 새로 추가된 구분선 -->
     </div>
 
@@ -253,34 +253,34 @@ html, body {
 
 /* 모바일 화면(431px-577px 범위)에서의 고정값 */
 @media screen and (min-width: 431px) and (max-width: 577px) {
- .welcome-title { font-size: 24px; }
- .welcome-subtitle { font-size: 19px; }
- .year { font-size: 15px; }
- .event { font-size: 9px; }
- .movie-summary { font-size: 10px; }
- .movie-card { width: 135px; }
+ .welcome-title { font-size: 38px; }
+ .welcome-subtitle { font-size: 22px; }
+ .year { font-size: 30px; }
+ .event { font-size: 12px; }
+ .movie-summary { font-size: 11px; }
+ .movie-card { width: 140px; }
  .timeline-item { margin-bottom: 20px; }
 }
 
-/* 태블릿 화면(577px-1025px 범위)에서의 고정값 */
+/* 태블릿 세로 화면(577px-1025px 범위)에서의 고정값 */
 @media screen and (min-width: 577px) and (max-width: 1025px) {
  .welcome-title { font-size: 24px; }
  .welcome-subtitle { font-size: 19px; }
- .year { font-size: 20px; }
- .event { font-size: 15px; }
- .movie-summary { font-size: 15px; }
- .movie-card { width: 200px; }
+ .year { font-size: 35px; }
+ .event { font-size: 17px; }
+ .movie-summary { font-size: 14px; }
+ .movie-card { width: 180px; }
  .timeline-item { margin-bottom: 20px; }
 }
 
-/* 데스크톱 화면(1025px-1919px 범위)에서의 고정값 */
+/* 태블릿 가로 화면(1025px-1919px 범위)에서의 고정값 */
 @media screen and (min-width: 1025px) and (max-width: 1919px) {
   .welcome-title { font-size: 36px; }
   .welcome-subtitle { font-size: 36px; }
-  .year { font-size: 30px; }
+  .year { font-size: 40px; }
   .event { font-size: 30px; }
-  .movie-summary { font-size: 25px; }
-  .movie-card { width: 350px; }
+  .movie-summary { font-size: 20px; }
+  .movie-card { width: 250px; }
   .timeline-item { margin-bottom: 20px; }
 }
 </style>

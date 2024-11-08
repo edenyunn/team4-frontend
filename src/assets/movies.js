@@ -87,7 +87,7 @@ export default [
     { id: 35, title: '남영동', eventYear: 1985, event: '서울대 민추위 사건', summary: '', imageUrl: 남영동 },
     { id: 36, title: '비공식작전', eventYear: 1986, event: '레바논 한국 외교관 \n납치 사건', summary: '', imageUrl: 비공식작전 },
     { id: 37, title: '살인의 추억', event: '화성연쇄살인사건', summary: '', imageUrl: 살인의추억 },
-    { id: 38, title: '1987', eventYear: 1987, event: '6월민주항쟁', summary: '민주주의까지 남은 거리, 87m', imageUrl: 일구팔칠 },
+    { id: 38, title: '1987', eventYear: 1987, event: '6월민주항쟁', summary: '역사를 바꾼 그해의 외침', imageUrl: 일구팔칠 },
     { id: 39, title: '범죄와의 전쟁', eventYear: 1990, event: '10·13 특별선언', summary: '’느그 서장’이랑 \n친하면 다 되는 세상', imageUrl: 범죄와의전쟁 },
     { id: 40, title: '모가디슈', eventYear: 1991, event: '소말리아\n외교공관 철수', summary: '', imageUrl: 모가디슈 },
     { id: 41, title: '삼진그룹', event: '낙동강\n페놀 유출사건', summary: '', imageUrl: 삼진그룹 },

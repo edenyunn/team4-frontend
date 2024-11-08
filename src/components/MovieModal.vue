@@ -130,6 +130,7 @@ export default {
 </script>
 
 <style scoped>
+
 .modal-header {
   padding: 1rem 1.5rem; /* 헤더의 패딩 값 조정 */
 }
@@ -144,14 +145,6 @@ export default {
   max-height: 50vh;
   object-fit: cover;
   border-radius: 4px;
-}
-
-.modal.show {
-  font-size: 15px;
-  font-weight: 150;
-  font-family: 'Raleway-SemiBold';
-  display: block;
-  animation: fadeIn 0.3s ease-in-out;
 }
 
 @keyframes fadeIn {
@@ -193,6 +186,11 @@ export default {
   width: 100%;
   height: 100%;
 }
+
+::v-deep(.blockquote) {
+  font-size: 1.5rem;
+  font-weight: light;
+  font-family: 'BookkMyungjo_Light';}
 
 /* 모바일 화면에서의 조정 */
 @media screen and (max-width: 768px) {

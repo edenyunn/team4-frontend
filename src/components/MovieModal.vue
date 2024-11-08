@@ -81,7 +81,7 @@
           <hr>
           
           <!-- Timeline Section -->
-          <h5 class="eventLists"><strong>그날의 사건들</strong></h5>
+          <h5 class="eventLists"><strong>📅 그날의 사건들</strong></h5>
           <ul class="paContent">
             <li v-for="(item, index) in movie?.details?.eventDetails?.timeline" :key="index">
               <strong>{{ item.date }}:</strong> {{ item.event }}

@@ -37,13 +37,15 @@
           <!-- Quote Section -->
           <figure class="text-center" v-if="movie?.details?.quote">
             <blockquote class="blockquote">
-              <p>{{ movie.details.quote.text }}</p>
+              <p>"{{ movie.details.quote.text }}"</p>
             </blockquote>
             <figcaption class="blockquote-footer">
               <em>{{ movie.details.quote.author }} ({{ movie.details.quote.actor }})</em>
               <cite :title="movie.details.quote.source">{{ movie.details.quote.source }}</cite>
             </figcaption>
           </figure>
+
+          <br>
 
           <!-- Background Music -->
           <iframe 
@@ -98,7 +100,6 @@
           
           <!-- Related Videos Section -->
           <h5 class="prVideo"><strong>📰 함께 보면 좋을 자료</strong></h5>
-          <br>
           <div 
             v-for="(video, index) in movie?.details?.relatedVideos"
             :key="index"

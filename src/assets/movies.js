@@ -59,7 +59,67 @@ export default [
     { id: 7, title: '암살', eventYear: 1932, event: '우가키 조선총독 \n암살 작전', summary: '목표는 하나, \n조국을 위한 암살', imageUrl: 암살 },
     { id: 8, title: '마이웨이', eventYear: 1937, event: '중일전쟁', summary: '도쿄에서 경성, \n그리고 노르망디까지', imageUrl: 마이웨이 },
     { id: 9, title: '말모이', eventYear: 1942, event: '조선어학회 사건', summary: '한 장의 종이에 \n희망을 새기다', imageUrl: 말모이 },
-    { id: 10, title: '동주', eventYear: 1944, event: '윤동주 형무소 수감', summary: '짧았던 청춘, 영원한 시', imageUrl: 동주 },
+    {
+            id: 10,
+            title: '동주',
+            eventYear: 1944,
+            event: '윤동주 형무소 수감',
+            summary: '짧았던 청춘, 영원한 시',
+            imageUrl: 동주,
+            // 추가되는 상세 정보들
+            details: {
+                // 인용구 정보
+                quote: {
+                    text: "하늘을 우러러 한 점 부끄럼 없기를…",
+                    author: "윤동주",
+                    actor: "강하늘",
+                    source: "동주"
+                },
+                // 시놉시스 (문단별로 배열로 저장)
+                synopsis: [
+                    "이름도, 언어도, 꿈도, 모든 것이 허락되지 않았던 일제강점기. 한 집에서 태어나고 자란 동갑내기 사촌지간 동주와 몽규. 시인을 꿈꾸는 청년 동주에게 신념을 위해 거침없이 행동하는 청년 몽규는 가장 가까운 벗이면서도, 넘기 힘든 산처럼 느껴진다.",
+                    "창씨개명을 강요하는 혼란스러운 나라를 떠나 일본 유학 길에 오른 두 사람. 일본으로 건너간 뒤 몽규는 더욱 독립 운동에 매진하게 되고, 절망적인 순간에도 시를 쓰며 시대의 비극을 아파하던 동주와의 갈등은 점점 깊어진다. 어둠의 시대, 평생을 함께 한 친구이자 영원한 라이벌이었던 윤동주와 송몽규의 끝나지 않은 이야기가 지금 시작된다."
+                ],
+                // 사건 정보
+                eventDetails: {
+                    period: "1910년 ~ 1945년 (윤동주 사망 1945.2.16.)",
+                    keywords: ["일제강점기", "저항시인", "윤동주", "송몽규", "문학", "독립운동"],
+                    timeline: [
+                        {
+                            date: "1945년 2월 16일",
+                            event: "윤동주, 후쿠오카 형무소에서 사망"
+                        },
+                        {
+                            date: "1943년 7월",
+                            event: "윤동주, 일본에서 체포"
+                        },
+                        {
+                            date: "1945년 8월 15일",
+                            event: "광복"
+                        }
+                    ]
+                },
+                // 시대상 설명
+                historicalContext: "1930-1940년대의 한국은 일제의 압박 속에서 독립운동이 점차 조직화되던 시기였다. 많은 청년들이 교육을 위해 일본으로 유학을 떠났지만, 그곳에서도 차별과 억압을 겪었다. 윤동주와 송몽규 같은 인물들은 문학과 지식으로 저항하고자 했고, 그들의 활동은 일본의 감시와 탄압을 피해 나아갔다. 이 시기는 한국 문학사에서 중요한 전환점이 되었으며, 많은 저항 문인들이 탄생한 시기이기도 하다.",
+                // 관련 영상
+                relatedVideos: [
+                    {
+                        title: "관련 영상 1",
+                        youtubeId: "W1QIciSrI2o",
+                        params: "si=YooTJcs85-31MI14"
+                    },
+                    {
+                        title: "관련 영상 2",
+                        youtubeId: "QkiK1oEDrho",
+                        params: "si=-Koc20T8SKf1ZzGi"
+                    }
+                ],
+                // 배경음악 정보
+                backgroundMusic: {
+                    youtubeId: "LcR0Uyku1LQ"
+                }
+            }
+        },
     { id: 11, title: '군함도', eventYear: 1945, event: '일본의 패망과 광복', summary: '일본이 숨긴 섬, \n조선이 잊을 수 없는 섬', imageUrl: 군함도 },
     { id: 12, title: '보스톤', eventYear: 1947, event: '보스턴 마라톤 우승', summary: '태극기로 완주하다', imageUrl: 보스톤 },
     { id: 13, title: '태극기 휘날리며', eventYear: 1950, event: '6·25전쟁', summary: '돌아온다고 \n약속했잖아요', imageUrl: 태극기휘날리며 },

@@ -1,12 +1,9 @@
 <template>
-   <div v-if="isOpen" class="modal show d-block" tabindex="-1">
+  <div v-if="isOpen" class="modal show d-block" tabindex="-1">
     <div class="modal-dialog modal-fullscreen">
       <div class="modal-content bg-dark text-white">
         <div class="modal-header border-secondary d-flex justify-content-between">
-          <!-- 왼쪽: 제목 -->
           <h1 class="modal-title fs-4">{{ movie?.title || '' }}</h1>
-          
-          <!-- 오른쪽: 버튼들 -->
           <div class="d-flex align-items-center gap-2">
             <button 
               v-if="player"
@@ -36,8 +33,89 @@
             <h5 class="mb-3">{{ movie?.eventYear }}&nbsp;{{ movie?.event }}</h5>
             <p class="movie-description">{{ movie?.summary }}</p>
           </div>
+          
+          <!-- Quote Section -->
+          <figure class="text-center" v-if="movie?.details?.quote">
+            <blockquote class="blockquote">
+              <p>{{ movie.details.quote.text }}</p>
+            </blockquote>
+            <figcaption class="blockquote-footer">
+              <em>{{ movie.details.quote.author }} ({{ movie.details.quote.actor }})</em>
+              <cite :title="movie.details.quote.source">{{ movie.details.quote.source }}</cite>
+            </figcaption>
+          </figure>
+
+          <!-- Background Music -->
+          <iframe 
+            v-if="movie?.details?.backgroundMusic"
+            id="bgMusic"
+            style="display: none;"
+            :src="'https://www.youtube.com/embed/' + movie.details.backgroundMusic.youtubeId + '?enablejsapi=1'"
+            allow="autoplay">
+          </iframe>
+
+          <hr>
+          
+          <!-- Synopsis Section -->
+          <h5 class="synopsis"><strong>✨ 시놉시스</strong></h5>
+          <p 
+            v-for="(paragraph, index) in movie?.details?.synopsis" 
+            :key="index"
+            class="paContent"
+          >
+            {{ paragraph }}
+          </p>
+
+          <hr>
+          
+          <!-- Event Details Section -->
+          <h5 class="eventSummary"><strong>🕰️ 사건 개요</strong></h5>
+          <ul class="paContent" v-if="movie?.details?.eventDetails">
+            <li><strong>기간:</strong> {{ movie.details.eventDetails.period }}</li>
+            <li>
+              <strong>핵심 키워드:</strong> 
+              {{ movie.details.eventDetails.keywords.map(k => '#' + k).join(' ') }}
+            </li>
+          </ul>
+
+          <hr>
+          
+          <!-- Timeline Section -->
+          <h5 class="eventLists"><strong>그날의 사건들</strong></h5>
+          <ul class="paContent">
+            <li v-for="(item, index) in movie?.details?.eventDetails?.timeline" :key="index">
+              <strong>{{ item.date }}:</strong> {{ item.event }}
+            </li>
+          </ul>
+
+          <hr>
+          
+          <!-- Historical Context Section -->
+          <h5 class="historyDescription"><strong>📌 시대상</strong></h5>
+          <p class="paContent">{{ movie?.details?.historicalContext }}</p>
+
+          <hr>
+          
+          <!-- Related Videos Section -->
+          <h5 class="prVideo"><strong>📰 함께 보면 좋을 자료</strong></h5>
           <br>
-          <div v-html="renderedHTML"></div>
+          <div 
+            v-for="(video, index) in movie?.details?.relatedVideos"
+            :key="index"
+            class="video-container"
+          >
+            <iframe 
+              width="100%" 
+              height="315" 
+              :src="'https://www.youtube.com/embed/' + video.youtubeId + '?si=' + video.params"
+              title="YouTube video player" 
+              frameborder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+              referrerpolicy="strict-origin-when-cross-origin" 
+              allowfullscreen>
+            </iframe>
+            <br>
+          </div>
         </div>
       </div>
     </div>
@@ -59,7 +137,6 @@ export default {
   },
   data() {
     return {
-      renderedHTML: '',
       isPlaying: false,
       player: null
     };
@@ -83,7 +160,7 @@ export default {
       }
     },
     initializePlayer() {
-      if (window.YT && window.YT.Player) {
+      if (window.YT && window.YT.Player && this.movie?.details?.backgroundMusic) {
         const iframe = document.getElementById('bgMusic');
         if (iframe) {
           this.player = new window.YT.Player('bgMusic', {
@@ -98,26 +175,24 @@ export default {
       }
     }
   },
-  async updated() {
-    const id = this.movie?.id || 1;
-    try {
-      const response = await fetch(`/src/assets/movie-html/${id}.html`);
-      if (response.ok) {
-        this.renderedHTML = await response.text();
-        // DOM이 업데이트된 후에 플레이어 초기화
-        this.$nextTick(() => {
-          if (!this.player) {
-            if (window.YT && window.YT.Player) {
-              this.initializePlayer();
-            } else {
-              // YouTube API가 아직 로드되지 않았다면 기다림
-              window.onYouTubeIframeAPIReady = this.initializePlayer;
+  watch: {
+    // movie prop이 변경될 때마다 플레이어 초기화
+    movie: {
+      handler(newMovie) {
+        if (newMovie) {
+          this.$nextTick(() => {
+            if (!this.player) {
+              if (window.YT && window.YT.Player) {
+                this.initializePlayer();
+              } else {
+                // YouTube API가 아직 로드되지 않았다면 기다림
+                window.onYouTubeIframeAPIReady = this.initializePlayer;
+              }
             }
-          }
-        });
-      }
-    } catch (error) {
-      console.error('Failed to load HTML content');
+          });
+        }
+      },
+      immediate: true
     }
   },
   beforeUnmount() {
@@ -130,14 +205,12 @@ export default {
 </script>
 
 <style scoped>
-
 .modal-header {
-  padding: 1rem 1.5rem; /* 헤더의 패딩 값 조정 */
+  padding: 1rem 1.5rem;
 }
 
-/* 버튼 그룹 스타일 */
 .d-flex.align-items-center {
-  margin-right: 0.1rem; /* 오른쪽 여백 추가 */
+  margin-right: 0.1rem;
 }
 
 .modal-image {
@@ -145,11 +218,6 @@ export default {
   max-height: 50vh;
   object-fit: cover;
   border-radius: 4px;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
 }
 
 .modal {
@@ -160,19 +228,9 @@ export default {
   z-index: 1040;
 }
 
-.youtube-player-container {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 0;
-  overflow: hidden;
-}
-
-/* 추가할 반응형 비디오 컨테이너 스타일 */
 .video-container {
   position: relative;
-  padding-bottom: 56.25%; /* 16:9 비율 */
+  padding-bottom: 56.25%;
   height: 0;
   overflow: hidden;
   max-width: 100%;
@@ -187,15 +245,43 @@ export default {
   height: 100%;
 }
 
-::v-deep(.blockquote) {
+/* blockquote 스타일 */
+.blockquote {
   font-size: 1.5rem;
   font-weight: light;
-  font-family: 'BookkMyungjo_Light';}
+  font-family: 'BookkMyungjo_Light';
+  margin: 2rem 0;
+}
+
+.blockquote-footer {
+  color: #6c757d;
+  margin-top: 0.5rem;
+}
+
+/* 섹션 제목 스타일 */
+h5 {
+  margin: 1.5rem 0 1rem;
+  font-weight: bold;
+}
+
+/* 콘텐츠 텍스트 스타일 */
+.paContent {
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
 
 /* 모바일 화면에서의 조정 */
 @media screen and (max-width: 768px) {
+  .modal-image {
+    max-width: 80%;
+  }
+  
   .video-container {
     margin: 0.5rem 0;
+  }
+  
+  .blockquote {
+    font-size: 1.2rem;
   }
 }
 </style>

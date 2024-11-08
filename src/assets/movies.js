@@ -155,7 +155,7 @@ export default [
     { id: 43, title: '국가부도의 날', eventYear: 1997, event: 'IMF 외환위기', summary: '그날 우리 아버지가 \n해고 당한 이유', imageUrl: 국가부도의날, details: {} },
     { id: 44, title: '공작', event: '제15대 대통령 선거', summary: '서로를 믿고 싶었던 \n두 남자의 ‘비즈니스’', imageUrl: 공작, details: {} },
     { id: 45, title: '연평해전', eventYear: 2002, event: '제2연평해전', summary: '모두가 붉게 물든 2002년, \n진짜 영웅은 따로 있었다', imageUrl: 연평해전, details: {} },
-    { id: 46, title: '추격자', eventYear: 2003, event: '유영철 연쇄살인 사건', summary: '혹시 망치나 몽둥이 같은 거 있어요?', imageUrl: 추격자, details: {} },
+    { id: 46, title: '추격자', eventYear: 2003, event: '유영철 연쇄살인 사건', summary: '혹시 망치나 \n몽둥이 같은 거 있어요?', imageUrl: 추격자, details: {} },
     { id: 47, title: '더킹', eventYear: 2004, event: '노무현 탄핵 소추', summary: '대한민국 현대 정치사 입문서', imageUrl: 더킹, details: {} },
     { id: 48, title: '아이캔스피크', eventYear: 2007, event: '미국 의회 \n위안부 결의안', summary: '할머니의 사연 있는 ‘ABCD’', imageUrl: 아이캔스피크, details: {} },
     { id: 49, title: '댓글부대', eventYear: 2012, event: '국정원·국방부 \n여론조작 의혹', summary: '클릭 한 번으로 \n세상을 조작할 수 있다면', imageUrl: 댓글부대, details: {} },

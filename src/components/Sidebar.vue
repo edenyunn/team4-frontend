@@ -5,19 +5,19 @@
       <div class="sidebar-menu">
         <RouterLink to="/movies" class="menu-item">
           Timeline
-          <span class="small-subtitle">POV 타임라인</span>
+          <span class="small-subtitle">현대사 타임라인</span>
         </RouterLink>
         <RouterLink to="/search" class="menu-item">
           Search
-          <span class="small-subtitle">AI 영화 길잡이</span>
-        </RouterLink>
-        <RouterLink to="/inside" class="menu-item">
-          Inside
-          <span class="small-subtitle">그 시대 속으로</span>
+          <span class="small-subtitle">질문으로 영화 찾기</span>
         </RouterLink>
         <RouterLink to="/cast" class="menu-item">
           Cast
           <span class="small-subtitle">배우 개그 유니버스</span>
+        </RouterLink>
+        <RouterLink to="/inside" class="menu-item">
+          Inside
+          <span class="small-subtitle">AI 음악 시리즈</span>
         </RouterLink>
         <RouterLink to="/original" class="menu-item">
           Original

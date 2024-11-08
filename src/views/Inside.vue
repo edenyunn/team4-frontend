@@ -3,7 +3,7 @@
     <!-- Welcome Section -->
     <div class="welcome-section">
       <h1 class="welcome-title">Inside</h1>
-      <h2 class="welcome-subtitle">Major Films in Modern Korean History</h2>
+      <h2 class="welcome-subtitle">생성형 AI로 제작된 음악을 통해<br/>한국 현대사를 다룬 새롭게 느껴보세요</h2>
       <div class="divider"></div> <!-- 새로 추가된 구분선 -->
     </div>
 

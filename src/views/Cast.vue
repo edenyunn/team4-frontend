@@ -3,7 +3,7 @@
     <!-- Welcome Section -->
     <div class="welcome-section">
       <h1 class="welcome-title">Cast</h1>
-      <h2 class="welcome-subtitle">Korean Actor Universe</h2>
+      <h2 class="welcome-subtitle">한국 현대사로 엮은 배우 유니버스<br/>카드뉴스 스토리로 만나보세요</h2>
       <div class="divider"></div> <!-- 새로 추가된 구분선 -->
     </div>
 

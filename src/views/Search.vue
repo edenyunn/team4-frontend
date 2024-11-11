@@ -18,11 +18,12 @@
         <div v-if="chat.movies && chat.movies.length > 0" class="movie-posters">
           <div v-for="movie in chat.movies" :key="movie.id" 
                class="movie-poster" @click="openMovieModal(movie)">
-            <img 
-              :src="movie.imageUrl"
-              :alt="movie.title"
-              @error="handleImageError"
-            >
+               <img 
+                :src="movie.imageUrl" 
+                :alt="movie.title"
+                class="movie-poster-img"
+                @error="handleImageError"
+              >
             <div class="movie-title">{{ movie.title }}</div>
           </div>
         </div>
@@ -250,12 +251,12 @@
   transform: scale(1.05);
  }
  
- .movie-poster img {
+ .movie-poster-img {
   width: 100%;
   height: auto;
   border-radius: 5px;
   object-fit: cover;
- }
+}
  
  .movie-title {
   font-size: 0.8em;

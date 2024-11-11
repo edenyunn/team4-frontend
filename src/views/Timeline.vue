@@ -4,7 +4,7 @@
     <!-- Welcome Section -->
     <div class="welcome-section">
       <h1 class="welcome-title">Welcome to POV</h1>
-      <h2 class="welcome-subtitle">한국 현대사 영화와 실제 사건을<br/>한눈에 연결하는 타임라인</h2>
+      <h2 class="welcome-subtitle">한국 영화와 현대사를<br/>한눈에 연결하는 타임라인</h2>
       <div class="divider"></div> <!-- 새로 추가된 구분선 -->
     </div>
 

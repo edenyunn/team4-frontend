@@ -595,7 +595,11 @@ export default [
                     youtubeId: "nXlnkPKlZRo",
                     params: "feature=shared"
                 }
-            ]
+            ],
+            // 배경음악 정보
+            backgroundMusic: {
+                youtubeId: "vRg9OOrrHOw"
+            }
         }
     },
     { id: 15, title: '장사리', event: '장사상륙작전', summary: '역사의 각주로 남은 \n그들의 청춘', imageUrl: 장사리, details: {} },
@@ -649,7 +653,11 @@ export default [
                     youtubeId: "nXlnkPKlZRo",
                     params: "feature=shared"
                 }
-            ]
+            ],
+            // 배경음악 정보
+            backgroundMusic: {
+                youtubeId: "vRg9OOrrHOw"
+            }
         }
     },
     { id: 17, title: '웰컴 투 동막골', event: '중공군 개입', summary: '총 대신 막걸리, \n수류탄 대신 감자', imageUrl: 웰컴투동막골, details: {} },
@@ -708,7 +716,11 @@ export default [
                     youtubeId: "nXlnkPKlZRo",
                     params: "feature=shared"
                 }
-            ]
+            ],
+            // 배경음악 정보
+            backgroundMusic: {
+                youtubeId: "vRg9OOrrHOw"
+            }
         }
     },
     {
@@ -767,7 +779,11 @@ export default [
                     youtubeId: "nXlnkPKlZRo",
                     params: "feature=shared"
                 }
-            ]
+            ],
+            // 배경음악 정보
+            backgroundMusic: {
+                youtubeId: "vRg9OOrrHOw"
+            }
         }
     },
     {
@@ -823,7 +839,11 @@ export default [
                     youtubeId: "nXlnkPKlZRo",
                     params: "feature=shared"
                 }
-            ]
+            ],
+            // 배경음악 정보
+            backgroundMusic: {
+                youtubeId: "vRg9OOrrHOw"
+            }
         }
     },
     {
@@ -881,7 +901,11 @@ export default [
                     youtubeId: "nXlnkPKlZRo",
                     params: "feature=shared"
                 }
-            ]
+            ],
+            // 배경음악 정보
+            backgroundMusic: {
+                youtubeId: "vRg9OOrrHOw"
+            }
         }
     },
     { id: 22, title: '하이재킹', eventYear: 1971, event: '대한한공 F27기 \n납북미수사건', summary: '88년 서울행 비행기, \n목적지는 평양!?', imageUrl: 하이재킹, details: {} },
@@ -938,7 +962,11 @@ export default [
                     youtubeId: "nXlnkPKlZRo",
                     params: "feature=shared"
                 }
-            ]
+            ],
+            // 배경음악 정보
+            backgroundMusic: {
+                youtubeId: "vRg9OOrrHOw"
+            }
         }
     },
     { id: 24, title: '님은 먼곳에', event: '베트남 전쟁', summary: '전쟁터에서도 멈추지 않은 \n그리움의 멜로디', imageUrl: 님은먼곳에, details: {} },
@@ -992,7 +1020,11 @@ export default [
                     youtubeId: "nXlnkPKlZRo",
                     params: "feature=shared"
                 }
-            ]
+            ],
+            // 배경음악 정보
+            backgroundMusic: {
+                youtubeId: "vRg9OOrrHOw"
+            }
         }
     },
     {
@@ -1045,7 +1077,11 @@ export default [
                     youtubeId: "nXlnkPKlZRo",
                     params: "feature=shared"
                 }
-            ]
+            ],
+            // 배경음악 정보
+            backgroundMusic: {
+                youtubeId: "vRg9OOrrHOw"
+            }
         }
     },
     {
@@ -1101,7 +1137,11 @@ export default [
                     youtubeId: "nXlnkPKlZRo",
                     params: "feature=shared"
                 }
-            ]
+            ],
+            // 배경음악 정보
+            backgroundMusic: {
+                youtubeId: "vRg9OOrrHOw"
+            }
         }
     },
     { id: 29, title: '행복의 나라', event: '12·12사태', summary: '5공 유니버스의 마무리', imageUrl: 행복의나라, details: {} },
@@ -1159,7 +1199,11 @@ export default [
                     youtubeId: "nXlnkPKlZRo",
                     params: "feature=shared"
                 }
-            ]
+            ],
+            // 배경음악 정보
+            backgroundMusic: {
+                youtubeId: "vRg9OOrrHOw"
+            }
         }
     },
     {
@@ -1216,7 +1260,11 @@ export default [
                     youtubeId: "nXlnkPKlZRo",
                     params: "feature=shared"
                 }
-            ]
+            ],
+            // 배경음악 정보
+            backgroundMusic: {
+                youtubeId: "vRg9OOrrHOw"
+            }
         }
     },
     { id: 32, title: '박하사탕', event: '5·18민주화운동', summary: '한 남자의 되돌릴 수 없는 과거', imageUrl: 박하사탕, details: {} },
@@ -1274,7 +1322,11 @@ export default [
                     youtubeId: "nXlnkPKlZRo",
                     params: "feature=shared"
                 }
-            ]
+            ],
+            // 배경음악 정보
+            backgroundMusic: {
+                youtubeId: "vRg9OOrrHOw"
+            }
         }
     },
     {
@@ -1331,7 +1383,11 @@ export default [
                     youtubeId: "nXlnkPKlZRo",
                     params: "feature=shared"
                 }
-            ]
+            ],
+            // 배경음악 정보
+            backgroundMusic: {
+                youtubeId: "vRg9OOrrHOw"
+            }
         }
     },
     { id: 35, title: '남영동', eventYear: 1985, event: '서울대 민추위 사건', summary: '삭제된 509호 고문실의 기록', imageUrl: 남영동, details: {} },
@@ -1391,7 +1447,11 @@ export default [
                     youtubeId: "nXlnkPKlZRo",
                     params: "feature=shared"
                 }
-            ]
+            ],
+            // 배경음악 정보
+            backgroundMusic: {
+                youtubeId: "vRg9OOrrHOw"
+            }
         }
     },
     {
@@ -1448,7 +1508,11 @@ export default [
                     youtubeId: "nXlnkPKlZRo",
                     params: "feature=shared"
                 }
-            ]
+            ],
+            // 배경음악 정보
+            backgroundMusic: {
+                youtubeId: "vRg9OOrrHOw"
+            }
         }
     },
     { id: 40, title: '모가디슈', eventYear: 1991, event: '소말리아\n외교공관 철수', summary: '두 개의 국가, 하나의 탈출구', imageUrl: 모가디슈, details: {} },
@@ -1508,7 +1572,11 @@ export default [
                     youtubeId: "nXlnkPKlZRo",
                     params: "feature=shared"
                 }
-            ]
+            ],
+            // 배경음악 정보
+            backgroundMusic: {
+                youtubeId: "vRg9OOrrHOw"
+            }
         }
     },
     {
@@ -1561,7 +1629,11 @@ export default [
                     youtubeId: "nXlnkPKlZRo",
                     params: "feature=shared"
                 }
-            ]
+            ],
+            // 배경음악 정보
+            backgroundMusic: {
+                youtubeId: "vRg9OOrrHOw"
+            }
         }
     },
     {
@@ -1625,10 +1697,14 @@ export default [
                     youtubeId: "nXlnkPKlZRo",
                     params: "feature=shared"
                 }
-            ]
+            ],
+            // 배경음악 정보
+            backgroundMusic: {
+                youtubeId: "vRg9OOrrHOw"
+            }
         }
     },
-    { id: 46, title: '추격자', eventYear: 2003, event: '유영철 연쇄살인 사건', summary: '혹시 망치나 \n몽둥이 같은 거 있어요?', imageUrl: 추격자, details: {} },
+    { id: 46, title: '추격자', eventYear: 2003, event: '유영철 연쇄살인 사건', summary: '그 아가씨가 여기 있대니깐', imageUrl: 추격자, details: {} },
     {
         id: 47,
         title: '더 킹',
@@ -1682,7 +1758,11 @@ export default [
                     youtubeId: "nXlnkPKlZRo",
                     params: "feature=shared"
                 }
-            ]
+            ],
+            // 배경음악 정보
+            backgroundMusic: {
+                youtubeId: "vRg9OOrrHOw"
+            }
         }
     },
     {
@@ -1735,7 +1815,11 @@ export default [
                     youtubeId: "nXlnkPKlZRo",
                     params: "feature=shared"
                 }
-            ]
+            ],
+            // 배경음악 정보
+            backgroundMusic: {
+                youtubeId: "vRg9OOrrHOw"
+            }
         }
     },
     {
@@ -1792,7 +1876,11 @@ export default [
                     youtubeId: "nXlnkPKlZRo",
                     params: "feature=shared"
                 }
-            ]
+            ],
+            // 배경음악 정보
+            backgroundMusic: {
+                youtubeId: "vRg9OOrrHOw"
+            }
         }
     },
     { id: 50, title: '내부자들', eventYear: 2016, event: '고위 공무원 \n국민 개·돼지 발언', summary: '정의라는 달달한 것이 \n아직 남아있긴 한가', imageUrl: 내부자들, details: {} },

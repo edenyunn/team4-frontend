@@ -35,7 +35,9 @@
         </div>
       </div>
       <!-- 로딩 모션 -->
-      <div v-if="isLoading" class="loading-spinner"></div>
+    </div>
+    <div v-if="isLoading" class="spinner-grow" role="status">
+        <span class="visually-hidden">Loading...</span>
     </div>
 
     <!-- MovieModal 컴포넌트 -->
@@ -255,17 +257,6 @@ export default {
   text-align: center;
   margin-top: 5px;
   word-break: keep-all; /* 단어 단위로 줄바꿈 */
- }
- 
- /* 로딩 애니메이션 */
- .loading-spinner {
-  border: 4px solid rgba(255, 255, 255, 0.3); /* 회색 테두리 */
-  border-left-color: #ffffff; /* 흰색 테두리 */
-  border-radius: 50%;
-  width: 24px;
-  height: 24px;
-  animation: spin 1s linear infinite;
-  margin: auto;
  }
  
  @keyframes spin {

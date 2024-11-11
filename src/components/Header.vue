@@ -1,7 +1,7 @@
 <template>
     <header class="header fixed-top">
       <div class="povlogo-container">
-        <RouterLink to="/search">
+        <RouterLink to="/movies">
           <img class="povlogo" src="@/assets/mock-logo.png" alt="POV 로고" />
         </RouterLink>
       </div>

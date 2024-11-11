@@ -14,10 +14,25 @@
       <div v-for="(chat, index) in chatHistory" :key="index"
         :class="['chat-bubble', chat.isUser ? 'user-bubble' : 'bot-bubble']">
         {{ chat.message }}
+        <!-- 영화 포스터 목록 추가 -->
+        <div v-if="chat.movies && chat.movies.length" class="movie-posters">
+          <div v-for="movie in chat.movies" :key="movie.id" 
+               class="movie-poster" @click="openMovieModal(movie)">
+            <img :src="movie.imageUrl" :alt="movie.title">
+            <div class="movie-title">{{ movie.title }}</div>
+          </div>
+        </div>
       </div>
       <!-- 로딩 모션 -->
       <div v-if="isLoading" class="loading-spinner"></div>
     </div>
+
+    <!-- MovieModal 컴포넌트 추가 -->
+    <MovieModal 
+      :is-open="showModal"
+      :movie="selectedMovie"
+      @close="closeModal"
+    />
 
     <!-- 프롬프트 입력 영역 -->
     <footer class="footer">
@@ -30,16 +45,22 @@
 <script>
 
 import axios from 'axios'
+import movies from '@/assets/movies.js'
+import MovieModal from '@/components/MovieModal.vue'
+
 const BASE_URL = 'http://127.0.0.1:5000/'
 
 export default {
   components: {
+    MovieModal
   },
   data() {
     return {
       userInput: "", // 새로운 메시지를 저장
       chatHistory: [], // 채팅 메시지 목록
       isLoading: false, // 로딩 상태
+      showModal: false,
+      selectedMovie: null
     };
   },
   methods: {
@@ -55,18 +76,36 @@ export default {
           const res = await axios.post(BASE_URL, {
             message: this.userInput,
           });
+
+          // 영화 정보 매칭
+          const matchedMovies = res.data.movieIds
+            .map(id => movies.find(m => m.id.toString() === id))
+            .filter(m => m);
+
           // 받은 응답메시지를 chatHistory에 추가함
-          this.chatHistory.push({ isUser: false, message: res.data.llm });
+          this.chatHistory.push({ 
+            message: res.data.llm, 
+            isUser: false,
+            movies: matchedMovies
+          });
         } catch (error) {
           console.error("Error sending message:", error);
         } finally {
-          this.isLoading = false; // 로딩 상태 끝
-          this.userInput = ''
+          this.isLoading = false;
+          this.userInput = '';
         }
       }
     },
-  },
-};
+    openMovieModal(movie) {
+      this.selectedMovie = movie;
+      this.showModal = true;
+    },
+    closeModal() {
+      this.showModal = false;
+      this.selectedMovie = null;
+    }
+  }
+}
 </script>
 
 <style scoped>
@@ -157,6 +196,34 @@ body {
   color: white;
   margin-right: auto;
   /* 왼쪽 정렬 */
+}
+
+.movie-posters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.movie-poster {
+  width: 120px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.movie-poster:hover {
+  transform: scale(1.05);
+}
+
+.movie-poster img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.movie-title {
+  font-size: 0.8em;
+  text-align: center;
+  margin-top: 5px;
 }
 
 /* 로딩 애니메이션 */

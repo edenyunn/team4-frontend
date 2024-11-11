@@ -237,6 +237,11 @@ export default {
 <style scoped>
 .modal-header {
   padding: 1rem 1.5rem;
+  font-family: 'Pretendard-SemiBold';
+}
+
+.modal-body {
+  font-family: 'Pretendard-Light';
 }
 
 .d-flex.align-items-center {
@@ -286,18 +291,21 @@ export default {
 .blockquote-footer {
   color: #6c757d;
   margin-top: 0.5rem;
+  font-family: 'Pretendard-Light';
 }
 
 /* 섹션 제목 스타일 */
 h5 {
   margin: 1.5rem 0 1rem;
   font-weight: bold;
+  font-family: 'Pretendard-SemiBold';
 }
 
 /* 콘텐츠 텍스트 스타일 */
 .paContent {
   line-height: 1.6;
   margin-bottom: 1rem;
+  font-family: 'Pretendard-Light';
 }
 
 /* 모바일 화면에서의 조정 */

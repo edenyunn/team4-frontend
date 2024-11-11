@@ -2,6 +2,7 @@
 <template>
     <div v-if="isSidebarOpen" class="sidebar">
       <button class="close-sidebar" @click="$emit('toggle-sidebar')">X 닫기</button>
+      <br>
       <div class="sidebar-menu">
         <RouterLink to="/movies" class="menu-item">
           Timeline
@@ -37,7 +38,7 @@ export default {
 
 <style scoped>
 .sidebar {
-  position: absolute;
+  position: fixed; /* 화면 전체에서 고정 */
   top: 0;
   left: 0;
   width: 250px;
@@ -45,7 +46,7 @@ export default {
   background-color: #333;
   color: white;
   padding: 10px;
-  z-index: 100;
+  z-index: 1050; /* 헤더보다 높은 z-index 설정 */
   transition: transform 0.3s ease;
 }
 
@@ -79,5 +80,8 @@ export default {
   color: white;
   font-size: 15px;
   cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px;
 }
 </style>

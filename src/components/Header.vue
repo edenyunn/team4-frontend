@@ -2,7 +2,7 @@
     <header class="header fixed-top">
       <div class="povlogo-container">
         <RouterLink to="/movies">
-          <img class="povlogo" src="@/assets/mock-logo.png" alt="POV 로고" />
+          <img class="povlogo" src="@/assets/mock-logo4.png" alt="POV 로고" />
         </RouterLink>
       </div>
       <button class="sidebar-button" @click="$emit('toggle-sidebar')">

@@ -1,5 +1,5 @@
 <template>
-    <header class="header">
+    <header class="header fixed-top">
       <div class="povlogo-container">
         <RouterLink to="/search">
           <img class="povlogo" src="@/assets/mock-logo.png" alt="POV 로고" />
@@ -18,17 +18,18 @@
   </script>
   
   <style scoped>
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-  left: 0;
-  right: 0;
-  background-color: #222222;
-  position: relative;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.5); /* 하얀 실선 불투명도 조절 */
-}
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    left: 0;
+    right: 0;
+    top: 0; /* 화면 상단에 고정 */
+    background-color: #222222;
+    position: fixed; /* 화면에 고정 */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5); /* 하얀 실선 불투명도 조절 */
+  }
   
   .povlogo-container {
     position: absolute;

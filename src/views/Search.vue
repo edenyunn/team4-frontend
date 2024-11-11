@@ -1,29 +1,35 @@
 <template>
   <div class="my-container">
- 
     <!-- guide Section -->
     <div class="welcome-section">
       <h1 class="welcome-title">Search</h1>
       <br/>
       <h2 class="welcome-subtitle">한국 현대사를 다룬 영화,<br/> 알고 싶은 사건과 인물로 탐색하세요.</h2>
-      <div class="divider"></div> <!-- 새로 추가된 구분선 -->
+      <div class="divider"></div>
     </div>
- 
+
     <!-- 채팅 창 영역 -->
     <div class="chat-box">
       <div v-for="(chat, index) in chatHistory" :key="index"
         :class="['chat-bubble', chat.isUser ? 'user-bubble' : 'bot-bubble']">
-        {{ chat.message }}
-        <!-- 영화 포스터 목록 추가 -->
+        <!-- 사용자 메시지는 그대로 표시 -->
+        <template v-if="chat.isUser">
+          {{ chat.message }}
+        </template>
+        <!-- 봇 메시지는 generation 내용만 표시 -->
+        <template v-else>
+          {{ typeof chat.message === 'object' ? chat.message.generation : chat.message }}
+        </template>
+        <!-- 영화 포스터 목록 -->
         <div v-if="chat.movies && chat.movies.length > 0" class="movie-posters">
           <div v-for="movie in chat.movies" :key="movie.id" 
                class="movie-poster" @click="openMovieModal(movie)">
-               <img 
-                :src="movie.imageUrl" 
-                :alt="movie.title"
-                class="movie-poster-img"
-                @error="handleImageError"
-              >
+            <img 
+              :src="movie.imageUrl" 
+              :alt="movie.title"
+              class="movie-poster-img"
+              @error="handleImageError"
+            >
             <div class="movie-title">{{ movie.title }}</div>
           </div>
         </div>
@@ -31,40 +37,38 @@
       <!-- 로딩 모션 -->
       <div v-if="isLoading" class="loading-spinner"></div>
     </div>
- 
-    <!-- MovieModal 컴포넌트 추가 -->
+
+    <!-- MovieModal 컴포넌트 -->
     <MovieModal 
       :is-open="showModal"
       :movie="selectedMovie"
       @close="closeModal"
     />
- 
+
     <!-- 프롬프트 입력 영역 -->
     <footer class="footer">
       <input type="text" v-model="userInput" placeholder="메시지" @keyup.enter="sendMessage" class="message-input" :disabled="isLoading" />
       <button @click="sendMessage" class="send-button" :disabled="isLoading">➤</button>
     </footer>
   </div>
- </template>
- 
- <script>
- import axios from 'axios'
- import movies from '@/assets/movies.js'
- import MovieModal from '@/components/MovieModal.vue'
- 
- const BASE_URL = 'http://127.0.0.1:5000/'
- 
- console.log('Available movies:', movies); // movies 배열 확인
- 
- export default {
+</template>
+
+<script>
+import axios from 'axios'
+import movies from '@/assets/movies.js'
+import MovieModal from '@/components/MovieModal.vue'
+
+const BASE_URL = 'http://127.0.0.1:5000/'
+
+export default {
   components: {
     MovieModal
   },
   data() {
     return {
-      userInput: "", // 새로운 메시지를 저장
-      chatHistory: [], // 채팅 메시지 목록
-      isLoading: false, // 로딩 상태
+      userInput: "",
+      chatHistory: [],
+      isLoading: false,
       showModal: false,
       selectedMovie: null
     };
@@ -72,6 +76,7 @@
   methods: {
     async sendMessage() {
       if (this.userInput.trim() !== "") {
+        // 사용자 메시지 추가
         this.chatHistory.push({ message: this.userInput, isUser: true });
         this.isLoading = true;
         
@@ -80,30 +85,20 @@
             message: this.userInput,
           });
           
-          console.log('Backend Response:', res.data); // 응답 확인
-          console.log('Movie IDs:', res.data.movieIds); // movieIds 확인
-          
           // 영화 정보 매칭
           const matchedMovies = (res.data.movieIds || [])
-            .map(id => {
-              const found = movies.find(m => String(m.id) === String(id));
-              console.log(`Matching ID ${id}:`, found); // 매칭 과정 확인
-              return found;
-            })
-            .filter(Boolean); // null/undefined 제거
-            
-          console.log('Matched Movies:', matchedMovies); // 최종 매칭된 영화들 확인
- 
+            .map(id => movies.find(m => String(m.id) === String(id)))
+            .filter(Boolean);
+
+          // 봇 응답 추가 - llm 객체를 직접 사용
           this.chatHistory.push({ 
             message: res.data.llm, 
             isUser: false,
             movies: matchedMovies
           });
- 
-          console.log('Updated Chat History:', this.chatHistory); // 채팅 히스토리 확인
+
         } catch (error) {
           console.error("Error sending message:", error);
-          // 에러 메시지를 채팅창에 표시
           this.chatHistory.push({ 
             message: "죄송합니다. 오류가 발생했습니다. 잠시 후 다시 시도해주세요.", 
             isUser: false 
@@ -124,26 +119,23 @@
     },
     handleImageError(e) {
       console.error('Image failed to load:', e.target.src);
-      // 필요하다면 대체 이미지로 교체
-      e.target.src = '/placeholder-movie-poster.jpg'; // 기본 대체 이미지 경로 설정
+      e.target.src = '/placeholder-movie-poster.jpg';
     }
   },
   mounted() {
-    // 컴포넌트가 마운트되었을 때 채팅창 스크롤을 맨 아래로
     this.$nextTick(() => {
       const chatBox = document.querySelector('.chat-box');
       chatBox.scrollTop = chatBox.scrollHeight;
     });
   },
   updated() {
-    // 채팅 내용이 업데이트될 때마다 스크롤을 맨 아래로
     this.$nextTick(() => {
       const chatBox = document.querySelector('.chat-box');
       chatBox.scrollTop = chatBox.scrollHeight;
     });
   }
- }
- </script>
+}
+</script>
  
  <style scoped>
  /* 검은색 배경에 흰색 글씨, 화면을 꽉 채움 */

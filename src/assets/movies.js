@@ -107,7 +107,7 @@ export default [
             ],
             // 배경음악 정보
             backgroundMusic: {
-                youtubeId: "vRg9OOrrHOw"
+                youtubeId: "vcT84Oah4KE"
             }
         }
     },    
@@ -241,10 +241,9 @@ export default [
         details: {
             // 인용구 정보
             quote: {
-                text: "적과 동지의 경계에서, 믿음이란 무엇인가",
-                author: "이정출",
-                actor: "송강호",
-                source: "밀정"
+                text: "우리는 실패해도 앞으로 나아가야 합니다 그 실패가 쌓이고 우리는 그 실패를 디딛고 더 높은곳으로 나아 가야 합니다",
+                author: "정채산",
+                actor: "이병헌",
             },
             // 시놉시스 (문단별로 배열로 저장)
             synopsis: [
@@ -272,7 +271,7 @@ export default [
                 ]
             },
             // 시대상 설명
-            historicalContext: "1920년대는 독립운동이 무장투쟁으로 활발히 진행되던 시기였다.\n의열단을 비롯한 독립운동 단체들이 조직적으로 항일 의거를 전개했고, 일제는 이에 대응해 밀정을 심어 조직 내부를 와해시키려 했다.\n이 시기는 항일운동의 빛과 그림자가 극적으로 얽힌 시대였다.",
+            historicalContext: "1920년대 조선은 일제의 문화통치 아래 겉으로는 유화적이었으나, 실제로는 더욱 교묘한 감시와 탄압이 이루어졌다. 독립운동가들은 목숨을 걸고 항일투쟁을 이어갔지만, 일제의 밀정정책으로 인해 동지도 적도 쉽게 믿을 수 없는 불안한 현실 속에서 활동해야 했다. 이 시기는 항일운동의 빛과 그림자가 극적으로 얽힌 시대였다.",
             // 관련 영상
             relatedVideos: [
                 {
@@ -415,7 +414,62 @@ export default [
         }
     },
     { id: 8, title: '마이웨이', eventYear: 1937, event: '중일전쟁', summary: '도쿄에서 경성, \n그리고 노르망디까지', imageUrl: 마이웨이, details: {} },
-    { id: 9, title: '말모이', eventYear: 1942, event: '조선어학회 사건', summary: '한 장의 종이에 \n희망을 새기다', imageUrl: 말모이, details: {} },
+    {
+        id: 9,
+        title: '말모이',
+        eventYear: 1942,
+        event: '조선어학회 사건',
+        summary: '한 장의 종이에 희망을 새기다',
+        imageUrl: 말모이, // 해당 포스터 파일 경로 연결
+        details: {
+            // 인용구 정보
+            quote: {
+                text: "말은 민족의 정신이요, 글은 민족의 생명입니다.",
+                author: "류정환",
+                actor: "김판수",
+            },
+            // 시놉시스 (문단별로 배열로 저장)
+            synopsis: [
+                "1940년대 우리말이 점점 사라져가고 있는 경성. 극장에서 해고된 후 아들 학비 때문에 가방을 훔치다 실패한 판수. 하필 면접 보러 간 조선어학회 대표가 가방 주인 정환이다.",
+                "사전 만드는데 전과자에다 까막눈이라니! 그러나 판수를 반기는 회원들에 밀려 정환은 읽고 쓰기를 떼는 조건으로 그를 받아들인다.",
+                "돈도 아닌 말을 대체 왜 모으나 싶었던 판수는 난생처음 글을 읽으며 우리말의 소중함에 눈뜨고, 정환 또한 전국의 말을 모으는 ‘말모이’에 힘을 보태는 판수를 통해 ‘우리’의 소중함에 눈뜬다. 얼마 남지 않은 시간, 바짝 조여오는 일제의 감시를 피해 ‘말모이’를 끝내야 하는데…"
+            ],
+            // 사건 정보
+            eventDetails: {
+                period: "1942년 ~ 1945년",
+                keywords: ["조선어학회", "한글사전", "일제강점기", "민족정신"],
+                timeline: [
+                    {
+                        date: "1942년 10월",
+                        event: "조선어학회 사건 발생, 회원들 대거 체포"
+                    },
+                    {
+                        date: "1957년",
+                        event: "우리말 큰사전 편찬 완료"
+                    }
+                ]
+            },
+            // 시대상 설명
+            historicalContext: "1940년대 일제강점기, 조선의 언어와 문화가 말살될 위기에 처해 있었다.\n일제는 조선어 사용을 금지하고, 창씨개명을 강요하는 등 민족정신 말살 정책을 펼쳤다.\n이러한 상황에서 조선어학회의 한글 사전 편찬 작업은 단순한 학술 활동을 넘어 민족의 정체성을 지키기 위한 독립운동의 일환이었다.",
+            // 관련 영상
+            relatedVideos: [
+                {
+                    title: "관련 영상 1",
+                    youtubeId: "-LSzxaVP2Ws",
+                    params: "feature=shared"
+                },
+                {
+                    title: "관련 영상 2",
+                    youtubeId: "nXlnkPKlZRo",
+                    params: "feature=shared"
+                }
+            ],
+            // 배경음악 정보
+            backgroundMusic: {
+                youtubeId: "vRg9OOrrHOw"
+            }
+        }
+    },
     {
         id: 10,
         title: '동주',
@@ -483,7 +537,7 @@ export default [
         id: 13,
         title: '태극기 휘날리며',
         eventYear: 1950,
-        event: '한국 전쟁',
+        event: '6·25전쟁',
         summary: '돌아온다고 \n약속했잖아요',
         imageUrl: 태극기휘날리며, // 해당 포스터 파일 경로 연결
         details: {
@@ -542,7 +596,6 @@ export default [
     {
         id: 14,
         title: '포화 속으로',
-        eventYear: 1950,
         event: '포항 전투',
         summary: '포화 소리에 묻힌 \n그들의 청춘',
         imageUrl: 포화속으로, // 해당 포스터 파일 경로 연결
@@ -595,15 +648,18 @@ export default [
                     youtubeId: "nXlnkPKlZRo",
                     params: "feature=shared"
                 }
-            ]
+            ],
+            // 배경음악 정보
+            backgroundMusic: {
+                youtubeId: "vRg9OOrrHOw"
+            }
         }
     },
     { id: 15, title: '장사리', event: '장사상륙작전', summary: '역사의 각주로 남은 \n그들의 청춘', imageUrl: 장사리, details: {} },
     {
         id: 16,
         title: '인천상륙작전',
-        eventYear: 1950,
-        event: '인천 상륙작전',
+        event: '인천상륙작전',
         summary: '기적? 그건 작전이었다',
         imageUrl: 인천상륙작전, // 해당 포스터 파일 경로 연결
         details: {
@@ -649,15 +705,19 @@ export default [
                     youtubeId: "nXlnkPKlZRo",
                     params: "feature=shared"
                 }
-            ]
+            ],
+            // 배경음악 정보
+            backgroundMusic: {
+                youtubeId: "vRg9OOrrHOw"
+            }
         }
     },
     { id: 17, title: '웰컴 투 동막골', event: '중공군 개입', summary: '총 대신 막걸리, \n수류탄 대신 감자', imageUrl: 웰컴투동막골, details: {} },
     {
         id: 18,
         title: '고지전',
-        eventYear: 1951,
-        event: '고지 쟁탈전',
+        eventYear: 1953,
+        event: '휴전 협정',
         summary: '산은 기억한다, \n헛되이 흘린 젊은 피를',
         imageUrl: 고지전, // 해당 포스터 파일 경로 연결
         details: {
@@ -708,14 +768,18 @@ export default [
                     youtubeId: "nXlnkPKlZRo",
                     params: "feature=shared"
                 }
-            ]
+            ],
+            // 배경음악 정보
+            backgroundMusic: {
+                youtubeId: "vRg9OOrrHOw"
+            }
         }
     },
     {
         id: 19,
         title: '효자동 이발사',
         eventYear: 1960,
-        event: '4·19 혁명, 5·16 군사정변',
+        event: '4·19 혁명',
         summary: '‘대머리 그 남자’의 \n은밀한 헤어컷',
         imageUrl: 효자동이발사, // 해당 포스터 파일 경로 연결
         details: {
@@ -767,14 +831,18 @@ export default [
                     youtubeId: "nXlnkPKlZRo",
                     params: "feature=shared"
                 }
-            ]
+            ],
+            // 배경음악 정보
+            backgroundMusic: {
+                youtubeId: "vRg9OOrrHOw"
+            }
         }
     },
     {
         id: 20,
         title: '국제시장',
-        eventYear: 1950,
-        event: '6.25 전쟁, 파독 광부, 베트남 전쟁',
+        eventYear: 1963,
+        event: '서독 광부 파견',
         summary: 'K-아버지 주름살',
         imageUrl: 국제시장, // 해당 포스터 파일 경로 연결
         details: {
@@ -823,7 +891,11 @@ export default [
                     youtubeId: "nXlnkPKlZRo",
                     params: "feature=shared"
                 }
-            ]
+            ],
+            // 배경음악 정보
+            backgroundMusic: {
+                youtubeId: "vRg9OOrrHOw"
+            }
         }
     },
     {
@@ -881,15 +953,18 @@ export default [
                     youtubeId: "nXlnkPKlZRo",
                     params: "feature=shared"
                 }
-            ]
+            ],
+            // 배경음악 정보
+            backgroundMusic: {
+                youtubeId: "vRg9OOrrHOw"
+            }
         }
     },
     { id: 22, title: '하이재킹', eventYear: 1971, event: '대한한공 F27기 \n납북미수사건', summary: '88년 서울행 비행기, \n목적지는 평양!?', imageUrl: 하이재킹, details: {} },
     {
         id: 23,
         title: '킹메이커',
-        eventYear: 1971,
-        event: '신민당 대선 경선',
+        event: '제7대 대통령 선거',
         summary: '정치판 서커스, \n진짜 설계자는 따로 있다',
         imageUrl: 킹메이커, // 해당 포스터 파일 경로 연결
         details: {
@@ -938,7 +1013,11 @@ export default [
                     youtubeId: "nXlnkPKlZRo",
                     params: "feature=shared"
                 }
-            ]
+            ],
+            // 배경음악 정보
+            backgroundMusic: {
+                youtubeId: "vRg9OOrrHOw"
+            }
         }
     },
     { id: 24, title: '님은 먼곳에', event: '베트남 전쟁', summary: '전쟁터에서도 멈추지 않은 \n그리움의 멜로디', imageUrl: 님은먼곳에, details: {} },
@@ -947,7 +1026,7 @@ export default [
         id: 26,
         title: '남산의 부장들',
         eventYear: 1979,
-        event: '10·26 사건',
+        event: '10·26사태',
         summary: '당신의 저녁 식사가 정치적 \n음모의 무대가 된다면?',
         imageUrl: 남산의부장들, // 해당 포스터 파일 경로 연결
         details: {
@@ -956,7 +1035,6 @@ export default [
                 text: "각하, 왜 혁명을 하셨습니까? 왜 우리가 목숨을 걸고 혁명을 했습니까? 백만 이백만, 탱크로 밀어서 죽여버리겠다고? 제발 각하, 정신 좀 차리십시오!",
                 author: "김규평",
                 actor: "이병헌",
-                source: "남산의 부장들"
             },
             // 시놉시스 (문단별로 배열로 저장)
             synopsis: [
@@ -970,11 +1048,11 @@ export default [
                 timeline: [
                     {
                         date: "1979년 10월 26일",
-                        event: "김재규, 서울 종로구 궁정동 안가에서 박정희 대통령을 암살"
+                        event: "김재규, 서울 종로구 궁정동 안가에서 박정희 대통령 암살"
                     },
                     {
                         date: "1979년 12월 12일",
-                        event: "전두환을 중심으로 한 신군부가 쿠데타(12·12 사태)로 권력을 장악"
+                        event: "전두환을 중심으로 한 신군부가 쿠데타로 권력 장악"
                     }
                 ]
             },
@@ -992,14 +1070,17 @@ export default [
                     youtubeId: "nXlnkPKlZRo",
                     params: "feature=shared"
                 }
-            ]
+            ],
+            // 배경음악 정보
+            backgroundMusic: {
+                youtubeId: "vRg9OOrrHOw"
+            }
         }
     },
     {
         id: 27,
         title: '그때 그 사람들',
-        eventYear: 1979,
-        event: '10·26 사건',
+        event: '10·26사태',
         summary: '남산에 계신 부장님들보다는 \n훨씬 유머러스하네요',
         imageUrl: 그때그사람들, // 해당 포스터 파일 경로 연결
         details: {
@@ -1008,7 +1089,6 @@ export default [
                 text: "김 부장... 또 쏠라꼬? 벌써 한 방 묵었다 아이가…",
                 author: "대통령",
                 actor: "송재호",
-                source: "그때 그 사람들"
             },
             // 시놉시스 (문단별로 배열로 저장)
             synopsis: [
@@ -1027,7 +1107,7 @@ export default [
                     },
                     {
                         date: "1979년 12월 12일",
-                        event: "전두환과 신군부가 쿠데타(12·12 사태)를 통해 권력을 장악"
+                        event: "전두환과 신군부가 쿠데타를 통해 권력 장악"
                     }
                 ]
             },
@@ -1045,14 +1125,17 @@ export default [
                     youtubeId: "nXlnkPKlZRo",
                     params: "feature=shared"
                 }
-            ]
+            ],
+            // 배경음악 정보
+            backgroundMusic: {
+                youtubeId: "vRg9OOrrHOw"
+            }
         }
     },
     {
         id: 28,
         title: '서울의 봄',
-        eventYear: 1979,
-        event: '12·12 군사반란',
+        event: '12·12사태',
         summary: '누구도 예상 못한 생일잔치',
         imageUrl: 서울의봄, // 해당 포스터 파일 경로 연결
         details: {
@@ -1061,7 +1144,6 @@ export default [
                 text: "실패하면 반역, 성공하면 혁명 아닙니까?",
                 author: "전두광",
                 actor: "황정민",
-                source: "서울의 봄"
             },
             // 시놉시스 (문단별로 배열로 저장)
             synopsis: [
@@ -1079,7 +1161,7 @@ export default [
                     },
                     {
                         date: "1979년 12월 12일",
-                        event: "전두광과 신군부가 군사반란을 일으켜 정승호 육군참모총장을 체포"
+                        event: "전두환과 하나회가 군사반란을 일으켜 정승화 육군참모총장을 체포"
                     },
                     {
                         date: "1980년 5월 18일",
@@ -1088,7 +1170,7 @@ export default [
                 ]
             },
             // 시대상 설명
-            historicalContext: "1979년 말, 대한민국은 유신체제의 종말로 민주화에 대한 기대가 높아졌던 시기였다.\n하지만 신군부는 민주화의 물결을 군사반란으로 끊어내며 권력을 장악했다.\n영화는 당시 정치적 긴장과 국민들의 염원을 섬세하게 그리며, 군사 쿠데타가 가져온 비극과 역사의 전환점을 조명한다.",
+            historicalContext: "1979년 말 대한민국은 격변의 시기였다. 18년간의 유신독재가 끝나고 민주화에 대한 기대가 높았다. 부마민주항쟁을 시작으로 전국적으로 민주화 요구가 거세졌다. 하지만 신군부의 등장으로 상황은 급변했다. 민주화를 염원하는 국민들의 열망과 권력을 장악하려는 신군부의 야욕이 충돌하는 긴장감 넘치는 시기였다.",
             // 관련 영상
             relatedVideos: [
                 {
@@ -1101,7 +1183,11 @@ export default [
                     youtubeId: "nXlnkPKlZRo",
                     params: "feature=shared"
                 }
-            ]
+            ],
+            // 배경음악 정보
+            backgroundMusic: {
+                youtubeId: "vRg9OOrrHOw"
+            }
         }
     },
     { id: 29, title: '행복의 나라', event: '12·12사태', summary: '5공 유니버스의 마무리', imageUrl: 행복의나라, details: {} },
@@ -1109,7 +1195,7 @@ export default [
         id: 30,
         title: '화려한 휴가',
         eventYear: 1980,
-        event: '5·18 광주 민주화 운동',
+        event: '5·18민주화 운동',
         summary: '전혀 화려하지 않았던 휴가',
         imageUrl: 화려한휴가, // 해당 포스터 파일 경로 연결
         details: {
@@ -1159,14 +1245,17 @@ export default [
                     youtubeId: "nXlnkPKlZRo",
                     params: "feature=shared"
                 }
-            ]
+            ],
+            // 배경음악 정보
+            backgroundMusic: {
+                youtubeId: "vRg9OOrrHOw"
+            }
         }
     },
     {
         id: 31,
         title: '택시운전사',
-        eventYear: 1980,
-        event: '5·18 광주 민주화 운동',
+        event: '5·18민주화 운동',
         summary: '노 광주, 노 민주(주의)',
         imageUrl: 택시운전사, // 해당 포스터 파일 경로 연결
         details: {
@@ -1216,7 +1305,11 @@ export default [
                     youtubeId: "nXlnkPKlZRo",
                     params: "feature=shared"
                 }
-            ]
+            ],
+            // 배경음악 정보
+            backgroundMusic: {
+                youtubeId: "vRg9OOrrHOw"
+            }
         }
     },
     { id: 32, title: '박하사탕', event: '5·18민주화운동', summary: '한 남자의 되돌릴 수 없는 과거', imageUrl: 박하사탕, details: {} },
@@ -1274,14 +1367,18 @@ export default [
                     youtubeId: "nXlnkPKlZRo",
                     params: "feature=shared"
                 }
-            ]
+            ],
+            // 배경음악 정보
+            backgroundMusic: {
+                youtubeId: "vRg9OOrrHOw"
+            }
         }
     },
     {
         id: 34,
         title: '헌트',
         eventYear: 1983,
-        event: '아웅산 테러 사건',
+        event: '아웅 산 묘소 \n폭탄 테러 사건',
         summary: '코리아 서스펜스: \n적인가, 동료인가?',
         imageUrl: 헌트, // 해당 포스터 파일 경로 연결
         details: {
@@ -1331,7 +1428,11 @@ export default [
                     youtubeId: "nXlnkPKlZRo",
                     params: "feature=shared"
                 }
-            ]
+            ],
+            // 배경음악 정보
+            backgroundMusic: {
+                youtubeId: "vRg9OOrrHOw"
+            }
         }
     },
     { id: 35, title: '남영동', eventYear: 1985, event: '서울대 민추위 사건', summary: '삭제된 509호 고문실의 기록', imageUrl: 남영동, details: {} },
@@ -1341,7 +1442,7 @@ export default [
         id: 38,
         title: '1987',
         eventYear: 1987,
-        event: '6월 민주항쟁',
+        event: '6월민주항쟁',
         summary: '역사를 바꾼 그해의 외침',
         imageUrl: 일구팔칠, // 해당 포스터 파일 경로 연결
         details: {
@@ -1391,7 +1492,11 @@ export default [
                     youtubeId: "nXlnkPKlZRo",
                     params: "feature=shared"
                 }
-            ]
+            ],
+            // 배경음악 정보
+            backgroundMusic: {
+                youtubeId: "vRg9OOrrHOw"
+            }
         }
     },
     {
@@ -1448,7 +1553,11 @@ export default [
                     youtubeId: "nXlnkPKlZRo",
                     params: "feature=shared"
                 }
-            ]
+            ],
+            // 배경음악 정보
+            backgroundMusic: {
+                youtubeId: "vRg9OOrrHOw"
+            }
         }
     },
     { id: 40, title: '모가디슈', eventYear: 1991, event: '소말리아\n외교공관 철수', summary: '두 개의 국가, 하나의 탈출구', imageUrl: 모가디슈, details: {} },
@@ -1508,14 +1617,17 @@ export default [
                     youtubeId: "nXlnkPKlZRo",
                     params: "feature=shared"
                 }
-            ]
+            ],
+            // 배경음악 정보
+            backgroundMusic: {
+                youtubeId: "vRg9OOrrHOw"
+            }
         }
     },
     {
         id: 44,
         title: '공작',
-        eventYear: 1997,
-        event: '흑금성 사건',
+        event: '제15대 대통령 선거',
         summary: '서로를 믿고 싶었던 \n두 남자의 ‘비즈니스’',
         imageUrl: 공작, // 해당 포스터 파일 경로 연결
         details: {
@@ -1561,7 +1673,11 @@ export default [
                     youtubeId: "nXlnkPKlZRo",
                     params: "feature=shared"
                 }
-            ]
+            ],
+            // 배경음악 정보
+            backgroundMusic: {
+                youtubeId: "vRg9OOrrHOw"
+            }
         }
     },
     {
@@ -1625,16 +1741,20 @@ export default [
                     youtubeId: "nXlnkPKlZRo",
                     params: "feature=shared"
                 }
-            ]
+            ],
+            // 배경음악 정보
+            backgroundMusic: {
+                youtubeId: "vRg9OOrrHOw"
+            }
         }
     },
-    { id: 46, title: '추격자', eventYear: 2003, event: '유영철 연쇄살인 사건', summary: '혹시 망치나 \n몽둥이 같은 거 있어요?', imageUrl: 추격자, details: {} },
+    { id: 46, title: '추격자', eventYear: 2003, event: '유영철 연쇄살인 사건', summary: '그 아가씨가 여기 있대니깐', imageUrl: 추격자, details: {} },
     {
         id: 47,
         title: '더 킹',
         eventYear: 2004,
-        event: '노무현 대통령 탄핵 소추',
-        summary: '권력과 욕망의 경계에서, \n모든 것이 뒤집힌다',
+        event: '노무현 탄핵 소추',
+        summary: '대한민국 현대 정치사 입문서',
         imageUrl: 더킹, // 해당 포스터 파일 경로 연결
         details: {
             // 인용구 정보
@@ -1682,15 +1802,19 @@ export default [
                     youtubeId: "nXlnkPKlZRo",
                     params: "feature=shared"
                 }
-            ]
+            ],
+            // 배경음악 정보
+            backgroundMusic: {
+                youtubeId: "vRg9OOrrHOw"
+            }
         }
     },
     {
         id: 48,
         title: '아이 캔 스피크',
         eventYear: 2007,
-        event: '미국 하원 청문회',
-        summary: '그녀의 목소리가 역사를 바꾼다!',
+        event: '미국 의회 위안부 결의안',
+        summary: '할머니의 사연 있는 ‘ABCD’',
         imageUrl: 아이캔스피크, // 해당 포스터 파일 경로 연결
         details: {
             // 인용구 정보
@@ -1735,15 +1859,19 @@ export default [
                     youtubeId: "nXlnkPKlZRo",
                     params: "feature=shared"
                 }
-            ]
+            ],
+            // 배경음악 정보
+            backgroundMusic: {
+                youtubeId: "vRg9OOrrHOw"
+            }
         }
     },
     {
         id: 49,
         title: '댓글부대',
         eventYear: 2012,
-        event: '국내외 여론 조작 및 댓글부대 사건',
-        summary: '진실과 거짓의 경계를 허무는 댓글 전쟁',
+        event: '국정원·국방부 여론조작 의혹',
+        summary: '클릭 한 번으로 세상을 조작할 수 있다면',
         imageUrl: 댓글부대, // 해당 포스터 파일 경로 연결
         details: {
             // 인용구 정보
@@ -1792,8 +1920,68 @@ export default [
                     youtubeId: "nXlnkPKlZRo",
                     params: "feature=shared"
                 }
-            ]
+            ],
+            // 배경음악 정보
+            backgroundMusic: {
+                youtubeId: "vRg9OOrrHOw"
+            }
         }
     },
-    { id: 50, title: '내부자들', eventYear: 2016, event: '고위 공무원 \n국민 개·돼지 발언', summary: '정의라는 달달한 것이 \n아직 남아있긴 한가', imageUrl: 내부자들, details: {} },
+    {
+    id: 50,
+    title: '내부자들',
+    eventYear: 2016,
+    event: '고위 공무원 국민 개·돼지 발언',
+    summary: '정의라는 달달한 것이 \n아직 남아있긴 한가 ',
+    imageUrl: 내부자들, // 해당 포스터 파일 경로 연결
+    details: {
+        // 인용구 정보
+        quote: {
+            text: "어차피 대중들은 개, 돼지입니다. 거 뭐하러 개, 돼지들한테 신경을 쓰시고 그러십니까. 적당히 짖어대다가 알아서 조용해질 겁니다.",
+            author: "이강희",
+            actor: "백윤식",
+            source: "내부자들"
+        },
+        // 시놉시스 (문단별로 배열로 저장)
+        synopsis: [
+            "“복수극으로 가자고, 화끈하게” 유력한 대통령 후보와 재벌 회장, 그들을 돕는 정치깡패 안상구(이병헌). 뒷거래의 판을 짠 이는 대한민국 여론을 움직이는 유명 논설주간 이강희(백윤식)다.",
+            "더 큰 성공을 원한 안상구는 이들의 비자금 파일로 거래를 준비하다 발각되고, 이 일로 폐인이 되어 버려진다. 빽 없고 족보가 없어 늘 승진을 눈 앞에 두고 주저 앉는 검사 우장훈(조승우)은 대선을 앞둔 대대적인 비자금 조사의 저격수가 되는 기회를 잡는다.",
+            "자신을 폐인으로 만든 일당에게 복수를 계획하는 정치깡패 안상구, 비자금 파일을 이용해 성공하고 싶은 무족보 검사 우장훈, 그리고 비자금 스캔들을 덮어야 하는 대통령 후보와 재벌, 그들의 설계자 이강희. 과연 살아남는 자는 누가 될 것인가?"
+        ],
+        // 사건 정보
+        eventDetails: {
+            period: "2010년대",
+            keywords: ["정경유착", "언론조작", "권력암투", "검찰개혁"],
+            timeline: [
+                {
+                    date: "2013년 3월",
+                    event: "김학의 전 법무부 차관 성접대 의혹 사건"
+                },
+                {
+                    date: "2015년 4월",
+                    event: "성완종 리스트 폭로"
+                },
+                {
+                    date: "2016년 7월",
+                    event: "고위공무원 개돼지 망언 사건"
+                }
+            ]
+        },
+        // 시대상 설명
+        historicalContext: "2010년대 한국 사회는 정치, 경제, 언론이 복잡하게 얽힌 권력 구조로 인해 다양한 사회 문제가 대두되었다.\n정경유착, 언론 조작, 검찰의 정치화 등이 주요 이슈로 떠올랐다.\n영화는 이러한 시대상을 반영하여 한국 사회의 구조적 부패와 권력의 실체를 적나라하게 보여준다.\n특히 정치인, 재벌, 언론, 검찰, 조직폭력배 등 다양한 집단이 얽혀 있는 한국 특유의 권력 구조를 날카롭게 비판한다.",
+        // 관련 영상
+        relatedVideos: [
+            {
+                title: "관련 영상 1",
+                youtubeId: "-LSzxaVP2Ws",
+                params: "feature=shared"
+            },
+            {
+                title: "관련 영상 2",
+                youtubeId: "nXlnkPKlZRo",
+                params: "feature=shared"
+            }
+        ]
+    }
+},
 ]

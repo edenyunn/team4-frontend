@@ -210,6 +210,7 @@ export default {
   word-wrap: break-word;
   overflow-wrap: break-word;
   white-space: pre-line; /* 줄바꿈 유지 */
+  font-family: 'Pretendard-Medium';
  }
  
  .user-bubble {
@@ -254,6 +255,7 @@ export default {
  
  .movie-title {
   font-size: 0.8em;
+  font-family: 'Pretendard-Medium';
   text-align: center;
   margin-top: 5px;
   word-break: keep-all; /* 단어 단위로 줄바꿈 */

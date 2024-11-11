@@ -1,6 +1,18 @@
 <!-- components/Sidebar.vue -->
 <template>
-    <div v-if="isSidebarOpen" class="sidebar">
+  <div>
+    <!-- 오버레이: 사이드바 외부 영역 -->
+    <div 
+      v-if="isSidebarOpen" 
+      class="overlay" 
+      @click="$emit('toggle-sidebar')"
+    ></div>
+    
+    <!-- 사이드바 -->
+    <div 
+      class="sidebar" 
+      :class="{ 'sidebar-open': isSidebarOpen }"
+    >
       <button class="close-sidebar" @click="$emit('toggle-sidebar')">X 닫기</button>
       <br>
       <div class="sidebar-menu">
@@ -22,10 +34,11 @@
         </RouterLink>
         <RouterLink to="/original" class="menu-item">
           Original
-          <span class="small-subtitle">AI 영화 시리즈</span>
+          <span class="small-subtitle">AI 영화 상영관</span>
         </RouterLink>
       </div>
     </div>
+  </div>
 </template>
 
 <script>
@@ -37,51 +50,87 @@ export default {
 </script>
 
 <style scoped>
+/* 사이드바 */
 .sidebar {
-  position: fixed; /* 화면 전체에서 고정 */
+  position: fixed;
   top: 0;
   left: 0;
-  width: 250px;
+  width: 300px; /* 기본 너비 */
   height: 100%;
   background-color: #333;
   color: white;
   padding: 10px;
-  z-index: 1050; /* 헤더보다 높은 z-index 설정 */
-  transition: transform 0.3s ease;
+  z-index: 1050;
+  transform: translateX(-100%); /* 기본 상태: 화면 밖 */
+  transition: transform 0.3s ease; /* 부드러운 애니메이션 */
 }
 
+/* 열림 상태 */
+.sidebar.sidebar-open {
+  transform: translateX(0); /* 열릴 때 화면 안으로 이동 */
+}
+
+/* 오버레이 */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5); /* 반투명 검은색 배경 */
+  z-index: 1049; /* 사이드바 바로 아래 레이어 */
+}
+
+/* 닫기 버튼 */
+.close-sidebar {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 15px;
+  font-family: 'Pretendard-Medium';
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+/* 메뉴 스타일 */
 .sidebar-menu {
   display: flex;
   flex-direction: column;
 }
 
 .menu-item {
-  padding-left: 20px; /* 들여쓰기 추가 */
+  padding-left: 20px;
   color: white;
+  font-family: 'Pretendard-SemiBold';
   text-decoration: none;
   margin: 8px 0;
   position: relative;
 }
 
 .menu-item:hover {
-  text-decoration: underline; /* 선택 사항: 마우스를 올렸을 때 스타일 추가 */
+  text-decoration: underline;
 }
 
 .small-subtitle {
   display: block;
   font-size: 12px;
-  color: #ccc; /* 소제목 색상 */
+  font-family: 'Pretendard-Medium';
+  color: #ccc;
   margin-top: 3px;
 }
 
-.close-sidebar {
-  background: none;
-  border: none;
-  color: white;
-  font-size: 15px;
-  cursor: pointer;
-  position: absolute;
-  top: 10px;
-  right: 10px;
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 250px; /* 작은 화면에서는 너비 축소 */
+  }
+}
+
+@media (max-width: 480px) {
+  .sidebar {
+    width: 200px; /* 더 작은 화면에서는 더 축소 */
+  }
 }
 </style>

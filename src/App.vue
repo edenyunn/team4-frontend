@@ -93,6 +93,15 @@ body {
     font-style: normal;
 }
 
+@font-face {
+  font-family: 'ClimateCrisis';
+  src: url('@/assets/fonts/ClimateCrisisKRVF.ttf') format('truetype');
+  font-weight: 1 1000; /* 가변 폰트의 가중치 범위 */
+  font-stretch: 50% 200%; /* 폭 설정 가능 */
+  font-display: swap;
+}
+
+
 /* BookkMyungjo 폰트 추가 */
 @font-face {
     font-family: 'BookkMyungjo_Light';

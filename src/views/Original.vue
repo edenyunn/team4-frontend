@@ -127,9 +127,9 @@ export default {
 
 .video-title {
   margin-bottom: 2rem; /* 제목과 비디오 간격 */
-  font-size: 2rem;
-  font-weight: bold;
-  font-family: "Raleway-Bold";
+  font-size: 3rem;
+  font-weight: 10;
+  font-family: "ClimateCrisis";
   color: white;
 }
 

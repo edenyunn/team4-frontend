@@ -71,6 +71,29 @@
 
           <hr />
 
+          <!-- info Section -->
+          <h5 class="eventLists"><strong>✅ 영화 정보</strong></h5>
+          <ul class="paContent">
+            <li class="info-item"><strong>장르:</strong> {{ movie?.details?.genre }}</li>
+            <li class="info-item"><strong>개봉:</strong> {{ movie?.details?.releaseDate }}</li>
+            <li class="info-item"><strong>러닝타임:</strong> {{ movie?.details?.runtime }}</li>
+            <li class="info-item"><strong>관객수:</strong> {{ movie?.details?.audience }}</li>
+            <li class="info-item"><strong>등급:</strong> {{ movie?.details?.rating }}</li>
+            <li class="info-item"><strong>감독:</strong> {{ movie?.details?.director }}</li>
+            <li class="info-item"><strong>출연진</strong>
+              <ul>
+                <li
+              v-for="(item, index) in movie?.details?.cast"
+              :key="index"
+              >
+              <strong>{{ item.name }}:</strong> {{ item.role }}
+              </li>
+              </ul>
+            </li>
+          </ul>
+
+          <hr />
+
           <!-- Synopsis Section -->
           <h5 class="synopsis"><strong>✨ 시놉시스</strong></h5>
           <p

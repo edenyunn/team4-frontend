@@ -522,9 +522,21 @@ export default [
             // 배경음악 정보
             backgroundMusic: {
                 youtubeId: "vRg9OOrrHOw"
-            }
+            },
+            // 추가된 영화 정보
+            genre: "드라마, 전기",
+            releaseDate: "2016.02.17.",
+            runtime: "110분",
+            audience: "117만명",
+            rating: "12세 이상 관람가",
+            director: "이준익",
+            cast: [
+                { name: "강하늘", role: "윤동주 역" },
+                { name: "박정민", role: "송몽규 역" },
+                { name: "김인우", role: "고등형사 역" }
+            ]
         }
-    },
+    },    
     { id: 11, title: '군함도', eventYear: 1945, event: '일본의 패망과 광복', summary: '일본이 숨긴 섬, \n조선이 잊을 수 없는 섬', imageUrl: 군함도, details: {} },
     { id: 12, title: '보스톤', eventYear: 1947, event: '보스턴 마라톤 우승', summary: '태극기로 완주하다', imageUrl: 보스톤, details: {} },
     {

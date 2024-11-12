@@ -62,8 +62,7 @@ export default [
             quote: {
                 text: "조국이 무엇입니까? 조국이 대체 우리에게 무엇입니까?",
                 author: "안중근",
-                actor: "정성화",
-                source: "영웅"
+                actor: "정성화"
             },
             // 시놉시스 (문단별로 배열로 저장)
             synopsis: [
@@ -107,7 +106,7 @@ export default [
             ],
             // 배경음악 정보
             backgroundMusic: {
-                youtubeId: "vcT84Oah4KE"
+                youtubeId: "PX1wfyS1RSU"
             }
         }
     },    
@@ -123,8 +122,7 @@ export default [
             quote: {
                 text: "우리가 원하는 것은 단 하나, 우리의 독립이오!",
                 author: "유관순",
-                actor: "고아성",
-                source: "항거"
+                actor: "고아성"
             },
             // 시놉시스 (문단별로 배열로 저장)
             synopsis: [
@@ -155,12 +153,12 @@ export default [
             relatedVideos: [
                 {
                     title: "관련 영상 1",
-                    youtubeId: "-LSzxaVP2Ws",
+                    youtubeId: "KKRe332JyXI",
                     params: "feature=shared"
                 },
                 {
                     title: "관련 영상 2",
-                    youtubeId: "nXlnkPKlZRo",
+                    youtubeId: "AfeQqSxW4NU",
                     params: "feature=shared"
                 }
             ],
@@ -182,8 +180,7 @@ export default [
             quote: {
                 text: "독립군 수는 셀 수가 없어? 왠지 알아? 어제 농사짓던 인물이 내일 독립군이 될 수 있다 이 말이야",
                 author: "황해철",
-                actor: "유해진",
-                source: "봉오동 전투"
+                actor: "유해진"
             },
             // 시놉시스 (문단별로 배열로 저장)
             synopsis: [
@@ -243,7 +240,7 @@ export default [
             quote: {
                 text: "우리는 실패해도 앞으로 나아가야 합니다 그 실패가 쌓이고 우리는 그 실패를 디딛고 더 높은곳으로 나아 가야 합니다",
                 author: "정채산",
-                actor: "이병헌",
+                actor: "이병헌"
             },
             // 시놉시스 (문단별로 배열로 저장)
             synopsis: [
@@ -303,8 +300,7 @@ export default [
             quote: {
                 text: "나는 조선인이다. 아니, 나는 불령사다!",
                 author: "박열",
-                actor: "이제훈",
-                source: "박열"
+                actor: "이제훈"
             },
             // 시놉시스 (문단별로 배열로 저장)
             synopsis: [
@@ -365,8 +361,7 @@ export default [
             quote: {
                 text: "알려줘야지... 우리는 끝까지 싸우고 있다고",
                 author: "안옥윤",
-                actor: "전지현",
-                source: "암살"
+                actor: "전지현"
             },
             // 시놉시스 (문단별로 배열로 저장)
             synopsis: [
@@ -426,7 +421,7 @@ export default [
             quote: {
                 text: "말은 민족의 정신이요, 글은 민족의 생명입니다.",
                 author: "류정환",
-                actor: "김판수",
+                actor: "김판수"
             },
             // 시놉시스 (문단별로 배열로 저장)
             synopsis: [
@@ -483,8 +478,7 @@ export default [
             quote: {
                 text: "하늘을 우러러 한 점 부끄럼 없기를…",
                 author: "윤동주",
-                actor: "강하늘",
-                source: "동주"
+                actor: "강하늘"
             },
             // 시놉시스 (문단별로 배열로 저장)
             synopsis: [
@@ -545,8 +539,7 @@ export default [
             quote: {
                 text: "네가 살아야 내가 사는 거다!",
                 author: "이진태",
-                actor: "장동건",
-                source: "태극기 휘날리며"
+                actor: "장동건"
             },
             // 시놉시스 (문단별로 배열로 저장)
             synopsis: [
@@ -604,8 +597,7 @@ export default [
             quote: {
                 text: "어머니 제가 오늘 죽을지도 모릅니다",
                 author: "오장범",
-                actor: "최승현",
-                source: "포화 속으로"
+                actor: "최승현"
             },
             // 시놉시스 (문단별로 배열로 저장)
             synopsis: [
@@ -667,8 +659,7 @@ export default [
             quote: {
                 text: "단 한 명만 살아남더라도 반드시 해야 하는 일입니다.",
                 author: "장학수",
-                actor: "이정재",
-                source: "인천상륙작전"
+                actor: "이정재"
             },
             // 시놉시스 (문단별로 배열로 저장)
             synopsis: [
@@ -725,8 +716,7 @@ export default [
             quote: {
                 text: "여기서는 죽지 않으면 살아갈 수 없는 겁니다.",
                 author: "강은표",
-                actor: "신하균",
-                source: "고지전"
+                actor: "신하균"
             },
             // 시놉시스 (문단별로 배열로 저장)
             synopsis: [
@@ -787,8 +777,7 @@ export default [
             quote: {
                 text: "전 이 나라의 대통령의 머리를 자른 이발사입니다.",
                 author: "성한모",
-                actor: "송강호",
-                source: "효자동 이발사"
+                actor: "송강호"
             },
             // 시놉시스 (문단별로 배열로 저장)
             synopsis: [
@@ -850,8 +839,7 @@ export default [
             quote: {
                 text: "내는 그래 생각한다. 힘든 세월에 태어나가 이 힘든 세상 풍파를 우리 자식이 아니라 우리가 격은기 참 다행이라꼬.",
                 author: "덕수",
-                actor: "황정민",
-                source: "국제시장"
+                actor: "황정민"
             },
             // 시놉시스 (문단별로 배열로 저장)
             synopsis: [
@@ -910,8 +898,7 @@ export default [
             quote: {
                 text: "우리는 대한민국의 이름으로 싸운다. 그러나 그 이름은 우리에게 없다.",
                 author: "강인찬",
-                actor: "설경구",
-                source: "실미도"
+                actor: "설경구"
             },
             // 시놉시스 (문단별로 배열로 저장)
             synopsis: [
@@ -972,8 +959,7 @@ export default [
             quote: {
                 text: "세상 바뀌는 꼴 좀 보고 싶습니다.",
                 author: "서창대",
-                actor: "이선균",
-                source: "킹메이커"
+                actor: "이선균"
             },
             // 시놉시스 (문단별로 배열로 저장)
             synopsis: [
@@ -1034,7 +1020,7 @@ export default [
             quote: {
                 text: "각하, 왜 혁명을 하셨습니까? 왜 우리가 목숨을 걸고 혁명을 했습니까? 백만 이백만, 탱크로 밀어서 죽여버리겠다고? 제발 각하, 정신 좀 차리십시오!",
                 author: "김규평",
-                actor: "이병헌",
+                actor: "이병헌"
             },
             // 시놉시스 (문단별로 배열로 저장)
             synopsis: [
@@ -1088,7 +1074,7 @@ export default [
             quote: {
                 text: "김 부장... 또 쏠라꼬? 벌써 한 방 묵었다 아이가…",
                 author: "대통령",
-                actor: "송재호",
+                actor: "송재호"
             },
             // 시놉시스 (문단별로 배열로 저장)
             synopsis: [
@@ -1143,7 +1129,7 @@ export default [
             quote: {
                 text: "실패하면 반역, 성공하면 혁명 아닙니까?",
                 author: "전두광",
-                actor: "황정민",
+                actor: "황정민"
             },
             // 시놉시스 (문단별로 배열로 저장)
             synopsis: [
@@ -1165,7 +1151,7 @@ export default [
                     },
                     {
                         date: "1980년 5월 18일",
-                        event: "광주민주화운동 발발"
+                        event: "5·18민주화운동 발발"
                     }
                 ]
             },
@@ -1203,8 +1189,7 @@ export default [
             quote: {
                 text: "우리는 총을 들었지만, 그 총으로 평화를 원합니다.",
                 author: "강민우",
-                actor: "김상경",
-                source: "화려한 휴가"
+                actor: "김상경"
             },
             // 시놉시스 (문단별로 배열로 저장)
             synopsis: [
@@ -1263,8 +1248,7 @@ export default [
             quote: {
                 text: "데모한 사람이 천벌 받으면 데모를 하게 한 사람은 무슨 벌을 받아요?",
                 author: "구재식",
-                actor: "류준열",
-                source: "택시운전사"
+                actor: "류준열"
             },
             // 시놉시스 (문단별로 배열로 저장)
             synopsis: [
@@ -1325,8 +1309,7 @@ export default [
             quote: {
                 text: "이렇게 할 거면 재판은 왜 합니까?! 이 나라 법치주의는 어디로 갔습니까?! 이따위 짓거리가 무슨 재판입니까?!",
                 author: "송우석",
-                actor: "송강호",
-                source: "변호인"
+                actor: "송강호"
             },
             // 시놉시스 (문단별로 배열로 저장)
             synopsis: [
@@ -1386,8 +1369,7 @@ export default [
             quote: {
                 text: "국가를 찬탈하고 국민을 학살한 죄로 너를 즉결처형한다",
                 author: "김정도",
-                actor: "정우성",
-                source: "헌트"
+                actor: "정우성"
             },
             // 시놉시스 (문단별로 배열로 저장)
             synopsis: [
@@ -1450,8 +1432,7 @@ export default [
             quote: {
                 text: "그런다고 세상이 바뀌어요?",
                 author: "연희",
-                actor: "김태리",
-                source: "1987"
+                actor: "김태리"
             },
             // 시놉시스 (문단별로 배열로 저장)
             synopsis: [
@@ -1511,8 +1492,7 @@ export default [
             quote: {
                 text: "내가 인마 느그 서장이랑 인마 어저께도 으! 같이 밥묵고 으! 싸우나도같이가고 으! 마 개이섀꺄 마 다했으..",
                 author: "최익현",
-                actor: "최민식",
-                source: "범죄와의 전쟁"
+                actor: "최민식"
             },
             // 시놉시스 (문단별로 배열로 저장)
             synopsis: [
@@ -1575,8 +1555,7 @@ export default [
             quote: {
                 text: "지금 이 순간, 우리는 나라가 망하는 걸 보고 있습니다.",
                 author: "한시현",
-                actor: "김혜수",
-                source: "국가부도의 날"
+                actor: "김혜수"
             },
             // 시놉시스 (문단별로 배열로 저장)
             synopsis: [
@@ -1635,8 +1614,7 @@ export default [
             quote: {
                 text: "비즈니스의 뜻은 첫째 사업이라는 말도 있지만 둘째 모험이라는 뜻도 있는데 저와 마지막으로 모험해보지 않겠습니까?",
                 author: "박석영",
-                actor: "황정민",
-                source: "공작"
+                actor: "황정민"
             },
             // 시놉시스 (문단별로 배열로 저장)
             synopsis: [
@@ -1692,8 +1670,7 @@ export default [
             quote: {
                 text: "우리는 절대 선제공격하지 않는다. 하지만 적이 먼저 도발하면 즉각 응징한다.",
                 author: "윤영하 소령",
-                actor: "김무열",
-                source: "연평해전"
+                actor: "김무열"
             },
             // 시놉시스 (문단별로 배열로 저장)
             synopsis: [
@@ -1761,8 +1738,7 @@ export default [
             quote: {
                 text: "좆같았다. 그의 말이 좆같은 게 아니라 구구절절 맞았다는 게 좆같았다.",
                 author: "박태수",
-                actor: "조인성",
-                source: "더 킹"
+                actor: "조인성"
             },
             // 시놉시스 (문단별로 배열로 저장)
             synopsis: [
@@ -1813,7 +1789,7 @@ export default [
         id: 48,
         title: '아이 캔 스피크',
         eventYear: 2007,
-        event: '미국 의회 위안부 결의안',
+        event: '미국 의회\n위안부 결의안',
         summary: '할머니의 사연 있는 ‘ABCD’',
         imageUrl: 아이캔스피크, // 해당 포스터 파일 경로 연결
         details: {
@@ -1821,8 +1797,7 @@ export default [
             quote: {
                 text: "I am sorry 그 한마디가 그렇게 어렵나",
                 author: "나옥분",
-                actor: "나문희",
-                source: "아이 캔 스피크"
+                actor: "나문희"
             },
             // 시놉시스 (문단별로 배열로 저장)
             synopsis: [
@@ -1870,16 +1845,15 @@ export default [
         id: 49,
         title: '댓글부대',
         eventYear: 2012,
-        event: '국정원·국방부 여론조작 의혹',
-        summary: '클릭 한 번으로 세상을 조작할 수 있다면',
+        event: '국정원·국방부\n여론조작 의혹',
+        summary: '클릭 한 번으로\n세상을 조작할 수 있다면',
         imageUrl: 댓글부대, // 해당 포스터 파일 경로 연결
         details: {
             // 인용구 정보
             quote: {
                 text: "완전한 진실보다, 거짓이 섞인 진실이 더 진실 같다.",
                 author: "임상진",
-                actor: "손석구",
-                source: "댓글부대"
+                actor: "손석구"
             },
             // 시놉시스 (문단별로 배열로 저장)
             synopsis: [
@@ -1931,7 +1905,7 @@ export default [
     id: 50,
     title: '내부자들',
     eventYear: 2016,
-    event: '고위 공무원 국민 개·돼지 발언',
+    event: '고위 공무원\n국민 개·돼지 발언',
     summary: '정의라는 달달한 것이 \n아직 남아있긴 한가 ',
     imageUrl: 내부자들, // 해당 포스터 파일 경로 연결
     details: {
@@ -1939,8 +1913,7 @@ export default [
         quote: {
             text: "어차피 대중들은 개, 돼지입니다. 거 뭐하러 개, 돼지들한테 신경을 쓰시고 그러십니까. 적당히 짖어대다가 알아서 조용해질 겁니다.",
             author: "이강희",
-            actor: "백윤식",
-            source: "내부자들"
+            actor: "백윤식"
         },
         // 시놉시스 (문단별로 배열로 저장)
         synopsis: [
@@ -1973,15 +1946,19 @@ export default [
         relatedVideos: [
             {
                 title: "관련 영상 1",
-                youtubeId: "-LSzxaVP2Ws",
+                youtubeId: "UFkeiUxyIFY",
                 params: "feature=shared"
             },
             {
                 title: "관련 영상 2",
-                youtubeId: "nXlnkPKlZRo",
+                youtubeId: "",
                 params: "feature=shared"
             }
-        ]
+        ],
+        // 배경음악 정보
+            backgroundMusic: {
+                youtubeId: "0ZPxIw5aBpE"
+            }
     }
 },
 ]

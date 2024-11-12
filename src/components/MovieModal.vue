@@ -84,8 +84,6 @@
             :src="'https://www.youtube.com/embed/' + movieBgmId + '?enablejsapi=1'" allow="autoplay">
           </iframe>
 
-          <hr />
-
           <!-- 아래 나머지 섹션 -->
           <!-- Synopsis Section -->
           <h5 class="synopsis"><strong>✨ 시놉시스</strong></h5>

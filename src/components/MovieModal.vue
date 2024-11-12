@@ -26,74 +26,80 @@
           </div>
         </div>
         <div class="modal-body">
-          <div class="text-center">
-            <div class="d-flex justify-content-center mb-3">
-              <img
-                :src="movie?.imageUrl"
-                :alt="movie?.title"
-                class="modal-image img-fluid"
-              />
+          <!-- 좌우 배치 -->
+          <div class="top-section d-flex">
+            <!-- 좌측 콘텐츠 -->
+            <div class="left-panel">
+              <div class="text-center">
+                <div class="d-flex justify-content-center mb-3">
+                  <img
+                    :src="movie?.imageUrl"
+                    :alt="movie?.title"
+                    class="modal-image img-fluid"
+                  />
+                </div>
+                <h5 class="mb-3">{{ movie?.eventYear }}&nbsp;{{ movie?.event }}</h5>
+                <p class="movie-description">{{ movie?.summary }}</p>
+              </div>
+
+              <!-- Quote Section -->
+              <figure class="text-center" v-if="movie?.details?.quote">
+                <blockquote class="blockquote">
+                  <p>"{{ movie.details.quote.text }}"</p>
+                </blockquote>
+                <figcaption class="blockquote-footer">
+                  <em
+                    >{{ movie.details.quote.author }} ({{
+                      movie.details.quote.actor
+                    }})</em
+                  >
+                  <cite :title="movie.details.quote.source">{{
+                    movie.details.quote.source
+                  }}</cite>
+                </figcaption>
+              </figure>
             </div>
-            <h5 class="mb-3">{{ movie?.eventYear }}&nbsp;{{ movie?.event }}</h5>
-            <p class="movie-description">{{ movie?.summary }}</p>
+
+            <!-- 우측 콘텐츠 -->
+            <div class="right-panel">
+              <h5 class="eventLists"><strong>✅ 영화 정보</strong></h5>
+              <ul class="paContent">
+                <li class="info-item">
+                  <strong>장르:</strong> {{ movie?.details?.genre }}
+                </li>
+                <li class="info-item">
+                  <strong>개봉:</strong> {{ movie?.details?.releaseDate }}
+                </li>
+                <li class="info-item">
+                  <strong>러닝타임:</strong> {{ movie?.details?.runtime }}
+                </li>
+                <li class="info-item">
+                  <strong>관객수:</strong> {{ movie?.details?.audience }}
+                </li>
+                <li class="info-item">
+                  <strong>등급:</strong> {{ movie?.details?.rating }}
+                </li>
+                <li class="info-item">
+                  <strong>감독:</strong> {{ movie?.details?.director }}
+                </li>
+                <li class="info-item">
+                  <strong>출연진</strong>
+                  <ul>
+                    <li
+                      v-for="(item, index) in movie?.details?.cast"
+                      :key="index"
+                    >
+                      <strong>{{ item.name }}:</strong> {{ item.role }}
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
           </div>
 
-          <!-- Quote Section -->
-          <figure class="text-center" v-if="movie?.details?.quote">
-            <blockquote class="blockquote">
-              <p>"{{ movie.details.quote.text }}"</p>
-            </blockquote>
-            <figcaption class="blockquote-footer">
-              <em
-                >{{ movie.details.quote.author }} ({{
-                  movie.details.quote.actor
-                }})</em
-              >
-              <cite :title="movie.details.quote.source">{{
-                movie.details.quote.source
-              }}</cite>
-            </figcaption>
-          </figure>
-
-          <br />
-
-          <!-- v-if="movie?.details?.backgroundMusic" -->
-          <!-- Background Music -->
-          <iframe
-            id="bgMusic"
-            style="display: none"
-            :src="
-              'https://www.youtube.com/embed/' + movieBgmId + '?enablejsapi=1'
-            "
-            allow="autoplay"
-          >
-          </iframe>
-
           <hr />
 
-          <!-- info Section -->
-          <h5 class="eventLists"><strong>✅ 영화 정보</strong></h5>
-          <ul class="paContent">
-            <li class="info-item"><strong>장르:</strong> {{ movie?.details?.genre }}</li>
-            <li class="info-item"><strong>개봉:</strong> {{ movie?.details?.releaseDate }}</li>
-            <li class="info-item"><strong>러닝타임:</strong> {{ movie?.details?.runtime }}</li>
-            <li class="info-item"><strong>관객수:</strong> {{ movie?.details?.audience }}</li>
-            <li class="info-item"><strong>등급:</strong> {{ movie?.details?.rating }}</li>
-            <li class="info-item"><strong>감독:</strong> {{ movie?.details?.director }}</li>
-            <li class="info-item"><strong>출연진</strong>
-              <ul>
-                <li
-              v-for="(item, index) in movie?.details?.cast"
-              :key="index"
-              >
-              <strong>{{ item.name }}:</strong> {{ item.role }}
-              </li>
-              </ul>
-            </li>
-          </ul>
-
-          <hr />
-
+          <!-- 아래 나머지 섹션 -->
           <!-- Synopsis Section -->
           <h5 class="synopsis"><strong>✨ 시놉시스</strong></h5>
           <p
@@ -267,6 +273,34 @@ export default {
   font-family: 'Pretendard-Light';
 }
 
+/* 좌우 배치 스타일 */
+.top-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.left-panel {
+  flex: 1;
+  max-width: 50%;
+}
+
+.right-panel {
+  flex: 1;
+  max-width: 50%;
+  background-color: #c9c9c9; /* 박스 배경색 */
+  color: black;
+  padding: 20px; /* 내부 여백 */
+  border-radius: 8px; /* 둥근 모서리 */
+  margin: 20px; /* 외부 여백 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 박스 그림자 */
+  display: flex; /* 추가 */
+  flex-direction: column; /* 추가 */
+  justify-content: center; /* 세로 중앙 정렬 */
+}
+
 .d-flex.align-items-center {
   margin-right: 0.1rem;
 }
@@ -333,6 +367,16 @@ h5 {
 
 /* 모바일 화면에서의 조정 */
 @media screen and (max-width: 768px) {
+  .top-section {
+    flex-direction: column;
+    align-items: center; /* 추가: 중앙 정렬 */
+  }
+
+  .left-panel,
+  .right-panel {
+    max-width: 100%;
+  }
+
   .modal-image {
     max-width: 80%;
   }

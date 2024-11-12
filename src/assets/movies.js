@@ -510,18 +510,18 @@ export default [
             relatedVideos: [
                 {
                     title: "관련 영상 1",
-                    youtubeId: "W1QIciSrI2o",
+                    youtubeId: "DcjQm7Q8AT8",
                     params: "si=YooTJcs85-31MI14"
                 },
                 {
                     title: "관련 영상 2",
-                    youtubeId: "QkiK1oEDrho",
+                    youtubeId: "RW-BMXfUEjQ",
                     params: "si=-Koc20T8SKf1ZzGi"
                 }
             ],
             // 배경음악 정보
             backgroundMusic: {
-                youtubeId: "vRg9OOrrHOw"
+                youtubeId: "zyTuNuMtgu8"
             },
             // 추가된 영화 정보
             genre: "드라마, 전기",

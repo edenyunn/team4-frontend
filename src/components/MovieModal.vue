@@ -21,6 +21,21 @@
             <p class="movie-description">{{ movie?.summary }}</p>
           </div>
 
+          <!-- Quote Section -->
+          <figure class="text-center" v-if="movie?.details?.quote">
+            <blockquote class="blockquote">
+              <p>"{{ movie.details.quote.text }}"</p>
+            </blockquote>
+            <figcaption class="blockquote-footer">
+              <em>{{ movie.details.quote.author }} ({{ movie.details.quote.actor }})</em>
+              <cite :title="movie.details.quote.source">{{
+                movie.details.quote.source
+              }}</cite>
+            </figcaption>
+          </figure>
+
+          <br />
+
           <!-- 영화 상세 정보 섹션 -->
           <div class="movie-details mb-4" v-if="movie?.details">
             <h5 class="details-title"><strong>🎬 영화 정보</strong></h5>
@@ -63,21 +78,6 @@
           </div>
 
           <hr />
-
-          <!-- Quote Section -->
-          <figure class="text-center" v-if="movie?.details?.quote">
-            <blockquote class="blockquote">
-              <p>"{{ movie.details.quote.text }}"</p>
-            </blockquote>
-            <figcaption class="blockquote-footer">
-              <em>{{ movie.details.quote.author }} ({{ movie.details.quote.actor }})</em>
-              <cite :title="movie.details.quote.source">{{
-                movie.details.quote.source
-              }}</cite>
-            </figcaption>
-          </figure>
-
-          <br />
 
           <!-- Background Music -->
           <iframe id="bgMusic" style="display: none"

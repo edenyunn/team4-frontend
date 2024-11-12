@@ -86,6 +86,7 @@
 
           <hr />
 
+          <!-- 아래 나머지 섹션 -->
           <!-- Synopsis Section -->
           <h5 class="synopsis"><strong>✨ 시놉시스</strong></h5>
           <p v-for="(paragraph, index) in movie?.details?.synopsis" :key="index" class="paContent">
@@ -224,6 +225,34 @@ export default {
   font-family: 'Pretendard-Light';
 }
 
+/* 좌우 배치 스타일 */
+.top-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* 전체 패널 세로 중앙 정렬 */
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.left-panel {
+  flex: 1;
+  max-width: 50%;
+}
+
+.right-panel {
+  flex: 1;
+  max-width: 50%;
+  background-color: #c9c9c9; /* 박스 배경색 */
+  color: black;
+  padding: 20px; /* 내부 여백 */
+  border-radius: 8px; /* 둥근 모서리 */
+  margin: 20px; /* 외부 여백 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 박스 그림자 */
+  display: flex; /* 추가 */
+  flex-direction: column; /* 추가 */
+  justify-content: center; /* 세로 중앙 정렬 */
+}
+
 .d-flex.align-items-center {
   margin-right: 0.1rem;
 }
@@ -346,6 +375,16 @@ h5 {
 
 /* 모바일 화면에서의 조정 */
 @media screen and (max-width: 768px) {
+  .top-section {
+    flex-direction: column;
+    align-items: center; /* 추가: 중앙 정렬 */
+  }
+
+  .left-panel,
+  .right-panel {
+    max-width: 100%;
+  }
+
   .modal-image {
     max-width: 80%;
   }

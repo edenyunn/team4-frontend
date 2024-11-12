@@ -277,7 +277,7 @@ export default {
 .top-section {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center; /* 전체 패널 세로 중앙 정렬 */
   gap: 2rem;
   margin-bottom: 2rem;
 }

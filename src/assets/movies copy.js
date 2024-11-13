@@ -19,8 +19,8 @@ import 고지전 from '@/assets/posters/고지전.jpg'
 import 효자동이발사 from '@/assets/posters/효자동이발사.jpg'
 import 국제시장 from '@/assets/posters/국제시장.jpg'
 import 실미도 from '@/assets/posters/실미도.jpg'
-import 킹메이커 from '@/assets/posters/킹메이커.jpg'
 import 하이재킹 from '@/assets/posters/하이재킹.jpg'
+import 킹메이커 from '@/assets/posters/킹메이커.jpg'
 import 님은먼곳에 from '@/assets/posters/님은먼곳에.jpg'
 import 알포인트 from '@/assets/posters/알포인트.jpg'
 import 남산의부장들 from '@/assets/posters/남산의부장들.jpg'
@@ -2207,7 +2207,7 @@ export default [
         title: '화려한 휴가',
         eventYear: 1980,
         event: '5·18민주화운동',
-        summary: '광주 민주화 운동을 배경으로 한 이야기',
+        summary: '전혀 화려하지 않았던 휴가',
         imageUrl: 화려한휴가,
         details: {
             // 인용구 정보
@@ -2276,10 +2276,9 @@ export default [
     },
     {
         id: 31,
-        title: '택시 운전사',
-        eventYear: 1980,
+        title: '택시운전사',
         event: '5·18민주화운동',
-        summary: '광주 민주화 운동의 한 복판에서 펼쳐지는 한 택시기사의 이야기',
+        summary: '노 광주, 노 민주(주의)',
         imageUrl: 택시운전사,
         details: {
             // 인용구 정보
@@ -2354,7 +2353,7 @@ export default [
         id: 32,
         title: '박하사탕',
         event: '5·18민주화운동',
-        summary: '5·18 광주 민주화운동을 배경으로 한 한 남자의 인생 이야기',
+        summary: '한 남자의 되돌릴 수 없는 과거',
         imageUrl: 박하사탕,
         details: {
             // 인용구 정보
@@ -2426,7 +2425,7 @@ export default [
         title: '변호인',
         eventYear: 1981,
         event: '부림사건',
-        summary: '부림사건을 배경으로 한 세무 변호사의 법정 드라마',
+        summary: '‘돼지국밥’처럼 뜨거운 변호인의 인권 투쟁',
         imageUrl: 변호인,
         details: {
             // 인용구 정보
@@ -2497,9 +2496,9 @@ export default [
     {
         id: 34,
         title: '헌트',
-        eventYear: 1980,
-        event: '5·18 광주민주화운동, 아웅 산 테러 사건',
-        summary: '스파이 색출 작전과 첩보전의 긴박감을 그린 액션 영화',
+        eventYear: 1983,
+        event: '아웅 산 묘소 폭탄 테러 사건',
+        summary: '코리아 서스펜스: 적인가, 동료인가?',
         imageUrl: 헌트,
         details: {
             // 인용구 정보
@@ -2571,9 +2570,9 @@ export default [
         id: 35,
         title: '남영동 1985',
         eventYear: 1985,
-        event: '남영동 대공분실 고문 사건',
-        summary: '1985년 남영동 대공분실에서 발생한 고문 사건을 중심으로 한 드라마',
-        imageUrl: 남영동1985,
+        event: '서울대 민추위 사건',
+        summary: '삭제된 509호 고문실의 기록',
+        imageUrl: 남영동,
         details: {
             // 인용구 정보
             quote: {
@@ -2645,7 +2644,7 @@ export default [
         title: '비공식작전',
         eventYear: 1986,
         event: '레바논 한국 외교관 납치 사건',
-        summary: '레바논에서 벌어진 한국 외교관 납치 사건과 그 구출 작전을 그린 드라마',
+        summary: '상부에선 “공식적으로 이 작전이 없었다”고 한다',
         imageUrl: 비공식작전,
         details: {
             // 인용구 정보
@@ -2723,9 +2722,8 @@ export default [
     {
         id: 37,
         title: '살인의 추억',
-        eventYear: 1986,
         event: '화성 연쇄 살인 사건',
-        summary: '화성 연쇄 살인 사건을 바탕으로 한 수사 드라마',
+        summary: '밥 잘 먹고 다닙시다',
         imageUrl: 살인의추억,
         details: {
             // 인용구 정보
@@ -2808,9 +2806,9 @@ export default [
         id: 38,
         title: '1987',
         eventYear: 1987,
-        event: '박종철 고문치사 사건',
-        summary: '박종철 고문치사 사건을 배경으로 한 민주화 운동의 전개',
-        imageUrl: 1987,
+        event: '6월민주항쟁',
+        summary: '민주주의까지 남은 거리, 87m',
+        imageUrl: 일구팔칠,
         details: {
             // 인용구 정보
             quote: {
@@ -2885,8 +2883,8 @@ export default [
         id: 39,
         title: '범죄와의 전쟁',
         eventYear: 1990,
-        event: '범죄와의 전쟁 선포',
-        summary: '부산의 범죄와 부패의 역사 속에서 벌어지는 조직폭력배와의 치열한 싸움',
+        event: '10·13 특별선언',
+        summary: '‘느그 서장’이랑 친하면 다 되는 세상',
         imageUrl: 범죄와의전쟁,
         details: {
             // 인용구 정보
@@ -2959,8 +2957,8 @@ export default [
         id: 40,
         title: '모가디슈',
         eventYear: 1991,
-        event: '소말리아 모가디슈 탈출',
-        summary: '소말리아 내전 중 대한민국 대사관과 북한 대사관의 탈출을 그린 실화 바탕 영화',
+        event: '소말리아 외교공관 철수',
+        summary: '두 개의 국가, 하나의 탈출구',
         imageUrl: 모가디슈,
         details: {
             // 인용구 정보
@@ -3034,9 +3032,8 @@ export default [
     {
         id: 41,
         title: '삼진그룹 영어토익반',
-        eventYear: 1991,
         event: '낙동강 페놀 유출 사건',
-        summary: '삼진그룹의 여직원들이 환경 오염 사건을 추적하며 펼치는 용감한 이야기',
+        summary: '토익 점수보다 높아진 세 친구의 정의 지수',
         imageUrl: 삼진그룹,
         details: {
             // 인용구 정보
@@ -3111,8 +3108,8 @@ export default [
         id: 42,
         title: '벌새',
         eventYear: 1994,
-        event: '성수대교 붕괴 사고',
-        summary: '1994년, 14살 소녀의 보편적이고 찬란한 기억을 그린 드라마',
+        event: '성수대교 붕괴',
+        summary: '열네 살의 마음에도 금이 갔다, 마치 그 시절처럼',
         imageUrl: 벌새,
         details: {
             // 인용구 정보
@@ -3190,8 +3187,8 @@ export default [
         id: 43,
         title: '국가부도의 날',
         eventYear: 1997,
-        event: '1997년 IMF 외환 위기',
-        summary: '1997년 IMF 외환 위기 속에서 각기 다른 선택을 한 사람들의 이야기를 그린 드라마',
+        event: 'IMF 외환위기',
+        summary: '그날 우리 아버지가 해고 당한 이유',
         imageUrl: 국가부도의날,
         details: {
             // 인용구 정보
@@ -3275,9 +3272,8 @@ export default [
     {
         id: 44,
         title: '공작',
-        eventYear: 1990,
-        event: '흑금성 사건',
-        summary: '남북 관계와 첩보전을 배경으로 한 공작원 박채서의 이야기',
+        event: '제15대 대통령 선거',
+        summary: '서로를 믿고 싶었던 두 남자의 ‘비즈니스’',
         imageUrl: 공작,
         details: {
             // 인용구 정보
@@ -3358,7 +3354,7 @@ export default [
         title: '연평해전',
         eventYear: 2002,
         event: '제2연평해전',
-        summary: '2002년 제2연평해전에서 해군 대원들이 서로를 의지하며 싸운 이야기',
+        summary: '모두가 붉게 물든 2002년, 진짜 영웅은 따로 있었다',
         imageUrl: 연평해전,
         details: {
             // 인용구 정보
@@ -3438,7 +3434,7 @@ export default [
         title: '추격자',
         eventYear: 2003,
         event: '유영철 연쇄살인 사건',
-        summary: '연쇄살인 사건의 배경 속에서 벌어지는 추격전과 경찰 수사의 이야기',
+        summary: '그 아가씨가 여기 있대니깐',
         imageUrl: 추격자,
         details: {
             // 인용구 정보
@@ -3515,7 +3511,7 @@ export default [
         title: '더 킹',
         eventYear: 2004,
         event: '노무현 대통령 탄핵 소추',
-        summary: '정치적 대립과 권력의 이면을 그린 범죄 드라마',
+        summary: '대한민국 현대 정치사 입문서',
         imageUrl: 더킹,
         details: {
             // 인용구 정보
@@ -3589,8 +3585,8 @@ export default [
         id: 48,
         title: '아이 캔 스피크',
         eventYear: 2007,
-        event: '미국 하원 위안부 결의안 (H.Res.121) 통과',
-        summary: '위안부 피해자들의 증언을 담은 감동적인 이야기',
+        event: '미국 하원 위안부 결의안 통과',
+        summary: '할머니의 사연 있는 ‘ABCD’',
         imageUrl: 아이캔스피크,
         details: {
             // 인용구 정보
@@ -3660,8 +3656,8 @@ export default [
         id: 49,
         title: '댓글부대',
         eventYear: 2012,
-        event: '국내 여론 조작 및 댓글부대 사건들',
-        summary: '여론 조작과 댓글 부대의 이면을 그린 범죄 드라마',
+        event: '국정원·국방부 여론조작 의혹',
+        summary: '클릭 한 번으로 세상을 조작할 수 있다면',
         imageUrl: 댓글부대,
         details: {
             // 인용구 정보
@@ -3732,8 +3728,8 @@ export default [
         id: 50,
         title: '내부자들',
         eventYear: 2016,
-        event: '성완종 리스트 폭로',
-        summary: '정경유착과 권력 암투를 그린 범죄 드라마',
+        event: '고위 공무원 국민 개·돼지 발언',
+        summary: '정의라는 달달한 것이 아직 남아있긴 한가',
         imageUrl: 내부자들,
         details: {
             // 인용구 정보
@@ -3801,6 +3797,5 @@ export default [
                 { name: "김홍파", role: "오현수 역" }
             ]
         }
-    }
-    ,
+    },
 ]

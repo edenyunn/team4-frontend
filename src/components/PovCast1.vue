@@ -3,27 +3,23 @@
     <div class="modal-dialog modal-lg" role="document">
       <div class="modal-content bg-dark text-white">
         <div class="modal-header border-secondary">
-          <h5 class="modal-title">배우개그 유니버스 <strong>{{ actorName }}</strong></h5>
-          <button 
-            type="button" 
-            class="btn-close btn-close-white" 
-            aria-label="Close" 
+          <h5 class="modal-title">POV Cast: 배우개그 유니버스 - {{ actorName }}</h5>
+          <button
+            type="button"
+            class="btn-close btn-close-white"
+            aria-label="Close"
             @click="closeModal"
           ></button>
         </div>
 
         <div class="modal-body">
-
-          <Carousel 
+          <Carousel
             :folder-name="cardsFolder"
-            v-if="isCarouselVisible" 
+            v-if="isCarouselVisible"
             @load-error="handleCarouselError"
           />
 
-          <div 
-            v-if="errorMessage" 
-            class="alert alert-danger text-center"
-          >
+          <div v-if="errorMessage" class="alert alert-danger text-center">
             {{ errorMessage }}
           </div>
         </div>
@@ -33,71 +29,45 @@
 </template>
 
 <script setup>
-import { ref, computed } from 'vue'
-import Carousel from './CastCarousel.vue'
+import { ref, computed } from "vue";
+import Carousel from "./CastCarousel.vue";
 
-// Props with validation 0
+// Props 설정
 const props = defineProps({
-  isOpen: {
-    type: Boolean,
-    required: true
-  },
   castNumber: {
-    type: [String, Number],
-    default: '1',
-    validator: (value) => ['1', '2', '3', 1, 2, 3].includes(value)
-  }
-})
+    type: Number,
+    required: true,
+  },
+  actorName: {
+    type: String,
+    required: true,
+  },
+});
 
 // State
-const errorMessage = ref('')
-const isCarouselVisible = ref(true)
+const errorMessage = ref("");
+const isCarouselVisible = ref(true);
 
-// Emits with validation
+// Emits 설정
 const emit = defineEmits({
   close: null,
-  error: (error) => error instanceof Error
-})
+  error: (error) => error instanceof Error,
+});
 
-// 동적 이미지 임포트
-const castImage = computed(() => {
-  try {
-    return new URL(`../assets/PovCast${props.castNumber}.png`, import.meta.url).href
-  } catch (error) {
-    handleImageError()
-    return ''
-  }
-})
-
-// 배우 이름 매핑
-const actorName = computed(() => {
-  const names = {
-    '1': '이성민',
-    '2': '황정민',
-    '3': '정우성'
-  }
-  return names[props.castNumber.toString()] || '배우'
-})
-
-// 폴더명 동적 생성
-const cardsFolder = computed(() => `CastCards${props.castNumber}`)
+// 동적 폴더 이름 생성
+const cardsFolder = computed(() => `CastCards${props.castNumber}`);
 
 // 에러 핸들링
-const handleImageError = () => {
-  errorMessage.value = '이미지를 불러오는데 실패했습니다.'
-  emit('error', new Error('Failed to load cast image'))
-}
-
 const handleCarouselError = (error) => {
-  errorMessage.value = '카드뉴스를 불러오는데 실패했습니다.'
-  isCarouselVisible.value = false
-  emit('error', error)
-}
+  errorMessage.value = "카드뉴스를 불러오는데 실패했습니다.";
+  isCarouselVisible.value = false;
+  emit("error", error);
+};
 
 // 모달 닫기
 const closeModal = () => {
-  emit('close')
-}
+  emit("close");
+};
 </script>
 
 <style scoped>
@@ -127,22 +97,12 @@ const closeModal = () => {
 }
 
 .modal-title {
-  font-family: 'Pretendard-Medium';
+  font-family: "Pretendard-Medium";
 }
 
 .modal-body {
   padding: 1.5rem;
   overflow-y: auto;
   max-height: calc(100vh - 60px);
-}
-
-@media (max-width: 768px) {
-  .modal-image {
-    max-height: 200px;
-  }
-  
-  .modal-body {
-    padding: 1rem;
-  }
 }
 </style>

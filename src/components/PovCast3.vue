@@ -32,28 +32,72 @@
   </div>
 </template>
 
-<script>
-import PovCast3 from '@/assets/PovCast3.png';
+<script setup>
+import { ref, computed } from 'vue'
+import Carousel from './CastCarousel.vue'
 
-export default {
-  name: "PovCast3",
-  props: {
-    isOpen: {
-      type: Boolean,
-      required: true
-    }
+// Props with validation 0
+const props = defineProps({
+  isOpen: {
+    type: Boolean,
+    required: true
   },
-  data() {
-    return {
-      PovCast3: PovCast3
-    };
-  },
-  methods: {
-    closeModal() {
-      this.$emit('close');
-    }
+  castNumber: {
+    type: [String, Number],
+    default: '1',
+    validator: (value) => ['1', '2', '3', 1, 2, 3].includes(value)
   }
-};
+})
+
+// State
+const errorMessage = ref('')
+const isCarouselVisible = ref(true)
+
+// Emits with validation
+const emit = defineEmits({
+  close: null,
+  error: (error) => error instanceof Error
+})
+
+// 동적 이미지 임포트
+const castImage = computed(() => {
+  try {
+    return new URL(`../assets/PovCast${props.castNumber}.png`, import.meta.url).href
+  } catch (error) {
+    handleImageError()
+    return ''
+  }
+})
+
+// 배우 이름 매핑
+const actorName = computed(() => {
+  const names = {
+    '1': '이성민',
+    '2': '송강호',
+    '3': '이정재'
+  }
+  return names[props.castNumber.toString()] || '배우'
+})
+
+// 폴더명 동적 생성
+const cardsFolder = computed(() => `CastCards${props.castNumber}`)
+
+// 에러 핸들링
+const handleImageError = () => {
+  errorMessage.value = '이미지를 불러오는데 실패했습니다.'
+  emit('error', new Error('Failed to load cast image'))
+}
+
+const handleCarouselError = (error) => {
+  errorMessage.value = '카드뉴스를 불러오는데 실패했습니다.'
+  isCarouselVisible.value = false
+  emit('error', error)
+}
+
+// 모달 닫기
+const closeModal = () => {
+  emit('close')
+}
 </script>
 
 <style scoped>

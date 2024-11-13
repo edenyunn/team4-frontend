@@ -19,8 +19,8 @@ import 고지전 from '@/assets/posters/고지전.jpg'
 import 효자동이발사 from '@/assets/posters/효자동이발사.jpg'
 import 국제시장 from '@/assets/posters/국제시장.jpg'
 import 실미도 from '@/assets/posters/실미도.jpg'
-import 하이재킹 from '@/assets/posters/하이재킹.jpg'
 import 킹메이커 from '@/assets/posters/킹메이커.jpg'
+import 하이재킹 from '@/assets/posters/하이재킹.jpg'
 import 님은먼곳에 from '@/assets/posters/님은먼곳에.jpg'
 import 알포인트 from '@/assets/posters/알포인트.jpg'
 import 남산의부장들 from '@/assets/posters/남산의부장들.jpg'
@@ -2573,7 +2573,7 @@ export default [
         eventYear: 1985,
         event: '남영동 대공분실 고문 사건',
         summary: '1985년 남영동 대공분실에서 발생한 고문 사건을 중심으로 한 드라마',
-        imageUrl: 남영동,
+        imageUrl: 남영동1985,
         details: {
             // 인용구 정보
             quote: {
@@ -2810,7 +2810,7 @@ export default [
         eventYear: 1987,
         event: '박종철 고문치사 사건',
         summary: '박종철 고문치사 사건을 배경으로 한 민주화 운동의 전개',
-        imageUrl: 일구팔칠,
+        imageUrl: 1987,
         details: {
             // 인용구 정보
             quote: {

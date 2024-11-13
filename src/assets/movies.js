@@ -1632,8 +1632,8 @@ export default [
         id: 22,
         title: '하이재킹',
         eventYear: 1971,
-        event: '대한항공 F27기 납북 미수 사건',
-        summary: '88년 서울행 비행기, 목적지는 평양!?',
+        event: '대한항공 F27기\n납북 미수 사건',
+        summary: '88년 서울행 비행기,\n목적지는 평양!?',
         imageUrl: 하이재킹,
         details: {
             // 인용구 정보
@@ -1708,7 +1708,7 @@ export default [
         id: 23,
         title: '킹메이커',
         event: '제 7대 대통령 선거',
-        summary: '정치판 서커스, 진짜 설계자는 따로 있다',
+        summary: '정치판 서커스,\n진짜 설계자는 따로 있다',
         imageUrl: 킹메이커,
         details: {
             // 인용구 정보
@@ -1779,7 +1779,7 @@ export default [
         id: 24,
         title: '님은 먼 곳에',
         event: '베트남 전쟁',
-        summary: '전쟁터에서도 멈추지 않은 그리움의 멜로디',
+        summary: '전쟁터에서도 멈추지 않은\n그리움의 멜로디',
         imageUrl: 님은먼곳에,
         details: {
             // 인용구 정보
@@ -1850,7 +1850,7 @@ export default [
         id: 25,
         title: '알포인트',
         event: '베트남 전쟁',
-        summary: '사건일지: 실종자 다수, 원인 불명, 생존자 0명',
+        summary: '사건일지: 실종자 다수,\n원인 불명, 생존자 0명',
         imageUrl: 알포인트,
         details: {
             // 인용구 정보
@@ -1923,7 +1923,7 @@ export default [
         title: '남산의 부장들',
         eventYear: 1979,
         event: '10·26사태',
-        summary: '당신의 저녁 식사가 정치적 음모의 무대가 된다면?',
+        summary: '당신의 저녁 식사가 정치적\n음모의 무대가 된다면?',
         imageUrl: 남산의부장들,
         details: {
             // 인용구 정보
@@ -2058,7 +2058,7 @@ export default [
         id: 28,
         title: '서울의 봄',
         event: '12·12사태',
-        summary: '누구도 예상하지 못한 생일잔치',
+        summary: '누구도 예상 못한 생일잔치',
         imageUrl: 서울의봄,
         details: {
             // 인용구 정보
@@ -2429,8 +2429,8 @@ export default [
         id: 33,
         title: '변호인',
         eventYear: 1981,
-        event: '부림사건',
-        summary: '‘돼지국밥’처럼 뜨거운 변호인의 인권 투쟁',
+        event: '부림 사건',
+        summary: '‘돼지국밥’처럼\n뜨거운 변호인의 인권 투쟁',
         imageUrl: 변호인,
         details: {
             // 인용구 정보
@@ -2502,8 +2502,8 @@ export default [
         id: 34,
         title: '헌트',
         eventYear: 1983,
-        event: '아웅 산 묘소 폭탄 테러 사건',
-        summary: '코리아 서스펜스: 적인가, 동료인가?',
+        event: '아웅 산 묘소\n폭탄 테러 사건',
+        summary: '코리아 서스펜스: \n적인가, 동료인가?',
         imageUrl: 헌트,
         details: {
             // 인용구 정보
@@ -2648,8 +2648,8 @@ export default [
         id: 36,
         title: '비공식작전',
         eventYear: 1986,
-        event: '레바논 한국 외교관 납치 사건',
-        summary: '상부에선 “공식적으로 이 작전이 없었다”고 한다',
+        event: '레바논 한국 외교관\n납치 사건',
+        summary: '상부에선 “공식적으로\n이 작전이 없었다”고 한다',
         imageUrl: 비공식작전,
         details: {
             // 인용구 정보
@@ -2899,7 +2899,7 @@ export default [
         title: '범죄와의 전쟁',
         eventYear: 1990,
         event: '10·13 특별선언',
-        summary: '‘느그 서장’이랑 친하면 다 되는 세상',
+        summary: '‘느그 서장’이랑\n친하면 다 되는 세상',
         imageUrl: 범죄와의전쟁,
         details: {
             // 인용구 정보
@@ -2977,7 +2977,7 @@ export default [
         id: 40,
         title: '모가디슈',
         eventYear: 1991,
-        event: '소말리아 외교공관 철수',
+        event: '소말리아\n외교공관 철수',
         summary: '두 개의 국가, 하나의 탈출구',
         imageUrl: 모가디슈,
         details: {
@@ -3052,8 +3052,8 @@ export default [
     {
         id: 41,
         title: '삼진그룹 영어토익반',
-        event: '낙동강 페놀 유출 사건',
-        summary: '토익 점수보다 높아진 세 친구의 정의 지수',
+        event: '낙동강 페놀\n유출 사건',
+        summary: '토익 점수보다 높아진\n세 친구의 정의 지수',
         imageUrl: 삼진그룹,
         details: {
             // 인용구 정보
@@ -3129,7 +3129,7 @@ export default [
         title: '벌새',
         eventYear: 1994,
         event: '성수대교 붕괴',
-        summary: '열네 살의 마음에도 금이 갔다, 마치 그 시절처럼',
+        summary: '열네 살 마음에도 금이 갔다,\n마치 그 시절처럼',
         imageUrl: 벌새,
         details: {
             // 인용구 정보
@@ -3208,7 +3208,7 @@ export default [
         title: '국가부도의 날',
         eventYear: 1997,
         event: 'IMF 외환위기',
-        summary: '그날 우리 아버지가 해고 당한 이유',
+        summary: '그날 우리 아버지가\n해고 당한 이유',
         imageUrl: 국가부도의날,
         details: {
             // 인용구 정보
@@ -3293,7 +3293,7 @@ export default [
         id: 44,
         title: '공작',
         event: '제15대 대통령 선거',
-        summary: '서로를 믿고 싶었던 두 남자의 ‘비즈니스’',
+        summary: '서로를 믿고 싶었던\n두 남자의 ‘비즈니스’',
         imageUrl: 공작,
         details: {
             // 인용구 정보
@@ -3374,7 +3374,7 @@ export default [
         title: '연평해전',
         eventYear: 2002,
         event: '제2연평해전',
-        summary: '모두가 붉게 물든 2002년, 진짜 영웅은 따로 있었다',
+        summary: '모두가 붉게 물든 2002년,\n진짜 영웅은 따로 있었다',
         imageUrl: 연평해전,
         details: {
             // 인용구 정보
@@ -3530,7 +3530,7 @@ export default [
         id: 47,
         title: '더 킹',
         eventYear: 2004,
-        event: '노무현 대통령 탄핵 소추',
+        event: '노무현 대통령\n탄핵 소추',
         summary: '대한민국 현대 정치사 입문서',
         imageUrl: 더킹,
         details: {
@@ -3610,7 +3610,7 @@ export default [
         id: 48,
         title: '아이 캔 스피크',
         eventYear: 2007,
-        event: '미국 하원 위안부 결의안 통과',
+        event: '미국 하원\n위안부 결의안 통과',
         summary: '할머니의 사연 있는 ‘ABCD’',
         imageUrl: 아이캔스피크,
         details: {
@@ -3686,8 +3686,8 @@ export default [
         id: 49,
         title: '댓글부대',
         eventYear: 2012,
-        event: '국정원·국방부 여론조작 의혹',
-        summary: '클릭 한 번으로 세상을 조작할 수 있다면',
+        event: '국정원·국방부\n여론조작 의혹',
+        summary: '클릭 한 번으로\n세상을 조작할 수 있다면',
         imageUrl: 댓글부대,
         details: {
             // 인용구 정보
@@ -3758,8 +3758,8 @@ export default [
         id: 50,
         title: '내부자들',
         eventYear: 2016,
-        event: '고위 공무원 국민 개·돼지 발언',
-        summary: '정의라는 달달한 것이 아직 남아있긴 한가',
+        event: '고위 공무원\n국민 개·돼지 발언',
+        summary: '정의라는 달달한 것이\n아직 남아있긴 한가',
         imageUrl: 내부자들,
         details: {
             // 인용구 정보

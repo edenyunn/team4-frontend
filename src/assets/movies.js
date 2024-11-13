@@ -414,7 +414,7 @@ export default [
         title: '말모이',
         eventYear: 1942,
         event: '조선어학회 사건',
-        summary: '한 장의 종이에 희망을 새기다',
+        summary: '한 권의 책에 희망을 새기다',
         imageUrl: 말모이, // 해당 포스터 파일 경로 연결
         details: {
             // 인용구 정보
@@ -510,18 +510,18 @@ export default [
             relatedVideos: [
                 {
                     title: "관련 영상 1",
-                    youtubeId: "W1QIciSrI2o",
+                    youtubeId: "DcjQm7Q8AT8",
                     params: "si=YooTJcs85-31MI14"
                 },
                 {
                     title: "관련 영상 2",
-                    youtubeId: "QkiK1oEDrho",
+                    youtubeId: "RW-BMXfUEjQ",
                     params: "si=-Koc20T8SKf1ZzGi"
                 }
             ],
             // 배경음악 정보
             backgroundMusic: {
-                youtubeId: "vRg9OOrrHOw"
+                youtubeId: "zyTuNuMtgu8"
             },
             // 추가된 영화 정보
             genre: "드라마, 전기",

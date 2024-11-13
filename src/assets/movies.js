@@ -543,7 +543,7 @@ export default [
                 },
                 {
                     title: "관련 영상 2",
-                    youtubeId: "1YZDR6Kt62I",
+                    youtubeId: "YewXx9am6Jk",
                     params: "si=-Koc20T8SKf1ZzGi"
                 }
             ],
@@ -1522,16 +1522,11 @@ export default [
             relatedVideos: [
                 {
                     title: "관련 영상 1",
-                    youtubeId: "PFXSqRWVxcc",
-                    params: "si=YooTJcs85-31MI14"
-                },
-                {
-                    title: "관련 영상 2",
                     youtubeId: "c0YeXUZLuX0",
                     params: "si=-Koc20T8SKf1ZzGi"
                 },
                 {
-                    title: "관련 영상 3",
+                    title: "관련 영상 2",
                     youtubeId: "jPaXSkCW2vk",
                     params: "si=-Koc20T8SKf1ZzGi"
                 }
@@ -1965,6 +1960,11 @@ export default [
                     title: "관련 영상 2",
                     youtubeId: "QpolfHUybGc",
                     params: "si=-Koc20T8SKf1ZzGi"
+                },
+                {
+                    title: "관련 영상 3",
+                    youtubeId: "pVXlIbGDMIY",
+                    params: "si=-Koc20T8SKf1ZzGi"
                 }
             ],
             // 배경음악 정보
@@ -2102,7 +2102,7 @@ export default [
                 },
                 {
                     title: "관련 영상 2",
-                    youtubeId: "LveKX1ZjG1s",
+                    youtubeId: "O_Xe5UsFlF8",
                     params: "si=-Koc20T8SKf1ZzGi"
                 }
             ],

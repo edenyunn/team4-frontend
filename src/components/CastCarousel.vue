@@ -15,7 +15,7 @@
         ></button>
       </div>
 
-      <!-- 캐러셀 내용 -->
+      <!-- 캐러셀 0내용 -->
       <div class="carousel-inner">
         <div
           v-for="(image, index) in images"

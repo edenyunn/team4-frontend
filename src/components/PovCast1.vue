@@ -47,7 +47,7 @@
 import { ref, computed } from 'vue'
 import Carousel from './CastCarousel.vue'
 
-// Props with validation
+// Props with validation 0
 const props = defineProps({
   isOpen: {
     type: Boolean,

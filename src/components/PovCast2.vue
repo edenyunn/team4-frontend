@@ -58,10 +58,9 @@ export default {
 
 <style scoped>
 .modal-image {
-  max-width: 40%;
-  max-height: 50vh;
-  object-fit: cover;
-  border-radius: 4px;
+  max-height: 300px;
+  width: auto;
+  object-fit: contain;
 }
 
 .modal.show {
@@ -79,38 +78,27 @@ export default {
   }
 }
 
-.modal {
-  z-index: 1050;
-}
-
-.modal-backdrop {
-  z-index: 1040;
-}
-
 .modal-header {
-  padding: 1rem 2rem;
-}
-
-.modal-body {
-  padding: 2rem;
-  overflow-y: auto;
+  padding: 1rem 1.5rem;
 }
 
 .modal-title {
-  font-size: 1.5rem;
+  font-family: 'Pretendard-Medium';
 }
 
-@media (max-width: 576px) {
-  .modal-header {
-    padding: 1rem;
-  }
+.modal-body {
+  padding: 1.5rem;
+  overflow-y: auto;
+  max-height: calc(100vh - 60px);
+}
 
+@media (max-width: 768px) {
+  .modal-image {
+    max-height: 200px;
+  }
+  
   .modal-body {
     padding: 1rem;
-  }
-
-  .modal-title {
-    font-size: 1.25rem;
   }
 }
 </style>

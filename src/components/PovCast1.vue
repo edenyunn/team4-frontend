@@ -107,6 +107,21 @@ const closeModal = () => {
   object-fit: contain;
 }
 
+.modal.show {
+  display: block;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
 .modal-header {
   padding: 1rem 1.5rem;
 }

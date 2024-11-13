@@ -1,9 +1,9 @@
 <template>
   <div class="modal show d-block" tabindex="-1">
-    <div class="modal-dialog modal-fullscreen" role="document">
+    <div class="modal-dialog modal-lg" role="document">
       <div class="modal-content bg-dark text-white">
         <div class="modal-header border-secondary">
-          <h5 class="modal-title">POV Cast: 배우개그 유니버스</h5>
+          <h5 class="modal-title">배우개그 유니버스 <strong>{{ actorName }}</strong></h5>
           <button 
             type="button" 
             class="btn-close btn-close-white" 
@@ -13,17 +13,6 @@
         </div>
 
         <div class="modal-body">
-          <div class="text-center mb-4">
-            <div class="d-flex justify-content-center mb-3">
-              <img 
-                :src="castImage" 
-                :alt="`Pov Cast ${actorName}`" 
-                class="modal-image img-fluid" 
-                @error="handleImageError"
-              />
-            </div>
-            <h5 class="mb-3">{{ actorName }}&nbsp;배우</h5>
-          </div>
 
           <Carousel 
             :folder-name="cardsFolder"
@@ -120,6 +109,10 @@ const closeModal = () => {
 
 .modal-header {
   padding: 1rem 1.5rem;
+}
+
+.modal-title {
+  font-family: 'Pretendard-Medium';
 }
 
 .modal-body {

@@ -1,22 +1,31 @@
 <template>
   <div class="modal show d-block" tabindex="-1">
-    <div class="modal-dialog modal-fullscreen" role="document">
+    <div class="modal-dialog modal-lg" role="document">
       <div class="modal-content bg-dark text-white">
-        <div class="modal-header">
-          <h5 class="modal-title">POV Cast: 배우개그 유니버스</h5>
-          <button type="button" class="btn-close btn-close-white" aria-label="Close" @click="closeModal"></button>
+        <div class="modal-header border-secondary">
+          <h5 class="modal-title">POV Cast: 배우개그 유니버스 - {{ actorName }}&nbsp;</h5>
+          <button 
+            type="button" 
+            class="btn-close btn-close-white" 
+            aria-label="Close" 
+            @click="closeModal"
+          ></button>
         </div>
+
         <div class="modal-body">
-          <div class="text-center">
-            <div class="d-flex justify-content-center mb-3">
-              <img :src="PovCast3" alt="Pov Cast 이정재" class="modal-image img-fluid" />
-            </div>
-            <h5 class="mb-3">이정재&nbsp;배우</h5>
+
+          <Carousel 
+            :folder-name="cardsFolder"
+            v-if="isCarouselVisible" 
+            @load-error="handleCarouselError"
+          />
+
+          <div 
+            v-if="errorMessage" 
+            class="alert alert-danger text-center"
+          >
+            {{ errorMessage }}
           </div>
-          <div>
-            내용
-          </div>
-          <br>
         </div>
       </div>
     </div>

@@ -92,6 +92,7 @@ export default {
   font-size: 36px;
   font-weight: bold;
   font-family: "Raleway-Bold";
+  color: rgba(255, 255, 255);
   margin-bottom: 8px;
   letter-spacing: -1px;
 }

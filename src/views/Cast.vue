@@ -1,5 +1,5 @@
 <template>
-  <div class="dark-container">
+  <div class="dark-container" :class="{'low-opacity': isModalOpen}">
     <!-- Welcome Section -->
     <div class="welcome-section">
       <h1 class="welcome-title">Cast</h1>
@@ -18,9 +18,9 @@
     >
       <img :src="image" :alt="`${name} logo`" />
     </button>
-
-    <!-- 동적 모달 -->
-    <Suspense v-if="isModalOpen">
+  </div>
+  <!-- 동적 모달 -->
+  <Suspense v-if="isModalOpen">
       <component
         :is="currentModal"
         @close="closeModal"
@@ -29,7 +29,6 @@
         aria-modal="true"
       />
     </Suspense>
-  </div>
 </template>
 
 <script>
@@ -129,6 +128,10 @@ export default {
   background-color: rgba(255, 255, 255, 0.5);
   margin: 20px -20px;
   margin-top: 55px;
+}
+
+.low-opacity {
+  opacity: 0.1;
 }
 
 /* 갤러리 */

@@ -1,6 +1,6 @@
 <template>
   <div class="modal show d-block" tabindex="-1">
-    <div class="modal-dialog modal-fullscreen" role="document">
+    <div class="modal-dialog modal-dialog-scrollable" role="document">
       <div class="modal-content bg-dark text-white">
         <div class="modal-header">
           <h5 class="modal-title">POV 1980</h5>
@@ -13,15 +13,27 @@
         </div>
         <div class="modal-body">
           <div class="text-center">
-            <div class="d-flex justify-content-center mb-3">
-              <img
-                :src="pov1980Logo"
-                alt="Pov1980"
-                class="modal-image img-fluid"
-              />
+            <div class="d-flex justify-content-center mb-3"></div>
+
+            <!-- Related Videos Section -->
+            <div class="video-container">
+              <div class="iframe-wrapper">
+                <iframe
+                  width="430"
+                  height="315"
+                  src="https://www.youtube.com/embed/h2yBi1ZRcG8?si=F1Z3G6Cf7LAv6dS4"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <br />
             </div>
-            <h5 class="mb-3">1980&nbsp;5.18민주화운동</h5>
-            <p class="movie-description">그 날이 오면</p>
+
+            <h5 class="mb-3">&nbsp;그 날이 오면</h5>
+            <p class="movie-description"></p>
           </div>
           <br />
           <div>

@@ -1,37 +1,41 @@
 <template>
   <div class="modal show d-block" tabindex="-1">
-    <div class="modal-dialog modal-fullscreen" role="document">
+    <div class="modal-dialog modal-dialog-scrollable" role="document">
       <div class="modal-content bg-dark text-white">
         <div class="modal-header">
           <h5 class="modal-title">POV 1950</h5>
-          <!-- OST 버튼  추가 -->
-          <div class="d-flex align-items-center gap-2">
-            <button v-if="player" class="btn btn-outline-light" @click="toggleMusic">
-              <i :class="isPlaying ? 'bi bi-pause-fill' : 'bi bi-play-fill'"></i>
-              노래 재생
-            </button>
-            <button type="button" class="btn-close btn-close-white" aria-label="Close" @click="closeModal"></button>
-          </div>
+          <button
+            type="button"
+            class="btn-close btn-close-white"
+            aria-label="Close"
+            @click="closeModal"
+          ></button>
         </div>
-        
-        <!-- Background Music iframe 추가 -->
-        <iframe id="bgMusic" style="display: none"
-          :src="'https://www.youtube.com/embed/' + musicId + '?enablejsapi=1'"
-          allow="autoplay">
-        </iframe>
-        
         <div class="modal-body">
           <div class="text-center">
-            <div class="d-flex justify-content-center mb-3">
-              <img
-                :src="pov1950Logo"
-                alt="Pov1980"
-                class="modal-image img-fluid"
-              />
+            <div class="d-flex justify-content-center mb-3"></div>
+
+            <!-- Related Videos Section -->
+            <div class="video-container">
+              <div class="iframe-wrapper">
+                <iframe
+                  width="430"
+                  height="315"
+                  src="https://www.youtube.com/embed/h2yBi1ZRcG8?si=F1Z3G6Cf7LAv6dS4"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <br />
             </div>
-            <h5 class="mb-3">1950&nbsp;6.25전쟁</h5>
-            <p class="movie-description">6.25전쟁</p>
+
+            <h5 class="mb-3">1950:&nbsp;그날의 전선</h5>
+            <p class="movie-description"></p>
           </div>
+          <br />
           <div>
             <p>
               평화롭던 거리에 총성이 울리고<br />
@@ -97,60 +101,13 @@ export default {
   data() {
     return {
       pov1950Logo: pov1950Logo,
-      pov1950Logo: pov1950Logo,
-      isPlaying: false,
-      player: null,
-      musicId: 'vRg9OOrrHOw' // 재생하고 싶은 YouTube 영상 ID
     };
   },
   methods: {
     closeModal() {
-      if (this.player) {
-        this.player.stopVideo();
-      }
-      this.isPlaying = false;
-      this.$emit('close');
+      this.$emit("close");
     },
-    toggleMusic() {
-      if (this.player) {
-        if (this.isPlaying) {
-          this.player.pauseVideo();
-        } else {
-          this.player.playVideo();
-        }
-        this.isPlaying = !this.isPlaying;
-      }
-    },
-    initializePlayer() {
-      if (window.YT && window.YT.Player) {
-        const iframe = document.getElementById("bgMusic");
-        if (iframe) {
-          this.player = new window.YT.Player("bgMusic", {
-            events: {
-              onStateChange: (event) => {
-                this.isPlaying = event.data === window.YT.PlayerState.PLAYING;
-              },
-            },
-          });
-        }
-      }
-    }
   },
-  mounted() {
-    this.$nextTick(() => {
-      if (window.YT && window.YT.Player) {
-        this.initializePlayer();
-      } else {
-        window.onYouTubeIframeAPIReady = this.initializePlayer;
-      }
-    });
-  },
-  beforeUnmount() {
-    if (this.player) {
-      this.player.stopVideo();
-      this.player.destroy();
-    }
-  }
 };
 </script>
 

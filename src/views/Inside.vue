@@ -1,5 +1,5 @@
 <template>
-  <div class="dark-container">
+  <div class="dark-container" :class="{'low-opacity': isModalOpen}">
     <!-- Welcome Section -->
     <div class="welcome-section">
       <h1 class="welcome-title">Inside</h1>
@@ -17,8 +17,9 @@
     >
       <img :src="image" :alt="`${name} logo`" />
     </button>
+  </div>
 
-    <Suspense v-if="isModalOpen">
+  <Suspense v-if="isModalOpen">
       <component
         :is="currentModal"
         @close="closeModal"
@@ -27,7 +28,7 @@
         aria-modal="true"
       />
     </Suspense>
-  </div>
+
 </template>
 
 <script>
@@ -110,6 +111,10 @@ export default {
   background-color: rgba(255, 255, 255, 0.5);
   margin: 20px -20px; /* 음수 마진으로 좌우로 확장 */
   margin-top: 55px;
+}
+
+.low-opacity {
+  opacity: 0.1;
 }
 
 .gallery-container {

@@ -1,6 +1,6 @@
 <template>
   <div v-if="isOpen" class="modal show d-block" tabindex="-1">
-    <div class="modal-dialog modal-fullscreen">
+    <div class="modal-dialog modal-dialog-scrollable">
       <div class="modal-content bg-dark text-white">
         <div class="modal-header border-secondary d-flex justify-content-between">
           <h1 class="modal-title fs-4">{{ movie?.title || "" }}</h1>

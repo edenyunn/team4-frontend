@@ -271,20 +271,17 @@ export default {
 }
 
 .video-container {
-  position: relative;
-  padding-bottom: 56.25%;
-  height: 0;
+  max-width: 1000px; /* 최대 가로 길이를 768px로 제한 */
+  margin: 1rem auto; /* 세로 여백과 가운데 정렬 */
+  aspect-ratio: 16 / 9; /* 16:9 비율 유지 */
+  background: #000; /* 비디오 로딩 전 배경색 설정 (선택 사항) */
   overflow: hidden;
-  max-width: 100%;
-  margin: 1rem 0;
 }
 
 .video-container iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  width: 100%; /* 부모 컨테이너의 너비에 맞춤 */
+  height: 100%; /* 부모 컨테이너의 높이에 맞춤 */
+  border: 0; /* 테두리 제거 */
 }
 
 /* blockquote 스타일 */

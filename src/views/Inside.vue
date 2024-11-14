@@ -32,9 +32,9 @@
 
 <script>
 import { defineAsyncComponent } from "vue";
-import pov1950Logo from "@/assets/pov1950logo.png";
-import pov1979Logo from "@/assets/pov1979logo.png";
-import pov1980Logo from "@/assets/pov1980logo.png";
+import pov1950Logo from "@/assets/1950 record.png";
+import pov1979Logo from "@/assets/1979 record.png";
+import pov1980Logo from "@/assets/1980 record.png";
 
 export default {
   name: "ModalGallery",

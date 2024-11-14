@@ -34,9 +34,9 @@
 
 <script>
 import { defineAsyncComponent } from "vue";
-import PovCast1 from "@/assets/Lee Sungmin.png";
-import PovCast2 from "@/assets/Song Gangho.png";
-import PovCast3 from "@/assets/Lee Jungjae.png";
+import PovCast1 from "@/assets/2Lee Sungmin.png";
+import PovCast2 from "@/assets/2Song Gangho.png";
+import PovCast3 from "@/assets/2Lee Jungjae.png";
 
 export default {
   name: "ModalGallery",

@@ -19,8 +19,8 @@
             <div class="video-container">
               <div class="iframe-wrapper">
                 <iframe
-                  width="430"
-                  height="315"
+                  width="320"
+                  height="180"
                   src="https://www.youtube.com/embed/h2yBi1ZRcG8?si=F1Z3G6Cf7LAv6dS4"
                   title="YouTube video player"
                   frameborder="0"
@@ -144,6 +144,7 @@ export default {
 .modal-body {
   padding: 2rem;
   overflow-y: auto;
+  text-align: center;
 }
 
 .modal-title {

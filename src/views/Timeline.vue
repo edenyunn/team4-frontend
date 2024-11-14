@@ -1,6 +1,6 @@
 <!-- Timeline.vue -->
 <template>
-  <div class="dark-container">
+  <div class="dark-container" :class="{'low-opacity': isModalOpen}">
     <!-- Welcome Section -->
     <div class="welcome-section">
       <h1 class="welcome-title">Welcome to POV</h1>
@@ -34,13 +34,14 @@
       </div>
     </div>
 
-    <!-- Movie Modal -->
-    <MovieModal 
-      :is-open="isModalOpen"
-      :movie="selectedMovie"
-      @close="closeModal"
-    />
   </div>
+  
+  <!-- Movie Modal -->
+  <MovieModal 
+    :is-open="isModalOpen"
+    :movie="selectedMovie"
+    @close="closeModal"
+  />
 </template>
 
 <script>
@@ -95,6 +96,10 @@ html, body {
   color: white;
   padding: 0;
   margin: 0;
+}
+
+.low-opacity {
+  opacity: 0.1;
 }
 
 .icons {
@@ -265,6 +270,7 @@ html, body {
 @media screen and (min-width: 577px) and (max-width: 1025px) {
  .welcome-title { font-size: 24px; }
  .welcome-subtitle { font-size: 19px; }
+ .timeline-section { margin: 0 10% }
  .year { font-size: 35px; }
  .event { font-size: 17px; }
  .movie-summary { font-size: 14px; }
@@ -275,6 +281,7 @@ html, body {
 /* 태블릿 가로 화면(1025px-1919px 범위)에서의 고정값 */
 @media screen and (min-width: 1025px) and (max-width: 1919px) {
   .welcome-title { font-size: 36px; }
+ .timeline-section { margin: 0 20% }
   .welcome-subtitle { font-size: 36px; }
   .year { font-size: 40px; }
   .event { font-size: 30px; }

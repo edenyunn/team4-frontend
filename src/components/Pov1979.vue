@@ -1,6 +1,6 @@
 <template>
   <div class="modal show d-block" tabindex="-1">
-    <div class="modal-dialog modal-fullscreen" role="document">
+    <div class="modal-dialog modal-dialog-scrollable" role="document">
       <div class="modal-content bg-dark text-white">
         <div class="modal-header">
           <h5 class="modal-title">POV 1979</h5>
@@ -13,16 +13,29 @@
         </div>
         <div class="modal-body">
           <div class="text-center">
-            <div class="d-flex justify-content-center mb-3">
-              <img
-                :src="pov1979Logo"
-                alt="Pov1980"
-                class="modal-image img-fluid"
-              />
+            <div class="d-flex justify-content-center mb-3"></div>
+
+            <!-- Related Videos Section -->
+            <div class="video-container">
+              <div class="iframe-wrapper">
+                <iframe
+                  width="430"
+                  height="315"
+                  src="https://www.youtube.com/embed/h2yBi1ZRcG8?si=F1Z3G6Cf7LAv6dS4"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <br />
             </div>
-            <h5 class="mb-3">1979&nbsp;10.26사태, 서울의 봄, 그리고...</h5>
-            <p class="movie-description">빼앗긴 들에도 봄은 오는가</p>
+
+            <h5 class="mb-3">&nbsp;빼앗긴 들에도 봄은 오는가</h5>
+            <p class="movie-description"></p>
           </div>
+          <br />
           <div>
             <p>
               궁정동의 저녁, 긴장 속의 만찬<br />

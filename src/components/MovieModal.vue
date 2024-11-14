@@ -333,6 +333,7 @@ h5 {
   gap: 5px;
 }
 
+
 .detail-label {
   font-size: 0.9em;
   color: #aaa;

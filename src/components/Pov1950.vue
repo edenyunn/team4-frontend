@@ -4,7 +4,7 @@
       <div class="modal-content bg-dark text-white">
         <div class="modal-header">
           <h5 class="modal-title">POV 1950</h5>
-          <!-- OST 버튼 추가 -->
+          <!-- OST 버튼  추가 -->
           <div class="d-flex align-items-center gap-2">
             <button v-if="player" class="btn btn-outline-light" @click="toggleMusic">
               <i :class="isPlaying ? 'bi bi-pause-fill' : 'bi bi-play-fill'"></i>

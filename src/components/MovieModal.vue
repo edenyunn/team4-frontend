@@ -3,11 +3,11 @@
     <div class="modal-dialog modal-dialog-scrollable">
       <div class="modal-content bg-dark text-white">
         <div class="modal-header border-secondary d-flex justify-content-between">
-          <h1 class="modal-title fs-4">{{ movie?.title || "" }}</h1>
+          <h1 class="modal-title fs-1">{{ movie?.eventYear }}</h1>
           <div class="d-flex align-items-center gap-2">
             <button v-if="player" class="btn btn-outline-light" @click="toggleMusic">
               <i :class="isPlaying ? 'bi bi-pause-fill' : 'bi bi-play-fill'"></i>
-              OST 재생
+              OST
             </button>
             <button type="button" class="btn-close btn-close-white" aria-label="Close" @click="closeModal"></button>
           </div>
@@ -17,8 +17,8 @@
             <div class="d-flex justify-content-center mb-3">
               <img :src="movie?.imageUrl" :alt="movie?.title" class="modal-image img-fluid">
             </div>
-            <h5 class="mb-3">{{ movie?.eventYear }} {{ movie?.event }}</h5>
-            <p class="movie-description">{{ movie?.summary }}</p>
+            <h2 class="mb-3">{{ movie?.title || "" }}</h2>
+            <p class="movie-description">{{ movie?.event }}</p>
           </div>
 
           <!-- Quote Section -->
@@ -238,11 +238,10 @@ export default {
 /* Small devices (phones) */
 @media (max-width: 767.98px) {
   .modal-dialog {
-    width: 75%; /* 모바일에서는 더 작은 너비 */
+    width: 85%; /* 모바일에서는 더 작은 너비 */
     margin: 0.5rem auto;
   }
 }
-
 
 .modal-header {
   padding: 1rem 1.5rem;
@@ -329,10 +328,11 @@ export default {
 }
 
 /* 섹션 제목 스타일 */
-h5 {
+h2 {
   margin: 1.5rem 0 1rem;
   font-weight: bold;
   font-family: 'Pretendard-SemiBold';
+  margin-top: 25px;
 }
 
 /* 콘텐츠 텍스트 스타일 */
@@ -419,7 +419,8 @@ h5 {
   }
 
   .blockquote {
-    font-size: 1.2rem;
+    font-size: 15px;
+    margin: 10px;
   }
 
   .details-grid {

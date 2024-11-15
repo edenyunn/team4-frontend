@@ -1,10 +1,13 @@
 <template>
-  <div class="dark-container" :class="{'low-opacity': isModalOpen}">
+  <div class="dark-container" :class="{ 'low-opacity': isModalOpen }">
     <!-- Welcome Section -->
     <div class="welcome-section">
       <h1 class="welcome-title">Inside</h1>
-      <h2 class="welcome-subtitle">생성형 AI로 제작된 음악을 통해<br/>한국 현대사를 새롭게 느껴보세요</h2>
-      <div class="divider"></div> <!-- 새로 추가된 구분선 -->
+      <h2 class="welcome-subtitle">
+        생성형 AI로 제작된 음악을 통해<br />한국 현대사를 새롭게 느껴보세요
+      </h2>
+      <div class="divider"></div>
+      <!-- 새로 추가된 구분선 -->
     </div>
 
     <button
@@ -20,15 +23,14 @@
   </div>
 
   <Suspense v-if="isModalOpen">
-      <component
-        :is="currentModal"
-        @close="closeModal"
-        v-bind="modalProps"
-        role="dialog"
-        aria-modal="true"
-      />
-    </Suspense>
-
+    <component
+      :is="currentModal"
+      @close="closeModal"
+      v-bind="modalProps"
+      role="dialog"
+      aria-modal="true"
+    />
+  </Suspense>
 </template>
 
 <script>
@@ -100,10 +102,11 @@ export default {
 .welcome-subtitle {
   font-size: 18px;
   font-weight: 150;
-  font-family: "Raleway-SemiBold";
+  font-family: "Pretendard-Light";
   color: rgba(255, 255, 255);
   letter-spacing: -1px;
 }
+
 /* 구분선 스타일 */
 .divider {
   width: calc(100% + 40px); /* 컨테이너보다 좌우로 20px씩 더 길게 */

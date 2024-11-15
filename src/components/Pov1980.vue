@@ -3,7 +3,7 @@
     <div class="modal-dialog modal-dialog-scrollable" role="document">
       <div class="modal-content bg-dark text-white">
         <div class="modal-header">
-          <h5 class="modal-title">POV 1980</h5>
+          <h1 class="modal-title fs-1">POV 1980</h1>
           <button
             type="button"
             class="btn-close btn-close-white"
@@ -99,6 +99,16 @@ export default {
 </script>
 
 <style scoped>
+.modal-header {
+  padding: 1rem 1.5rem;
+  font-family: "Pretendard-SemiBold";
+}
+
+.modal-body {
+  font-weight: bold;
+  font-family: "Pretendard-Light";
+}
+
 .modal-image {
   max-width: 40%;
   max-height: 50vh;

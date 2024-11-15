@@ -214,6 +214,36 @@ export default {
 </script>
 
 <style scoped>
+.modal-dialog {
+  margin: 1.75rem auto;
+  width: 90%;
+  max-width: 800px; /* 데스크톱 기본 최대 너비 */
+}
+
+/* Large devices (desktops) */
+@media (min-width: 992px) {
+  .modal-dialog {
+    width: 40%;
+  }
+}
+
+/* Medium devices (tablets) */
+@media (max-width: 991.98px) {
+  .modal-dialog {
+    width: 60%;
+    margin: 1rem auto;
+  }
+}
+
+/* Small devices (phones) */
+@media (max-width: 767.98px) {
+  .modal-dialog {
+    width: 75%; /* 모바일에서는 더 작은 너비 */
+    margin: 0.5rem auto;
+  }
+}
+
+
 .modal-header {
   padding: 1rem 1.5rem;
   font-family: 'Pretendard-SemiBold';
@@ -332,7 +362,6 @@ h5 {
   flex-direction: column;
   gap: 5px;
 }
-
 
 .detail-label {
   font-size: 0.9em;

@@ -456,7 +456,7 @@ export default [
                     },
                     {
                         date: "1989년 4월 21일",
-                        event: "덕혜옹주 서거"
+                        event: "덕혜옹주 타계"
                     }
                 ]
             },

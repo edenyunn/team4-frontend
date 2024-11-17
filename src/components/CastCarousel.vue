@@ -147,9 +147,8 @@ onUnmounted(() => {
 
 .carousel-item img {
   width: 100%;
-  height: auto;
-  max-height: 80vh;
-  object-fit: contain;
+  height: 100%; /* 컨테이너 높이를 기준으로 이미지 크기 조정 */
+  object-fit: cover; /* 이미지를 컨테이너에 맞게 자름 */
 }
 
 .carousel-control-prev,

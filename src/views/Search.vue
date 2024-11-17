@@ -18,7 +18,7 @@
         </template>
         <!-- 봇 메시지는 generation 내용만 표시 -->
         <template v-else>
-          {{ typeof chat.message === 'object' ? chat.message.generation : chat.message }}
+          <div v-html="typeof chat.message === 'object' ? chat.message.generation : chat.message"></div>
         </template>
         <!-- 영화 포스터 목록 -->
         <div v-if="chat.movies && chat.movies.length > 0" class="movie-posters">

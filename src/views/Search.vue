@@ -18,7 +18,8 @@
         </template>
         <!-- 봇 메시지는 generation 내용만 표시 -->
         <template v-else>
-          <div v-html="typeof chat.message === 'object' ? chat.message.generation : chat.message"></div>
+          <!-- 마크다운을 읽어 HTML로 렌더링 -->
+          <div class="markdown-output" v-html="renderMarkdown(typeof chat.message === 'object' ? chat.message.generation : chat.message)"></div>
         </template>
         <!-- 영화 포스터 목록 -->
         <div v-if="chat.movies && chat.movies.length > 0" class="movie-posters">
@@ -59,6 +60,8 @@
 import axios from 'axios'
 import movies from '@/assets/movies.js'
 import MovieModal from '@/components/MovieModal.vue'
+import { marked } from 'marked'; // marked 라이브러리 가져오기
+
 
 const BASE_URL = 'http://127.0.0.1:5000/'
 
@@ -76,6 +79,10 @@ export default {
     };
   },
   methods: {
+    renderMarkdown(content) {
+      // 마크다운 형식을 HTML로 변환
+      return marked(content);
+    },
     async sendMessage() {
       if (this.userInput.trim() !== "") {
         // 사용자 메시지 추가
@@ -210,7 +217,7 @@ export default {
   word-wrap: break-word;
   overflow-wrap: break-word;
   white-space: pre-line; /* 줄바꿈 유지 */
-  font-family: 'Pretendard-Medium';
+  font-family: 'Pretendard-Light';
  }
  
  .user-bubble {
@@ -228,6 +235,25 @@ export default {
   margin-right: auto;
   /* 왼쪽 정렬 */
  }
+
+ .markdown-output {
+  font-family: 'Pretendard-Light';
+  line-height: 1.6;
+  color: white;
+}
+
+.markdown-output strong {
+  font-weight: bold;
+}
+
+.markdown-output em {
+  font-style: italic;
+}
+
+.markdown-output ul {
+  list-style-type: disc;
+  margin-left: 20px;
+}
  
  .movie-posters {
   display: flex;

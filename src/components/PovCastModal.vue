@@ -3,7 +3,9 @@
     <div class="modal-dialog modal-lg" role="document">
       <div class="modal-content bg-dark text-white">
         <div class="modal-header border-secondary">
-          <h5 class="modal-title">POV Cast: 배우개그 유니버스 - {{ actorName }}</h5>
+          <h5 class="modal-title">
+            POV Cast: 배우 개그 유니버스 - {{ actorName }}
+          </h5>
           <button
             type="button"
             class="btn-close btn-close-white"
@@ -44,18 +46,14 @@ const props = defineProps({
   },
 });
 
-// State
 const errorMessage = ref("");
 const isCarouselVisible = ref(true);
 
-// Emits 설정
-const emit = defineEmits({
-  close: null,
-  error: (error) => error instanceof Error,
-});
-
-// 동적 폴더 이름 생성
+// 동적 폴더 이름 계산
 const cardsFolder = computed(() => `CastCards${props.castNumber}`);
+
+// Emits 설정
+const emit = defineEmits(["close", "error"]);
 
 // 에러 핸들링
 const handleCarouselError = (error) => {
@@ -71,38 +69,39 @@ const closeModal = () => {
 </script>
 
 <style scoped>
-.modal-image {
-  max-height: 300px;
-  width: auto;
-  object-fit: contain;
-}
-
-.modal.show {
-  display: block;
-  animation: fadeIn 0.3s ease-in-out;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-
-.modal-header {
-  padding: 1rem 1.5rem;
+/* 모달 스타일 */
+.modal-content {
+  font-family: "Raleway-SemiBold", sans-serif;
 }
 
 .modal-title {
-  font-family: "Pretendard-Medium";
+  font-family: "Raleway-Bold", sans-serif;
+  font-size: 1.5rem;
+  color: #fff;
 }
 
 .modal-body {
-  padding: 1.5rem;
-  overflow-y: auto;
-  max-height: calc(100vh - 60px);
+  font-family: "Raleway-SemiBold", sans-serif;
+  font-size: 1rem;
+  color: #d1d1d1;
+}
+
+.alert {
+  font-family: "Raleway-SemiBold", sans-serif;
+  font-size: 1rem;
+  color: #ff4d4f;
+  background-color: rgba(255, 0, 0, 0.1);
+  border: none;
+}
+
+/* 버튼 스타일 */
+.btn-close {
+  font-family: "Raleway-SemiBold", sans-serif;
+}
+
+.carousel-container {
+  font-family: "Raleway-SemiBold", sans-serif;
+  font-size: 0.9rem;
+  color: #e3e3e3;
 }
 </style>

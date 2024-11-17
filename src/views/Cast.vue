@@ -3,36 +3,38 @@
     <!-- Welcome Section -->
     <div class="welcome-section">
       <h1 class="welcome-title">Cast</h1>
-      <h2 class="welcome-subtitle">한국 현대사로 엮은 배우 유니버스<br />카드뉴스 스토리로 만나보세요</h2>
+      <h2 class="welcome-subtitle">
+        한국 현대사로 엮은 배우 유니버스<br />카드뉴스 스토리로 만나보세요
+      </h2>
       <div class="divider"></div>
     </div>
 
     <!-- 버튼 목록 -->
     <button
-      v-for="(image, name) in images"
-      :key="name"
+      v-for="(image, index) in images"
+      :key="index"
       class="gallery-item"
-      @click="openModal(name)"
-      @keydown.enter="openModal(name)"
-      :aria-label="`Open ${name} modal`"
+      @click="openModal(index + 1)"
+      @keydown.enter="openModal(index + 1)"
+      :aria-label="`Open modal for ${actors[index + 1]}`"
     >
-      <img :src="image" :alt="`${name} logo`" />
+      <img :src="image" :alt="`${actors[index + 1]} logo`" />
     </button>
   </div>
-  <!-- 동적 모달 -->
+
+  <!-- 모달 -->
   <Suspense v-if="isModalOpen">
-      <component
-        :is="currentModal"
-        @close="closeModal"
-        v-bind="modalProps"
-        role="dialog"
-        aria-modal="true"
-      />
-    </Suspense>
+    <PovCastModal
+      v-bind="modalProps"
+      @close="closeModal"
+      role="dialog"
+      aria-modal="true"
+    />
+  </Suspense>
 </template>
 
 <script>
-import { defineAsyncComponent } from "vue";
+import PovCastModal from "@/components/PovCastModal.vue";
 import PovCast1 from "@/assets/2Lee Sungmin.png";
 import PovCast2 from "@/assets/2Song Gangho.png";
 import PovCast3 from "@/assets/2Lee Jungjae.png";
@@ -40,16 +42,15 @@ import PovCast3 from "@/assets/2Lee Jungjae.png";
 export default {
   name: "ModalGallery",
 
+  components: {
+    PovCastModal,
+  },
+
   data() {
     return {
       isModalOpen: false,
-      currentComponent: null,
       modalProps: { castNumber: 1, actorName: "배우" }, // 초기값
-      images: {
-        PovCast1: PovCast1,
-        PovCast2: PovCast2,
-        PovCast3: PovCast3,
-      },
+      images: [PovCast1, PovCast2, PovCast3],
       actors: {
         1: "이성민",
         2: "송강호",
@@ -58,42 +59,19 @@ export default {
     };
   },
 
-  computed: {
-    // 동적 컴포넌트 로드
-    currentModal() {
-      if (!this.currentComponent) return null;
-      return defineAsyncComponent(() =>
-        import(`@/components/${this.currentComponent}.vue`)
-      );
-    },
-  },
-
   methods: {
-    // 파일명에서 숫자 추출
-    getCastNumberFromFileName(fileName) {
-      const match = fileName.match(/\d+/); // 숫자 추출
-      return match ? parseInt(match[0], 10) : 1; // 기본값 1
-    },
-
     // 모달 열기
-    openModal(fileName) {
-      const castNumber = this.getCastNumberFromFileName(fileName);
-      const actorName = this.actors[castNumber] || "배우";
-      this.modalProps = { castNumber, actorName };
-      this.currentComponent = fileName;
+    openModal(castNumber) {
+      this.modalProps = {
+        castNumber,
+        actorName: this.actors[castNumber] || "배우",
+      };
       this.isModalOpen = true;
-
-      // 모달로 포커스 이동
-      this.$nextTick(() => {
-        const modal = this.$el.querySelector("[role='dialog']");
-        if (modal) modal.focus();
-      });
     },
 
     // 모달 닫기
     closeModal() {
       this.isModalOpen = false;
-      this.currentComponent = null;
       this.modalProps = { castNumber: 1, actorName: "배우" }; // 초기화
     },
   },
@@ -101,7 +79,7 @@ export default {
 </script>
 
 <style scoped>
-/* 웰컴 박스 */
+/* Welcome Section */
 .welcome-section {
   padding: 40px 20px;
   text-align: left;
@@ -121,7 +99,8 @@ export default {
   color: rgba(255, 255, 255);
   letter-spacing: -1px;
 }
-/* 구분선 스타일 */
+
+/* Divider Style */
 .divider {
   width: calc(100% + 40px);
   height: 1px;
@@ -130,11 +109,12 @@ export default {
   margin-top: 55px;
 }
 
+/* Low Opacity */
 .low-opacity {
   opacity: 0.1;
 }
 
-/* 갤러리 */
+/* Gallery Items */
 .gallery-item {
   background: none;
   border: none;
@@ -158,7 +138,7 @@ export default {
   object-fit: cover;
 }
 
-/* 모바일 화면 크기 */
+/* Mobile Styles */
 @media (max-width: 768px) {
   .gallery-container {
     flex-direction: column;

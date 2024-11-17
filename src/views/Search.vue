@@ -10,6 +10,7 @@
 
     <!-- 채팅 창 영역 -->
     <div class="chat-box">
+      <div class="chat-messages">  <!-- 새로 추가된 wrapper div -->
       <div v-for="(chat, index) in chatHistory" :key="index"
         :class="['chat-bubble', chat.isUser ? 'user-bubble' : 'bot-bubble']">
         <!-- 사용자 메시지는 그대로 표시 -->
@@ -34,6 +35,7 @@
             <div class="movie-title">{{ movie.title }}</div>
           </div>
         </div>
+      </div>
       </div>
       <!-- 로딩 모션 -->
     </div>
@@ -148,31 +150,31 @@ export default {
  
  <style scoped>
  /* 검은색 배경에 흰색 글씨, 화면을 꽉 채움 */
- html,
- body {
+ html, body {
   margin: 0;
   padding: 0;
-  height: 100%;
   background-color: #222222;
- }
- 
- .my-container {
+  min-height: 100%;
+  width: 100%;
+}
+
+.my-container {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  height: 100vh;
+  min-height: 100vh; /* height: 100vh 대신 min-height 사용 */
   background-color: #222222;
   color: white;
   margin: 0;
   position: relative;
-  overflow: hidden;
- }
+}
  
  /* 가이드 박스 */
- .welcome-section {
+/* welcome 섹션도 스크롤 방지 */
+.welcome-section {
   padding: 40px 20px;
   text-align: left;
- }
+  overflow: hidden; /* 스크롤 방지 */
+}
  .welcome-title {
   font-size: 36px;
   font-weight: bold;
@@ -185,6 +187,7 @@ export default {
   font-family: 'Raleway-SemiBold';
   color: rgba(255, 255, 255);
  }
+
  /* 구분선 스타일 */
  .divider {
   width: calc(100% + 40px); /* 컨테이너보다 좌우로 20px씩 더 길게 */
@@ -194,47 +197,46 @@ export default {
   margin-top: 55px;
  }
  
- /* 채팅박스 스타일 */
  .chat-box {
   flex-grow: 1;
   padding: 10px;
-  overflow-y: auto;
-  display: flex;
+  display: flex; /* flex 복원 */
   flex-direction: column;
-  /* 말풍선을 세로로 쌓이도록 설정 */
- }
- 
- .chat-bubble {
+}
+
+/* 새로 추가 */
+.chat-messages {
+  width: 100%;
+}
+
+.chat-bubble {
   background-color: #4f4f4f;
-  /* 짙은 회색 말풍선 */
   color: white;
   padding: 10px;
   border-radius: 10px;
   margin-bottom: 10px;
   max-width: 80%;
-  /* 말풍선 최대 너비 설정 */
-  display: inline-block;
+  width: fit-content; /* 글자 수에 맞춰 너비 조절 */
   word-wrap: break-word;
   overflow-wrap: break-word;
-  white-space: pre-line; /* 줄바꿈 유지 */
+  white-space: pre-line;
   font-family: 'Pretendard-Light';
- }
- 
- .user-bubble {
+  display: block; /* inline-block 대신 block 사용 */
+}
+
+.user-bubble {
   background-color: #858585;
-  /* 사용자 말풍선 색 (파란색) */
   color: white;
-  margin-left: auto;
-  /* 오른쪽 정렬 */
- }
- 
- .bot-bubble {
+  margin-left: auto; /* 오른쪽 정렬 유지 */
+  margin-right: 0;   /* 명시적으로 오른쪽 마진 제거 */
+}
+
+.bot-bubble {
   background-color: #4f4f4f;
-  /* 봇 말풍선 색 (짙은 회색) */
   color: white;
-  margin-right: auto;
-  /* 왼쪽 정렬 */
- }
+  margin-right: auto; /* 왼쪽 정렬 유지 */
+  margin-left: 0;     /* 명시적으로 왼쪽 마진 제거 */
+}
 
  .markdown-output {
   font-family: 'Pretendard-Light';
@@ -296,14 +298,14 @@ export default {
   }
  }
  
- /* 프롬프트 입력창 스타일 */
- .footer {
+ /* footer 수정 */
+.footer {
   display: flex;
   padding: 10px;
   background-color: #222222;
-  position: sticky;
-  bottom: 0;
- }
+  width: 100%;
+  box-sizing: border-box;
+}
  
  .message-input {
   flex-grow: 1;

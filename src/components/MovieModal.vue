@@ -1,6 +1,6 @@
 <template>
     <Transition name="modal">
-      <div v-if="isOpen" class="modal show d-block" tabindex="-1">
+      <div v-if="isOpen" class="modal show d-block" tabindex="-1" @click.self="closeModal">
         <div class="modal-dialog modal-dialog-scrollable">
           <div class="modal-content text-white">
             <div

@@ -46,8 +46,7 @@
           <p>"가만히 있으라"</p>
         </blockquote>
         <figcaption class="blockquote-footer">
-          <em>수아(강승민)</em>
-          <cite></cite>
+          <em>세월호 참사 당시 선내 방송</em>
         </figcaption>
       </figure>
 
@@ -285,7 +284,6 @@ export default {};
   font-size: 1.5rem;
   font-weight: light;
   font-family: "BookkMyungjo_Light";
-  margin: 2rem 0;
 }
 
 .blockquote-footer {
@@ -298,6 +296,10 @@ export default {};
   border-radius: 8px;
   padding: 20px;
   margin: 20px 0;
+}
+
+.details-title {
+  margin-top: 0.5rem;
 }
 
 .details-grid {

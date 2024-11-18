@@ -16,23 +16,43 @@
       <button class="close-sidebar" @click="$emit('toggle-sidebar')">X 닫기</button>
       <br>
       <div class="sidebar-menu">
-        <RouterLink to="/movies" class="menu-item">
+        <RouterLink 
+          to="/movies" 
+          class="menu-item" 
+          @click="closeSidebar"
+        >
           Timeline
           <span class="small-subtitle">현대사 타임라인</span>
         </RouterLink>
-        <RouterLink to="/search" class="menu-item">
+        <RouterLink 
+          to="/search" 
+          class="menu-item" 
+          @click="closeSidebar"
+        >
           Search
           <span class="small-subtitle">질문으로 영화 찾기</span>
         </RouterLink>
-        <RouterLink to="/cast" class="menu-item">
+        <RouterLink 
+          to="/cast" 
+          class="menu-item" 
+          @click="closeSidebar"
+        >
           Cast
           <span class="small-subtitle">배우 개그 유니버스</span>
         </RouterLink>
-        <RouterLink to="/inside" class="menu-item">
+        <RouterLink 
+          to="/inside" 
+          class="menu-item" 
+          @click="closeSidebar"
+        >
           Inside
           <span class="small-subtitle">AI 음악 시리즈</span>
         </RouterLink>
-        <RouterLink to="/original" class="menu-item">
+        <RouterLink 
+          to="/original" 
+          class="menu-item" 
+          @click="closeSidebar"
+        >
           Original
           <span class="small-subtitle">AI 영화 상영관</span>
         </RouterLink>
@@ -46,11 +66,16 @@ export default {
   props: {
     isSidebarOpen: Boolean, // 사이드바 열림 여부를 부모로부터 전달받음
   },
+  methods: {
+    closeSidebar() {
+      this.$emit("toggle-sidebar"); // 부모 컴포넌트에 이벤트 전달
+    },
+  },
 };
 </script>
 
 <style scoped>
-/* 사이드바 */
+/* 기존 스타일 그대로 유지 */
 .sidebar {
   position: fixed;
   top: 0;

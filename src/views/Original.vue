@@ -244,9 +244,10 @@ export default {};
 .welcome-subtitle {
   font-size: 18px;
   font-weight: 150;
-  font-family: "Raleway-SemiBold";
+  font-family: "Pretendard-Light";
   color: rgba(255, 255, 255);
   letter-spacing: -1px;
+  line-height: 1.5;
 }
 /* 구분선 스타일 */
 .divider {

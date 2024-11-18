@@ -317,7 +317,7 @@ export default {
 /* Large devices (desktops) */
 @media (min-width: 992px) {
   .modal-dialog {
-    width: 40%;
+    width: 50%;
   }
 }
 
@@ -488,6 +488,7 @@ h2 {
   padding: 5px 10px;
   border-radius: 4px;
   font-size: 0.9em;
+  width: fit-content;
   font-family: "Pretendard-Medium";
   background-color: #525252;
 }

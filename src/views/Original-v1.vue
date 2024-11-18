@@ -51,65 +51,21 @@
         </figcaption>
       </figure>
 
-      <!-- 영화 상세 정보 섹션 -->
-      <div class="movie-details mb-4" style="background-color: #434343;">
-        <h5 class="details-title"><strong>🎬 영화 정보</strong></h5>
-        <div class="details-grid">
-          <div class="detail-item">
-            <span class="detail-label">공개일</span>
-            <span class="detail-value">2024.11.25.</span>
-          </div>
-          <div class="detail-item">
-            <span class="detail-label">장르</span>
-            <span class="detail-value">드라마, 판타지, 성장물</span>
-          </div>
-          <div class="detail-item">
-            <span class="detail-label">러닝타임</span>
-            <span class="detail-value">9분 34초</span>
-          </div>
-          <div class="detail-item">
-            <span class="detail-label">기획</span>
-            <span class="detail-value">강승민, 이동윤, 전예원</span>
-          </div>
-          <div class="detail-item">
-            <span class="detail-label">각본</span>
-            <span class="detail-value">강승민</span>
-          </div>
-          <div class="detail-item">
-            <span class="detail-label">감독</span>
-            <span class="detail-value">강승민</span>
-          </div>
-        </div>
+      <br />
 
-        <!-- 출연진 정보 -->
-        <div class="cast-section mt-3">
-          <h6 class="cast-title">주요 출연진</h6>
-          <div class="cast-list">
-            <div style="background-color: #525252;" class="cast-item">
-              수아 (강승민)
-            </div>
-            <div style="background-color: #525252;" class="cast-item">
-              어린 수아 (강승민)
-            </div>
-            <div style="background-color: #525252;" class="cast-item">
-              수아 아버지 (강승민)
-            </div>
-            <div style="background-color: #525252;" class="cast-item">
-              사회 선생님 (강승민)
-            </div>
-            <div style="background-color: #525252;" class="cast-item">
-              체육 선생님 (강승민)
-            </div>
-            <div style="background-color: #525252;" class="cast-item">
-              다현 (강승민)
-            </div>
-          </div>
-        </div>
-      </div>
+      <!-- Background Music -->
+      <iframe
+        id="bgMusic"
+        style="display: none"
+        :src="
+          'https://www.youtube.com/embed/' + 'xZ7e3deNChc' + '?enablejsapi=1'
+        "
+        allow="autoplay"
+      >
+      </iframe>
 
       <hr />
 
-      <!-- 아래 나머지 섹션 -->
       <!-- Synopsis Section -->
       <h5 class="synopsis"><strong>✨ 시놉시스</strong></h5>
       <p class="paContent">
@@ -291,60 +247,6 @@ export default {};
 .blockquote-footer {
   color: #6c757d;
   margin-top: 0.5rem;
-}
-
-/* 새로 추가된 영화 정보 스타일 */
-.movie-details {
-  border-radius: 8px;
-  padding: 20px;
-  margin: 20px 0;
-}
-
-.details-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 15px;
-  margin-top: 15px;
-}
-
-.detail-item {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-}
-
-.detail-label {
-  font-size: 0.9em;
-  color: #aaa;
-  font-family: "Pretendard-Medium";
-}
-
-.detail-value {
-  font-size: 1.1em;
-  font-family: "Pretendard-SemiBold";
-}
-
-.cast-section {
-  margin-top: 20px;
-}
-
-.cast-title {
-  color: #aaa;
-  margin-bottom: 10px;
-  font-family: "Pretendard-Medium";
-}
-
-.cast-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-.cast-item {
-  padding: 5px 10px;
-  border-radius: 4px;
-  font-size: 0.9em;
-  font-family: "Pretendard-Medium";
 }
 
 /* 섹션 제목 스타일 */

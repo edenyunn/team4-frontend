@@ -32,6 +32,7 @@
               <br />
             </div>
 
+
             <h5 class="mb-3">&nbsp;그날이 오면</h5>
             <p class="movie-description"></p>
           </div>
@@ -87,7 +88,7 @@
 </template>
 
 <script>
-import pov1980Logo from "@/assets/1980 record.png";
+import pov1980Logo from "@/assets/1980 inside.png";
 
 export default {
   name: "Pov1980",

@@ -32,7 +32,7 @@
               <br />
             </div>
 
-            <h5 class="mb-3">&nbsp;그날의 전선</h5>
+            <h5 class="mb-3" style="font-weight: bold;" >&nbsp;그날의 전선</h5>
             <p class="movie-description"></p>
           </div>
           <br />
@@ -94,7 +94,7 @@
 </template>
 
 <script>
-import pov1950Logo from "@/assets/1950 record.png";
+import pov1950Logo from "@/assets/1950 inside.png";
 
 export default {
   name: "Pov1950",

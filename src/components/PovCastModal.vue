@@ -4,7 +4,8 @@
       <div class="modal-content bg-dark text-white">
         <div class="modal-header border-secondary">
           <h5 class="modal-title">
-            POV Cast: 배우 개그 유니버스 - {{ actorName }}
+            <span class="pov-text">POV Cast: </span>
+            <span class="actor-name">{{ actorName }}</span>
           </h5>
           <button
             type="button"
@@ -74,8 +75,15 @@ const closeModal = () => {
   font-family: "Raleway-SemiBold", sans-serif;
 }
 
-.modal-title {
-  font-family: "Raleway-Bold", sans-serif;
+.modal-title .pov-text {
+  font-family: "Raleway-Bold";
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+.modal-title .actor-name {
+  font-family: "Raleway-Bold";
+  font-weight: bold;
   font-size: 1.5rem;
   color: #fff;
 }

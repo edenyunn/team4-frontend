@@ -1,7 +1,7 @@
 <template>
   <div v-if="isOpen" class="modal show d-block" tabindex="-1">
     <div class="modal-dialog modal-dialog-scrollable">
-      <div class="modal-content text-white" style="background-color: #333333;">
+      <div class="modal-content text-white">
         <div
           class="modal-header border-secondary d-flex justify-content-between"
         >
@@ -59,7 +59,7 @@
           <br />
 
           <!-- 영화 상세 정보 섹션 -->
-          <div class="movie-details mb-4" style="background-color: #434343;" v-if="movie?.details">
+          <div class="movie-details mb-4" v-if="movie?.details">
             <h5 class="details-title"><strong>🎬 영화 정보</strong></h5>
             <div class="details-grid">
               <div class="detail-item">
@@ -97,7 +97,6 @@
                 <div
                   v-for="actor in movie.details.cast"
                   :key="actor.name"
-                  style="background-color: #525252;"
                   class="cast-item"
                 >
                   {{ actor.name }} ({{ actor.role }})
@@ -290,6 +289,10 @@ export default {
   max-width: 800px; /* 데스크톱 기본 최대 너비 */
 }
 
+.modal-content {
+  background-color: #333333;
+}
+
 /* Large devices (desktops) */
 @media (min-width: 992px) {
   .modal-dialog {
@@ -417,6 +420,7 @@ h2 {
   border-radius: 8px;
   padding: 20px;
   margin: 20px 0;
+  background-color: #434343;
 }
 
 .details-grid {
@@ -464,6 +468,7 @@ h2 {
   border-radius: 4px;
   font-size: 0.9em;
   font-family: "Pretendard-Medium";
+  background-color: #525252;
 }
 
 /* 모바일 화면에서의 조정 */

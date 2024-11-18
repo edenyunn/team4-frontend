@@ -10,41 +10,41 @@
 
     <!-- 채팅 창 영역 -->
     <div class="chat-box">
-      <div class="chat-messages">  <!-- 새로 추가된 wrapper div -->
-      <div v-for="(chat, index) in chatHistory" :key="index"
-        :class="['chat-bubble', chat.isUser ? 'user-bubble' : 'bot-bubble']">
-        <!-- 사용자 메시지는 그대로 표시 -->
-        <template v-if="chat.isUser">
-          {{ chat.message }}
-        </template>
-        <!-- 봇 메시지는 generation 내용만 표시 -->
-        <template v-else>
-          <!-- 마크다운을 읽어 HTML로 렌더링 -->
-          <div class="markdown-output" v-html="renderMarkdown(typeof chat.message === 'object' ? chat.message.generation : chat.message)"></div>
-        </template>
-        <!-- 영화 포스터 목록 -->
-        <div v-if="chat.movies && chat.movies.length > 0" class="movie-posters">
-          <div v-for="movie in chat.movies" :key="movie.id" 
-               class="movie-poster" @click="openMovieModal(movie)">
-            <img 
-              :src="movie.imageUrl" 
-              :alt="movie.title"
-              class="movie-poster-img"
-              @error="handleImageError"
-            >
-            <div class="movie-title">{{ movie.title }}</div>
+      <div class="chat-messages">
+        <TransitionGroup name="message" tag="div">
+          <div v-for="(chat, index) in chatHistory" :key="index"
+            :class="['chat-bubble', chat.isUser ? 'user-bubble' : 'bot-bubble']">
+            <template v-if="chat.isUser">
+              {{ chat.message }}
+            </template>
+            <template v-else>
+              <div class="markdown-output" v-html="renderMarkdown(typeof chat.message === 'object' ? chat.message.generation : chat.message)"></div>
+            </template>
+            <TransitionGroup name="poster" tag="div" v-if="chat.movies && chat.movies.length > 0" class="movie-posters">
+              <div v-for="movie in chat.movies" :key="movie.id" 
+                   class="movie-poster" @click="openMovieModal(movie)">
+                <img 
+                  :src="movie.imageUrl" 
+                  :alt="movie.title"
+                  class="movie-poster-img"
+                  @error="handleImageError"
+                >
+                <div class="movie-title">{{ movie.title }}</div>
+              </div>
+            </TransitionGroup>
+          </div>
+        </TransitionGroup>
+      </div>
+
+      <!-- Loading container with transition -->
+      <Transition name="fade">
+        <div v-if="isLoading" class="loading-container">
+          <div class="loading-message">현재 POV Search가 답변을 생성 중입니다..</div>
+          <div class="spinner-grow" role="status">
+            <span class="visually-hidden">Loading...</span>
           </div>
         </div>
-      </div>
-      </div>
-    </div>
-
-    <!-- 로딩 모션 -->
-    <div v-if="isLoading" class="loading-container">
-        <div class="loading-message">현재 POV Search가 답변을 생성 중입니다..</div>
-        <div class="spinner-grow" role="status">
-          <span class="visually-hidden">Loading...</span>
-        </div>
+      </Transition>
     </div>
 
     <!-- MovieModal 컴포넌트 -->
@@ -67,7 +67,6 @@ import axios from 'axios'
 import movies from '@/assets/movies.js'
 import MovieModal from '@/components/MovieModal.vue'
 import { marked } from 'marked'; // marked 라이브러리 가져오기
-
 
 const BASE_URL = 'http://127.0.0.1:5000/'
 
@@ -225,6 +224,54 @@ export default {
   background-color: rgb(168, 108, 108);
   flex-shrink: 0; /* Prevents the spinner from being squished */
 }
+
+/* Message appear animation */
+.message-enter-active,
+.message-leave-active {
+  transition: all 0.5s ease;
+}
+
+.message-enter-from {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.message-leave-to {
+  opacity: 0;
+  transform: translateY(-20px);
+}
+
+/* Ensure proper stacking */
+.message-move {
+  transition: transform 0.5s ease;
+}
+
+/* Movie poster animation */
+.poster-enter-active,
+.poster-leave-active {
+  transition: all 0.5s ease;
+}
+
+.poster-enter-from {
+  opacity: 0;
+  transform: translateY(20px) scale(0.9);
+}
+
+.poster-leave-to {
+  opacity: 0;
+  transform: translateY(-20px) scale(0.9);
+}
+
+/* Loading container fade animation */
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
  
  .chat-box {
   flex-grow: 1;
@@ -241,6 +288,7 @@ export default {
   flex-direction: column;
 }
 
+/* Ensure chat bubbles maintain their position */
 .chat-bubble {
   background-color: #4f4f4f;
   color: white;
@@ -254,6 +302,9 @@ export default {
   white-space: pre-line;
   font-family: 'Pretendard-Light';
   display: block; /* inline-block 대신 block 사용 */
+  position: relative;
+  backface-visibility: hidden;
+  will-change: transform, opacity;
 }
 
 .user-bubble {

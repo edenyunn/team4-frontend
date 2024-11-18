@@ -105,6 +105,7 @@ export default {
   font-family: "Pretendard-Light";
   color: rgba(255, 255, 255);
   letter-spacing: -1px;
+  line-height: 1.5;
 }
 
 /* 구분선 스타일 */

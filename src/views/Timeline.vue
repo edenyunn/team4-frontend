@@ -112,6 +112,7 @@ html, body {
   padding: 40px 20px;
   text-align: center;
 }
+
 .welcome-title {
   font-size: 48px;
   font-weight: bold;
@@ -119,6 +120,7 @@ html, body {
   margin-bottom: 16px;
   letter-spacing: -1px;
 }
+
 .welcome-subtitle {
   font-size: 48px;
   font-weight: 150;
@@ -127,6 +129,7 @@ html, body {
   letter-spacing: -1px;
   line-height: 0.1;
 }
+
 /* 구분선 스타일 */
 .divider {
   width: calc(100% + 40px); /* 컨테이너보다 좌우로 20px씩 더 길게 */

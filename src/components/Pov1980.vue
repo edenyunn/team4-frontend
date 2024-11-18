@@ -32,7 +32,7 @@
               <br />
             </div>
 
-            <h5 class="mb-3">&nbsp;그 날이 오면</h5>
+            <h5 class="mb-3" style="font-weight: bold;" >&nbsp;그 날이 오면</h5>
             <p class="movie-description"></p>
           </div>
           <br />
@@ -75,7 +75,7 @@
 </template>
 
 <script>
-import pov1980Logo from "@/assets/1980 record.png";
+import pov1980Logo from "@/assets/1980 inside.png";
 
 export default {
   name: "Pov1980",
@@ -105,7 +105,6 @@ export default {
 }
 
 .modal-body {
-  font-weight: bold;
   font-family: "Pretendard-Light";
 }
 

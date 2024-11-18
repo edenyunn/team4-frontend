@@ -1,21 +1,39 @@
 <template>
   <div v-if="isOpen" class="modal show d-block" tabindex="-1">
     <div class="modal-dialog modal-dialog-scrollable">
-      <div class="modal-content bg-dark text-white">
-        <div class="modal-header border-secondary d-flex justify-content-between">
-          <h1 class="modal-title fs-1">{{ movie?.eventYear }}</h1>
+      <div class="modal-content text-white" style="background-color: #333333;">
+        <div
+          class="modal-header border-secondary d-flex justify-content-between"
+        >
+        <h1 class="modal-title fs-1">{{ movie?.details?.modalYear }}</h1>
           <div class="d-flex align-items-center gap-2">
-            <button v-if="player" class="btn btn-outline-light" @click="toggleMusic">
-              <i :class="isPlaying ? 'bi bi-pause-fill' : 'bi bi-play-fill'"></i>
+            <!-- 배경음악이 있을 때만 버튼 표시 -->
+            <button
+              v-if="movieBgmId && player"
+              class="btn btn-outline-light"
+              @click="toggleMusic"
+            >
+              <i
+                :class="isPlaying ? 'bi bi-pause-fill' : 'bi bi-play-fill'"
+              ></i>
               OST
             </button>
-            <button type="button" class="btn-close btn-close-white" aria-label="Close" @click="closeModal"></button>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              aria-label="Close"
+              @click="closeModal"
+            ></button>
           </div>
         </div>
         <div class="modal-body">
           <div class="text-center mb-4">
             <div class="d-flex justify-content-center mb-3">
-              <img :src="movie?.imageUrl" :alt="movie?.title" class="modal-image img-fluid">
+              <img
+                :src="movie?.imageUrl"
+                :alt="movie?.title"
+                class="modal-image img-fluid"
+              />
             </div>
             <h2 class="mb-3">{{ movie?.title || "" }}</h2>
             <p class="movie-description">{{ movie?.event }}</p>
@@ -27,7 +45,11 @@
               <p>"{{ movie.details.quote.text }}"</p>
             </blockquote>
             <figcaption class="blockquote-footer">
-              <em>{{ movie.details.quote.author }} ({{ movie.details.quote.actor }})</em>
+              <em
+                >{{ movie.details.quote.author }} ({{
+                  movie.details.quote.actor
+                }})</em
+              >
               <cite :title="movie.details.quote.source">{{
                 movie.details.quote.source
               }}</cite>
@@ -37,12 +59,14 @@
           <br />
 
           <!-- 영화 상세 정보 섹션 -->
-          <div class="movie-details mb-4" v-if="movie?.details">
+          <div class="movie-details mb-4" style="background-color: #434343;" v-if="movie?.details">
             <h5 class="details-title"><strong>🎬 영화 정보</strong></h5>
             <div class="details-grid">
               <div class="detail-item">
                 <span class="detail-label">개봉일</span>
-                <span class="detail-value">{{ movie.details.releaseDate }}</span>
+                <span class="detail-value">{{
+                  movie.details.releaseDate
+                }}</span>
               </div>
               <div class="detail-item">
                 <span class="detail-label">장르</span>
@@ -70,7 +94,12 @@
             <div class="cast-section mt-3" v-if="movie.details.cast">
               <h6 class="cast-title">주요 출연진</h6>
               <div class="cast-list">
-                <div v-for="actor in movie.details.cast" :key="actor.name" class="cast-item">
+                <div
+                  v-for="actor in movie.details.cast"
+                  :key="actor.name"
+                  style="background-color: #525252;"
+                  class="cast-item"
+                >
                   {{ actor.name }} ({{ actor.role }})
                 </div>
               </div>
@@ -80,14 +109,25 @@
           <hr />
 
           <!-- Background Music -->
-          <iframe id="bgMusic" style="display: none"
-            :src="'https://www.youtube.com/embed/' + movieBgmId + '?enablejsapi=1'" allow="autoplay">
+          <iframe
+            v-if="movieBgmId"
+            id="bgMusic"
+            style="display: none"
+            :src="
+              'https://www.youtube.com/embed/' + movieBgmId + '?enablejsapi=1'
+            "
+            allow="autoplay"
+          >
           </iframe>
 
           <!-- 아래 나머지 섹션 -->
           <!-- Synopsis Section -->
           <h5 class="synopsis"><strong>✨ 시놉시스</strong></h5>
-          <p v-for="(paragraph, index) in movie?.details?.synopsis" :key="index" class="paContent">
+          <p
+            v-for="(paragraph, index) in movie?.details?.synopsis"
+            :key="index"
+            class="paContent"
+          >
             {{ paragraph }}
           </p>
 
@@ -101,7 +141,11 @@
             </li>
             <li>
               <strong>핵심 키워드:</strong>
-              {{ movie.details.eventDetails.keywords.map((k) => "#" + k).join(" ") }}
+              {{
+                movie.details.eventDetails.keywords
+                  .map((k) => "#" + k)
+                  .join(" ")
+              }}
             </li>
           </ul>
 
@@ -110,7 +154,10 @@
           <!-- Timeline Section -->
           <h5 class="eventLists"><strong>📅 그날의 사건들</strong></h5>
           <ul class="paContent">
-            <li v-for="(item, index) in movie?.details?.eventDetails?.timeline" :key="index">
+            <li
+              v-for="(item, index) in movie?.details?.eventDetails?.timeline"
+              :key="index"
+            >
               <strong>{{ item.date }}:</strong> {{ item.event }}
             </li>
           </ul>
@@ -125,12 +172,26 @@
 
           <!-- Related Videos Section -->
           <h5 class="prVideo"><strong>📰 함께 보면 좋을 자료</strong></h5>
-          <div v-for="(video, index) in movie?.details?.relatedVideos" :key="index" class="video-container">
-            <iframe width="100%" height="315"
-              :src="'https://www.youtube.com/embed/' + video.youtubeId + '?si=' + video.params"
-              title="YouTube video player" frameborder="0"
+          <div
+            v-for="(video, index) in movie?.details?.relatedVideos"
+            :key="index"
+            class="video-container"
+          >
+            <iframe
+              width="100%"
+              height="315"
+              :src="
+                'https://www.youtube.com/embed/' +
+                video.youtubeId +
+                '?si=' +
+                video.params
+              "
+              title="YouTube video player"
+              frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            >
             </iframe>
             <br />
           </div>
@@ -161,14 +222,18 @@ export default {
   },
   computed: {
     movieBgmId() {
-      this.$nextTick(() => {
-        if (window.YT && window.YT.Player) {
-          this.initializePlayer();
-        } else {
-          window.onYouTubeIframeAPIReady = this.initializePlayer;
-        }
-      });
-      return this.movie.details.backgroundMusic.youtubeId;
+      // 배경음악 ID가 있을 때만 처리
+      if (this.movie?.details?.backgroundMusic?.youtubeId) {
+        this.$nextTick(() => {
+          if (window.YT && window.YT.Player) {
+            this.initializePlayer();
+          } else {
+            window.onYouTubeIframeAPIReady = this.initializePlayer;
+          }
+        });
+        return this.movie.details.backgroundMusic.youtubeId;
+      }
+      return null; // 배경음악이 없을 경우
     },
   },
   methods: {
@@ -190,7 +255,12 @@ export default {
       }
     },
     initializePlayer() {
-      if (window.YT && window.YT.Player && this.movie?.details?.backgroundMusic) {
+      // 배경음악 ID가 있을 때만 플레이어 초기화
+      if (
+        window.YT &&
+        window.YT.Player &&
+        this.movie?.details?.backgroundMusic?.youtubeId
+      ) {
         const iframe = document.getElementById("bgMusic");
         if (iframe) {
           this.player = new window.YT.Player("bgMusic", {
@@ -245,11 +315,11 @@ export default {
 
 .modal-header {
   padding: 1rem 1.5rem;
-  font-family: 'Pretendard-SemiBold';
+  font-family: "Pretendard-SemiBold";
 }
 
 .modal-body {
-  font-family: 'Pretendard-Light';
+  font-family: "Pretendard-Light";
 }
 
 /* 좌우 배치 스타일 */
@@ -324,14 +394,14 @@ export default {
 .blockquote-footer {
   color: #6c757d;
   margin-top: 0.5rem;
-  font-family: 'Pretendard-Light';
+  font-family: "Pretendard-Light";
 }
 
 /* 섹션 제목 스타일 */
 h2 {
   margin: 1.5rem 0 1rem;
   font-weight: bold;
-  font-family: 'Pretendard-SemiBold';
+  font-family: "Pretendard-SemiBold";
   margin-top: 25px;
 }
 
@@ -339,12 +409,11 @@ h2 {
 .paContent {
   line-height: 1.6;
   margin-bottom: 1rem;
-  font-family: 'Pretendard-Light';
+  font-family: "Pretendard-Light";
 }
 
 /* 새로 추가된 영화 정보 스타일 */
 .movie-details {
-  background-color: rgba(255, 255, 255, 0.1);
   border-radius: 8px;
   padding: 20px;
   margin: 20px 0;
@@ -366,12 +435,12 @@ h2 {
 .detail-label {
   font-size: 0.9em;
   color: #aaa;
-  font-family: 'Pretendard-Medium';
+  font-family: "Pretendard-Medium";
 }
 
 .detail-value {
   font-size: 1.1em;
-  font-family: 'Pretendard-SemiBold';
+  font-family: "Pretendard-SemiBold";
 }
 
 .cast-section {
@@ -381,7 +450,7 @@ h2 {
 .cast-title {
   color: #aaa;
   margin-bottom: 10px;
-  font-family: 'Pretendard-Medium';
+  font-family: "Pretendard-Medium";
 }
 
 .cast-list {
@@ -391,11 +460,10 @@ h2 {
 }
 
 .cast-item {
-  background-color: rgba(255, 255, 255, 0.1);
   padding: 5px 10px;
   border-radius: 4px;
   font-size: 0.9em;
-  font-family: 'Pretendard-Medium';
+  font-family: "Pretendard-Medium";
 }
 
 /* 모바일 화면에서의 조정 */

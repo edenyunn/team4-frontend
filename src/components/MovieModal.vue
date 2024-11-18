@@ -1,203 +1,205 @@
 <template>
-  <div v-if="isOpen" class="modal show d-block" tabindex="-1">
-    <div class="modal-dialog modal-dialog-scrollable">
-      <div class="modal-content text-white">
-        <div
-          class="modal-header border-secondary d-flex justify-content-between"
-        >
-        <h1 class="modal-title fs-1">{{ movie?.details?.modalYear }}</h1>
-          <div class="d-flex align-items-center gap-2">
-            <!-- 배경음악이 있을 때만 버튼 표시 -->
-            <button
-              v-if="movieBgmId && player"
-              class="btn btn-outline-light"
-              @click="toggleMusic"
+    <Transition name="modal">
+      <div v-if="isOpen" class="modal show d-block" tabindex="-1">
+        <div class="modal-dialog modal-dialog-scrollable">
+          <div class="modal-content text-white">
+            <div
+              class="modal-header border-secondary d-flex justify-content-between"
             >
-              <i
-                :class="isPlaying ? 'bi bi-pause-fill' : 'bi bi-play-fill'"
-              ></i>
-              OST
-            </button>
-            <button
-              type="button"
-              class="btn-close btn-close-white"
-              aria-label="Close"
-              @click="closeModal"
-            ></button>
-          </div>
-        </div>
-        <div class="modal-body">
-          <div class="text-center mb-4">
-            <div class="d-flex justify-content-center mb-3">
-              <img
-                :src="movie?.imageUrl"
-                :alt="movie?.title"
-                class="modal-image img-fluid"
-              />
-            </div>
-            <h2 class="mb-3">{{ movie?.title || "" }}</h2>
-            <p class="movie-description">{{ movie?.event }}</p>
-          </div>
-
-          <!-- Quote Section -->
-          <figure class="text-center" v-if="movie?.details?.quote">
-            <blockquote class="blockquote">
-              <p>"{{ movie.details.quote.text }}"</p>
-            </blockquote>
-            <figcaption class="blockquote-footer">
-              <em
-                >{{ movie.details.quote.author }} ({{
-                  movie.details.quote.actor
-                }})</em
-              >
-              <cite :title="movie.details.quote.source">{{
-                movie.details.quote.source
-              }}</cite>
-            </figcaption>
-          </figure>
-
-          <br />
-
-          <!-- 영화 상세 정보 섹션 -->
-          <div class="movie-details mb-4" v-if="movie?.details">
-            <h5 class="details-title"><strong>🎬 영화 정보</strong></h5>
-            <div class="details-grid">
-              <div class="detail-item">
-                <span class="detail-label">개봉일</span>
-                <span class="detail-value">{{
-                  movie.details.releaseDate
-                }}</span>
-              </div>
-              <div class="detail-item">
-                <span class="detail-label">장르</span>
-                <span class="detail-value">{{ movie.details.genre }}</span>
-              </div>
-              <div class="detail-item">
-                <span class="detail-label">러닝타임</span>
-                <span class="detail-value">{{ movie.details.runtime }}</span>
-              </div>
-              <div class="detail-item">
-                <span class="detail-label">관객수</span>
-                <span class="detail-value">{{ movie.details.audience }}</span>
-              </div>
-              <div class="detail-item">
-                <span class="detail-label">등급</span>
-                <span class="detail-value">{{ movie.details.rating }}</span>
-              </div>
-              <div class="detail-item">
-                <span class="detail-label">감독</span>
-                <span class="detail-value">{{ movie.details.director }}</span>
-              </div>
-            </div>
-
-            <!-- 출연진 정보 -->
-            <div class="cast-section mt-3" v-if="movie.details.cast">
-              <h6 class="cast-title">주요 출연진</h6>
-              <div class="cast-list">
-                <div
-                  v-for="actor in movie.details.cast"
-                  :key="actor.name"
-                  class="cast-item"
+            <h1 class="modal-title fs-1">{{ movie?.details?.modalYear }}</h1>
+              <div class="d-flex align-items-center gap-2">
+                <!-- 배경음악이 있을 때만 버튼 표시 -->
+                <button
+                  v-if="movieBgmId && player"
+                  class="btn btn-outline-light"
+                  @click="toggleMusic"
                 >
-                  {{ actor.name }} ({{ actor.role }})
+                  <i
+                    :class="isPlaying ? 'bi bi-pause-fill' : 'bi bi-play-fill'"
+                  ></i>
+                  OST
+                </button>
+                <button
+                  type="button"
+                  class="btn-close btn-close-white"
+                  aria-label="Close"
+                  @click="closeModal"
+                ></button>
+              </div>
+            </div>
+            <div class="modal-body">
+              <div class="text-center mb-4">
+                <div class="d-flex justify-content-center mb-3">
+                  <img
+                    :src="movie?.imageUrl"
+                    :alt="movie?.title"
+                    class="modal-image img-fluid"
+                  />
+                </div>
+                <h2 class="mb-3">{{ movie?.title || "" }}</h2>
+                <p class="movie-description">{{ movie?.event }}</p>
+              </div>
+
+              <!-- Quote Section -->
+              <figure class="text-center" v-if="movie?.details?.quote">
+                <blockquote class="blockquote">
+                  <p>"{{ movie.details.quote.text }}"</p>
+                </blockquote>
+                <figcaption class="blockquote-footer">
+                  <em
+                    >{{ movie.details.quote.author }} ({{
+                      movie.details.quote.actor
+                    }})</em
+                  >
+                  <cite :title="movie.details.quote.source">{{
+                    movie.details.quote.source
+                  }}</cite>
+                </figcaption>
+              </figure>
+
+              <br />
+
+              <!-- 영화 상세 정보 섹션 -->
+              <div class="movie-details mb-4" v-if="movie?.details">
+                <h5 class="details-title"><strong>🎬 영화 정보</strong></h5>
+                <div class="details-grid">
+                  <div class="detail-item">
+                    <span class="detail-label">개봉일</span>
+                    <span class="detail-value">{{
+                      movie.details.releaseDate
+                    }}</span>
+                  </div>
+                  <div class="detail-item">
+                    <span class="detail-label">장르</span>
+                    <span class="detail-value">{{ movie.details.genre }}</span>
+                  </div>
+                  <div class="detail-item">
+                    <span class="detail-label">러닝타임</span>
+                    <span class="detail-value">{{ movie.details.runtime }}</span>
+                  </div>
+                  <div class="detail-item">
+                    <span class="detail-label">관객수</span>
+                    <span class="detail-value">{{ movie.details.audience }}</span>
+                  </div>
+                  <div class="detail-item">
+                    <span class="detail-label">등급</span>
+                    <span class="detail-value">{{ movie.details.rating }}</span>
+                  </div>
+                  <div class="detail-item">
+                    <span class="detail-label">감독</span>
+                    <span class="detail-value">{{ movie.details.director }}</span>
+                  </div>
+                </div>
+
+                <!-- 출연진 정보 -->
+                <div class="cast-section mt-3" v-if="movie.details.cast">
+                  <h6 class="cast-title">주요 출연진</h6>
+                  <div class="cast-list">
+                    <div
+                      v-for="actor in movie.details.cast"
+                      :key="actor.name"
+                      class="cast-item"
+                    >
+                      {{ actor.name }} ({{ actor.role }})
+                    </div>
+                  </div>
                 </div>
               </div>
+
+              <hr />
+
+              <!-- Background Music -->
+              <iframe
+                v-if="movieBgmId"
+                id="bgMusic"
+                style="display: none"
+                :src="
+                  'https://www.youtube.com/embed/' + movieBgmId + '?enablejsapi=1'
+                "
+                allow="autoplay"
+              >
+              </iframe>
+
+              <!-- 아래 나머지 섹션 -->
+              <!-- Synopsis Section -->
+              <h5 class="synopsis"><strong>✨ 시놉시스</strong></h5>
+              <p
+                v-for="(paragraph, index) in movie?.details?.synopsis"
+                :key="index"
+                class="paContent"
+              >
+                {{ paragraph }}
+              </p>
+
+              <hr />
+
+              <!-- Event Details Section -->
+              <h5 class="eventSummary"><strong>🕰️ 사건 개요</strong></h5>
+              <ul class="paContent" v-if="movie?.details?.eventDetails">
+                <li>
+                  <strong>기간:</strong> {{ movie.details.eventDetails.period }}
+                </li>
+                <li>
+                  <strong>핵심 키워드:</strong>
+                  {{
+                    movie.details.eventDetails.keywords
+                      .map((k) => "#" + k)
+                      .join(" ")
+                  }}
+                </li>
+              </ul>
+
+              <hr />
+
+              <!-- Timeline Section -->
+              <h5 class="eventLists"><strong>📅 그날의 사건들</strong></h5>
+              <ul class="paContent">
+                <li
+                  v-for="(item, index) in movie?.details?.eventDetails?.timeline"
+                  :key="index"
+                >
+                  <strong>{{ item.date }}:</strong> {{ item.event }}
+                </li>
+              </ul>
+
+              <hr />
+
+              <!-- Historical Context Section -->
+              <h5 class="historyDescription"><strong>📌 시대상</strong></h5>
+              <p class="paContent">{{ movie?.details?.historicalContext }}</p>
+
+              <hr />
+
+              <!-- Related Videos Section -->
+              <h5 class="prVideo"><strong>📰 함께 보면 좋을 자료</strong></h5>
+              <div
+                v-for="(video, index) in movie?.details?.relatedVideos"
+                :key="index"
+                class="video-container"
+              >
+                <iframe
+                  width="100%"
+                  height="315"
+                  :src="
+                    'https://www.youtube.com/embed/' +
+                    video.youtubeId +
+                    '?si=' +
+                    video.params
+                  "
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allowfullscreen
+                >
+                </iframe>
+                <br />
+              </div>
             </div>
-          </div>
-
-          <hr />
-
-          <!-- Background Music -->
-          <iframe
-            v-if="movieBgmId"
-            id="bgMusic"
-            style="display: none"
-            :src="
-              'https://www.youtube.com/embed/' + movieBgmId + '?enablejsapi=1'
-            "
-            allow="autoplay"
-          >
-          </iframe>
-
-          <!-- 아래 나머지 섹션 -->
-          <!-- Synopsis Section -->
-          <h5 class="synopsis"><strong>✨ 시놉시스</strong></h5>
-          <p
-            v-for="(paragraph, index) in movie?.details?.synopsis"
-            :key="index"
-            class="paContent"
-          >
-            {{ paragraph }}
-          </p>
-
-          <hr />
-
-          <!-- Event Details Section -->
-          <h5 class="eventSummary"><strong>🕰️ 사건 개요</strong></h5>
-          <ul class="paContent" v-if="movie?.details?.eventDetails">
-            <li>
-              <strong>기간:</strong> {{ movie.details.eventDetails.period }}
-            </li>
-            <li>
-              <strong>핵심 키워드:</strong>
-              {{
-                movie.details.eventDetails.keywords
-                  .map((k) => "#" + k)
-                  .join(" ")
-              }}
-            </li>
-          </ul>
-
-          <hr />
-
-          <!-- Timeline Section -->
-          <h5 class="eventLists"><strong>📅 그날의 사건들</strong></h5>
-          <ul class="paContent">
-            <li
-              v-for="(item, index) in movie?.details?.eventDetails?.timeline"
-              :key="index"
-            >
-              <strong>{{ item.date }}:</strong> {{ item.event }}
-            </li>
-          </ul>
-
-          <hr />
-
-          <!-- Historical Context Section -->
-          <h5 class="historyDescription"><strong>📌 시대상</strong></h5>
-          <p class="paContent">{{ movie?.details?.historicalContext }}</p>
-
-          <hr />
-
-          <!-- Related Videos Section -->
-          <h5 class="prVideo"><strong>📰 함께 보면 좋을 자료</strong></h5>
-          <div
-            v-for="(video, index) in movie?.details?.relatedVideos"
-            :key="index"
-            class="video-container"
-          >
-            <iframe
-              width="100%"
-              height="315"
-              :src="
-                'https://www.youtube.com/embed/' +
-                video.youtubeId +
-                '?si=' +
-                video.params
-              "
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerpolicy="strict-origin-when-cross-origin"
-              allowfullscreen
-            >
-            </iframe>
-            <br />
           </div>
         </div>
       </div>
-    </div>
-  </div>
+    </Transition>
 </template>
 
 <script>
@@ -283,14 +285,33 @@ export default {
 </script>
 
 <style scoped>
+
+/* Modal animation */
+.modal-enter-active,
+.modal-leave-active {
+  transition: all 0.3s ease;
+}
+
+.modal-enter-from {
+  opacity: 0;
+  transform: scale(0.95) translateY(-10px);
+}
+
+.modal-leave-to {
+  opacity: 0;
+  transform: scale(0.95) translateY(10px);
+}
+
 .modal-dialog {
   margin: 1.75rem auto;
   width: 90%;
   max-width: 800px; /* 데스크톱 기본 최대 너비 */
+  transition: all 0.3s ease;
 }
 
 .modal-content {
   background-color: #333333;
+  transition: all 0.3s ease;
 }
 
 /* Large devices (desktops) */

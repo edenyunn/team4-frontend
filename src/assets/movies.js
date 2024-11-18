@@ -58,6 +58,7 @@ export default [
         summary: '한 발의 총성으로, \n역사가 흔들렸다',
         imageUrl: 영웅,
         details: {
+            modalYear: 1909,
             // 인용구 정보
             quote: {
                 text: "조국이 무엇입니까? 조국이 대체 우리에게 무엇입니까?",
@@ -131,6 +132,7 @@ export default [
         summary: '형무소 안에 울려 퍼진 \n개구리 소리?',
         imageUrl: 항거,
         details: {
+            modalYear: 1919,
             // 인용구 정보
             quote: {
                 text: "우리가 원하는 것은 단 하나, 우리의 독립이오!",
@@ -202,6 +204,7 @@ export default [
         summary: '산이 무기였다, \n적은 길을 잃었다',
         imageUrl: 봉오동전투,
         details: {
+            modalYear: 1920,
             // 인용구 정보
             quote: {
                 text: "독립군 수는 셀 수가 없어? 왠지 알아? 어제 농사짓던 인물이 내일 독립군이 될 수 있다 이 말이야",
@@ -248,10 +251,6 @@ export default [
                     params: "si=-Koc20T8SKf1ZzGi"
                 }
             ],
-            // 배경음악 정보
-            backgroundMusic: {
-                youtubeId: ""
-            },
             // 추가된 영화 정보
             genre: "액션, 드라마",
             releaseDate: "2019.08.07.",
@@ -274,6 +273,7 @@ export default [
         summary: '이중 스파이일까, 아니면 \n진정한 애국자일까?',
         imageUrl: 밀정,
         details: {
+            modalYear: 1923,
             // 인용구 정보
             quote: {
                 text: "의열단의 이름으로 적의 밀정을 척살한다!",
@@ -320,10 +320,6 @@ export default [
                     params: "si=-Koc20T8SKf1ZzGi"
                 }
             ],
-            // 배경음악 정보
-            backgroundMusic: {
-                youtubeId: ""
-            },
             // 추가된 영화 정보
             genre: "액션",
             releaseDate: "2016.09.07.",
@@ -346,6 +342,7 @@ export default [
         summary: '조선의 미친놈, \n일본 법정을 뒤집다',
         imageUrl: 박열,
         details: {
+            modalYear: 1923,
             // 인용구 정보
             quote: {
                 text: "나는 조선인이다. 아니, 나는 불령사다!",
@@ -419,6 +416,7 @@ export default [
         summary: '공주에서 포로로, \n그리고 이방인으로',
         imageUrl: 덕혜옹주,
         details: {
+            modalYear: 1931,
             // 인용구 정보
             quote: {
                 text: "나는 낙선재에서 오래오래 살고 싶어요. 전하 비전하 보고 싶습니다. 대한민국 우리나라",
@@ -502,6 +500,7 @@ export default [
         summary: '목표는 하나, \n조국을 위한 암살',
         imageUrl: 암살,
         details: {
+            modalYear: 1932,
             // 인용구 정보
             quote: {
                 text: "알려줘야지... 우리는 끝까지 싸우고 있다고",
@@ -547,10 +546,6 @@ export default [
                     params: "si=-Koc20T8SKf1ZzGi"
                 }
             ],
-            // 배경음악 정보
-            backgroundMusic: {
-                youtubeId: ""
-            },
             // 추가된 영화 정보
             genre: "액션, 드라마",
             releaseDate: "2015.07.22.",
@@ -574,6 +569,7 @@ export default [
         summary: '도쿄에서 경성, \n그리고 노르망디까지',
         imageUrl: 마이웨이,
         details: {
+            modalYear: 1937,
             // 인용구 정보
             quote: {
                 text: "지금부터 난 김준식 일병이 아니라 조선 마라토너 김준식이다",
@@ -655,6 +651,7 @@ export default [
         summary: '한 권의 책에 희망을 새기다',
         imageUrl: 말모이,
         details: {
+            modalYear: 1942,
             // 인용구 정보
             quote: {
                 text: "말은 민족의 정신이요, 글은 민족의 생명입니다",
@@ -722,6 +719,7 @@ export default [
         summary: '짧았던 청춘, 영원한 시',
         imageUrl: 동주,
         details: {
+            modalYear: 1944,
             // 인용구 정보
             quote: {
                 text: "하늘을 우러러 한 점 부끄럼 없기를…",
@@ -797,6 +795,7 @@ export default [
         summary: '일본이 숨긴 섬, \n조선이 잊을 수 없는 섬',
         imageUrl: 군함도,
         details: {
+            modalYear: 1945,
             // 인용구 정보
             quote: {
                 text: "나갈 거요 여기 있는 조선 사람들 다 같이",
@@ -849,10 +848,6 @@ export default [
                     params: "si=-Koc20T8SKf1ZzGi"
                 }
             ],
-            // 배경음악 정보
-            backgroundMusic: {
-                youtubeId: ""
-            },
             // 추가된 영화 정보
             genre: "액션, 드라마",
             releaseDate: "2017.07.26.",
@@ -877,6 +872,7 @@ export default [
         summary: '태극기로 완주하다',
         imageUrl: 보스톤,
         details: {
+            modalYear: 1947,
             // 인용구 정보
             quote: {
                 text: "그리하여 나는 이겼습니다",
@@ -949,6 +945,7 @@ export default [
         summary: '돌아온다고 약속했잖아요',
         imageUrl: 태극기휘날리며,
         details: {
+            modalYear: 1950,
             // 인용구 정보
             quote: {
                 text: "네가 살아야 내가 사는 거다!",
@@ -1036,6 +1033,7 @@ export default [
         summary: '포화 소리에 묻힌 \n그들의 청춘',
         imageUrl: 포화속으로,
         details: {
+            modalYear: 1950,
             // 인용구 정보
             quote: {
                 text: "어머니 제가 오늘 죽을지도 모릅니다",
@@ -1109,6 +1107,7 @@ export default [
         summary: '역사의 각주로 남게 된 \n그들의 청춘',
         imageUrl: 장사리,
         details: {
+            modalYear: 1950,
             // 인용구 정보
             quote: {
                 text: "멋지게 살았을 놈들입니다. 사람들이 꼭 기억할 수 있게 해주십시오!",
@@ -1153,10 +1152,6 @@ export default [
                     params: "si=-Koc20T8SKf1ZzGi"
                 }
             ],
-            // 배경음악 정보
-            backgroundMusic: {
-                youtubeId: ""
-            },
             // 추가된 영화 정보
             genre: "전쟁",
             releaseDate: "2019.09.25.",
@@ -1179,6 +1174,7 @@ export default [
         summary: '기적? 그건 작전이었다',
         imageUrl: 인천상륙작전,
         details: {
+            modalYear: 1950,
             // 인용구 정보
             quote: {
                 text: "단 한 명만 살아남더라도 반드시 해야 하는 일입니다.",
@@ -1232,7 +1228,7 @@ export default [
             ],
             // 배경음악 정보
             backgroundMusic: {
-                youtubeId: ""
+                youtubeId: "FyZq3YNH1BA"
             },
             // 추가된 영화 정보
             genre: "전쟁, 드라마",
@@ -1256,6 +1252,7 @@ export default [
         summary: '총 대신 막걸리, \n수류탄 대신 감자',
         imageUrl: 웰컴투동막골,
         details: {
+            modalYear: 1950,
             // 인용구 정보
             quote: {
                 text: "이렇게 말고 다른 곳에서 다르게 만났으면 우리 진짜 재미있었을 텐데.. 안 그래요?",
@@ -1328,6 +1325,7 @@ export default [
         summary: '산은 기억한다, \n헛되이 흘린 젊은 피를',
         imageUrl: 고지전,
         details: {
+            modalYear: 1953,
             // 인용구 정보
             quote: {
                 text: "여기서는 죽지 않으면 살아갈 수 없는 겁니다.",
@@ -1383,10 +1381,6 @@ export default [
                     params: "si=-Koc20T8SKf1ZzGi"
                 }
             ],
-            // 배경음악 정보
-            backgroundMusic: {
-                youtubeId: ""
-            },
             // 추가된 영화 정보
             genre: "전쟁, 드라마",
             releaseDate: "2011.07.20.",
@@ -1410,6 +1404,7 @@ export default [
         summary: '‘대머리 그 남자’의 \n은밀한 헤어컷',
         imageUrl: 효자동이발사,
         details: {
+            modalYear: 1961,
             // 인용구 정보
             quote: {
                 text: "전 이 나라의 대통령의 머리를 자른 이발사입니다.",
@@ -1482,6 +1477,7 @@ export default [
         summary: 'K-아버지 주름살',
         imageUrl: 국제시장,
         details: {
+            modalYear: 1963,
             // 인용구 정보
             quote: {
                 text: "내는 그래 생각한다. 힘든 세월에 태어나가 이 힘든 세상 풍파를 우리 자식이 아니라 우리가 격은기 참 다행이라꼬.",
@@ -1558,6 +1554,7 @@ export default [
         summary: '국가가 버린\n31명의 살인 병기',
         imageUrl: 실미도,
         details: {
+            modalYear: 1968,
             // 인용구 정보
             quote: {
                 text: "우리는 대한민국의 이름으로 싸운다. 그러나 그 이름은 우리에게 없다.",
@@ -1631,6 +1628,7 @@ export default [
         summary: '88년 서울행 비행기,\n목적지는 평양!?',
         imageUrl: 하이재킹,
         details: {
+            modalYear: 1971,
             // 인용구 정보
             quote: {
                 text: "지금부터 이 비행기 이북 간다",
@@ -1680,10 +1678,6 @@ export default [
                     params: "si=-Koc20T8SKf1ZzGi"
                 }
             ],
-            // 배경음악 정보
-            backgroundMusic: {
-                youtubeId: ""
-            },
             // 추가된 영화 정보
             genre: "범죄, 액션",
             releaseDate: "2024.06.21.",
@@ -1706,6 +1700,7 @@ export default [
         summary: '정치판 서커스,\n진짜 설계자는 따로 있다',
         imageUrl: 킹메이커,
         details: {
+            modalYear: 1971,
             // 인용구 정보
             quote: {
                 text: "어떻게 이기는지가 아니고 왜 이겨야 하는지가 중요한 법이오",
@@ -1773,10 +1768,12 @@ export default [
     {
         id: 24,
         title: '님은 먼 곳에',
+        eventYear: 1972,
         event: '베트남 전쟁',
         summary: '전쟁터에서도 멈추지 않은\n그리움의 멜로디',
         imageUrl: 님은먼곳에,
         details: {
+            modalYear: 1972,
             // 인용구 정보
             quote: {
                 text: "남편 만나러 왔어요",
@@ -1808,7 +1805,7 @@ export default [
                 ]
             },
             // 시대상 설명
-            historicalContext: "1971년은 베트남 전쟁이 한창이던 시기로, 한국군은 미군의 주요 동맹군으로 참전 중이었다. 국내에서는 경제 개발이 진행되고 있었고, 베트남 참전은 이를 위한 중요한 외화 수입원이 되었다. 많은 젊은이들이 전쟁에 동원되었으며, 한국군은 최대 5만 명 규모의 병력을 유지했다. 이 시기 위문공연단의 활동은 전선의 군인들에게 위안이 되었지만, 동시에 전쟁의 현실을 국내에 전달하는 역할도 했다.",
+            historicalContext: "1972년은 베트남 전쟁이 한창이던 시기로, 한국군은 미군의 주요 동맹군으로 참전 중이었다. 국내에서는 경제 개발이 진행되고 있었고, 베트남 참전은 이를 위한 중요한 외화 수입원이 되었다. 많은 젊은이들이 전쟁에 동원되었으며, 한국군은 최대 5만 명 규모의 병력을 유지했다. 이 시기 위문공연단의 활동은 전선의 군인들에게 위안이 되었지만, 동시에 전쟁의 현실을 국내에 전달하는 역할도 했다.",
             // 관련 영상
             relatedVideos: [
                 {
@@ -1848,6 +1845,7 @@ export default [
         summary: '사건일지: 실종자 다수,\n원인 불명, 생존자 0명',
         imageUrl: 알포인트,
         details: {
+            modalYear: 1972,
             // 인용구 정보
             quote: {
                 text: "관등성명",
@@ -1894,10 +1892,6 @@ export default [
                     params: "si=-Koc20T8SKf1ZzGi"
                 }
             ],
-            // 배경음악 정보
-            backgroundMusic: {
-                youtubeId: ""
-            },
             // 추가된 영화 정보
             genre: "공포, 전쟁, 미스테리",
             releaseDate: "2004.08.20.",
@@ -1921,6 +1915,7 @@ export default [
         summary: '당신의 저녁 식사가 정치적\n음모의 무대가 된다면?',
         imageUrl: 남산의부장들,
         details: {
+            modalYear: 1979,
             // 인용구 정보
             quote: {
                 text: "임자 하고싶은대로 해 임자 곁엔 내가 있잖아",
@@ -1993,6 +1988,7 @@ export default [
         summary: '남산에 계신 부장님들보다는 훨씬 유머러스하네요',
         imageUrl: 그때그사람들,
         details: {
+            modalYear: 1979,
             // 인용구 정보
             quote: {
                 text: "김 부장... 또 쏠라꼬? 벌써 한 방 묵었다 아이가…",
@@ -2037,7 +2033,7 @@ export default [
             ],
             // 배경음악 정보
             backgroundMusic: {
-                youtubeId: ""
+                youtubeId: "VsgD95u7aZM"
             },
             // 추가된 영화 정보
             genre: "미스터리",
@@ -2061,6 +2057,7 @@ export default [
         summary: '누구도 예상 못한 생일잔치',
         imageUrl: 서울의봄,
         details: {
+            modalYear: 1979,
             // 인용구 정보
             quote: {
                 text: "실패하면 반역, 성공하면 혁명 아닙니까?",
@@ -2133,6 +2130,7 @@ export default [
         summary: '5공 유니버스의 마무리',
         imageUrl: 행복의나라,
         details: {
+            modalYear: 1979,
             // 인용구 정보
             quote: {
                 text: "왕이 되고 싶으면 왕 해, 돈이 갖고 싶으면 대한민국 돈 다 가져, 대신 사람은 죽이지마",
@@ -2210,6 +2208,7 @@ export default [
         summary: '전혀 화려하지 않았던 휴가',
         imageUrl: 화려한휴가,
         details: {
+            modalYear: 1980,
             // 인용구 정보
             quote: {
                 text: "우리는 총을 들었지만, 그 총으로 평화를 원합니다.",
@@ -2281,6 +2280,7 @@ export default [
         summary: '노 광주, 노 민주(주의)',
         imageUrl: 택시운전사,
         details: {
+            modalYear: 1980,
             // 인용구 정보
             quote: {
                 text: "데모한 사람이 천벌 받으면 데모를 하게 한 사람은 무슨 벌을 받아요?",
@@ -2361,6 +2361,7 @@ export default [
         summary: '한 남자의 되돌릴 수 없는 과거',
         imageUrl: 박하사탕,
         details: {
+            modalYear: 1980,
             // 인용구 정보
             quote: {
                 text: "나 다시 돌아갈래!",
@@ -2433,6 +2434,7 @@ export default [
         summary: '‘돼지국밥’처럼\n뜨거운 변호인의 인권 투쟁',
         imageUrl: 변호인,
         details: {
+            modalYear: 1981,
             // 인용구 정보
             quote: {
                 text: "이렇게 할 거면 재판은 왜 합니까?! 이 나라 법치주의는 어디로 갔습니까?! 이따위 짓거리가 무슨 재판입니까?!",
@@ -2506,6 +2508,7 @@ export default [
         summary: '코리아 서스펜스: \n적인가, 동료인가?',
         imageUrl: 헌트,
         details: {
+            modalYear: 1983,
             // 인용구 정보
             quote: {
                 text: "국가를 찬탈하고 국민을 학살한 죄로 너를 즉결처형한다",
@@ -2579,6 +2582,7 @@ export default [
         summary: '삭제된 509호 고문실의 기록',
         imageUrl: 남영동,
         details: {
+            modalYear: 1985,
             // 인용구 정보
             quote: {
                 text: "전 대한민국을 진심으로 사랑합니다.",
@@ -2652,6 +2656,7 @@ export default [
         summary: '상부에선 “공식적으로\n이 작전이 없었다”고 한다',
         imageUrl: 비공식작전,
         details: {
+            modalYear: 1986,
             // 인용구 정보
             quote: {
                 text: "너무 피곤하다 진짜",
@@ -2705,10 +2710,6 @@ export default [
                     params: "si=-Koc20T8SKf1ZzGi"
                 }
             ],
-            // 배경음악 정보
-            backgroundMusic: {
-                youtubeId: ""
-            },
             // 추가된 영화 정보
             genre: "드라마",
             releaseDate: "2023.08.02.",
@@ -2727,10 +2728,11 @@ export default [
     {
         id: 37,
         title: '살인의 추억',
-        event: '화성 연쇄 살인 사건',
+        event: '화성연쇄살인사건',
         summary: '밥 잘 먹고 다닙시다',
         imageUrl: 살인의추억,
         details: {
+            modalYear: 1986,
             // 인용구 정보
             quote: {
                 text: "밥은 먹고 다니냐?",
@@ -2794,7 +2796,7 @@ export default [
             ],
             // 배경음악 정보
             backgroundMusic: {
-                youtubeId: "sjo2nIme0Hc"
+                youtubeId: "a0Xp3aFpgtg"
             },
             // 추가된 영화 정보
             genre: "범죄, 스릴러, 드라마",
@@ -2820,6 +2822,7 @@ export default [
         summary: '역사를 바꾼 그 해의 외침',
         imageUrl: 일구팔칠,
         details: {
+            modalYear: 1987,
             // 인용구 정보
             quote: {
                 text: "그런다고 세상이 바뀌어요?",
@@ -2902,6 +2905,7 @@ export default [
         summary: '‘느그 서장’이랑\n친하면 다 되는 세상',
         imageUrl: 범죄와의전쟁,
         details: {
+            modalYear: 1990,
             // 인용구 정보
             quote: {
                 text: "내가 인마 느그 서장이랑 인마 어저께도 으! 같이 밥묵고 으! 싸우나도같이가고 으! 마 개이섀꺄 마 다했으..",
@@ -2981,10 +2985,11 @@ export default [
         summary: '두 개의 국가, 하나의 탈출구',
         imageUrl: 모가디슈,
         details: {
+            modalYear: 1991,
             // 인용구 정보
             quote: {
                 text: "살다 보니 두 가지 진실이 있을 때도 있습니다",
-                author: "한신성 대사",
+                author: "한신성",
                 actor: "김윤석"
             },
             // 시놉시스 (문단별로 배열로 저장)
@@ -3056,6 +3061,7 @@ export default [
         summary: '토익 점수보다 높아진\n세 친구의 정의 지수',
         imageUrl: 삼진그룹,
         details: {
+            modalYear: 1991,
             // 인용구 정보
             quote: {
                 text: "나를 보지 말고 너를 봐",
@@ -3132,6 +3138,7 @@ export default [
         summary: '열네 살 마음에도 금이 갔다,\n마치 그 시절처럼',
         imageUrl: 벌새,
         details: {
+            modalYear: 1994,
             // 인용구 정보
             quote: {
                 text: "다만 나쁜 일들이 닥치면서도 기쁜 일들이 함께 한다는 것. 우리는 늘 누군가를 만나 무언가를 나눈다는 것. 세상은 참 신기하고 아름답다",
@@ -3211,6 +3218,7 @@ export default [
         summary: '그날 우리 아버지가\n해고 당한 이유',
         imageUrl: 국가부도의날,
         details: {
+            modalYear: 1997,
             // 인용구 정보
             quote: {
                 text: "지금 이 순간, 우리는 나라가 망하는 걸 보고 있습니다.",
@@ -3270,10 +3278,6 @@ export default [
                     params: "si=-Koc20T8SKf1ZzGi"
                 }
             ],
-            // 배경음악 정보
-            backgroundMusic: {
-                youtubeId: ""
-            },
             // 추가된 영화 정보
             genre: "드라마",
             releaseDate: "2018.11.28.",
@@ -3296,6 +3300,7 @@ export default [
         summary: '서로를 믿고 싶었던\n두 남자의 ‘비즈니스’',
         imageUrl: 공작,
         details: {
+            modalYear: 1997,
             // 인용구 정보
             quote: {
                 text: "처장님, 우리가 하려고 했던 비즈니스라는 말에는 두 가지 뜻이 있습니다. 첫째는 사업이고, 둘째는 모험입니다. 처장님, 저하고 마지막으로 모험 한번 해 보시렵니까?",
@@ -3377,6 +3382,7 @@ export default [
         summary: '모두가 붉게 물든 2002년,\n진짜 영웅은 따로 있었다',
         imageUrl: 연평해전,
         details: {
+            modalYear: 2002,
             // 인용구 정보
             quote: {
                 text: "우리는 절대 선제공격하지 않는다. 하지만 적이 먼저 도발하면 즉각 응징한다",
@@ -3457,6 +3463,7 @@ export default [
         summary: '그 아가씨가 여기 있대니깐',
         imageUrl: 추격자,
         details: {
+            modalYear: 2003,
             // 인용구 정보
             quote: {
                 text: "야, 4885...너지?",
@@ -3534,6 +3541,7 @@ export default [
         summary: '대한민국 현대 정치사 입문서',
         imageUrl: 더킹,
         details: {
+            modalYear: 2004,
             // 인용구 정보
             quote: {
                 text: "좆같았다. 그의 말이 좆같은 게 아니라 구구절절 맞았다는 게 좆같았다.",
@@ -3614,6 +3622,7 @@ export default [
         summary: '할머니의 사연 있는 ‘ABCD’',
         imageUrl: 아이캔스피크,
         details: {
+            modalYear: 2007,
             // 인용구 정보
             quote: {
                 text: "I am sorry 그 한마디가 그렇게 어렵나",
@@ -3690,6 +3699,7 @@ export default [
         summary: '클릭 한 번으로\n세상을 조작할 수 있다면',
         imageUrl: 댓글부대,
         details: {
+            modalYear: 2012,
             // 인용구 정보
             quote: {
                 text: "완전한 진실보다, 거짓이 섞인 진실이 더 진실 같다.",
@@ -3737,7 +3747,7 @@ export default [
             ],
             // 배경음악 정보
             backgroundMusic: {
-                youtubeId: ""
+                youtubeId: "U-dU5jvuf4A"
             },
             // 추가된 영화 정보
             genre: "범죄, 드라마",
@@ -3762,6 +3772,7 @@ export default [
         summary: '정의라는 달달한 것이\n아직 남아있긴 한가',
         imageUrl: 내부자들,
         details: {
+            modalYear: 2016,
             // 인용구 정보
             quote: {
                 text: "어차피 대중들은 개, 돼지입니다. 거 뭐하러 개, 돼지들한테 신경을 쓰시고 그러십니까. 적당히 짖어대다가 알아서 조용해질 겁니다",

@@ -37,10 +37,14 @@
         </div>
       </div>
       </div>
-      <!-- 로딩 모션 -->
     </div>
-    <div v-if="isLoading" class="spinner-grow" role="status">
-        <span class="visually-hidden">Loading...</span>
+
+    <!-- 로딩 모션 -->
+    <div v-if="isLoading" class="loading-container">
+        <div class="loading-message">현재 POV Search가 답변을 생성 중입니다..</div>
+        <div class="spinner-grow" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
     </div>
 
     <!-- MovieModal 컴포넌트 -->
@@ -184,8 +188,9 @@ export default {
  .welcome-subtitle {
   font-size: 18px;
   font-weight: 150;
-  font-family: 'Raleway-SemiBold';
+  font-family: 'Pretendard-Light';
   color: rgba(255, 255, 255);
+  line-height: 1.5;
  }
 
  /* 구분선 스타일 */
@@ -196,17 +201,44 @@ export default {
   margin: 20px -20px; /* 음수 마진으로 좌우로 확장 */
   margin-top: 55px;
  }
+
+ .loading-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 10px;
+  width: fit-content;
+}
+
+.loading-message {
+  color: white;
+  font-family: 'Pretendard-Light';
+  font-size: 1 rem;
+}
+
+.spinner-grow {
+  width: 20px;
+  height: 20px;
+  background-color: rgb(168, 108, 108);
+  flex-shrink: 0; /* Prevents the spinner from being squished */
+}
  
  .chat-box {
   flex-grow: 1;
   padding: 10px;
   display: flex; /* flex 복원 */
   flex-direction: column;
+  overflow-y: auto;
 }
 
 /* 새로 추가 */
 .chat-messages {
   width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .chat-bubble {
@@ -260,12 +292,12 @@ export default {
  .movie-posters {
   display: flex;
   flex-wrap: wrap;
+  margin-bottom: 10px;
   gap: 10px;
-  margin-top: 10px;
  }
  
  .movie-poster {
-  width: 120px;
+  width: 200px;
   cursor: pointer;
   transition: transform 0.2s;
  }
@@ -275,14 +307,14 @@ export default {
  }
  
  .movie-poster-img {
-  width: 100%;
+  width: 200px;
   height: auto;
   border-radius: 5px;
   object-fit: cover;
 }
  
  .movie-title {
-  font-size: 0.8em;
+  font-size: 1rem;
   font-family: 'Pretendard-Medium';
   text-align: center;
   margin-top: 5px;
@@ -356,18 +388,14 @@ export default {
   .message-input {
     padding: 8px;
   }
- 
+
+  .movie-posters {
+  justify-content: center;
+ }
+  
   .send-button {
     font-size: 18px;
     margin-left: 5px;
-  }
- 
-  .movie-poster {
-    width: 100px;
-  }
- 
-  .movie-title {
-    font-size: 0.7em;
   }
  }
  </style>

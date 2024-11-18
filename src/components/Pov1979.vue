@@ -113,7 +113,6 @@ export default {
 }
 
 .modal-body {
-  font-weight: bold;
   font-family: "Pretendard-Light";
 }
 

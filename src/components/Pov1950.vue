@@ -87,18 +87,60 @@
               이제는 시간 속에 조용히 스며들리
             </p>
           </div>
-          <br />
+          <hr />
+          <div>
+            <h5 class="mb-3">&nbsp;관련 영화</h5>
+              <div class="movie-grid">
+                <div 
+                  v-for="movie in relatedMovies" 
+                  :key="movie.id" 
+                  class="movie-item"
+                  @click="handleMovieClick(movie)"
+                >
+                  <div class="poster-wrapper">
+                    <img 
+                      :src="movie.imageUrl" 
+                      :alt="movie.title"
+                      class="movie-poster"
+                    />
+                    <div class="movie-title">
+                      <h6>{{ movie.title }}</h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
         </div>
       </div>
     </div>
+
+    <!-- MovieModal 추가 -->
+    <MovieModal 
+      v-if="isMovieModalOpen"
+      :is-open="isMovieModalOpen"
+      :movie="selectedMovie"
+      @close="isMovieModalOpen = false"
+    />
   </div>
 </template>
 
 <script>
 import pov1950Logo from "@/assets/1950 Vibe.png";
 
+import movies from "@/assets/movies.js";  // movies.js import
+import MovieModal from './MovieModal.vue';  // MovieModal 컴포넌트 import
+import 태극기휘날리며 from '@/assets/posters/태극기휘날리며.jpg';
+import 포화속으로 from '@/assets/posters/포화속으로.jpg';
+import 장사리 from '@/assets/posters/장사리.jpg';
+import 인천상륙작전 from '@/assets/posters/인천상륙작전.jpg';
+import 웰컴투동막골 from '@/assets/posters/웰컴투동막골.jpg';
+import 고지전 from '@/assets/posters/고지전.jpg';
+
 export default {
   name: "Pov1950",
+  components: {
+    MovieModal
+  },
   props: {
     isOpen: {
       type: Boolean,
@@ -109,10 +151,49 @@ export default {
     return {
       pov1950Logo: pov1950Logo,
       isActive: false,
+      isMovieModalOpen: false,
+      selectedMovie: null,
+      relatedMovies: [
+        {
+          id: 13,
+          title: '태극기 휘날리며',
+          imageUrl: 태극기휘날리며,
+          summary: '1950년 한국전쟁, 형제의 생존을 위한 처절한 투쟁이 시작된다...'
+        },
+        {
+          id: 14,
+          title: '포화 속으로',
+          imageUrl: 포화속으로,
+          summary: '포화가 몰아치는 전쟁터에서 학도병들의 희생과 용기를 담아낸 이야기...'
+        },
+        {
+          id: 15,
+          title: '장사리',
+          imageUrl: 장사리,
+          summary: '미완의 승리, 이름 없는 영웅들이 펼친 숨겨진 전투 이야기...'
+        },
+        {
+          id: 16,
+          title: '인천상륙작전',
+          imageUrl: 인천상륙작전,
+          summary: '맥아더 장군과 용사들의 전략적 전투로 전쟁의 판도를 바꾸다...'
+        },
+        {
+          id: 17,
+          title: '웰컴 투 동막골',
+          imageUrl: 웰컴투동막골,
+          summary: '전쟁 중에도 평화가 숨쉬는 마을, 동막골에서 벌어지는 따뜻한 이야기...'
+        },
+        {
+          id: 18,
+          title: '고지전',
+          imageUrl: 고지전,
+          summary: '끝나지 않는 고지 쟁탈전, 그 속에 숨겨진 진실을 파헤친다...'
+        }
+      ]
     };
   },
   mounted() {
-    // 마운트 후 애니메이션 시작
     requestAnimationFrame(() => {
       this.isActive = true;
     });
@@ -120,14 +201,19 @@ export default {
   methods: {
     closeModal() {
       this.isActive = false;
-      // 애니메이션이 끝난 후 모달 닫기
       setTimeout(() => {
         this.$emit("close");
       }, 300);
+    },
+    handleMovieClick(movie) {
+      // movies 배열에서 해당 ID의 영화 정보를 찾습니다
+      this.selectedMovie = movies.find(m => m.id === movie.id);
+      this.isMovieModalOpen = true;
     }
   }
-}
+};
 </script>
+
 
 <style scoped>
 /* 모달 배경색 변경 */
@@ -223,6 +309,68 @@ export default {
 
   .modal-title {
     font-size: 1.25rem;
+  }
+}
+
+/* 관련 영화 섹션 스타일 */
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.movie-item {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.movie-item:hover {
+  transform: scale(1.05);
+}
+
+.poster-wrapper {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.movie-poster {
+  width: 100%;
+  aspect-ratio: 2/3;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.movie-title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 0.5rem;
+  color: white;
+}
+
+.movie-title h6 {
+  margin: 0;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .modal-dialog {
+    width: 85%; /* 모바일에서는 더 작은 너비 */
+    margin: 0.5rem auto;
+  }
+  .movie-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .movie-grid {
+    grid-template-columns: 1fr;
   }
 }
 </style>

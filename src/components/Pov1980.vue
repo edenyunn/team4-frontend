@@ -33,7 +33,6 @@
               <br />
             </div>
 
-
             <h5 class="mb-3">&nbsp;그날이 오면</h5>
             <p class="movie-description"></p>
           </div>

@@ -75,18 +75,60 @@
               조용히 스며든 그날의 기억<br />
             </p>
           </div>
-          <br />
+          <hr />
+          <div>
+            <h5 class="mb-3">&nbsp;관련 영화</h5>
+              <div class="movie-grid">
+                <div 
+                  v-for="movie in relatedMovies" 
+                  :key="movie.id" 
+                  class="movie-item"
+                  @click="handleMovieClick(movie)"
+                >
+                  <div class="poster-wrapper">
+                    <img 
+                      :src="movie.imageUrl" 
+                      :alt="movie.title"
+                      class="movie-poster"
+                    />
+                    <div class="movie-title">
+                      <h6>{{ movie.title }}</h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
         </div>
       </div>
     </div>
+
+    <!-- MovieModal 추가 -->
+    <MovieModal 
+      v-if="isMovieModalOpen"
+      :is-open="isMovieModalOpen"
+      :movie="selectedMovie"
+      @close="isMovieModalOpen = false"
+    />
   </div>
 </template>
 
 <script>
 import pov1979Logo from "@/assets/1979 Vibe.png";
 
+import movies from "@/assets/movies.js"; // movies.js import
+import MovieModal from './MovieModal.vue';  // MovieModal 컴포넌트 import
+
+import 남산의부장들 from "@/assets/posters/남산의부장들.jpg";
+import 그때그사람들 from "@/assets/posters/그때그사람들.jpg";
+import 서울의봄 from "@/assets/posters/서울의봄.jpg";
+import 행복의나라 from "@/assets/posters/행복의나라.jpg";
+
+
 export default {
   name: "Pov1979",
+  components: {
+    MovieModal
+  },
   props: {
     isOpen: {
       type: Boolean,
@@ -97,10 +139,37 @@ export default {
     return {
       pov1979Logo: pov1979Logo,
       isActive: false,
+      isMovieModalOpen: false,
+      selectedMovie: null,
+      relatedMovies: [
+        {
+          id: 26,
+          title: "남산의 부장들",
+          imageUrl: 남산의부장들,
+          summary: "중앙정보부의 권력 다툼 속에 숨겨진 진실, 그날의 긴박했던 이야기...",
+        },
+        {
+          id: 27,
+          title: "그때 그 사람들",
+          imageUrl: 그때그사람들,
+          summary: "1979년 10월, 대한민국 현대사를 뒤흔든 충격적인 사건의 재구성...",
+        },
+        {
+          id: 28,
+          title: "서울의 봄",
+          imageUrl: 서울의봄,
+          summary: "정권 교체의 분수령이 된 순간, 광화문을 뒤덮은 봄날의 열기...",
+        },
+        {
+          id: 29,
+          title: "행복의 나라",
+          imageUrl: 행복의나라,
+          summary:  "1979년 10월 26일, 대통령 암살 사건과 그로부터 시작된 정치적 혼란 속에서 펼쳐지는 법정 드라마",
+        },
+      ],
     };
   },
   mounted() {
-    // 마운트 후 애니메이션 시작
     requestAnimationFrame(() => {
       this.isActive = true;
     });
@@ -108,13 +177,17 @@ export default {
   methods: {
     closeModal() {
       this.isActive = false;
-      // 애니메이션이 끝난 후 모달 닫기
       setTimeout(() => {
         this.$emit("close");
       }, 300);
-    }
-  }
-}
+    },
+    handleMovieClick(movie) {
+      // movies 배열에서 해당 ID의 영화 정보를 찾습니다
+      this.selectedMovie = movies.find((m) => m.id === movie.id);
+      this.isMovieModalOpen = true;
+    },
+  },
+};
 </script>
 
 <style scoped>
@@ -199,7 +272,7 @@ export default {
   font-size: 1.5rem;
 }
 
-@media (max-width: 576px) {
+@media (max-width: 768px) {
   .modal-header {
     padding: 1rem;
   }
@@ -210,6 +283,68 @@ export default {
 
   .modal-title {
     font-size: 1.25rem;
+  }
+}
+
+/* 관련 영화 섹션 스타일 */
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.movie-item {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.movie-item:hover {
+  transform: scale(1.05);
+}
+
+.poster-wrapper {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.movie-poster {
+  width: 100%;
+  aspect-ratio: 2/3;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.movie-title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 0.5rem;
+  color: white;
+}
+
+.movie-title h6 {
+  margin: 0;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .modal-dialog {
+    width: 85%; /* 모바일에서는 더 작은 너비 */
+    margin: 0.5rem auto;
+  }
+  .movie-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .movie-grid {
+    grid-template-columns: 1fr;
   }
 }
 </style>

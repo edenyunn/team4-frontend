@@ -41,11 +41,11 @@
           <span class="small-subtitle">배우 개그 유니버스</span>
         </RouterLink>
         <RouterLink 
-          to="/inside" 
+          to="/vibe" 
           class="menu-item" 
           @click="closeSidebar"
         >
-          Inside
+          Vibe
           <span class="small-subtitle">AI 음악 시리즈</span>
         </RouterLink>
         <RouterLink 

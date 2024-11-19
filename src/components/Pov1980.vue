@@ -82,18 +82,57 @@
               우리가 기억한 그 봄의 얼굴<br />
             </p>
           </div>
-          <br />
+          <hr />
+          <div>
+            <h5 class="mb-3">&nbsp;관련 영화</h5>
+              <div class="movie-grid">
+                <div 
+                  v-for="movie in relatedMovies" 
+                  :key="movie.id" 
+                  class="movie-item"
+                  @click="handleMovieClick(movie)"
+                >
+                  <div class="poster-wrapper">
+                    <img 
+                      :src="movie.imageUrl" 
+                      :alt="movie.title"
+                      class="movie-poster"
+                    />
+                    <div class="movie-title">
+                      <h6>{{ movie.title }}</h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
         </div>
       </div>
     </div>
+
+    <!-- MovieModal 추가 -->
+    <MovieModal 
+      v-if="isMovieModalOpen"
+      :is-open="isMovieModalOpen"
+      :movie="selectedMovie"
+      @close="isMovieModalOpen = false"
+    />
   </div>
 </template>
 
 <script>
 import pov1980Logo from "@/assets/1980 Vibe.png";
 
+import movies from "@/assets/movies.js";  // movies.js import
+import MovieModal from './MovieModal.vue';  // MovieModal 컴포넌트 import
+import 택시운전사 from "@/assets/posters/택시운전사.jpg";
+import 화려한휴가 from "@/assets/posters/화려한휴가.jpg";
+import 일구팔칠 from "@/assets/posters/1987.jpg";
+
 export default {
   name: "Pov1980",
+  components: {
+    MovieModal
+  },
   props: {
     isOpen: {
       type: Boolean,
@@ -104,10 +143,31 @@ export default {
     return {
       pov1980Logo: pov1980Logo,
       isActive: false,
+      isMovieModalOpen: false,
+      selectedMovie: null,
+      relatedMovies: [
+        {
+          id: 31,
+          title: '택시운전사',
+          imageUrl: 택시운전사,
+          summary: '어떻게든 택시비를 받아야 하는 만섭의 기지로 검문을 뚫고 겨우 들어선 광주...'
+        },
+        {
+          id: 30,
+          title: '화려한 휴가',
+          imageUrl: 화려한휴가,
+          summary: '1980년 5월, 광주. 평범한 택시기사 민우는 어릴 적 부모님을 여의고...'
+        },
+        {
+          id: 38,
+          title: '1987',
+          imageUrl: 일구팔칠,
+          summary: '1987년 1월, 경찰 조사를 받던 스물두 살 대학생이 사망한다...'
+        }
+      ]
     };
   },
   mounted() {
-    // 마운트 후 애니메이션 시작
     requestAnimationFrame(() => {
       this.isActive = true;
     });
@@ -115,13 +175,17 @@ export default {
   methods: {
     closeModal() {
       this.isActive = false;
-      // 애니메이션이 끝난 후 모달 닫기
       setTimeout(() => {
         this.$emit("close");
       }, 300);
+    },
+    handleMovieClick(movie) {
+      // movies 배열에서 해당 ID의 영화 정보를 찾습니다
+      this.selectedMovie = movies.find(m => m.id === movie.id);
+      this.isMovieModalOpen = true;
     }
   }
-}
+};
 </script>
 
 <style scoped>
@@ -206,7 +270,7 @@ export default {
   font-size: 1.5rem;
 }
 
-@media (max-width: 576px) {
+@media (max-width: 768px) {
   .modal-header {
     padding: 1rem;
   }
@@ -217,6 +281,68 @@ export default {
 
   .modal-title {
     font-size: 1.25rem;
+  }
+}
+
+/* 관련 영화 섹션 스타일 */
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.movie-item {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.movie-item:hover {
+  transform: scale(1.05);
+}
+
+.poster-wrapper {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.movie-poster {
+  width: 100%;
+  aspect-ratio: 2/3;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.movie-title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 0.5rem;
+  color: white;
+}
+
+.movie-title h6 {
+  margin: 0;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .modal-dialog {
+    width: 85%; /* 모바일에서는 더 작은 너비 */
+    margin: 0.5rem auto;
+  }
+  .movie-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .movie-grid {
+    grid-template-columns: 1fr;
   }
 }
 </style>

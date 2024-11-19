@@ -328,13 +328,13 @@ export default {
 /* Medium devices (tablets) */
 @media (max-width: 991.98px) {
   .modal-dialog {
-    width: 60%;
+    width: 65%;
     margin: 1rem auto;
   }
 }
 
 /* Small devices (phones) */
-@media (max-width: 767.98px) {
+@media (max-width: 768px) {
   .modal-dialog {
     width: 85%; /* 모바일에서는 더 작은 너비 */
     margin: 0.5rem auto;

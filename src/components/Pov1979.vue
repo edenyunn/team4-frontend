@@ -1,7 +1,7 @@
 <template>
   <div class="modal show d-block" tabindex="-1">
     <div class="modal-dialog modal-dialog-scrollable" role="document">
-      <div class="modal-content bg-dark text-white">
+      <div class="modal-content custom-modal-color text-white">
         <div class="modal-header">
           <h1 class="modal-title fs-1">POV 1979</h1>
           <button
@@ -107,14 +107,26 @@ export default {
 </script>
 
 <style scoped>
+/* 모달 배경색 변경 */
+.custom-modal-color {
+  background-color: #333; /* 원하는 색상으로 변경 */
+  color: #ecf0f1; /* 텍스트 색상 */
+}
+
+/* 헤더와 푸터의 스타일 변경 */
 .modal-header {
+  background-color: #333; /* 원하는 색상 */
+  border-bottom: 1px solid #95a5a6;
   padding: 1rem 1.5rem;
   font-family: "Pretendard-SemiBold";
 }
 
 .modal-body {
+  background-color: #333; /* 원하는 색상 */
+  border-top: 1px solid #95a5a6;
   font-family: "Pretendard-Light";
 }
+
 
 .modal-image {
   max-width: 40%;

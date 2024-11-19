@@ -4,7 +4,7 @@
     <div class="welcome-section">
       <h1 class="welcome-title">Original</h1>
       <h2 class="welcome-subtitle">
-        AI와 함께 만든 이야기로 <br />당신의 21세기를 재발견하세요.
+        AI와 함께 만든 이야기로<br />당신의 21세기를 재발견하세요
       </h2>
       <div class="divider"></div>
       <!-- 새로 추가된 구분선 -->
@@ -51,7 +51,7 @@
       </figure>
 
       <!-- 영화 상세 정보 섹션 -->
-      <div class="movie-details mb-4" style="background-color: #434343;">
+      <div class="movie-details mb-4" style="background-color: #434343">
         <h5 class="details-title"><strong>🎬 영화 정보</strong></h5>
         <div class="details-grid">
           <div class="detail-item">
@@ -84,23 +84,23 @@
         <div class="cast-section mt-3">
           <h6 class="cast-title">주요 출연진</h6>
           <div class="cast-list">
-            <div style="background-color: #525252;" class="cast-item">
-              수아 (강승민)
+            <div style="background-color: #525252" class="cast-item">
+              강승민 (수아 역)
             </div>
-            <div style="background-color: #525252;" class="cast-item">
-              어린 수아 (강승민)
+            <div style="background-color: #525252" class="cast-item">
+              강승민 (어린 수아 역)
             </div>
-            <div style="background-color: #525252;" class="cast-item">
-              수아 아버지 (강승민)
+            <div style="background-color: #525252" class="cast-item">
+              강승민 (수아 아버지 역)
             </div>
-            <div style="background-color: #525252;" class="cast-item">
-              사회 선생님 (강승민)
+            <div style="background-color: #525252" class="cast-item">
+              강승민 (사회 선생님 역)
             </div>
-            <div style="background-color: #525252;" class="cast-item">
-              체육 선생님 (강승민)
+            <div style="background-color: #525252" class="cast-item">
+              강승민 (체육 선생님 역)
             </div>
-            <div style="background-color: #525252;" class="cast-item">
-              다현 (강승민)
+            <div style="background-color: #525252" class="cast-item">
+              강승민 (다현 역)
             </div>
           </div>
         </div>

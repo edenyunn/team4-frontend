@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Timeline from '@/views/Timeline.vue'
 import Search from '@/views/Search.vue'
-import Inside from '@/views/Inside.vue'
+import Vibe from '@/views/Vibe.vue'
 import Cast from '@/views/Cast.vue'
 import Original from '@/views/Original.vue'
 
@@ -21,8 +21,8 @@ const router = createRouter({
       component: Search
     },
     {
-      path: '/inside',
-      component: Inside
+      path: '/vibe',
+      component: Vibe
     },
     {
       path: '/original',

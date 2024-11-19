@@ -1,9 +1,9 @@
-<!-- Inside.vue -->
+<!-- Vibe.vue -->
 <template>
   <div class="dark-container" :class="{ 'low-opacity': isModalOpen }">
     <!-- Welcome Section -->
     <div class="welcome-section">
-      <h1 class="welcome-title">Inside</h1>
+      <h1 class="welcome-title">Vibe</h1>
       <h2 class="welcome-subtitle">
         생성형 AI로 제작된 음악을 통해<br />한국 현대사를 새롭게 느껴보세요
       </h2>
@@ -36,9 +36,9 @@
 
 <script>
 import { defineAsyncComponent } from "vue";
-import pov1950Logo from "@/assets/1950 inside.png";
-import pov1979Logo from "@/assets/1979 inside.png";
-import pov1980Logo from "@/assets/1980 inside.png";
+import pov1950Logo from "@/assets/1950 Vibe.png";
+import pov1979Logo from "@/assets/1979 Vibe.png";
+import pov1980Logo from "@/assets/1980 Vibe.png";
 
 export default {
   name: "ModalGallery",

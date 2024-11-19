@@ -4,7 +4,7 @@
     <div class="modal-dialog modal-dialog-scrollable" role="document">
       <div class="modal-content custom-modal-color text-white" :class="{ 'modal-enter': isActive }">
         <div class="modal-header">
-          <h1 class="modal-title fs-1">POV 1979</h1>
+          <h1 class="modal-title fs-1">POV Vibe 1979</h1>
           <button
             type="button"
             class="btn-close btn-close-white"
@@ -83,7 +83,7 @@
 </template>
 
 <script>
-import pov1979Logo from "@/assets/1979 inside.png";
+import pov1979Logo from "@/assets/1979 Vibe.png";
 
 export default {
   name: "Pov1979",

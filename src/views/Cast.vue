@@ -126,11 +126,17 @@ export default {
   max-width: 506px;
 }
 
-.gallery-item:hover,
-.gallery-item:focus {
+/* hover 상태에서만 아웃라인 표시 */
+.gallery-item:hover {
   transform: scale(1.05);
   outline: 2px solid var(--highlight-color, #fff);
   border-radius: 4px;
+}
+
+/* focus 상태일 때 아웃라인 제거 */
+.gallery-item:focus {
+  outline: none;
+  transform: scale(1.05);
 }
 
 .gallery-item img {

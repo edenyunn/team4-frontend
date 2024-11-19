@@ -1,6 +1,6 @@
 <template>
   <div class="carousel-container">
-    <div v-if="images.length > 0" id="cardNewsCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div v-if="images.length > 0" id="cardNewsCarousel" class="carousel slide">
       <!-- 인디케이터 -->
       <div class="carousel-indicators">
         <button
@@ -15,7 +15,7 @@
         ></button>
       </div>
 
-      <!-- 캐러셀 0내용 -->
+      <!-- 캐러셀 내용 -->
       <div class="carousel-inner">
         <div
           v-for="(image, index) in images"
@@ -147,8 +147,8 @@ onUnmounted(() => {
 
 .carousel-item img {
   width: 100%;
-  height: 100%; /* 컨테이너 높이를 기준으로 이미지 크기 조정 */
-  object-fit: cover; /* 이미지를 컨테이너에 맞게 자름 */
+  height: 100%;
+  object-fit: cover;
 }
 
 .carousel-control-prev,

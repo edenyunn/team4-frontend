@@ -1,7 +1,8 @@
 <template>
   <div class="modal show d-block" tabindex="-1">
+    <div class="modal-backdrop" @click="closeModal"></div>
     <div class="modal-dialog modal-dialog-scrollable" role="document">
-      <div class="modal-content custom-modal-color text-white">
+      <div class="modal-content custom-modal-color text-white" :class="{ 'modal-enter': isActive }">
         <div class="modal-header">
           <h1 class="modal-title fs-1">POV 1979</h1>
           <button
@@ -15,7 +16,7 @@
           <div class="text-center">
             <div class="d-flex justify-content-center mb-3"></div>
 
-            <!-- Related Videos Section -->
+             <!-- Related Videos Section -->
             <div class="video-container">
               <div class="iframe-wrapper">
                 <iframe
@@ -75,7 +76,6 @@
             </p>
           </div>
           <br />
-          <div></div>
         </div>
       </div>
     </div>
@@ -96,14 +96,25 @@ export default {
   data() {
     return {
       pov1979Logo: pov1979Logo,
+      isActive: false,
     };
+  },
+  mounted() {
+    // 마운트 후 애니메이션 시작
+    requestAnimationFrame(() => {
+      this.isActive = true;
+    });
   },
   methods: {
     closeModal() {
-      this.$emit("close");
-    },
-  },
-};
+      this.isActive = false;
+      // 애니메이션이 끝난 후 모달 닫기
+      setTimeout(() => {
+        this.$emit("close");
+      }, 300);
+    }
+  }
+}
 </script>
 
 <style scoped>
@@ -127,7 +138,6 @@ export default {
   font-family: "Pretendard-Light";
 }
 
-
 .modal-image {
   max-width: 40%;
   max-height: 50vh;
@@ -135,16 +145,37 @@ export default {
   border-radius: 4px;
 }
 
+/* 새로운 트랜지션 스타일 추가 */
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  transform: translateY(20px);
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.modal-enter {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* 기존 애니메이션 수정 */
 .modal.show {
   display: block;
-  animation: fadeIn 0.3s ease-in-out;
 }
 
 @keyframes fadeIn {
   from {
     opacity: 0;
   }
-
   to {
     opacity: 1;
   }
@@ -152,10 +183,6 @@ export default {
 
 .modal {
   z-index: 1050;
-}
-
-.modal-backdrop {
-  z-index: 1040;
 }
 
 .modal-header {

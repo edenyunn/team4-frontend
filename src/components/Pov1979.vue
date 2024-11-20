@@ -193,22 +193,29 @@ export default {
 <style scoped>
 /* 모달 배경색 변경 */
 .custom-modal-color {
-  background-color: #333; /* 원하는 색상으로 변경 */
-  color: #ecf0f1; /* 텍스트 색상 */
+  background-color: #333;
+  color: #ecf0f1;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 /* 헤더와 푸터의 스타일 변경 */
 .modal-header {
-  background-color: #333; /* 원하는 색상 */
+  background-color: #333;
   border-bottom: 1px solid #95a5a6;
   padding: 1rem 1.5rem;
   font-family: "Pretendard-SemiBold";
 }
 
 .modal-body {
-  background-color: #333; /* 원하는 색상 */
+  background-color: #333;
   border-top: 1px solid #95a5a6;
   font-family: "Pretendard-Light";
+  padding: 2rem;
+  overflow-x: hidden;
+  overflow-y: auto;
+  text-align: center;
+  width: 100%;
 }
 
 .modal-image {
@@ -218,7 +225,24 @@ export default {
   border-radius: 4px;
 }
 
-/* 새로운 트랜지션 스타일 추가 */
+/* 모달 다이얼로그 스타일 */
+.modal-dialog {
+  margin: 1.75rem auto;
+  width: 90%;
+  max-width: 800px;
+  transition: all 0.3s ease;
+}
+
+.modal-content {
+  background-color: #333;
+  transition: all 0.3s ease;
+  max-width: 100%;
+  overflow-x: hidden;
+  transform: translateY(20px);
+  opacity: 0;
+}
+
+/* 트랜지션 스타일 */
 .modal-backdrop {
   position: fixed;
   top: 0;
@@ -229,61 +253,41 @@ export default {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-.modal-content {
-  transform: translateY(20px);
-  opacity: 0;
-  transition: all 0.3s ease-in-out;
-}
-
 .modal-enter {
   transform: translateY(0);
   opacity: 1;
 }
 
-/* 기존 애니메이션 수정 */
+/* 모달 기본 스타일 */
 .modal.show {
   display: block;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
 }
 
 .modal {
   z-index: 1050;
 }
 
-.modal-header {
-  padding: 1rem 2rem;
+/* 비디오 컨테이너 스타일 */
+.video-container {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  margin: 1rem auto;
+  padding-top: 56.25%; /* 16:9 비율 */
 }
 
-.modal-body {
-  padding: 2rem;
-  overflow-y: auto;
-  text-align: center;
+.iframe-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
-.modal-title {
-  font-size: 1.5rem;
-}
-
-@media (max-width: 768px) {
-  .modal-header {
-    padding: 1rem;
-  }
-
-  .modal-body {
-    padding: 1rem;
-  }
-
-  .modal-title {
-    font-size: 1.25rem;
-  }
+.iframe-wrapper iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
 }
 
 /* 관련 영화 섹션 스타일 */
@@ -292,9 +296,12 @@ export default {
   grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
   margin-top: 1rem;
+  width: 100%;
+  max-width: 100%;
 }
 
 .movie-item {
+  width: 100%;
   cursor: pointer;
   transition: transform 0.3s ease;
 }
@@ -304,6 +311,7 @@ export default {
 }
 
 .poster-wrapper {
+  width: 100%;
   position: relative;
   border-radius: 8px;
   overflow: hidden;
@@ -332,19 +340,48 @@ export default {
   text-align: center;
 }
 
+/* 반응형 스타일 */
+@media (min-width: 992px) {
+  .modal-dialog {
+    width: 50%;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .modal-dialog {
+    width: 65%;
+    margin: 1rem auto;
+  }
+}
+
 @media (max-width: 768px) {
   .modal-dialog {
-    width: 85%; /* 모바일에서는 더 작은 너비 */
+    width: 85%;
     margin: 0.5rem auto;
   }
+  
+  .modal-header {
+    padding: 1rem;
+  }
+
+  .modal-body {
+    padding: 1rem;
+  }
+
   .movie-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+  }
+  
+  .video-container {
+    margin: 0.5rem auto;
   }
 }
 
 @media (max-width: 480px) {
   .movie-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
   }
 }
 </style>

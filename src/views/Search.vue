@@ -214,12 +214,14 @@ body {
   text-align: left;
   overflow: hidden; /* 스크롤 방지 */
 }
+
 .welcome-title {
   font-size: 36px;
   font-weight: bold;
   font-family: "Raleway-Bold";
   margin-bottom: -8px;
 }
+
 .welcome-subtitle {
   font-size: 18px;
   font-weight: 150;

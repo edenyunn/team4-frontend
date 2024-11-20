@@ -2,7 +2,10 @@
   <div class="modal show d-block" tabindex="-1">
     <div class="modal-backdrop" @click="closeModal"></div>
     <div class="modal-dialog modal-dialog-scrollable" role="document">
-      <div class="modal-content custom-modal-color text-white" :class="{ 'modal-enter': isActive }">
+      <div
+        class="modal-content custom-modal-color text-white"
+        :class="{ 'modal-enter': isActive }"
+      >
         <div class="modal-header">
           <h1 class="modal-title fs-1">POV Vibe 1980</h1>
           <button
@@ -14,7 +17,6 @@
         </div>
         <div class="modal-body">
           <div class="text-center">
-
             <!-- Related Videos Section -->
             <div class="video-container">
               <div class="iframe-wrapper">
@@ -33,7 +35,7 @@
             </div>
 
             <br />
-            
+
             <!-- Content Box -->
             <div class="content-box">
               <br />
@@ -84,7 +86,6 @@
                 </p>
               </div>
             </div>
-
           </div>
 
           <br />
@@ -93,25 +94,25 @@
           <div>
             <h5 class="vibe-relatedmovies">&nbsp;🎬 관련 영화 정보</h5>
             <br />
-              <div class="movie-grid">
-                <div 
-                  v-for="movie in relatedMovies" 
-                  :key="movie.id" 
-                  class="movie-item"
-                  @click="handleMovieClick(movie)"
-                >
-                  <div class="poster-wrapper">
-                    <img 
-                      :src="movie.imageUrl" 
-                      :alt="movie.title"
-                      class="movie-poster"
-                    />
-                    <div class="movie-title">
-                      <h6>{{ movie.title }}</h6>
-                    </div>
+            <div class="movie-grid">
+              <div
+                v-for="movie in relatedMovies"
+                :key="movie.id"
+                class="movie-item"
+                @click="handleMovieClick(movie)"
+              >
+                <div class="poster-wrapper">
+                  <img
+                    :src="movie.imageUrl"
+                    :alt="movie.title"
+                    class="movie-poster"
+                  />
+                  <div class="movie-title">
+                    <h6>{{ movie.title }}</h6>
                   </div>
                 </div>
               </div>
+            </div>
           </div>
         </div>
       </div>
@@ -119,31 +120,30 @@
 
     <!-- MovieModal 추가 -->
     <Transition name="modal">
-      <MovieModal 
+      <MovieModal
         v-if="isMovieModalOpen"
         :is-open="isMovieModalOpen"
         :movie="selectedMovie"
         @close="isMovieModalOpen = false"
       />
     </Transition>
-
   </div>
 </template>
 
 <script>
 import pov1980Logo from "@/assets/1980 Vibe.png";
 
-import movies from "@/assets/movies.js";  // movies.js import
-import MovieModal from './MovieModal.vue';  // MovieModal 컴포넌트 import
+import movies from "@/assets/movies.js"; // movies.js import
+import MovieModal from "./MovieModal.vue"; // MovieModal 컴포넌트 import
 
-import 택시운전사 from "@/assets/posters/택시운전사.jpg";
 import 화려한휴가 from "@/assets/posters/화려한휴가.jpg";
+import 택시운전사 from "@/assets/posters/택시운전사.jpg";
 import 일구팔칠 from "@/assets/posters/1987.jpg";
 
 export default {
   name: "Pov1980",
   components: {
-    MovieModal
+    MovieModal,
   },
   props: {
     isOpen: {
@@ -158,25 +158,28 @@ export default {
       isMovieModalOpen: false,
       selectedMovie: null,
       relatedMovies: [
-      {
+        {
           id: 30,
-          title: '화려한 휴가',
+          title: "화려한 휴가",
           imageUrl: 화려한휴가,
-          summary: '1980년 5월, 광주. 평범한 택시기사 민우는 어릴 적 부모님을 여의고...'
-        },  
-      {
+          summary:
+            "1980년 5월, 광주. 평범한 택시기사 민우는 어릴 적 부모님을 여의고...",
+        },
+        {
           id: 31,
-          title: '택시운전사',
+          title: "택시운전사",
           imageUrl: 택시운전사,
-          summary: '어떻게든 택시비를 받아야 하는 만섭의 기지로 검문을 뚫고 겨우 들어선 광주...'
+          summary:
+            "어떻게든 택시비를 받아야 하는 만섭의 기지로 검문을 뚫고 겨우 들어선 광주...",
         },
         {
           id: 38,
-          title: '1987',
+          title: "1987",
           imageUrl: 일구팔칠,
-          summary: '1987년 1월, 경찰 조사를 받던 스물두 살 대학생이 사망한다...'
-        }
-      ]
+          summary:
+            "1987년 1월, 경찰 조사를 받던 스물두 살 대학생이 사망한다...",
+        },
+      ],
     };
   },
   mounted() {
@@ -193,10 +196,10 @@ export default {
     },
     handleMovieClick(movie) {
       // movies 배열에서 해당 ID의 영화 정보를 찾습니다
-      this.selectedMovie = movies.find(m => m.id === movie.id);
+      this.selectedMovie = movies.find((m) => m.id === movie.id);
       this.isMovieModalOpen = true;
-    }
-  }
+    },
+  },
 };
 </script>
 
@@ -320,8 +323,8 @@ export default {
 }
 
 hr {
-  width : 50%;
-  height : 50px;
+  width: 50%;
+  height: 50px;
   text-align: center;
   margin: 0px auto;
 }
@@ -400,7 +403,7 @@ hr {
     width: 85%;
     margin: 0.5rem auto;
   }
-  
+
   .modal-header {
     padding: 1rem;
   }
@@ -413,7 +416,7 @@ hr {
     grid-template-columns: repeat(2, 1fr);
     gap: 0.5rem;
   }
-  
+
   .video-container {
     margin: 0.5rem auto;
   }

@@ -12,17 +12,16 @@
 
     <div class="gallery-grid">
       <button
-      v-for="(image, index) in images"
-      :key="index"
-      class="gallery-item"
-      @click="openModal(index + 1)"
-      @keydown.enter="openModal(index + 1)"
-      :aria-label="`Open modal for ${actors[index + 1]}`"
-    >
-      <img :src="image" :alt="`${actors[index + 1]} logo`" />
-    </button>
-  </div>
-
+        v-for="(image, index) in images"
+        :key="index"
+        class="gallery-item"
+        @click="openModal(index + 1)"
+        @keydown.enter="openModal(index + 1)"
+        :aria-label="`Open modal for ${actors[index + 1]}`"
+      >
+        <img :src="image" :alt="`${actors[index + 1]} logo`" />
+      </button>
+    </div>
   </div>
 
   <!-- 모달 -->
@@ -94,6 +93,7 @@ export default {
   text-align: left;
   margin-top: 60px;
 }
+
 .welcome-title {
   font-size: 36px;
   font-weight: bold;
@@ -102,6 +102,7 @@ export default {
   margin-bottom: 16px;
   letter-spacing: -1px;
 }
+
 .welcome-subtitle {
   font-size: 18px;
   font-weight: 150;

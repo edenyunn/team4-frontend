@@ -22,7 +22,6 @@
         <img :src="image" :alt="`${name} logo`" />
       </button>
     </div>
-
   </div>
 
   <Suspense v-if="isModalOpen">
@@ -101,6 +100,7 @@ export default {
   text-align: left;
   margin-top: 60px;
 }
+
 .welcome-title {
   font-size: 36px;
   font-weight: bold;
@@ -109,6 +109,7 @@ export default {
   margin-bottom: 8px;
   letter-spacing: -1px;
 }
+
 .welcome-subtitle {
   font-size: 18px;
   font-weight: 150;
@@ -130,7 +131,6 @@ export default {
 .low-opacity {
   opacity: 0.1;
 }
-
 
 /* 갤러리 그리드 */
 .gallery-grid {

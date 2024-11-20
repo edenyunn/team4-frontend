@@ -3,7 +3,10 @@
   <div class="modal show d-block" tabindex="-1">
     <div class="modal-backdrop" @click="closeModal"></div>
     <div class="modal-dialog modal-dialog-scrollable" role="document">
-      <div class="modal-content custom-modal-color text-white" :class="{ 'modal-enter': isActive }">
+      <div
+        class="modal-content custom-modal-color text-white"
+        :class="{ 'modal-enter': isActive }"
+      >
         <div class="modal-header">
           <h1 class="modal-title fs-1">POV Vibe 1979</h1>
           <button
@@ -15,8 +18,7 @@
         </div>
         <div class="modal-body">
           <div class="text-center">
-
-             <!-- Related Videos Section -->
+            <!-- Related Videos Section -->
             <div class="video-container">
               <div class="iframe-wrapper">
                 <iframe
@@ -79,7 +81,6 @@
                 </p>
               </div>
             </div>
-
           </div>
 
           <br />
@@ -88,25 +89,25 @@
           <div>
             <h5 class="vibe-relatedmovies">&nbsp;🎬 관련 영화 정보</h5>
             <br />
-              <div class="movie-grid">
-                <div 
-                  v-for="movie in relatedMovies" 
-                  :key="movie.id" 
-                  class="movie-item"
-                  @click="handleMovieClick(movie)"
-                >
-                  <div class="poster-wrapper">
-                    <img 
-                      :src="movie.imageUrl" 
-                      :alt="movie.title"
-                      class="movie-poster"
-                    />
-                    <div class="movie-title">
-                      <h6>{{ movie.title }}</h6>
-                    </div>
+            <div class="movie-grid">
+              <div
+                v-for="movie in relatedMovies"
+                :key="movie.id"
+                class="movie-item"
+                @click="handleMovieClick(movie)"
+              >
+                <div class="poster-wrapper">
+                  <img
+                    :src="movie.imageUrl"
+                    :alt="movie.title"
+                    class="movie-poster"
+                  />
+                  <div class="movie-title">
+                    <h6>{{ movie.title }}</h6>
                   </div>
                 </div>
               </div>
+            </div>
           </div>
         </div>
       </div>
@@ -114,14 +115,13 @@
 
     <!-- MovieModal 추가 -->
     <Transition name="modal">
-      <MovieModal 
+      <MovieModal
         v-if="isMovieModalOpen"
         :is-open="isMovieModalOpen"
         :movie="selectedMovie"
         @close="isMovieModalOpen = false"
       />
     </Transition>
-
   </div>
 </template>
 
@@ -129,18 +129,17 @@
 import pov1979Logo from "@/assets/1979 Vibe.png";
 
 import movies from "@/assets/movies.js"; // movies.js import
-import MovieModal from './MovieModal.vue';  // MovieModal 컴포넌트 import
+import MovieModal from "./MovieModal.vue"; // MovieModal 컴포넌트 import
 
 import 남산의부장들 from "@/assets/posters/남산의부장들.jpg";
 import 그때그사람들 from "@/assets/posters/그때그사람들.jpg";
 import 서울의봄 from "@/assets/posters/서울의봄.jpg";
 import 행복의나라 from "@/assets/posters/행복의나라.jpg";
 
-
 export default {
   name: "Pov1979",
   components: {
-    MovieModal
+    MovieModal,
   },
   props: {
     isOpen: {
@@ -159,25 +158,29 @@ export default {
           id: 26,
           title: "남산의 부장들",
           imageUrl: 남산의부장들,
-          summary: "중앙정보부의 권력 다툼 속에 숨겨진 진실, 그날의 긴박했던 이야기...",
+          summary:
+            "중앙정보부의 권력 다툼 속에 숨겨진 진실, 그날의 긴박했던 이야기...",
         },
         {
           id: 27,
           title: "그때 그 사람들",
           imageUrl: 그때그사람들,
-          summary: "1979년 10월, 대한민국 현대사를 뒤흔든 충격적인 사건의 재구성...",
+          summary:
+            "1979년 10월, 대한민국 현대사를 뒤흔든 충격적인 사건의 재구성...",
         },
         {
           id: 28,
           title: "서울의 봄",
           imageUrl: 서울의봄,
-          summary: "정권 교체의 분수령이 된 순간, 광화문을 뒤덮은 봄날의 열기...",
+          summary:
+            "정권 교체의 분수령이 된 순간, 광화문을 뒤덮은 봄날의 열기...",
         },
         {
           id: 29,
           title: "행복의 나라",
           imageUrl: 행복의나라,
-          summary:  "1979년 10월 26일, 대통령 암살 사건과 그로부터 시작된 정치적 혼란 속에서 펼쳐지는 법정 드라마",
+          summary:
+            "1979년 10월 26일, 대통령 암살 사건과 그로부터 시작된 정치적 혼란 속에서 펼쳐지는 법정 드라마",
         },
       ],
     };
@@ -323,8 +326,8 @@ export default {
 }
 
 hr {
-  width : 50%;
-  height : 50px;
+  width: 50%;
+  height: 50px;
   text-align: center;
   margin: 0px auto;
 }
@@ -403,7 +406,7 @@ hr {
     width: 85%;
     margin: 0.5rem auto;
   }
-  
+
   .modal-header {
     padding: 1rem;
   }
@@ -416,7 +419,7 @@ hr {
     grid-template-columns: repeat(2, 1fr);
     gap: 0.5rem;
   }
-  
+
   .video-container {
     margin: 0.5rem auto;
   }

@@ -53,78 +53,82 @@
         <span class="visually-hidden">다음</span>
       </button>
     </div>
-    <div v-else class="loading-placeholder">
-      이미지를 불러오는 중...
-    </div>
+    <div v-else class="loading-placeholder">이미지를 불러오는 중...</div>
   </div>
 </template>
 
 <script setup>
-import { ref, onMounted, onUnmounted, watch } from 'vue'
+import { ref, onMounted, onUnmounted, watch } from "vue";
 
 const props = defineProps({
   folderName: {
     type: String,
-    required: true
-  }
-})
+    required: true,
+  },
+});
 
-const images = ref([])
+const images = ref([]);
 
 // 동적으로 이미지 불러오기
 const loadImages = async () => {
   try {
     // PNG 파일들을 동적으로 import
-    const imageModules = import.meta.glob('/src/assets/CastCards*/*.png', { eager: true })
-    
+    const imageModules = import.meta.glob("/src/assets/CastCards*/*.png", {
+      eager: true,
+    });
+
     // 현재 폴더에 해당하는 이미지만 필터링
     const folderImages = Object.entries(imageModules)
       .filter(([path]) => path.includes(props.folderName))
       .map(([path, module]) => module.default)
       .sort((a, b) => {
         // 파일명의 숫자를 추출하여 정렬
-        const getNumber = (path) => parseInt(path.split('/').pop().split('.')[0])
-        return getNumber(a) - getNumber(b)
-      })
+        const getNumber = (path) =>
+          parseInt(path.split("/").pop().split(".")[0]);
+        return getNumber(a) - getNumber(b);
+      });
 
-    images.value = folderImages
+    images.value = folderImages;
   } catch (error) {
-    console.error('이미지 로드 중 에러 발생:', error)
-    images.value = []
+    console.error("이미지 로드 중 에러 발생:", error);
+    images.value = [];
   }
-}
+};
 
 // 이미지 로드 에러 처리
 const handleImageError = (event) => {
-  console.error('이미지 로드 실패:', event.target.src)
-  event.target.src = '/fallback-image.png'
-}
+  console.error("이미지 로드 실패:", event.target.src);
+  event.target.src = "/fallback-image.png";
+};
 
 // 키보드 네비게이션
 const handleKeyDown = (event) => {
-  const carousel = document.getElementById('cardNewsCarousel')
-  if (!carousel) return
+  const carousel = document.getElementById("cardNewsCarousel");
+  if (!carousel) return;
 
-  if (event.key === 'ArrowLeft') {
-    carousel.querySelector('.carousel-control-prev')?.click()
-  } else if (event.key === 'ArrowRight') {
-    carousel.querySelector('.carousel-control-next')?.click()
+  if (event.key === "ArrowLeft") {
+    carousel.querySelector(".carousel-control-prev")?.click();
+  } else if (event.key === "ArrowRight") {
+    carousel.querySelector(".carousel-control-next")?.click();
   }
-}
+};
 
 // folderName이 변경될 때마다 이미지 다시 로드
-watch(() => props.folderName, () => {
-  loadImages()
-})
+watch(
+  () => props.folderName,
+  () => {
+    loadImages();
+  }
+);
 
 onMounted(() => {
-  loadImages()
-  window.addEventListener('keydown', handleKeyDown)
-})
+  loadImages();
+  window.addEventListener("keydown", handleKeyDown);
+});
 
 onUnmounted(() => {
-  window.removeEventListener('keydown', handleKeyDown)
-})
+  window.removeEventListener("keydown", handleKeyDown);
+});
 </script>
 
 <style scoped>
@@ -185,11 +189,11 @@ onUnmounted(() => {
   .carousel-container {
     max-width: 100%;
   }
-  
+
   .carousel-item img {
     max-height: 60vh;
   }
-  
+
   .carousel-control-prev,
   .carousel-control-next {
     width: 15%;

@@ -48,7 +48,7 @@ const props = defineProps({
   actorName: {
     type: String,
     required: true,
-  }
+  },
 });
 
 const errorMessage = ref("");

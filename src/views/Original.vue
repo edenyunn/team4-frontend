@@ -235,6 +235,7 @@ export default {};
   text-align: left;
   margin-top: 60px;
 }
+
 .welcome-title {
   font-size: 36px;
   font-weight: bold;
@@ -242,6 +243,7 @@ export default {};
   margin-bottom: 16px;
   letter-spacing: -1px;
 }
+
 .welcome-subtitle {
   font-size: 18px;
   font-weight: 150;
@@ -250,6 +252,7 @@ export default {};
   letter-spacing: -1px;
   line-height: 1.5;
 }
+
 /* 구분선 스타일 */
 .divider {
   width: calc(100% + 40px); /* 컨테이너보다 좌우로 20px씩 더 길게 */

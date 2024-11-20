@@ -1,3 +1,4 @@
+<!-- Cast.vue -->
 <template>
   <div class="dark-container" :class="{ 'low-opacity': isModalOpen }">
     <!-- Welcome Section -->

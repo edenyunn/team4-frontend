@@ -68,6 +68,13 @@ const closeModal = () => {
 </script>
 
 <style scoped>
+.modal {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
 /* 모달 배경 애니메이션 */
 .modal-enter-active,
 .modal-leave-active {
@@ -117,7 +124,7 @@ const closeModal = () => {
 /* 모달 다이얼로그 스타일 */
 .modal-dialog {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  transform-origin: top;
+  transform-origin: center;
   margin: 1.75rem auto;
   width: 90%;
   max-width: 800px;

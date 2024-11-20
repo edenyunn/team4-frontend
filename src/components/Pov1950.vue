@@ -126,12 +126,15 @@
     </div>
 
     <!-- MovieModal 추가 -->
-    <MovieModal 
-      v-if="isMovieModalOpen"
-      :is-open="isMovieModalOpen"
-      :movie="selectedMovie"
-      @close="isMovieModalOpen = false"
-    />
+    <Transition name="modal">
+      <MovieModal 
+        v-if="isMovieModalOpen"
+        :is-open="isMovieModalOpen"
+        :movie="selectedMovie"
+        @close="isMovieModalOpen = false"
+      />
+    </Transition>
+
   </div>
 </template>
 

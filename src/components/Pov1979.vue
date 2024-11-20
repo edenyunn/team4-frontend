@@ -1,3 +1,4 @@
+<!-- Pov1979.vue -->
 <template>
   <div class="modal show d-block" tabindex="-1">
     <div class="modal-backdrop" @click="closeModal"></div>
@@ -33,7 +34,7 @@
             </div>
 
             <br />
-            
+
             <!-- Content Box -->
             <div class="content-box">
               <br />
@@ -112,12 +113,15 @@
     </div>
 
     <!-- MovieModal 추가 -->
-    <MovieModal 
-      v-if="isMovieModalOpen"
-      :is-open="isMovieModalOpen"
-      :movie="selectedMovie"
-      @close="isMovieModalOpen = false"
-    />
+    <Transition name="modal">
+      <MovieModal 
+        v-if="isMovieModalOpen"
+        :is-open="isMovieModalOpen"
+        :movie="selectedMovie"
+        @close="isMovieModalOpen = false"
+      />
+    </Transition>
+
   </div>
 </template>
 

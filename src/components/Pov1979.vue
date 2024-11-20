@@ -31,7 +31,9 @@
               </div>
               <br />
             </div>
+
             <br />
+            
             <!-- Content Box -->
             <div class="content-box">
               <br />

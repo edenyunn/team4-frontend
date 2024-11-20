@@ -14,7 +14,6 @@
         </div>
         <div class="modal-body">
           <div class="text-center">
-            <div class="d-flex justify-content-center mb-3"></div>
 
             <!-- Related Videos Section -->
             <div class="video-container">
@@ -33,57 +32,67 @@
               <br />
             </div>
 
-            <h5 class="mb-3">&nbsp;그날이 오면</h5>
-            <p class="movie-description"></p>
+            <br />
+            
+            <!-- Content Box -->
+            <div class="content-box">
+              <br />
+              <h5 class="mb-3">&nbsp;그날이 오면</h5>
+              <br />
+              <div class="vibe-lyrics">
+                <p>
+                  렌즈에 담긴 혼란의 순간들<br />
+                  거리에 번져 가는 발자국 소리<br />
+                  택시 타고 지나온 그 봄의 풍경<br />
+                </p>
+                <p>
+                  어제와는 다른 얼굴들이었지<br />
+                  담담히 남겨진 그들의 이야기<br />
+                </p>
+                <p>
+                  말없이 전해진 진실의 조각들<br />
+                  시간 속에 묻혀도 잊히지 않아<br />
+                  언제 나 그 자리 그곳에 남겠지<br />
+                </p>
+                <p>
+                  우리가 본 건 지울 수 없는 날들<br />
+                  말없이 남아 스며든 그 진실 그날의 울림<br />
+                  희미해져도 조용히 우리 곁에 남아 있겠지<br />
+                </p>
+                <p>
+                  어디선가 들려온 작은 영상이<br />
+                  거짓을 넘어 세상에 번지고<br />
+                  1987, 다시 피어난 불씨<br />
+                  우리가 기억한 그 봄의 얼굴<br />
+                </p>
+                <p>
+                  바람에 남겨진 그날의 약속<br />
+                  조용히 스며들어 빛이 되겠지<br />
+                  이제는 우리 곁에 남은 그 봄 날<br />
+                  작은 불빛처럼 영원히 피어나<br />
+                </p>
+                <p>
+                  우리가 본 건 지울 수 없는 날들<br />
+                  말없이 남아 스며든 그 진실 그날의 울림<br />
+                  희미해져도 조용히 우리 곁에 남아 있겠지<br />
+                </p>
+                <p>
+                  어디선가 들려온 작은 영상이<br />
+                  거짓을 넘어 세상에 번지고<br />
+                  1987, 다시 피어난 불씨<br />
+                  우리가 기억한 그 봄의 얼굴<br />
+                </p>
+              </div>
+            </div>
+
           </div>
+
           <br />
-          <div>
-            <p>
-              렌즈에 담긴 혼란의 순간들<br />
-              거리에 번져 가는 발자국 소리<br />
-              택시 타고 지나온 그 봄의 풍경<br />
-            </p>
-            <p>
-              어제와는 다른 얼굴들이었지<br />
-              담담히 남겨진 그들의 이야기<br />
-            </p>
-            <p>
-              말없이 전해진 진실의 조각들<br />
-              시간 속에 묻혀도 잊히지 않아<br />
-              언제 나 그 자리 그곳에 남겠지<br />
-            </p>
-            <p>
-              우리가 본 건 지울 수 없는 날들<br />
-              말없이 남아 스며든 그 진실 그날의 울림<br />
-              희미해져도 조용히 우리 곁에 남아 있겠지<br />
-            </p>
-            <p>
-              어디선가 들려온 작은 영상이<br />
-              거짓을 넘어 세상에 번지고<br />
-              1987, 다시 피어난 불씨<br />
-              우리가 기억한 그 봄의 얼굴<br />
-            </p>
-            <p>
-              바람에 남겨진 그날의 약속<br />
-              조용히 스며들어 빛이 되겠지<br />
-              이제는 우리 곁에 남은 그 봄 날<br />
-              작은 불빛처럼 영원히 피어나<br />
-            </p>
-            <p>
-              우리가 본 건 지울 수 없는 날들<br />
-              말없이 남아 스며든 그 진실 그날의 울림<br />
-              희미해져도 조용히 우리 곁에 남아 있겠지<br />
-            </p>
-            <p>
-              어디선가 들려온 작은 영상이<br />
-              거짓을 넘어 세상에 번지고<br />
-              1987, 다시 피어난 불씨<br />
-              우리가 기억한 그 봄의 얼굴<br />
-            </p>
-          </div>
           <hr />
+
           <div>
-            <h5 class="mb-3">&nbsp;관련 영화</h5>
+            <h5 class="vibe-relatedmovies">&nbsp;🎬 관련 영화 정보</h5>
+            <br />
               <div class="movie-grid">
                 <div 
                   v-for="movie in relatedMovies" 
@@ -123,6 +132,7 @@ import pov1980Logo from "@/assets/1980 Vibe.png";
 
 import movies from "@/assets/movies.js";  // movies.js import
 import MovieModal from './MovieModal.vue';  // MovieModal 컴포넌트 import
+
 import 택시운전사 from "@/assets/posters/택시운전사.jpg";
 import 화려한휴가 from "@/assets/posters/화려한휴가.jpg";
 import 일구팔칠 from "@/assets/posters/1987.jpg";
@@ -269,6 +279,7 @@ export default {
   position: relative;
   width: 100%;
   max-width: 100%;
+  height: 0;
   margin: 1rem auto;
   padding-top: 56.25%; /* 16:9 비율 */
 }
@@ -285,6 +296,36 @@ export default {
   width: 100%;
   height: 100%;
   border: 0;
+}
+
+/* 콘텐츠 박스 */
+.content-box {
+  background-color: #555; /* 박스 배경색 */
+  padding: 20px; /* 내부 여백 */
+  border-radius: 8px; /* 둥근 모서리 */
+  margin: 20px; /* 외부 여백 */
+}
+
+.vibe-titles {
+  font-family: "Pretendard-SemiBold";
+  font-size: 1.5rem;
+}
+
+.vibe-lyrics {
+  font-family: "Pretendard-Light";
+  font-size: 1rem;
+}
+
+hr {
+  width : 50%;
+  height : 50px;
+  text-align: center;
+  margin: 0px auto;
+}
+
+.vibe-relatedmovies {
+  font-family: "Pretendard-SemiBold";
+  font-size: 1.5rem;
 }
 
 /* 관련 영화 섹션 스타일 */

@@ -33,63 +33,74 @@
               <br />
             </div>
 
-            <h5 class="mb-3" style="font-weight: bold;" >&nbsp;그날의 전선</h5>
+            <br />
+            
+            <!-- Content Box -->
+            <div class="content-box">
+              <br />
+              <h5 class="mb-3" style="font-weight: bold;" >&nbsp;그날의 전선</h5>
             <p class="movie-description"></p>
+            <br />
+            <div class="vibe-lyrics">
+              <p>
+                평화롭던 거리에 총성이 울리고<br />
+                갑작스레 불린 이름들 떠난 길 위에<br />
+                전쟁은 형제의 삶을 갈라놓았고<br />
+                형은 동생을 위해 모든 걸 걸었네<br />
+              </p>
+              <p>
+                포항의 언덕엔 어린 손이 들었던<br />
+                익숙지 않은 총과 흔들리는 용기<br />
+                그들은 마지막 전선을 지키려 했고<br />
+                교실엔 침묵만이 깊게 남았네<br />
+              </p>
+              <p>
+                멀어지는 고향과 빛바랜 꿈<br />
+                소리 없이 내려앉은 먼지 속의 길<br />
+                남겨진 이름들은 기억 속에 살아<br />
+                그날의 전선은 사라지지 않으리<br />
+              </p>
+              <p>
+                어둠 속 파도를 넘어 인천에 닿아<br />
+                기적처럼 열렸던 전세의 새벽<br />
+                첩보 속 숨겨진 목숨의 무게로<br />
+                바다는 여전히 차갑게 출렁였지<br />
+              </p>
+              <p>
+                휴전의 시간에도 멈추지 않던 싸움<br />
+                고지마다 쌓인 피로 남은 흔적들<br />
+                끝이 보이지 않는 하늘 아래 병사들<br />
+                그들은 무엇을 위해 싸우고 있었나<br />
+              </p>
+              <p>
+                멀어지는 고향과 빛바랜 꿈<br />
+                소리 없이 내려앉은 먼지 속의 길<br />
+                남겨진 이름들은 기억 속에 살아<br />
+                그날의 전선은 사라지지 않으리<br />
+              </p>
+              <p>
+                휴전의 시간에도 멈추지 않던 싸움<br />
+                고지마다 쌓인 피로 남은 흔적들<br />
+                끝이 보이지 않는 하늘 아래 병사들<br />
+                그들은 무엇을 위해 싸우고 있었나<br />
+              </p>
+              <p>
+                길었던 밤의 끝, 희미한 불빛<br />
+                전쟁이 남긴 건 잊혀지지 않을 울림<br />
+                고지와 바다, 그리고 그들의 이야기<br />
+                이제는 시간 속에 조용히 스며들리
+              </p>
+            </div>
           </div>
-          <br />
+
+        </div>
+
+        <br />
+        <hr />
+
           <div>
-            <p>
-              평화롭던 거리에 총성이 울리고<br />
-              갑작스레 불린 이름들 떠난 길 위에<br />
-              전쟁은 형제의 삶을 갈라놓았고<br />
-              형은 동생을 위해 모든 걸 걸었네<br />
-            </p>
-            <p>
-              포항의 언덕엔 어린 손이 들었던<br />
-              익숙지 않은 총과 흔들리는 용기<br />
-              그들은 마지막 전선을 지키려 했고<br />
-              교실엔 침묵만이 깊게 남았네<br />
-            </p>
-            <p>
-              멀어지는 고향과 빛바랜 꿈<br />
-              소리 없이 내려앉은 먼지 속의 길<br />
-              남겨진 이름들은 기억 속에 살아<br />
-              그날의 전선은 사라지지 않으리<br />
-            </p>
-            <p>
-              어둠 속 파도를 넘어 인천에 닿아<br />
-              기적처럼 열렸던 전세의 새벽<br />
-              첩보 속 숨겨진 목숨의 무게로<br />
-              바다는 여전히 차갑게 출렁였지<br />
-            </p>
-            <p>
-              휴전의 시간에도 멈추지 않던 싸움<br />
-              고지마다 쌓인 피로 남은 흔적들<br />
-              끝이 보이지 않는 하늘 아래 병사들<br />
-              그들은 무엇을 위해 싸우고 있었나<br />
-            </p>
-            <p>
-              멀어지는 고향과 빛바랜 꿈<br />
-              소리 없이 내려앉은 먼지 속의 길<br />
-              남겨진 이름들은 기억 속에 살아<br />
-              그날의 전선은 사라지지 않으리<br />
-            </p>
-            <p>
-              휴전의 시간에도 멈추지 않던 싸움<br />
-              고지마다 쌓인 피로 남은 흔적들<br />
-              끝이 보이지 않는 하늘 아래 병사들<br />
-              그들은 무엇을 위해 싸우고 있었나<br />
-            </p>
-            <p>
-              길었던 밤의 끝, 희미한 불빛<br />
-              전쟁이 남긴 건 잊혀지지 않을 울림<br />
-              고지와 바다, 그리고 그들의 이야기<br />
-              이제는 시간 속에 조용히 스며들리
-            </p>
-          </div>
-          <hr />
-          <div>
-            <h5 class="mb-3">&nbsp;관련 영화</h5>
+            <h5 class="vibe-relatedmovies">&nbsp;🎬 관련 영화 정보</h5>
+            <br />
               <div class="movie-grid">
                 <div 
                   v-for="movie in relatedMovies" 
@@ -129,7 +140,8 @@
 import pov1950Logo from "@/assets/1950 Vibe.png";
 
 import movies from "@/assets/movies.js";  
-import MovieModal from './MovieModal.vue';  
+import MovieModal from './MovieModal.vue';
+
 import 태극기휘날리며 from '@/assets/posters/태극기휘날리며.jpg';
 import 포화속으로 from '@/assets/posters/포화속으로.jpg';
 import 장사리 from '@/assets/posters/장사리.jpg';
@@ -296,6 +308,7 @@ export default {
   position: relative;
   width: 100%;
   max-width: 100%;
+  height: 0;
   margin: 1rem auto;
   padding-top: 56.25%; /* 16:9 비율 */
 }
@@ -312,6 +325,36 @@ export default {
   width: 100%;
   height: 100%;
   border: 0;
+}
+
+/* 콘텐츠 박스 */
+.content-box {
+  background-color: #555; /* 박스 배경색 */
+  padding: 20px; /* 내부 여백 */
+  border-radius: 8px; /* 둥근 모서리 */
+  margin: 20px; /* 외부 여백 */
+}
+
+.vibe-titles {
+  font-family: "Pretendard-SemiBold";
+  font-size: 1.5rem;
+}
+
+.vibe-lyrics {
+  font-family: "Pretendard-Light";
+  font-size: 1rem;
+}
+
+hr {
+  width : 50%;
+  height : 50px;
+  text-align: center;
+  margin: 0px auto;
+}
+
+.vibe-relatedmovies {
+  font-family: "Pretendard-SemiBold";
+  font-size: 1.5rem;
 }
 
 /* 관련 영화 섹션 스타일 */

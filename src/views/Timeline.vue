@@ -111,6 +111,7 @@ html, body {
 .welcome-section {
   padding: 40px 20px;
   text-align: center;
+  margin-top: 60px;
 }
 
 .welcome-title {

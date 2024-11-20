@@ -1,3 +1,4 @@
+<!-- MovieModal.vue -->
 <template>
   <Transition name="modal">
     <div
@@ -318,29 +319,6 @@ export default {
   transition: all 0.3s ease;
 }
 
-/* Large devices (desktops) */
-@media (min-width: 992px) {
-  .modal-dialog {
-    width: 50%;
-  }
-}
-
-/* Medium devices (tablets) */
-@media (max-width: 991.98px) {
-  .modal-dialog {
-    width: 65%;
-    margin: 1rem auto;
-  }
-}
-
-/* Small devices (phones) */
-@media (max-width: 768px) {
-  .modal-dialog {
-    width: 85%; /* 모바일에서는 더 작은 너비 */
-    margin: 0.5rem auto;
-  }
-}
-
 .modal-header {
   padding: 1rem 1.5rem;
   font-family: "Pretendard-SemiBold";
@@ -496,6 +474,29 @@ h2 {
   width: fit-content;
   font-family: "Pretendard-Medium";
   background-color: #525252;
+}
+
+/* Large devices (desktops) */
+@media (min-width: 992px) {
+  .modal-dialog {
+    width: 50%;
+  }
+}
+
+/* Medium devices (tablets) */
+@media (max-width: 991.98px) {
+  .modal-dialog {
+    width: 65%;
+    margin: 1rem auto;
+  }
+}
+
+/* Small devices (phones) */
+@media (max-width: 768px) {
+  .modal-dialog {
+    width: 85%; /* 모바일에서는 더 작은 너비 */
+    margin: 0.5rem auto;
+  }
 }
 
 /* 모바일 화면에서의 조정 */

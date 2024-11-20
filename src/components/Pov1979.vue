@@ -1,3 +1,4 @@
+<!-- Pov1979.vue -->
 <template>
   <div class="modal show d-block" tabindex="-1">
     <div class="modal-backdrop" @click="closeModal"></div>
@@ -14,7 +15,6 @@
         </div>
         <div class="modal-body">
           <div class="text-center">
-            <div class="d-flex justify-content-center mb-3"></div>
 
              <!-- Related Videos Section -->
             <div class="video-container">
@@ -33,51 +33,61 @@
               <br />
             </div>
 
-            <h5 class="mb-3" style="font-weight: bold;" >&nbsp;빼앗긴 들에도 봄은 오는가</h5>
-            <p class="movie-description"></p>
+            <br />
+
+            <!-- Content Box -->
+            <div class="content-box">
+              <br />
+              <h5 class="vibe-titles">&nbsp;빼앗긴 들에도 봄은 오는가</h5>
+              <br />
+              <div class="vibe-lyrics">
+                <p>
+                  궁정동의 저녁, 긴장 속의 만찬<br />
+                  고요한 술잔이 오가는 순간<br />
+                  어디선가 울려 퍼진 총성 한 발<br />
+                  닫혀버린 문 뒤 남은 긴 여운<br />
+                </p>
+                <p>
+                  남산 언덕에 스며든 무거운 발자국<br />
+                  흩어진 그림자 사이 조용한 침묵<br />
+                  비워진 자리엔 차가운 숨결만<br />
+                  누구도 예기치 못한 그날의 끝<br />
+                </p>
+                <p>
+                  그날의 밤, 흩어져 간 이야기<br />
+                  어둠 속 머문 지워진 발자국<br />
+                  말없이 사라진 조용한 얼굴들<br />
+                  잔잔히 스며든 그날의 기억<br />
+                </p>
+                <p>
+                  얼어붙은 거리, 군화 소리 번지고<br />
+                  서로 다른 선택을 품은 시선들<br />
+                  누구도 묻지 않는 그 새벽의 풍경<br />
+                  긴 겨울 속에 스며든 갈등의 흔적<br />
+                </p>
+                <p>
+                  아직은 멈춰 선 사람들의 마음<br />
+                  희미한 자리마다 남은 여운들<br />
+                  봄을 기다리며 다시 걷는 거리<br />
+                  누구의 기억 속에 남을 그날<br />
+                </p>
+                <p>
+                  그 겨울 밤, 잊혀지지 않을 흔적<br />
+                  서로 다른 길 위에 남긴 발자국<br />
+                  멀어진 이야기와 잠든 목소리<br />
+                  조용히 스며든 그날의 기억<br />
+                </p>
+              </div>
+            </div>
+
           </div>
+
           <br />
-          <div>
-            <p>
-              궁정동의 저녁, 긴장 속의 만찬<br />
-              고요한 술잔이 오가는 순간<br />
-              어디선가 울려 퍼진 총성 한 발<br />
-              닫혀버린 문 뒤 남은 긴 여운<br />
-            </p>
-            <p>
-              남산 언덕에 스며든 무거운 발자국<br />
-              흩어진 그림자 사이 조용한 침묵<br />
-              비워진 자리엔 차가운 숨결만<br />
-              누구도 예기치 못한 그날의 끝<br />
-            </p>
-            <p>
-              그날의 밤, 흩어져 간 이야기<br />
-              어둠 속 머문 지워진 발자국<br />
-              말없이 사라진 조용한 얼굴들<br />
-              잔잔히 스며든 그날의 기억<br />
-            </p>
-            <p>
-              얼어붙은 거리, 군화 소리 번지고<br />
-              서로 다른 선택을 품은 시선들<br />
-              누구도 묻지 않는 그 새벽의 풍경<br />
-              긴 겨울 속에 스며든 갈등의 흔적<br />
-            </p>
-            <p>
-              아직은 멈춰 선 사람들의 마음<br />
-              희미한 자리마다 남은 여운들<br />
-              봄을 기다리며 다시 걷는 거리<br />
-              누구의 기억 속에 남을 그날<br />
-            </p>
-            <p>
-              그 겨울 밤, 잊혀지지 않을 흔적<br />
-              서로 다른 길 위에 남긴 발자국<br />
-              멀어진 이야기와 잠든 목소리<br />
-              조용히 스며든 그날의 기억<br />
-            </p>
-          </div>
           <hr />
+
           <div>
-            <h5 class="mb-3">&nbsp;관련 영화</h5>
+            <h5 class="vibe-relatedmovies">&nbsp;🎬 관련 영화 정보</h5>
+            <br />
               <div class="movie-grid">
                 <div 
                   v-for="movie in relatedMovies" 
@@ -103,12 +113,15 @@
     </div>
 
     <!-- MovieModal 추가 -->
-    <MovieModal 
-      v-if="isMovieModalOpen"
-      :is-open="isMovieModalOpen"
-      :movie="selectedMovie"
-      @close="isMovieModalOpen = false"
-    />
+    <Transition name="modal">
+      <MovieModal 
+        v-if="isMovieModalOpen"
+        :is-open="isMovieModalOpen"
+        :movie="selectedMovie"
+        @close="isMovieModalOpen = false"
+      />
+    </Transition>
+
   </div>
 </template>
 
@@ -193,22 +206,29 @@ export default {
 <style scoped>
 /* 모달 배경색 변경 */
 .custom-modal-color {
-  background-color: #333; /* 원하는 색상으로 변경 */
-  color: #ecf0f1; /* 텍스트 색상 */
+  background-color: #333;
+  color: #ecf0f1;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 /* 헤더와 푸터의 스타일 변경 */
 .modal-header {
-  background-color: #333; /* 원하는 색상 */
+  background-color: #333;
   border-bottom: 1px solid #95a5a6;
   padding: 1rem 1.5rem;
   font-family: "Pretendard-SemiBold";
 }
 
 .modal-body {
-  background-color: #333; /* 원하는 색상 */
+  background-color: #333;
   border-top: 1px solid #95a5a6;
   font-family: "Pretendard-Light";
+  padding: 2rem;
+  overflow-x: hidden;
+  overflow-y: auto;
+  text-align: center;
+  width: 100%;
 }
 
 .modal-image {
@@ -218,7 +238,24 @@ export default {
   border-radius: 4px;
 }
 
-/* 새로운 트랜지션 스타일 추가 */
+/* 모달 다이얼로그 스타일 */
+.modal-dialog {
+  margin: 1.75rem auto;
+  width: 90%;
+  max-width: 800px;
+  transition: all 0.3s ease;
+}
+
+.modal-content {
+  background-color: #333;
+  transition: all 0.3s ease;
+  max-width: 100%;
+  overflow-x: hidden;
+  transform: translateY(20px);
+  opacity: 0;
+}
+
+/* 트랜지션 스타일 */
 .modal-backdrop {
   position: fixed;
   top: 0;
@@ -229,61 +266,72 @@ export default {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-.modal-content {
-  transform: translateY(20px);
-  opacity: 0;
-  transition: all 0.3s ease-in-out;
-}
-
 .modal-enter {
   transform: translateY(0);
   opacity: 1;
 }
 
-/* 기존 애니메이션 수정 */
+/* 모달 기본 스타일 */
 .modal.show {
   display: block;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
 }
 
 .modal {
   z-index: 1050;
 }
 
-.modal-header {
-  padding: 1rem 2rem;
+/* 비디오 컨테이너 스타일 */
+.video-container {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  height: 0;
+  margin: 1rem auto;
+  padding-top: 56.25%; /* 16:9 비율 */
 }
 
-.modal-body {
-  padding: 2rem;
-  overflow-y: auto;
-  text-align: center;
+.iframe-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
-.modal-title {
+.iframe-wrapper iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* 콘텐츠 박스 */
+.content-box {
+  background-color: #555; /* 박스 배경색 */
+  padding: 20px; /* 내부 여백 */
+  border-radius: 8px; /* 둥근 모서리 */
+  margin: 20px; /* 외부 여백 */
+}
+
+.vibe-titles {
+  font-family: "Pretendard-SemiBold";
   font-size: 1.5rem;
 }
 
-@media (max-width: 768px) {
-  .modal-header {
-    padding: 1rem;
-  }
+.vibe-lyrics {
+  font-family: "Pretendard-Light";
+  font-size: 1rem;
+}
 
-  .modal-body {
-    padding: 1rem;
-  }
+hr {
+  width : 50%;
+  height : 50px;
+  text-align: center;
+  margin: 0px auto;
+}
 
-  .modal-title {
-    font-size: 1.25rem;
-  }
+.vibe-relatedmovies {
+  font-family: "Pretendard-SemiBold";
+  font-size: 1.5rem;
 }
 
 /* 관련 영화 섹션 스타일 */
@@ -292,9 +340,12 @@ export default {
   grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
   margin-top: 1rem;
+  width: 100%;
+  max-width: 100%;
 }
 
 .movie-item {
+  width: 100%;
   cursor: pointer;
   transition: transform 0.3s ease;
 }
@@ -304,6 +355,7 @@ export default {
 }
 
 .poster-wrapper {
+  width: 100%;
   position: relative;
   border-radius: 8px;
   overflow: hidden;
@@ -332,19 +384,48 @@ export default {
   text-align: center;
 }
 
+/* 반응형 스타일 */
+@media (min-width: 992px) {
+  .modal-dialog {
+    width: 50%;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .modal-dialog {
+    width: 65%;
+    margin: 1rem auto;
+  }
+}
+
 @media (max-width: 768px) {
   .modal-dialog {
-    width: 85%; /* 모바일에서는 더 작은 너비 */
+    width: 85%;
     margin: 0.5rem auto;
   }
+  
+  .modal-header {
+    padding: 1rem;
+  }
+
+  .modal-body {
+    padding: 1rem;
+  }
+
   .movie-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+  }
+  
+  .video-container {
+    margin: 0.5rem auto;
   }
 }
 
 @media (max-width: 480px) {
   .movie-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
   }
 }
 </style>

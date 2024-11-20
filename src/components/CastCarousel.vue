@@ -1,3 +1,4 @@
+<!-- CastCarousel.vue -->
 <template>
   <div class="carousel-container">
     <div v-if="images.length > 0" id="cardNewsCarousel" class="carousel slide">
@@ -133,7 +134,6 @@ onUnmounted(() => {
   margin: 0 auto;
   background-color: #000;
   position: relative;
-  min-height: 400px;
   display: flex;
   align-items: center;
   justify-content: center;

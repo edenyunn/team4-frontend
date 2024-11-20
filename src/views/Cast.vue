@@ -1,3 +1,4 @@
+<!-- Cast.vue -->
 <template>
   <div class="dark-container" :class="{ 'low-opacity': isModalOpen }">
     <!-- Welcome Section -->
@@ -9,8 +10,8 @@
       <div class="divider"></div>
     </div>
 
-    <!-- 버튼 목록 -->
-    <button
+    <div class="gallery-grid">
+      <button
       v-for="(image, index) in images"
       :key="index"
       class="gallery-item"
@@ -20,6 +21,8 @@
     >
       <img :src="image" :alt="`${actors[index + 1]} logo`" />
     </button>
+  </div>
+
   </div>
 
   <!-- 모달 -->
@@ -79,10 +82,17 @@ export default {
 </script>
 
 <style scoped>
+.dark-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
 /* Welcome Section */
 .welcome-section {
   padding: 40px 20px;
   text-align: left;
+  margin-top: 60px;
 }
 .welcome-title {
   font-size: 36px;
@@ -115,7 +125,21 @@ export default {
   opacity: 0.1;
 }
 
-/* Gallery Items */
+/* 갤러리 그리드만 수정 */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  padding: 2rem 20px; /* 좌우 여백 추가 */
+  justify-items: center;
+  align-items: center;
+  flex-grow: 1;
+  margin: 0 auto; /* 중앙 정렬 */
+  width: 100%; /* 전체 너비 사용 */
+  max-width: 1600px; /* 너무 넓어지지 않도록 제한 */
+}
+
+/* Gallery Items의 크기 조정 */
 .gallery-item {
   background: none;
   border: none;
@@ -123,7 +147,15 @@ export default {
   padding: 0.5rem;
   transition: transform 0.2s ease;
   width: 100%;
-  max-width: 506px;
+  max-width: 400px; /* 이미지 크기 제한 */
+  display: flex;
+  justify-content: center;
+}
+
+.gallery-item img {
+  width: 100%; /* 컨테이너에 맞게 조정 */
+  height: auto;
+  object-fit: contain;
 }
 
 /* hover 상태에서만 아웃라인 표시 */
@@ -139,16 +171,16 @@ export default {
   transform: scale(1.05);
 }
 
-.gallery-item img {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: cover;
-}
-
-/* Mobile Styles */
+/* 모바일 스타일 업데이트 */
 @media (max-width: 768px) {
-  .gallery-container {
-    flex-direction: column;
+  .gallery-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 1rem 20px;
+  }
+
+  .gallery-item {
+    max-width: 300px; /* 모바일에서는 더 작게 */
   }
 }
 </style>

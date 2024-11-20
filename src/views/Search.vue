@@ -1,3 +1,4 @@
+<!-- Search.vue -->
 <template>
   <div class="my-container">
     <!-- guide Section -->
@@ -202,7 +203,6 @@ body {
   min-height: 100vh; /* height: 100vh 대신 min-height 사용 */
   background-color: #222222;
   color: white;
-  margin: 0;
   position: relative;
 }
 
@@ -210,6 +210,7 @@ body {
 /* welcome 섹션도 스크롤 방지 */
 .welcome-section {
   padding: 40px 20px;
+  margin-top: 60px;
   text-align: left;
   overflow: hidden; /* 스크롤 방지 */
 }

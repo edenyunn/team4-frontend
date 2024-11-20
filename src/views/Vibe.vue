@@ -8,19 +8,21 @@
         생성형 AI로 제작된 음악을 통해<br />한국 현대사를 새롭게 느껴보세요
       </h2>
       <div class="divider"></div>
-      <!-- 새로 추가된 구분선 -->
     </div>
 
-    <button
-      v-for="(image, name) in images"
-      :key="name"
-      class="gallery-item"
-      @click="openModal(name)"
-      @keydown.enter="openModal(name)"
-      :aria-label="`Open ${name} modal`"
-    >
-      <img :src="image" :alt="`${name} logo`" />
-    </button>
+    <div class="gallery-grid">
+      <button
+        v-for="(image, name) in images"
+        :key="name"
+        class="gallery-item"
+        @click="openModal(name)"
+        @keydown.enter="openModal(name)"
+        :aria-label="`Open ${name} modal`"
+      >
+        <img :src="image" :alt="`${name} logo`" />
+      </button>
+    </div>
+
   </div>
 
   <Suspense v-if="isModalOpen">
@@ -87,10 +89,17 @@ export default {
 </script>
 
 <style scoped>
+.dark-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
 /* 웰컴 박스 */
 .welcome-section {
   padding: 40px 20px;
   text-align: left;
+  margin-top: 60px;
 }
 .welcome-title {
   font-size: 36px;
@@ -122,25 +131,16 @@ export default {
   opacity: 0.1;
 }
 
-.gallery-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center; /* 세로 중앙 정렬 */
-  min-height: 100vh; /* 화면 높이의 100% 사용 */
-  padding: 1rem;
-  background-color: var(--dark-bg, #1a1a1a);
-}
 
 /* 갤러리 그리드 */
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 4rem;
-  padding: 2rem;
+  gap: 2rem;
+  padding: 2rem 0;
   justify-items: center;
   align-items: center;
-  min-height: calc(100vh - 200px); /* welcome section 높이를 고려한 조정 */
+  flex-grow: 1;
 }
 
 .gallery-item {
@@ -151,6 +151,8 @@ export default {
   transition: transform 0.2s ease;
   width: 100%;
   max-width: 506px; /* Cast.vue와 비슷한 크기로 조정 */
+  display: flex;
+  justify-content: center;
 }
 
 /* hover 상태에서만 아웃라인 표시 */
@@ -174,8 +176,13 @@ export default {
 
 /* 모바일 화면 크기일 때 세로 정렬 */
 @media (max-width: 768px) {
-  .gallery-container {
-    flex-direction: column;
+  .gallery-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .gallery-item img {
+    width: 80%;
   }
 }
 </style>

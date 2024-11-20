@@ -147,7 +147,7 @@ export default {
   padding: 0.5rem;
   transition: transform 0.2s ease;
   width: 100%;
-  max-width: 400px; /* 이미지 크기 제한 */
+  max-width: 241px; /* 이미지 크기 제한 */
   display: flex;
   justify-content: center;
 }

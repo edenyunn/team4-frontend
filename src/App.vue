@@ -38,10 +38,6 @@ html, body {
   width: 100%;
 }
 
-/* 헤더 높이에 따른 상단 여백 설정 */
-body {
-  padding-top: 60px; /* 기본 헤더 높이 */
-}
 
 #app {
   background-color: #222222;

@@ -83,6 +83,7 @@ export default {
 .welcome-section {
   padding: 40px 20px;
   text-align: left;
+  margin-top: 60px;
 }
 .welcome-title {
   font-size: 36px;

@@ -150,7 +150,7 @@ export default {
   padding: 0.5rem;
   transition: transform 0.2s ease;
   width: 100%;
-  max-width: 506px; /* Cast.vue와 비슷한 크기로 조정 */
+  max-width: 419px; /* Cast.vue와 비슷한 크기로 조정 */
   display: flex;
   justify-content: center;
 }

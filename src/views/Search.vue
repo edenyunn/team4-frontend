@@ -1,3 +1,4 @@
+<!-- Search.vue -->
 <template>
   <div class="my-container">
     <!-- guide Section -->

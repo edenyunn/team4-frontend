@@ -1,3 +1,4 @@
+<!-- src\components\Pov1950.vue -->
 <template>
   <div class="modal show d-block" tabindex="-1">
     <div class="modal-backdrop" @click="closeModal"></div>

@@ -1,3 +1,4 @@
+<!-- App.vue -->
 <template>
   <!-- 헤더 컴포넌트 사용 -->
   <Header :isSidebarOpen="isSidebarOpen" @toggle-sidebar="toggleSidebar" />

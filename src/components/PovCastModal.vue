@@ -1,4 +1,4 @@
-<!-- PovCastModal.vue -->
+<!-- components/PovCastModal.vue -->
 <template>
   <Transition name="modal">
     <div class="modal show d-block" tabindex="-1" @click.self="closeModal">

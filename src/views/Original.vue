@@ -1,4 +1,4 @@
-<!-- Original.vue -->
+<!-- Original.vued -->
 <template>
   <div class="dark-container">
     <!-- Welcome Section -->

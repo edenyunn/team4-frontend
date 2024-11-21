@@ -12,7 +12,6 @@ export default defineConfig({
       '@': fileURLToPath(new URL('./src', import.meta.url))
     }
   },
-  assetsInclude: ['**/*.md']  // 모든 .md 파일을 텍스트로 포함
 });
 
 

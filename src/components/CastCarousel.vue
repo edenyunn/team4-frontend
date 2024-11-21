@@ -1,4 +1,4 @@
-<!-- CastCarousel.vue -->
+<!-- src\components\CastCarousel.vue -->
 <template>
   <div class="carousel-container">
     <div v-if="images.length > 0" id="cardNewsCarousel" class="carousel slide">

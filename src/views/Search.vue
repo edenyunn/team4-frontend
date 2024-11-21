@@ -436,6 +436,7 @@ body {
   color: white;
   border-radius: 5px;
   outline: none;
+  font-family: "Pretendard-Light";
 }
 
 .message-input::placeholder {

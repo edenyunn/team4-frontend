@@ -1,4 +1,4 @@
-<!-- MovieModal.vue -->
+<!-- src\components\MovieModal.vue -->
 <template>
   <Transition name="modal">
     <div

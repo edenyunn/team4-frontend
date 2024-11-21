@@ -1,4 +1,4 @@
-<!-- Header.vue -->
+<!-- src\components\Header.vue -->
 <template>
   <header class="header fixed-top">
     <div class="povlogo-container">

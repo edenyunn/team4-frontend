@@ -1,4 +1,5 @@
 import 영웅 from '@/assets/posters/영웅.jpg'
+import 하얼빈 from '@/assets/posters/하얼빈.jpg'
 import 항거 from '@/assets/posters/항거.jpg'
 import 봉오동전투 from '@/assets/posters/봉오동전투.jpg'
 import 밀정 from '@/assets/posters/밀정.jpg'
@@ -126,6 +127,77 @@ export default [
     },
     {
         id: 2,
+        title: '하얼빈',
+        event: '안중근 하얼빈 의거',
+        summary: '내가 해야 할 일을 알았습니다',
+        imageUrl: 하얼빈,
+        details: {
+            modalYear: 1909,
+            // 인용구 정보
+            quote: {
+                text: "모든 걸 포기하고 죽으려 했습니다",
+                author: "안중근",
+                actor: "현빈"
+            },
+            // 시놉시스 (문단별로 배열로 저장)
+            synopsis: [
+                "1908년 함경북도 신아산에서 안중근이 이끄는 독립군들은 일본군과의 전투에서 큰 승리를 거둔다. 대한의군 참모중장 안중근은 만국공법에 따라 전쟁포로인 일본인들을 풀어주게 되고, 이 사건으로 인해 독립군 사이에서는 안중근에 대한 의심과 함께 균열이 일기 시작한다. 1년 후, 블라디보스토크에는 안중근을 비롯해 우덕순, 김상현, 공부인, 최재형, 이창섭 등 빼앗긴 나라를 되찾기 위해 마음을 함께하는 이들이 모이게 된다. 이토 히로부미가 러시아와 협상을 위해 하얼빈으로 향한다는 소식을 접한 안중근과 독립군들은 하얼빈으로 향하고, 내부에서 새어 나간 이들의 작전 내용을 입수한 일본군들의 추격이 시작되는데… 하얼빈을 향한 단 하나의 목표, 늙은 늑대를 처단하라"
+            ],
+            // 사건 정보
+            eventDetails: {
+                period: "1909년 ~ 1910년",
+                keywords: ["안중근", "이토히로부미", "하얼빈", "독립운동", "대한제국역사"],
+                timeline: [
+                    {
+                        date: "1909년 10월 26일",
+                        event: "안중근, 하얼빈 역에서 이토 히로부미 저격"
+                    },
+                    {
+                        date: "1910년 2월 14일",
+                        event: "뤼순 법정에서 사형 선고"
+                    },
+                    {
+                        date: "1910년 3월 26일",
+                        event: "안중근 의사 순국"
+                    }
+                ]
+            },
+            // 시대상 설명
+            historicalContext: "1909년은 대한제국이 외교권을 잃고 국권 피탈을 눈앞에 둔 암울한 시기였다. 일본은 을사늑약을 통해 내정을 간섭하고 식민 통치를 강행했으며, 이에 맞서 수많은 독립운동가들이 목숨을 걸고 저항했다. 안중근 의사의 하얼빈 의거는 단순한 저격 사건을 넘어, 세계에 대한제국의 독립 의지를 알리는 계기가 되었다. 그의 행동은 이후 한국 독립운동의 불씨가 되었으며, 오늘날까지도 자주독립과 평화를 상징하는 위대한 역사로 남아 있다.",
+            // 관련 영상
+            relatedVideos: [
+                {
+                    title: "관련 영상 1",
+                    youtubeId: "Q5AVMM1IWXM",
+                    params: "si=YooTJcs85-31MI14"
+                },
+                {
+                    title: "관련 영상 2",
+                    youtubeId: "bFDCCaYDPxs",
+                    params: "si=YooTJcs85-31MI14"
+                }
+            ],
+            // 배경음악 정보
+            backgroundMusic: {
+                youtubeId: ""
+            },
+            // 추가된 영화 정보
+            genre: "드라마",
+            releaseDate: "2024.12.25.",
+            runtime: "114분",
+            audience: "",
+            rating: "15세 이상 관람가",
+            director: "우민호",
+            cast: [
+                { name: "현빈", role: "안중근 역" },
+                { name: "박정민", role: "우덕순 역" },
+                { name: "조우진", role: "김상현 역" },
+                { name: "전여빈", role: "공부인 역" }
+            ]
+        }
+    },
+    {
+        id: 3,
         title: '항거: 유관순 이야기',
         eventYear: 1919,
         event: '3·1운동',
@@ -197,7 +269,7 @@ export default [
         }
     },
     {
-        id: 3,
+        id: 4,
         title: '봉오동 전투',
         eventYear: 1920,
         event: '봉오동 전투',
@@ -266,7 +338,7 @@ export default [
         }
     },
     {
-        id: 4,
+        id: 5,
         title: '밀정',
         eventYear: 1923,
         event: '황옥 경부 폭탄 사건',
@@ -336,7 +408,7 @@ export default [
         }
     },
     {
-        id: 5,
+        id: 6,
         title: '박열',
         event: '박열 재판',
         summary: '조선의 미친놈, \n일본 법정을 뒤집다',
@@ -409,7 +481,7 @@ export default [
         }
     },
     {
-        id: 6,
+        id: 7,
         title: '덕혜옹주',
         eventYear: 1931,
         event: '만주사변',
@@ -493,7 +565,7 @@ export default [
         }
     },
     {
-        id: 7,
+        id: 8,
         title: '암살',
         eventYear: 1932,
         event: '우가키 조선총독 \n암살 작전',
@@ -562,7 +634,7 @@ export default [
         }
     },
     {
-        id: 8,
+        id: 9,
         title: '마이웨이',
         eventYear: 1937,
         event: '중일전쟁',
@@ -644,7 +716,7 @@ export default [
         }
     },
     {
-        id: 9,
+        id: 10,
         title: '말모이',
         eventYear: 1942,
         event: '조선어학회 사건',
@@ -712,7 +784,7 @@ export default [
         }
     },
     {
-        id: 10,
+        id: 11,
         title: '동주',
         eventYear: 1944,
         event: '윤동주 형무소 수감',
@@ -788,7 +860,7 @@ export default [
         }
     },
     {
-        id: 11,
+        id: 12,
         title: '군함도',
         eventYear: 1945,
         event: '일본의 패망과 광복',
@@ -865,7 +937,7 @@ export default [
         }
     },
     {
-        id: 12,
+        id: 13,
         title: '보스톤 1947',
         eventYear: 1947,
         event: '보스턴 마라톤 우승',
@@ -938,7 +1010,7 @@ export default [
         }
     },
     {
-        id: 13,
+        id: 14,
         title: '태극기 휘날리며',
         eventYear: 1950,
         event: '6·25전쟁',
@@ -1027,7 +1099,7 @@ export default [
         }
     },
     {
-        id: 14,
+        id: 15,
         title: '포화 속으로',
         event: '포항 전투',
         summary: '포화 소리에 묻힌 \n그들의 청춘',
@@ -1101,7 +1173,7 @@ export default [
         }
     },
     {
-        id: 15,
+        id: 16,
         title: '장사리: 잊혀진 영웅들',
         event: '장사상륙작전',
         summary: '역사의 각주로 남게 된 \n그들의 청춘',
@@ -1168,7 +1240,7 @@ export default [
         }
     },
     {
-        id: 16,
+        id: 17,
         title: '인천상륙작전',
         event: '인천상륙작전',
         summary: '기적? 그건 작전이었다',
@@ -1246,7 +1318,7 @@ export default [
         }
     },
     {
-        id: 17,
+        id: 18,
         title: '웰컴 투 동막골',
         event: '중공군 개입',
         summary: '총 대신 막걸리, \n수류탄 대신 감자',
@@ -1318,7 +1390,7 @@ export default [
         }
     },
     {
-        id: 18,
+        id: 19,
         title: '고지전',
         eventYear: 1953,
         event: '휴전 협정',
@@ -1397,7 +1469,7 @@ export default [
         }
     },
     {
-        id: 19,
+        id: 20,
         title: '효자동 이발사',
         eventYear: 1961,
         event: '5·16군사정변',
@@ -1470,7 +1542,7 @@ export default [
         }
     },
     {
-        id: 20,
+        id: 21,
         title: '국제시장',
         eventYear: 1963,
         event: '서독 광부 파견',
@@ -1547,7 +1619,7 @@ export default [
         }
     },
     {
-        id: 21,
+        id: 22,
         title: '실미도',
         eventYear: 1968,
         event: '1·21사태',
@@ -1621,7 +1693,7 @@ export default [
         }
     },
     {
-        id: 22,
+        id: 23,
         title: '하이재킹',
         eventYear: 1971,
         event: '대한항공 F27기\n납북 미수 사건',
@@ -1694,7 +1766,7 @@ export default [
         }
     },
     {
-        id: 23,
+        id: 24,
         title: '킹메이커',
         event: '제 7대 대통령 선거',
         summary: '정치판 서커스,\n진짜 설계자는 따로 있다',
@@ -1766,7 +1838,7 @@ export default [
         }
     },
     {
-        id: 24,
+        id: 25,
         title: '님은 먼 곳에',
         eventYear: 1972,
         event: '베트남 전쟁',
@@ -1839,7 +1911,7 @@ export default [
         }
     },
     {
-        id: 25,
+        id: 26,
         title: '알포인트',
         event: '베트남 전쟁',
         summary: '사건일지: 실종자 다수,\n원인 불명, 생존자 0명',
@@ -1908,7 +1980,7 @@ export default [
         }
     },
     {
-        id: 26,
+        id: 27,
         title: '남산의 부장들',
         eventYear: 1979,
         event: '10·26사태',
@@ -1982,7 +2054,7 @@ export default [
         }
     },
     {
-        id: 27,
+        id: 28,
         title: '그때 그 사람들',
         event: '10·26사태',
         summary: '남산에 계신 부장님들보다는 훨씬 유머러스하네요',
@@ -2051,7 +2123,7 @@ export default [
         }
     },
     {
-        id: 28,
+        id: 29,
         title: '서울의 봄',
         event: '12·12사태',
         summary: '누구도 예상 못한 생일잔치',
@@ -2124,7 +2196,7 @@ export default [
         }
     },
     {
-        id: 29,
+        id: 30,
         title: '행복의 나라',
         event: '12·12사태',
         summary: '5공 유니버스의 마무리',
@@ -2201,7 +2273,7 @@ export default [
         }
     },
     {
-        id: 30,
+        id: 31,
         title: '화려한 휴가',
         eventYear: 1980,
         event: '5·18민주화운동',
@@ -2274,7 +2346,7 @@ export default [
         }
     },
     {
-        id: 31,
+        id: 32,
         title: '택시운전사',
         event: '5·18민주화운동',
         summary: '노 광주, 노 민주(주의)',
@@ -2355,7 +2427,7 @@ export default [
         }
     },
     {
-        id: 32,
+        id: 33,
         title: '박하사탕',
         event: '5·18민주화운동',
         summary: '한 남자의 되돌릴 수 없는 과거',
@@ -2427,7 +2499,7 @@ export default [
         }
     },
     {
-        id: 33,
+        id: 34,
         title: '변호인',
         eventYear: 1981,
         event: '부림 사건',
@@ -2501,7 +2573,7 @@ export default [
         }
     },
     {
-        id: 34,
+        id: 35,
         title: '헌트',
         eventYear: 1983,
         event: '아웅 산 묘소\n폭탄 테러 사건',
@@ -2575,7 +2647,7 @@ export default [
         }
     },
     {
-        id: 35,
+        id: 36,
         title: '남영동 1985',
         eventYear: 1985,
         event: '서울대 민추위 사건',
@@ -2649,7 +2721,7 @@ export default [
         }
     },
     {
-        id: 36,
+        id: 37,
         title: '비공식작전',
         eventYear: 1986,
         event: '레바논 한국 외교관\n납치 사건',
@@ -2726,7 +2798,7 @@ export default [
         }
     },
     {
-        id: 37,
+        id: 38,
         title: '살인의 추억',
         event: '화성연쇄살인사건',
         summary: '밥 잘 먹고 다닙시다',
@@ -2815,7 +2887,7 @@ export default [
         }
     },
     {
-        id: 38,
+        id: 39,
         title: '1987',
         eventYear: 1987,
         event: '6월민주항쟁',
@@ -2898,7 +2970,7 @@ export default [
         }
     },
     {
-        id: 39,
+        id: 40,
         title: '범죄와의 전쟁',
         eventYear: 1990,
         event: '10·13 특별선언',
@@ -2978,7 +3050,7 @@ export default [
         }
     },
     {
-        id: 40,
+        id: 41,
         title: '모가디슈',
         eventYear: 1991,
         event: '소말리아\n외교공관 철수',
@@ -3055,7 +3127,7 @@ export default [
         }
     },
     {
-        id: 41,
+        id: 42,
         title: '삼진그룹 영어토익반',
         event: '낙동강 페놀\n유출 사건',
         summary: '토익 점수보다 높아진\n세 친구의 정의 지수',
@@ -3131,7 +3203,7 @@ export default [
         }
     },
     {
-        id: 42,
+        id: 43,
         title: '벌새',
         eventYear: 1994,
         event: '성수대교 붕괴',
@@ -3211,7 +3283,7 @@ export default [
         }
     },
     {
-        id: 43,
+        id: 44,
         title: '국가부도의 날',
         eventYear: 1997,
         event: 'IMF 외환위기',
@@ -3294,7 +3366,7 @@ export default [
         }
     },
     {
-        id: 44,
+        id: 45,
         title: '공작',
         event: '제15대 대통령 선거',
         summary: '서로를 믿고 싶었던\n두 남자의 ‘비즈니스’',
@@ -3375,7 +3447,7 @@ export default [
         }
     },
     {
-        id: 45,
+        id: 46,
         title: '연평해전',
         eventYear: 2002,
         event: '제2연평해전',
@@ -3456,7 +3528,7 @@ export default [
         }
     },
     {
-        id: 46,
+        id: 47,
         title: '추격자',
         eventYear: 2003,
         event: '유영철 연쇄살인 사건',
@@ -3534,7 +3606,7 @@ export default [
         }
     },
     {
-        id: 47,
+        id: 48,
         title: '더 킹',
         eventYear: 2004,
         event: '노무현 대통령\n탄핵 소추',
@@ -3615,7 +3687,7 @@ export default [
         }
     },
     {
-        id: 48,
+        id: 49,
         title: '아이 캔 스피크',
         eventYear: 2007,
         event: '미국 하원\n위안부 결의안 통과',
@@ -3692,7 +3764,7 @@ export default [
         }
     },
     {
-        id: 49,
+        id: 50,
         title: '댓글부대',
         eventYear: 2012,
         event: '국정원·국방부\n여론조작 의혹',
@@ -3765,7 +3837,7 @@ export default [
         }
     },
     {
-        id: 50,
+        id: 51,
         title: '내부자들',
         eventYear: 2016,
         event: '고위 공무원\n국민 개·돼지 발언',

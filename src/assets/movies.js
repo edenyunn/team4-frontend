@@ -56,13 +56,13 @@ export default [
         title: '하얼빈',
         eventYear: 1909,
         event: '안중근 하얼빈 의거',
-        summary: '단 하나의 목표, \n늙은 늑대를 처단하라',
+        summary: '끊임없는 인간적 고뇌와 \n가장 대담한 선택',
         imageUrl: 하얼빈,
         details: {
             modalYear: 1909,
             // 인용구 정보
             quote: {
-                text: "끝까지 싸우지 않으면 아무것도 얻을 수 없습니다",
+                text: "그런데 그 순간에 깨달았습니다. 내 목숨은 죽은 동지들의 것이라는 것을. 나는 죽은 동지들의 목숨을 대신하여 살고 있다는 것을",
                 author: "안중근",
                 actor: "현빈"
             },
@@ -80,15 +80,15 @@ export default [
                 timeline: [
                     {
                         date: "1908년 7월 10일",
-                        event: "안중근, 신아산 전투 승리"
+                        event: "신아산 전투 승리"
                     },
                     {
                         date: "1909년 10월 26일",
-                        event: "안중근, 하얼빈 역에서 이토 히로부미 저격"
+                        event: "하얼빈 역에서 이토 히로부미 저격"
                     },
                     {
                         date: "1910년 2월 14일",
-                        event: "뤼순 법정에서 사형 선고"
+                        event: "안중근 사형 선고"
                     },
                     {
                         date: "1910년 3월 26일",
@@ -102,7 +102,7 @@ export default [
             relatedVideos: [
                 {
                     title: "관련 영상 1",
-                    youtubeId: "bFDCCaYDPxs",
+                    youtubeId: "Zc3W3xNHXbw",
                     params: "si=YooTJcs85-31MI14"
                 },
                 {
@@ -126,7 +126,8 @@ export default [
                 { name: "현빈", role: "안중근 역" },
                 { name: "박정민", role: "우덕순 역" },
                 { name: "조우진", role: "김상현 역" },
-                { name: "전여빈", role: "공부인 역" }
+                { name: "전여빈", role: "공부인 역" },
+                { name: "박훈", role: "모리 다쓰오 역" }
             ]
         }
     },

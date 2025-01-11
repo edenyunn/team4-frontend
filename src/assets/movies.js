@@ -24,6 +24,8 @@ import 하이재킹 from '@/assets/posters/하이재킹.jpg'
 import 킹메이커 from '@/assets/posters/킹메이커.jpg'
 import 님은먼곳에 from '@/assets/posters/님은먼곳에.jpg'
 import 알포인트 from '@/assets/posters/알포인트.jpg'
+import 밀수 from '@/assets/posters/밀수.jpg'
+import 말죽거리 from '@/assets/posters/말죽거리.jpg'
 import 남산의부장들 from '@/assets/posters/남산의부장들.jpg'
 import 그때그사람들 from '@/assets/posters/그때그사람들.jpg'
 import 행복의나라 from '@/assets/posters/행복의나라.jpg'
@@ -113,7 +115,7 @@ export default [
             ],
             // 배경음악 정보
             backgroundMusic: {
-                youtubeId: ""
+                youtubeId: "vQSxTonchxI"
             },
             // 추가된 영화 정보
             genre: "드라마",
@@ -492,12 +494,12 @@ export default [
     {
         id: 7,
         title: '덕혜옹주',
-        eventYear: 1931,
-        event: '만주사변',
+        eventYear: 1926,
+        event: '6·10 만세운동',
         summary: '공주에서 포로로, \n그리고 이방인으로',
         imageUrl: 덕혜옹주,
         details: {
-            modalYear: 1931,
+            modalYear: 1926,
             // 인용구 정보
             quote: {
                 text: "나는 낙선재에서 오래오래 살고 싶어요. 전하 비전하 보고 싶습니다. 대한민국 우리나라",
@@ -518,8 +520,8 @@ export default [
                         event: "덕수궁에서 고종의 딸로 태어남"
                     },
                     {
-                        date: "1925년 3월",
-                        event: "13세 덕혜옹주, 일본 강제 유학 (3월 28일 경성 출발)"
+                        date: "1925년 3월 28일",
+                        event: "13세 덕혜옹주, 일본 강제 유학"
                     },
                     {
                         date: "1931년 5월 8일",
@@ -1990,6 +1992,163 @@ export default [
     },
     {
         id: 27,
+        title: '밀수',
+        eventYear: 1974,
+        event: '육영수 여사 피습',
+        summary: '구수한 복고 감성으로 펼쳐진 \n해녀들의 짜릿한 액션 활극',
+        imageUrl: 밀수,
+        details: {
+            modalYear: 1974,
+            // 인용구 정보
+            quote: {
+                text: "너 나 모르냐?",
+                author: "조춘자",
+                actor: "김혜수"
+            },
+            // 시놉시스 (문단별로 배열로 저장)
+            synopsis: [
+                "열길 물속은 알아도 한길 사람 속은 모른다!",
+                "평화롭던 바닷가 마을 군천에 화학 공장이 들어서면서 하루아침에 일자리를 잃은 해녀들.",
+                "먹고 살기 위한 방법을 찾던 승부사 '춘자'(김혜수)는",
+                "바다 속에 던진 물건을 건져 올리기만 하면 큰돈을 벌 수 있다는",
+                "밀수의 세계를 알게 되고 해녀들의 리더 '진숙'(염정아)에게 솔깃한 제안을 한다.",
+                "위험한 일임을 알면서도 생계를 위해 과감히 결단을 내린 해녀 '진숙'은",
+                "전국구 밀수왕 '권 상사'를 만나게 되면서 확 커진 밀수판에 본격적으로 빠지게 된다.",
+                "그러던 어느 날, 일확천금을 얻을 수 있는 일생일대의 기회가 찾아오고",
+                "사람들은 서로를 속고 속이며 거대한 밀수판 속으로 휩쓸려 들어가기 시작하는데...",
+                "물길을 아는 자가 돈길의 주인이 된다!",
+            ],
+            // 사건 정보
+            eventDetails: {
+                period: "1974년 ~ 1977년",
+                keywords: ["해녀", "밀수", "70년대", "복고 감성"],
+                timeline: [
+                    {
+                        date: "1972년 ~ 1976년",
+                        event: "제3차 경제 개발 5개년 계획"
+                    },                    
+                    {
+                        date: "1974년 8월 15일",
+                        event: "육영수 여사 피습 사건"
+                    },
+                    {
+                        date: "1975년 5월 13일",
+                        event: "긴급조치 9호 발표"
+                    },
+                    {
+                        date: "1976년 8월 18일",
+                        event: "판문점 도끼 만행 사건"
+                    }
+                ]
+            },
+            // 시대상 설명
+            historicalContext: "1974년부터 1977년까지는 대한민국의 유신 체제 아래 정치적 억압과 경제적 변화가 공존하던 시기였다. 1972년 유신헌법이 도입된 이후 박정희 정권은 독재 체제를 강화하며 국민의 기본권을 제한하고 강력한 통제를 이어갔다. 정치적 억압이 심화됐지만, 동시에 정부는 경제 개발에 박차를 가하며 중화학공업 육성과 수출 중심의 경제 성장을 추진했다. 이러한 경제 성장의 이면에는 농어촌 지역이 도시화와 산업화 과정에서 소외되고 빈부 격차가 심화되는 현실이 존재했다. 이 시기의 해안 지역 주민들에게 밀수업은 단순한 불법 행위가 아닌 생계를 위한 선택이었다. 외환 부족과 물자 부족 상황에서 정부는 밀수 단속을 강화했지만, 바닷가 마을에서는 밀수가 주요 생계 수단으로 자리 잡았다. 주로 고급 의류, 술, 담배, 가전제품 등이 밀수품으로 거래됐으며, 주민들은 이를 통해 생계를 유지하거나 경제적 어려움을 타개하려 했다. 밀수는 생존의 수단이었을 뿐만 아니라, 당대의 경제적 불균형과 사회적 억압을 반영하는 한 단면이었다.",
+            // 관련 영상
+            relatedVideos: [
+                {
+                    title: "관련 영상 1",
+                    youtubeId: "wMBv6icYsQY",
+                    params: "si=YooTJcs85-31MI14"
+                },
+                {
+                    title: "관련 영상 2",
+                    youtubeId: "udvozrIEpTY",
+                    params: "si=-Koc20T8SKf1ZzGi"
+                }
+            ],
+            // 배경음악 정보
+            backgroundMusic: {
+                youtubeId: "Tl3mMc41EOU"
+            },
+            // 추가된 영화 정보
+            genre: "범죄",
+            releaseDate: "2023.07.26.",
+            runtime: "129분",
+            audience: "514만명",
+            rating: "15세 이상 관람가",
+            director: "류승완",
+            cast: [
+                { name: "김혜수", role: "조춘자 역" },
+                { name: "염정아", role: "엄진숙 역" },
+                { name: "조인성", role: "권 상사 역" },
+                { name: "박정민", role: "장도리 역" },
+                { name: "김종수", role: "이장춘 역" },
+                { name: "고민시", role: "고옥분 역" }
+            ]
+        }
+    },
+    {
+        id: 28,
+        title: '말죽거리 잔혹사',
+        eventYear: 1978,
+        event: '제9대 대통령 선거',
+        summary: '남자들의 로망이 모두 담긴 \n학창 시절의 초상',
+        imageUrl: 말죽거리,
+        details: {
+            modalYear: 1978,
+            // 인용구 정보
+            quote: {
+                text: "니가 그렇게 싸움을 잘해? 옥상으로 올라와",
+                author: "김현수",
+                actor: "권상우"
+            },
+            // 시놉시스 (문단별로 배열로 저장)
+            synopsis: [
+                "1978년 말죽거리의 봄, 정문고로 전학 온 범생 현수! 정문고는 선생폭력과 아이들 세력다툼으로 하루도 조용할 날 없다. 숨막 히는 학교생활, 범생 현수에게 학교짱 우식과의 특별한 우정이 기다리고 있었으니.. 열혈 이소룡 키드 현수와 우식! 이소룡에 흥분하다 보니 둘은 서로 친구가 되어 있었다. 멋진 두 친구, 현수와 우식 ! 하교 길 버스안이 오늘따라 심상치 않다. 둘의 눈에 동시에 박힌 그녀는 바로 ‘올리비아 핫세’를 꼭 닮은 강.은.주!!!’ 불량배들에게 가방을 빼앗긴 은주, ‘가방 돌려줘요..’소심한 현수의 말이 채 끝나기도 전에 날아드는 우식의 오른발 차기! 은주는 거친 우식의 매력에 끌려들어간다. 학교짱 타이틀 전 , 선도부장 종훈vs막강캡짱 우식! 종훈은 비열한 방법으로 우식을 꺽고,우식은 그대로 학교를 떠난다. 우식이 떠난 정문고! 현수는 우식과 단짝 친구였다는 이유로 종훈에게 거센 압박을 받고 지긋지긋한 학교 폭력, 열등반 으로의 강등, 급기야 사랑하는 은주 마저 우식을 택하자 결국 분노는 폭발한다. 현수는 밤새 연습한 쌍절곤을 들고 학교 옥상으로 향하는데...",
+            ],
+            // 사건 정보
+            eventDetails: {
+                period: "1978년",
+                keywords: ["1970년대", "유신정권", "학원폭력", "강남8학군"],
+                timeline: [
+                    {
+                        date: "1978년 7월 6일",
+                        event: "제9대 대통령 선거"
+                    },
+                    {
+                        date: "1978년 9월 14일",
+                        event: "고려대, 1978 민중선언 발표 및 시위"
+                    },
+                    {
+                        date: "1978년 11월 2일",
+                        event: "경북대, 구국선언문 발표 및 시위"
+                    },
+                    {
+                        date: "1978년 12월 27일",
+                        event: "제9대 대통령 취임식 개최 및 김대중 가석방"
+                    }
+                ]
+            },
+            // 시대상 설명
+            historicalContext: "1978년은 유신체제가 끝을 향해 치닫는 가운데, 정치적 억압과 사회적 긴장이 최고조에 달했던 시기였다. 유신헌법에 기반한 박정희 대통령은 제9대 대통령 선거를 통해 재집권을 공고히 했다. 그러나 이는 국민들의 자유를 억압하는 체제를 유지하기 위한 수단에 불과했으며, 사회 전반에 걸친 불만과 저항을 억누르기 위해 더욱 강압적인 통제도 병행했다. 대학생들은 이러한 억압적인 환경에 맞서 저항을 이어갔고, 민주화를 요구하는 목소리는 점점 커졌다. 정부는 이를 강경하게 진압했지만, 학생들의 저항은 대학가를 중심으로 꾸준히 확산됐다. 이러한 사회적 분위기는 대학생들뿐만 아니라, 고등학생들 사이에서도 점차 억압에 대한 불만과 저항의식을 자라게 했다.",
+            // 관련 영상
+            relatedVideos: [
+                {
+                    title: "관련 영상 1",
+                    youtubeId: "4R2pc0qMXY0",
+                    params: "si=YooTJcs85-31MI14"
+                }
+            ],
+            // 배경음악 정보
+            backgroundMusic: {
+                youtubeId: "edjbYIh9jeI"
+            },
+            // 추가된 영화 정보
+            genre: "드라마",
+            releaseDate: "2004.01.16.",
+            runtime: "116분",
+            audience: "311만명",
+            rating: "15세 이상 관람가",
+            director: "유하",
+            cast: [
+                { name: "권상우", role: "현수 역" },
+                { name: "이정진", role: "우식 역" },
+                { name: "한가인", role: "은주 역" },
+            ]
+        }
+    },
+    {
+        id: 29,
         title: '남산의 부장들',
         eventYear: 1979,
         event: '10·26사태',
@@ -2063,7 +2222,7 @@ export default [
         }
     },
     {
-        id: 28,
+        id: 30,
         title: '그때 그 사람들',
         event: '10·26사태',
         summary: '남산에 계신 부장님들보다는 훨씬 유머러스하네요',
@@ -2132,7 +2291,7 @@ export default [
         }
     },
     {
-        id: 29,
+        id: 31,
         title: '서울의 봄',
         event: '12·12사태',
         summary: '누구도 예상 못한 생일잔치',
@@ -2205,7 +2364,7 @@ export default [
         }
     },
     {
-        id: 30,
+        id: 32,
         title: '행복의 나라',
         event: '12·12사태',
         summary: '5공 유니버스의 마무리',
@@ -2282,7 +2441,7 @@ export default [
         }
     },
     {
-        id: 31,
+        id: 33,
         title: '화려한 휴가',
         eventYear: 1980,
         event: '5·18민주화운동',
@@ -2355,7 +2514,7 @@ export default [
         }
     },
     {
-        id: 32,
+        id: 34,
         title: '택시운전사',
         event: '5·18민주화운동',
         summary: '노 광주, 노 민주(주의)',
@@ -2436,7 +2595,7 @@ export default [
         }
     },
     {
-        id: 33,
+        id: 35,
         title: '박하사탕',
         event: '5·18민주화운동',
         summary: '한 남자의 되돌릴 수 없는 과거',
@@ -2508,7 +2667,7 @@ export default [
         }
     },
     {
-        id: 34,
+        id: 36,
         title: '변호인',
         eventYear: 1981,
         event: '부림 사건',
@@ -2582,7 +2741,7 @@ export default [
         }
     },
     {
-        id: 35,
+        id: 37,
         title: '헌트',
         eventYear: 1983,
         event: '아웅 산 묘소\n폭탄 테러 사건',
@@ -2656,7 +2815,7 @@ export default [
         }
     },
     {
-        id: 36,
+        id: 38,
         title: '남영동 1985',
         eventYear: 1985,
         event: '서울대 민추위 사건',
@@ -2730,7 +2889,7 @@ export default [
         }
     },
     {
-        id: 37,
+        id: 39,
         title: '비공식작전',
         eventYear: 1986,
         event: '레바논 한국 외교관\n납치 사건',
@@ -2807,7 +2966,7 @@ export default [
         }
     },
     {
-        id: 38,
+        id: 40,
         title: '살인의 추억',
         event: '화성연쇄살인사건',
         summary: '밥 잘 먹고 다닙시다',
@@ -2896,7 +3055,7 @@ export default [
         }
     },
     {
-        id: 39,
+        id: 41,
         title: '1987',
         eventYear: 1987,
         event: '6월민주항쟁',
@@ -2979,7 +3138,7 @@ export default [
         }
     },
     {
-        id: 40,
+        id: 42,
         title: '범죄와의 전쟁',
         eventYear: 1990,
         event: '10·13 특별선언',
@@ -3059,7 +3218,7 @@ export default [
         }
     },
     {
-        id: 41,
+        id: 43,
         title: '모가디슈',
         eventYear: 1991,
         event: '소말리아\n외교공관 철수',
@@ -3136,7 +3295,7 @@ export default [
         }
     },
     {
-        id: 42,
+        id: 44,
         title: '삼진그룹 영어토익반',
         event: '낙동강 페놀\n유출 사건',
         summary: '토익 점수보다 높아진\n세 친구의 정의 지수',
@@ -3212,7 +3371,7 @@ export default [
         }
     },
     {
-        id: 43,
+        id: 45,
         title: '벌새',
         eventYear: 1994,
         event: '성수대교 붕괴',
@@ -3292,7 +3451,7 @@ export default [
         }
     },
     {
-        id: 44,
+        id: 46,
         title: '국가부도의 날',
         eventYear: 1997,
         event: 'IMF 외환위기',
@@ -3375,7 +3534,7 @@ export default [
         }
     },
     {
-        id: 45,
+        id: 47,
         title: '공작',
         event: '제15대 대통령 선거',
         summary: '서로를 믿고 싶었던\n두 남자의 ‘비즈니스’',
@@ -3456,7 +3615,7 @@ export default [
         }
     },
     {
-        id: 46,
+        id: 48,
         title: '연평해전',
         eventYear: 2002,
         event: '제2연평해전',
@@ -3537,7 +3696,7 @@ export default [
         }
     },
     {
-        id: 47,
+        id: 49,
         title: '추격자',
         eventYear: 2003,
         event: '유영철 연쇄살인 사건',
@@ -3615,7 +3774,7 @@ export default [
         }
     },
     {
-        id: 48,
+        id: 50,
         title: '더 킹',
         eventYear: 2004,
         event: '노무현 대통령\n탄핵 소추',
@@ -3696,7 +3855,7 @@ export default [
         }
     },
     {
-        id: 49,
+        id: 51,
         title: '아이 캔 스피크',
         eventYear: 2007,
         event: '미국 하원\n위안부 결의안 통과',
@@ -3773,10 +3932,10 @@ export default [
         }
     },
     {
-        id: 50,
+        id: 52,
         title: '댓글부대',
         eventYear: 2012,
-        event: '국정원·국방부\n여론조작 의혹',
+        event: '국정원·국방부\n여론조작 사건',
         summary: '클릭 한 번으로\n세상을 조작할 수 있다면',
         imageUrl: 댓글부대,
         details: {
@@ -3806,8 +3965,8 @@ export default [
                         event: "드루킹 댓글 조작 사건 발생"
                     },
                     {
-                        date: "2019년",
-                        event: "김경수 경남도지사 1심 유죄 판결"
+                        date: "2021년",
+                        event: "김경수 경남도지사 대법원 유죄 확정"
                     }
                 ]
             },
@@ -3822,13 +3981,13 @@ export default [
                 },
                 {
                     title: "관련 영상 2",
-                    youtubeId: "YnA0ImOF4no",
+                    youtubeId: "Etja_QQjub0",
                     params: "si=-Koc20T8SKf1ZzGi"
                 }
             ],
             // 배경음악 정보
             backgroundMusic: {
-                youtubeId: "U-dU5jvuf4A"
+                youtubeId: "So8yC5NE5Is"
             },
             // 추가된 영화 정보
             genre: "범죄, 드라마",
@@ -3846,7 +4005,7 @@ export default [
         }
     },
     {
-        id: 51,
+        id: 53,
         title: '내부자들',
         eventYear: 2016,
         event: '고위 공무원\n국민 개·돼지 발언',

@@ -172,9 +172,28 @@
 
             <!-- Historical Context Section -->
             <h5 class="historyDescription"><strong>📌 시대상</strong></h5>
-            <p class="paContent">{{ movie?.details?.historicalContext }}</p>
+            <p
+              class="paContent"
+              v-html="movie?.details?.historicalContext.replace(/\n/g, '<br>')"
+            ></p>
 
             <hr />
+
+  <!-- Simplified Awards Section -->
+  <div v-if="movie?.details?.awards?.length" class="awards-section">
+    <h5 class="awards-title"><strong>🏆 수상 내역</strong></h5>
+    <div class="awards-container">
+      <div 
+        v-for="(award, index) in movie?.details?.awards" 
+        :key="index"
+        class="award-item"
+      >
+        {{ award.ceremony }}
+      </div>
+    </div>
+  </div>
+
+  <hr v-if="movie?.details?.awards?.length" />
 
             <!-- Related Videos Section -->
             <h5 class="prVideo"><strong>📰 함께 보면 좋을 자료</strong></h5>
@@ -414,6 +433,7 @@ h2 {
 
 /* 콘텐츠 텍스트 스타일 */
 .paContent {
+  text-align: justify;
   line-height: 1.6;
   margin-bottom: 1rem;
   font-family: "Pretendard-Light";

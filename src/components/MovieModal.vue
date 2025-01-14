@@ -179,21 +179,34 @@
 
             <hr />
 
-  <!-- Simplified Awards Section -->
-  <div v-if="movie?.details?.awards?.length" class="awards-section">
-    <h5 class="awards-title"><strong>🏆 수상 내역</strong></h5>
-    <div class="awards-container">
-      <div 
-        v-for="(award, index) in movie?.details?.awards" 
-        :key="index"
-        class="award-item"
-      >
-        {{ award.ceremony }}
-      </div>
-    </div>
-  </div>
-
-  <hr v-if="movie?.details?.awards?.length" />
+            <!-- Awards Section with Multiple Categories -->
+            <div v-if="movie?.details?.awards?.length" class="awards-section">
+              <h5 class="awards-title"><strong>🏆 대표 수상 내역</strong></h5>
+              <div class="awards-container">
+                <div
+                  v-for="(award, index) in movie?.details?.awards"
+                  :key="index"
+                  class="paContent"
+                >
+                  <div class="award-content">
+                    <div class="award-header">
+                      <span class="award-year">{{ award.year }}</span>
+                      <span class="award-ceremony">{{ award.ceremony }}</span>
+                    </div>
+                    <div class="award-categories">
+                      <div
+                        v-for="(category, catIndex) in award.categories"
+                        :key="catIndex"
+                        class="category-item"
+                      >
+                        <span class="category-name">{{ category.name }}</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <hr v-if="movie?.details?.awards?.length" />
 
             <!-- Related Videos Section -->
             <h5 class="prVideo"><strong>📰 함께 보면 좋을 자료</strong></h5>

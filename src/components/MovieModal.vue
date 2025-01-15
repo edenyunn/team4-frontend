@@ -191,7 +191,9 @@
                   <div class="award-content">
                     <div class="award-header">
                       <span class="award-year">{{ award.year }}</span>
-                      <span class="award-ceremony">{{ award.ceremony }}</span>
+                      <span class="award-ceremony"
+                        ><strong>{{ award.ceremony }}</strong></span
+                      >
                     </div>
                     <div class="award-categories">
                       <div

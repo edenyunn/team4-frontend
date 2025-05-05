@@ -51,6 +51,7 @@ import 더킹 from '@/assets/posters/더킹.jpg'
 import 아이캔스피크 from '@/assets/posters/아이캔스피크.jpg'
 import 댓글부대 from '@/assets/posters/댓글부대.jpg'
 import 내부자들 from '@/assets/posters/내부자들.jpg'
+//마스터, 승부, 공동경비구역JSA
 
 export default [
     {
@@ -103,10 +104,10 @@ export default [
             // 수상 내역
             awards: [
                 {
-                    ceremony: "",
+                    ceremony: "제61회 백상예술대상(2025)",
                     categories: [
-                        { name: "" },
-
+                        { name: "영화 대상(홍경표)" },
+                        { name: "영화 작품상" }
                     ]
                 },
             ],
@@ -114,12 +115,17 @@ export default [
             relatedVideos: [
                 {
                     title: "관련 영상 1",
-                    youtubeId: "Zc3W3xNHXbw",
+                    youtubeId: "3YsJCWffyyU",
                     params: "si=YooTJcs85-31MI14"
                 },
                 {
                     title: "관련 영상 2",
-                    youtubeId: "_tReNb9FtsI",
+                    youtubeId: "ad2MabU6hFE",
+                    params: "si=YooTJcs85-31MI14"
+                },
+                {
+                    title: "관련 영상 3",
+                    youtubeId: "QY3OcKe47-w",
                     params: "si=YooTJcs85-31MI14"
                 }
             ],
@@ -131,7 +137,7 @@ export default [
             genre: "드라마",
             releaseDate: "2024.12.24.",
             runtime: "114분",
-            audience: "TBD",
+            audience: "491만명",
             rating: "15세 이상 관람가",
             director: "우민호",
             cast: [
@@ -2993,10 +2999,9 @@ export default [
             // 수상 내역
             awards: [
                 {
-                    ceremony: "",
+                    ceremony: "제61회 백상예술대상(2025)",
                     categories: [
-                        { name: "" },
-
+                        { name: "영화 남자 조연상(유재명)" }
                     ]
                 },
             ],

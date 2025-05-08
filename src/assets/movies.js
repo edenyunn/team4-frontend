@@ -194,7 +194,7 @@ export default [
             // 수상 내역
             awards: [
                 {
-                    ceremony: "제45회 대종상 영화제(2008)",
+                    ceremony: "제59회 대종상 영화제(2023)",
                     categories: [
                         { name: "대종이 주목한 시선상(배우)(정성화)" },
                     ]

@@ -4,8 +4,10 @@ import 항거 from '@/assets/posters/항거.jpg'
 import 봉오동전투 from '@/assets/posters/봉오동전투.jpg'
 import 밀정 from '@/assets/posters/밀정.jpg'
 import 박열 from '@/assets/posters/박열.jpg'
+import 대호 from '@/assets/posters/대호.jpg'
 import 덕혜옹주 from '@/assets/posters/덕혜옹주.jpg'
 import 암살 from '@/assets/posters/암살.jpg'
+import 놈놈놈 from '@/assets/posters/놈놈놈.jpg'
 import 마이웨이 from '@/assets/posters/마이웨이.jpg'
 import 말모이 from '@/assets/posters/말모이.jpg'
 import 동주 from '@/assets/posters/동주.jpg'
@@ -20,6 +22,7 @@ import 고지전 from '@/assets/posters/고지전.jpg'
 import 효자동이발사 from '@/assets/posters/효자동이발사.jpg'
 import 국제시장 from '@/assets/posters/국제시장.jpg'
 import 실미도 from '@/assets/posters/실미도.jpg'
+import 굿뉴스 from '@/assets/posters/굿뉴스.jpg'
 import 하이재킹 from '@/assets/posters/하이재킹.jpg'
 import 킹메이커 from '@/assets/posters/킹메이커.jpg'
 import 님은먼곳에 from '@/assets/posters/님은먼곳에.jpg'
@@ -39,19 +42,22 @@ import 남영동 from '@/assets/posters/남영동.png'
 import 비공식작전 from '@/assets/posters/비공식작전.jpg'
 import 살인의추억 from '@/assets/posters/살인의추억.jpg'
 import 일구팔칠 from '@/assets/posters/1987.jpg'
+import 승부 from '@/assets/posters/승부.jpg'
 import 범죄와의전쟁 from '@/assets/posters/범죄와의전쟁.jpg'
 import 모가디슈 from '@/assets/posters/모가디슈.jpg'
 import 삼진그룹 from '@/assets/posters/삼진그룹.jpg'
 import 벌새 from '@/assets/posters/벌새.jpg'
 import 국가부도의날 from '@/assets/posters/국가부도의날.jpg'
 import 공작 from '@/assets/posters/공작.jpg'
+import 공동경비구역 from '@/assets/posters/공동경비구역.jpg'
 import 연평해전 from '@/assets/posters/연평해전.jpg'
 import 추격자 from '@/assets/posters/추격자.jpg'
 import 더킹 from '@/assets/posters/더킹.jpg'
 import 아이캔스피크 from '@/assets/posters/아이캔스피크.jpg'
+import 마스터 from '@/assets/posters/마스터.jpg'
 import 댓글부대 from '@/assets/posters/댓글부대.jpg'
+import 너와나 from '@/assets/posters/너와나.jpg'
 import 내부자들 from '@/assets/posters/내부자들.jpg'
-//마스터, 승부, 공동경비구역JSA
 
 export default [
     {
@@ -586,6 +592,101 @@ export default [
     },
     {
         id: 7,
+        title: '대호',
+        eventYear: 1925,
+        event: '치안유지법 제정',
+        summary: '끊임없는 인간적 고뇌와 \n가장 대담한 선택',
+        imageUrl: 대호,
+        details: {
+            modalYear: 1909,
+            // 인용구 정보
+            quote: {
+                text: "그런데 그 순간에 깨달았습니다. 내 목숨은 죽은 동지들의 것이라는 것을. 나는 죽은 동지들의 목숨을 대신하여 살고 있다는 것을",
+                author: "안중근",
+                actor: "현빈"
+            },
+            // 시놉시스 (문단별로 배열로 저장)
+            synopsis: [
+                "1908년 함경북도 신아산에서 안중근이 이끄는 독립군들은 일본군과의 전투에서 큰 승리를 거둔다. 대한의군 참모중장 안중근은 만국공법에 따라 전쟁포로인 일본인들을 풀어주게 되고, 이 사건으로 인해 독립군 사이에서는 안중근에 대한 의심과 함께 균열이 일기 시작한다.",
+                "1년 후, 블라디보스토크에는 안중근을 비롯해 우덕순, 김상현, 공부인, 최재형, 이창섭 등 빼앗긴 나라를 되찾기 위해 마음을 함께하는 이들이 모이게 된다. 이토 히로부미가 러시아와 협상을 위해 하얼빈으로 향한다는 소식을 접한 안중근과 독립군들은 하얼빈으로 향하고, 내부에서 새어 나간 이들의 작전 내용을 입수한 일본군들의 추격이 시작되는데…",
+                "진심과 의심 사이,",
+                "우리는 반드시 하얼빈으로 간다"
+            ],
+            // 사건 정보
+            eventDetails: {
+                period: "1908년 ~ 1910년",
+                keywords: ["안중근", "우덕순", "최재형", "신아산전투", "하얼빈의거"],
+                timeline: [
+                    {
+                        date: "1908년 7월 10일",
+                        event: "신아산 전투 승리"
+                    },
+                    {
+                        date: "1909년 10월 26일",
+                        event: "하얼빈 역에서 이토 히로부미 저격"
+                    },
+                    {
+                        date: "1910년 2월 14일",
+                        event: "안중근 사형 선고"
+                    },
+                    {
+                        date: "1910년 3월 26일",
+                        event: "안중근 의사 순국"
+                    }
+                ]
+            },
+            // 시대상 설명
+            historicalContext: "1908년, 안중근 의사는 신아산 전투에 참여하며 본격적인 항일무장투쟁을 시작했다. 신아산 전투는 독립군이 일본군과 맞서 싸운 중요한 전투로, 당시 독립군은 일본군의 압도적인 군사력에 맞서 싸우며 조국의 자주성을 지키기 위한 희생을 감수했다. 안중근 의사는 이 전투에서 지휘관으로 활약하며 독립운동에 헌신하겠다는 굳은 결의를 다졌다. \n이듬해 10월 26일, 안중근 의사는 하얼빈역에서 대한제국 침략의 주범인 이토 히로부미를 처단하는 의거를 감행한다. 하얼빈 의거는 단순한 암살 행위가 아닌, 대한제국의 독립 의지를 세계에 알리고 일본의 제국주의 침략에 대한 단호한 항거를 선언한 역사적 사건으로 평가받는다.",
+            // 수상 내역
+            awards: [
+                {
+                    ceremony: "제61회 백상예술대상(2025)",
+                    categories: [
+                        { name: "영화 대상(홍경표)" },
+                        { name: "영화 작품상" }
+                    ]
+                },
+            ],
+            // 관련 영상
+            relatedVideos: [
+                {
+                    title: "관련 영상 1",
+                    youtubeId: "3YsJCWffyyU",
+                    params: "si=YooTJcs85-31MI14"
+                },
+                {
+                    title: "관련 영상 2",
+                    youtubeId: "ad2MabU6hFE",
+                    params: "si=YooTJcs85-31MI14"
+                },
+                {
+                    title: "관련 영상 3",
+                    youtubeId: "QY3OcKe47-w",
+                    params: "si=YooTJcs85-31MI14"
+                }
+            ],
+            // 배경음악 정보
+            backgroundMusic: {
+                youtubeId: "vQSxTonchxI"
+            },
+            // 추가된 영화 정보
+            genre: "드라마",
+            releaseDate: "2024.12.24.",
+            runtime: "114분",
+            audience: "491만명",
+            rating: "15세 이상 관람가",
+            director: "우민호",
+            cast: [
+                { name: "현빈", role: "안중근 역" },
+                { name: "박정민", role: "우덕순 역" },
+                { name: "조우진", role: "김상현 역" },
+                { name: "전여빈", role: "공부인 역" },
+                { name: "박훈", role: "모리 다쓰오 역" }
+            ]
+        }
+    },
+    {
+        id: 8,
         title: '덕혜옹주',
         eventYear: 1926,
         event: '6·10 만세운동',
@@ -695,7 +796,7 @@ export default [
         }
     },
     {
-        id: 8,
+        id: 9,
         title: '암살',
         eventYear: 1932,
         event: '우가키 조선총독 \n암살 작전',
@@ -794,7 +895,102 @@ export default [
         }
     },
     {
-        id: 9,
+        id: 10,
+        title: '좋은놈나쁜놈이상한놈',
+        eventYear: 1933,
+        event: '안중근 하얼빈 의거',
+        summary: '끊임없는 인간적 고뇌와 \n가장 대담한 선택',
+        imageUrl: 놈놈놈,
+        details: {
+            modalYear: 1909,
+            // 인용구 정보
+            quote: {
+                text: "그런데 그 순간에 깨달았습니다. 내 목숨은 죽은 동지들의 것이라는 것을. 나는 죽은 동지들의 목숨을 대신하여 살고 있다는 것을",
+                author: "안중근",
+                actor: "현빈"
+            },
+            // 시놉시스 (문단별로 배열로 저장)
+            synopsis: [
+                "1908년 함경북도 신아산에서 안중근이 이끄는 독립군들은 일본군과의 전투에서 큰 승리를 거둔다. 대한의군 참모중장 안중근은 만국공법에 따라 전쟁포로인 일본인들을 풀어주게 되고, 이 사건으로 인해 독립군 사이에서는 안중근에 대한 의심과 함께 균열이 일기 시작한다.",
+                "1년 후, 블라디보스토크에는 안중근을 비롯해 우덕순, 김상현, 공부인, 최재형, 이창섭 등 빼앗긴 나라를 되찾기 위해 마음을 함께하는 이들이 모이게 된다. 이토 히로부미가 러시아와 협상을 위해 하얼빈으로 향한다는 소식을 접한 안중근과 독립군들은 하얼빈으로 향하고, 내부에서 새어 나간 이들의 작전 내용을 입수한 일본군들의 추격이 시작되는데…",
+                "진심과 의심 사이,",
+                "우리는 반드시 하얼빈으로 간다"
+            ],
+            // 사건 정보
+            eventDetails: {
+                period: "1908년 ~ 1910년",
+                keywords: ["안중근", "우덕순", "최재형", "신아산전투", "하얼빈의거"],
+                timeline: [
+                    {
+                        date: "1908년 7월 10일",
+                        event: "신아산 전투 승리"
+                    },
+                    {
+                        date: "1909년 10월 26일",
+                        event: "하얼빈 역에서 이토 히로부미 저격"
+                    },
+                    {
+                        date: "1910년 2월 14일",
+                        event: "안중근 사형 선고"
+                    },
+                    {
+                        date: "1910년 3월 26일",
+                        event: "안중근 의사 순국"
+                    }
+                ]
+            },
+            // 시대상 설명
+            historicalContext: "1908년, 안중근 의사는 신아산 전투에 참여하며 본격적인 항일무장투쟁을 시작했다. 신아산 전투는 독립군이 일본군과 맞서 싸운 중요한 전투로, 당시 독립군은 일본군의 압도적인 군사력에 맞서 싸우며 조국의 자주성을 지키기 위한 희생을 감수했다. 안중근 의사는 이 전투에서 지휘관으로 활약하며 독립운동에 헌신하겠다는 굳은 결의를 다졌다. \n이듬해 10월 26일, 안중근 의사는 하얼빈역에서 대한제국 침략의 주범인 이토 히로부미를 처단하는 의거를 감행한다. 하얼빈 의거는 단순한 암살 행위가 아닌, 대한제국의 독립 의지를 세계에 알리고 일본의 제국주의 침략에 대한 단호한 항거를 선언한 역사적 사건으로 평가받는다.",
+            // 수상 내역
+            awards: [
+                {
+                    ceremony: "제61회 백상예술대상(2025)",
+                    categories: [
+                        { name: "영화 대상(홍경표)" },
+                        { name: "영화 작품상" }
+                    ]
+                },
+            ],
+            // 관련 영상
+            relatedVideos: [
+                {
+                    title: "관련 영상 1",
+                    youtubeId: "3YsJCWffyyU",
+                    params: "si=YooTJcs85-31MI14"
+                },
+                {
+                    title: "관련 영상 2",
+                    youtubeId: "ad2MabU6hFE",
+                    params: "si=YooTJcs85-31MI14"
+                },
+                {
+                    title: "관련 영상 3",
+                    youtubeId: "QY3OcKe47-w",
+                    params: "si=YooTJcs85-31MI14"
+                }
+            ],
+            // 배경음악 정보
+            backgroundMusic: {
+                youtubeId: "vQSxTonchxI"
+            },
+            // 추가된 영화 정보
+            genre: "드라마",
+            releaseDate: "2024.12.24.",
+            runtime: "114분",
+            audience: "491만명",
+            rating: "15세 이상 관람가",
+            director: "우민호",
+            cast: [
+                { name: "현빈", role: "안중근 역" },
+                { name: "박정민", role: "우덕순 역" },
+                { name: "조우진", role: "김상현 역" },
+                { name: "전여빈", role: "공부인 역" },
+                { name: "박훈", role: "모리 다쓰오 역" }
+            ]
+        }
+    },
+    {
+        id: 11,
         title: '마이웨이',
         eventYear: 1938,
         event: '국가총동원법 시행',
@@ -890,7 +1086,7 @@ export default [
         }
     },
     {
-        id: 10,
+        id: 12,
         title: '말모이',
         eventYear: 1942,
         event: '조선어학회 사건',
@@ -968,7 +1164,7 @@ export default [
         }
     },
     {
-        id: 11,
+        id: 13,
         title: '동주',
         eventYear: 1944,
         event: '윤동주 형무소 수감',
@@ -1070,7 +1266,7 @@ export default [
         }
     },
     {
-        id: 12,
+        id: 14,
         title: '군함도',
         eventYear: 1945,
         event: '일본의 패망과 광복',
@@ -1165,7 +1361,7 @@ export default [
         }
     },
     {
-        id: 13,
+        id: 15,
         title: '보스톤 1947',
         eventYear: 1947,
         event: '보스턴 마라톤 우승',
@@ -1248,7 +1444,7 @@ export default [
         }
     },
     {
-        id: 14,
+        id: 16,
         title: '태극기 휘날리며',
         eventYear: 1950,
         event: '6·25전쟁',
@@ -1366,7 +1562,7 @@ export default [
         }
     },
     {
-        id: 15,
+        id: 17,
         title: '포화 속으로',
         event: '포항 전투',
         summary: '포화 소리에 묻힌 \n그들의 청춘',
@@ -1457,7 +1653,7 @@ export default [
         }
     },
     {
-        id: 16,
+        id: 18,
         title: '장사리: 잊혀진 영웅들',
         event: '장사상륙작전',
         summary: '역사의 각주로 남게 된 \n그들의 청춘',
@@ -1534,7 +1730,7 @@ export default [
         }
     },
     {
-        id: 17,
+        id: 19,
         title: '인천상륙작전',
         event: '인천상륙작전',
         summary: '기적? 그건 작전이었다',
@@ -1621,7 +1817,7 @@ export default [
         }
     },
     {
-        id: 18,
+        id: 20,
         title: '웰컴 투 동막골',
         event: '중공군 개입',
         summary: '총 대신 막걸리, \n수류탄 대신 감자',
@@ -1710,7 +1906,7 @@ export default [
         }
     },
     {
-        id: 19,
+        id: 21,
         title: '고지전',
         eventYear: 1953,
         event: '휴전 협정',
@@ -1818,7 +2014,7 @@ export default [
         }
     },
     {
-        id: 20,
+        id: 22,
         title: '효자동 이발사',
         eventYear: 1961,
         event: '5·16군사정변',
@@ -1901,7 +2097,7 @@ export default [
         }
     },
     {
-        id: 21,
+        id: 23,
         title: '국제시장',
         eventYear: 1963,
         event: '서독 광부 파견',
@@ -2015,7 +2211,7 @@ export default [
         }
     },
     {
-        id: 22,
+        id: 24,
         title: '실미도',
         eventYear: 1968,
         event: '1·21사태',
@@ -2117,7 +2313,102 @@ export default [
         }
     },
     {
-        id: 23,
+        id: 25,
+        title: '굿뉴스',
+        eventYear: 1970,
+        event: '요도호 납치 사건',
+        summary: '끊임없는 인간적 고뇌와 \n가장 대담한 선택',
+        imageUrl: 굿뉴스,
+        details: {
+            modalYear: 1970,
+            // 인용구 정보
+            quote: {
+                text: "그런데 그 순간에 깨달았습니다. 내 목숨은 죽은 동지들의 것이라는 것을. 나는 죽은 동지들의 목숨을 대신하여 살고 있다는 것을",
+                author: "안중근",
+                actor: "현빈"
+            },
+            // 시놉시스 (문단별로 배열로 저장)
+            synopsis: [
+                "1908년 함경북도 신아산에서 안중근이 이끄는 독립군들은 일본군과의 전투에서 큰 승리를 거둔다. 대한의군 참모중장 안중근은 만국공법에 따라 전쟁포로인 일본인들을 풀어주게 되고, 이 사건으로 인해 독립군 사이에서는 안중근에 대한 의심과 함께 균열이 일기 시작한다.",
+                "1년 후, 블라디보스토크에는 안중근을 비롯해 우덕순, 김상현, 공부인, 최재형, 이창섭 등 빼앗긴 나라를 되찾기 위해 마음을 함께하는 이들이 모이게 된다. 이토 히로부미가 러시아와 협상을 위해 하얼빈으로 향한다는 소식을 접한 안중근과 독립군들은 하얼빈으로 향하고, 내부에서 새어 나간 이들의 작전 내용을 입수한 일본군들의 추격이 시작되는데…",
+                "진심과 의심 사이,",
+                "우리는 반드시 하얼빈으로 간다"
+            ],
+            // 사건 정보
+            eventDetails: {
+                period: "1908년 ~ 1910년",
+                keywords: ["안중근", "우덕순", "최재형", "신아산전투", "하얼빈의거"],
+                timeline: [
+                    {
+                        date: "1908년 7월 10일",
+                        event: "신아산 전투 승리"
+                    },
+                    {
+                        date: "1909년 10월 26일",
+                        event: "하얼빈 역에서 이토 히로부미 저격"
+                    },
+                    {
+                        date: "1910년 2월 14일",
+                        event: "안중근 사형 선고"
+                    },
+                    {
+                        date: "1910년 3월 26일",
+                        event: "안중근 의사 순국"
+                    }
+                ]
+            },
+            // 시대상 설명
+            historicalContext: "1908년, 안중근 의사는 신아산 전투에 참여하며 본격적인 항일무장투쟁을 시작했다. 신아산 전투는 독립군이 일본군과 맞서 싸운 중요한 전투로, 당시 독립군은 일본군의 압도적인 군사력에 맞서 싸우며 조국의 자주성을 지키기 위한 희생을 감수했다. 안중근 의사는 이 전투에서 지휘관으로 활약하며 독립운동에 헌신하겠다는 굳은 결의를 다졌다. \n이듬해 10월 26일, 안중근 의사는 하얼빈역에서 대한제국 침략의 주범인 이토 히로부미를 처단하는 의거를 감행한다. 하얼빈 의거는 단순한 암살 행위가 아닌, 대한제국의 독립 의지를 세계에 알리고 일본의 제국주의 침략에 대한 단호한 항거를 선언한 역사적 사건으로 평가받는다.",
+            // 수상 내역
+            awards: [
+                {
+                    ceremony: "제61회 백상예술대상(2025)",
+                    categories: [
+                        { name: "영화 대상(홍경표)" },
+                        { name: "영화 작품상" }
+                    ]
+                },
+            ],
+            // 관련 영상
+            relatedVideos: [
+                {
+                    title: "관련 영상 1",
+                    youtubeId: "3YsJCWffyyU",
+                    params: "si=YooTJcs85-31MI14"
+                },
+                {
+                    title: "관련 영상 2",
+                    youtubeId: "ad2MabU6hFE",
+                    params: "si=YooTJcs85-31MI14"
+                },
+                {
+                    title: "관련 영상 3",
+                    youtubeId: "QY3OcKe47-w",
+                    params: "si=YooTJcs85-31MI14"
+                }
+            ],
+            // 배경음악 정보
+            backgroundMusic: {
+                youtubeId: "vQSxTonchxI"
+            },
+            // 추가된 영화 정보
+            genre: "드라마",
+            releaseDate: "2024.12.24.",
+            runtime: "114분",
+            audience: "491만명",
+            rating: "15세 이상 관람가",
+            director: "우민호",
+            cast: [
+                { name: "현빈", role: "안중근 역" },
+                { name: "박정민", role: "우덕순 역" },
+                { name: "조우진", role: "김상현 역" },
+                { name: "전여빈", role: "공부인 역" },
+                { name: "박훈", role: "모리 다쓰오 역" }
+            ]
+        }
+    },
+    {
+        id: 26,
         title: '하이재킹',
         eventYear: 1971,
         event: '대한항공 F27기\n납북 미수 사건',
@@ -2200,7 +2491,7 @@ export default [
         }
     },
     {
-        id: 24,
+        id: 27,
         title: '킹메이커',
         event: '제 7대 대통령 선거',
         summary: '정치판 서커스,\n진짜 설계자는 따로 있다',
@@ -2295,7 +2586,7 @@ export default [
         }
     },
     {
-        id: 25,
+        id: 28,
         title: '님은 먼 곳에',
         eventYear: 1972,
         event: '베트남 전쟁',
@@ -2385,7 +2676,7 @@ export default [
         }
     },
     {
-        id: 26,
+        id: 29,
         title: '알포인트',
         event: '베트남 전쟁',
         summary: '사건일지: 실종자 다수,\n원인 불명, 생존자 0명',
@@ -2464,7 +2755,7 @@ export default [
         }
     },
     {
-        id: 27,
+        id: 30,
         title: '밀수',
         eventYear: 1974,
         event: '육영수 여사 피습',
@@ -2584,7 +2875,7 @@ export default [
         }
     },
     {
-        id: 28,
+        id: 31,
         title: '말죽거리 잔혹사',
         eventYear: 1978,
         event: '제9대 대통령 선거',
@@ -2676,7 +2967,7 @@ export default [
         }
     },
     {
-        id: 29,
+        id: 32,
         title: '남산의 부장들',
         eventYear: 1979,
         event: '10·26사태',
@@ -2773,7 +3064,7 @@ export default [
         }
     },
     {
-        id: 30,
+        id: 33,
         title: '그때 그 사람들',
         event: '10·26사태',
         summary: '남산에 계신 부장님들보다는 훨씬 유머러스하네요',
@@ -2851,7 +3142,7 @@ export default [
         }
     },
     {
-        id: 31,
+        id: 34,
         title: '서울의 봄',
         event: '12·12사태',
         summary: '누구도 예상 못한 생일잔치',
@@ -2952,7 +3243,7 @@ export default [
         }
     },
     {
-        id: 32,
+        id: 35,
         title: '행복의 나라',
         event: '12·12사태',
         summary: '5공 유니버스의 마무리',
@@ -3038,7 +3329,7 @@ export default [
         }
     },
     {
-        id: 33,
+        id: 36,
         title: '화려한 휴가',
         eventYear: 1980,
         event: '5·18민주화운동',
@@ -3121,7 +3412,7 @@ export default [
         }
     },
     {
-        id: 34,
+        id: 37,
         title: '택시운전사',
         event: '5·18민주화운동',
         summary: '노 광주, 노 민주(주의)',
@@ -3238,7 +3529,7 @@ export default [
         }
     },
     {
-        id: 35,
+        id: 38,
         title: '박하사탕',
         event: '5·18민주화운동',
         summary: '한 남자의 되돌릴 수 없는 과거',
@@ -3336,7 +3627,7 @@ export default [
         }
     },
     {
-        id: 36,
+        id: 39,
         title: '변호인',
         eventYear: 1981,
         event: '부림 사건',
@@ -3447,7 +3738,7 @@ export default [
         }
     },
     {
-        id: 37,
+        id: 40,
         title: '헌트',
         eventYear: 1983,
         event: '아웅 산 묘소\n폭탄 테러 사건',
@@ -3551,7 +3842,7 @@ export default [
         }
     },
     {
-        id: 38,
+        id: 41,
         title: '남영동 1985',
         eventYear: 1985,
         event: '서울대 민추위 사건',
@@ -3635,7 +3926,7 @@ export default [
         }
     },
     {
-        id: 39,
+        id: 42,
         title: '비공식작전',
         eventYear: 1986,
         event: '레바논 한국 외교관\n납치 사건',
@@ -3722,9 +4013,9 @@ export default [
         }
     },
     {
-        id: 40,
+        id: 43,
         title: '살인의 추억',
-        event: '화성연쇄살인사건',
+        event: '이춘재 연쇄살인사건',
         summary: '밥 잘 먹고 다닙시다',
         imageUrl: 살인의추억,
         details: {
@@ -3830,7 +4121,7 @@ export default [
         }
     },
     {
-        id: 41,
+        id: 44,
         title: '1987',
         eventYear: 1987,
         event: '6월민주항쟁',
@@ -3947,7 +4238,102 @@ export default [
         }
     },
     {
-        id: 42,
+        id: 45,
+        title: '승부',
+        eventYear: 1989,
+        event: '이창호 프로 첫 우승',
+        summary: '끊임없는 인간적 고뇌와 \n가장 대담한 선택',
+        imageUrl: 승부,
+        details: {
+            modalYear: 1909,
+            // 인용구 정보
+            quote: {
+                text: "그런데 그 순간에 깨달았습니다. 내 목숨은 죽은 동지들의 것이라는 것을. 나는 죽은 동지들의 목숨을 대신하여 살고 있다는 것을",
+                author: "안중근",
+                actor: "현빈"
+            },
+            // 시놉시스 (문단별로 배열로 저장)
+            synopsis: [
+                "1908년 함경북도 신아산에서 안중근이 이끄는 독립군들은 일본군과의 전투에서 큰 승리를 거둔다. 대한의군 참모중장 안중근은 만국공법에 따라 전쟁포로인 일본인들을 풀어주게 되고, 이 사건으로 인해 독립군 사이에서는 안중근에 대한 의심과 함께 균열이 일기 시작한다.",
+                "1년 후, 블라디보스토크에는 안중근을 비롯해 우덕순, 김상현, 공부인, 최재형, 이창섭 등 빼앗긴 나라를 되찾기 위해 마음을 함께하는 이들이 모이게 된다. 이토 히로부미가 러시아와 협상을 위해 하얼빈으로 향한다는 소식을 접한 안중근과 독립군들은 하얼빈으로 향하고, 내부에서 새어 나간 이들의 작전 내용을 입수한 일본군들의 추격이 시작되는데…",
+                "진심과 의심 사이,",
+                "우리는 반드시 하얼빈으로 간다"
+            ],
+            // 사건 정보
+            eventDetails: {
+                period: "1908년 ~ 1910년",
+                keywords: ["안중근", "우덕순", "최재형", "신아산전투", "하얼빈의거"],
+                timeline: [
+                    {
+                        date: "1908년 7월 10일",
+                        event: "신아산 전투 승리"
+                    },
+                    {
+                        date: "1909년 10월 26일",
+                        event: "하얼빈 역에서 이토 히로부미 저격"
+                    },
+                    {
+                        date: "1910년 2월 14일",
+                        event: "안중근 사형 선고"
+                    },
+                    {
+                        date: "1910년 3월 26일",
+                        event: "안중근 의사 순국"
+                    }
+                ]
+            },
+            // 시대상 설명
+            historicalContext: "1908년, 안중근 의사는 신아산 전투에 참여하며 본격적인 항일무장투쟁을 시작했다. 신아산 전투는 독립군이 일본군과 맞서 싸운 중요한 전투로, 당시 독립군은 일본군의 압도적인 군사력에 맞서 싸우며 조국의 자주성을 지키기 위한 희생을 감수했다. 안중근 의사는 이 전투에서 지휘관으로 활약하며 독립운동에 헌신하겠다는 굳은 결의를 다졌다. \n이듬해 10월 26일, 안중근 의사는 하얼빈역에서 대한제국 침략의 주범인 이토 히로부미를 처단하는 의거를 감행한다. 하얼빈 의거는 단순한 암살 행위가 아닌, 대한제국의 독립 의지를 세계에 알리고 일본의 제국주의 침략에 대한 단호한 항거를 선언한 역사적 사건으로 평가받는다.",
+            // 수상 내역
+            awards: [
+                {
+                    ceremony: "제61회 백상예술대상(2025)",
+                    categories: [
+                        { name: "영화 대상(홍경표)" },
+                        { name: "영화 작품상" }
+                    ]
+                },
+            ],
+            // 관련 영상
+            relatedVideos: [
+                {
+                    title: "관련 영상 1",
+                    youtubeId: "3YsJCWffyyU",
+                    params: "si=YooTJcs85-31MI14"
+                },
+                {
+                    title: "관련 영상 2",
+                    youtubeId: "ad2MabU6hFE",
+                    params: "si=YooTJcs85-31MI14"
+                },
+                {
+                    title: "관련 영상 3",
+                    youtubeId: "QY3OcKe47-w",
+                    params: "si=YooTJcs85-31MI14"
+                }
+            ],
+            // 배경음악 정보
+            backgroundMusic: {
+                youtubeId: "vQSxTonchxI"
+            },
+            // 추가된 영화 정보
+            genre: "드라마",
+            releaseDate: "2024.12.24.",
+            runtime: "114분",
+            audience: "491만명",
+            rating: "15세 이상 관람가",
+            director: "우민호",
+            cast: [
+                { name: "현빈", role: "안중근 역" },
+                { name: "박정민", role: "우덕순 역" },
+                { name: "조우진", role: "김상현 역" },
+                { name: "전여빈", role: "공부인 역" },
+                { name: "박훈", role: "모리 다쓰오 역" }
+            ]
+        }
+    },
+    {
+        id: 46,
         title: '범죄와의 전쟁',
         eventYear: 1990,
         event: '10·13 특별선언',
@@ -4060,7 +4446,7 @@ export default [
         }
     },
     {
-        id: 43,
+        id: 47,
         title: '모가디슈',
         eventYear: 1991,
         event: '소말리아\n외교공관 철수',
@@ -4170,7 +4556,7 @@ export default [
         }
     },
     {
-        id: 44,
+        id: 48,
         title: '삼진그룹 영어토익반',
         event: '낙동강 페놀\n유출 사건',
         summary: '토익 점수보다 높아진\n세 친구의 정의 지수',
@@ -4269,7 +4655,7 @@ export default [
         }
     },
     {
-        id: 45,
+        id: 49,
         title: '벌새',
         eventYear: 1994,
         event: '성수대교 붕괴',
@@ -4378,7 +4764,7 @@ export default [
         }
     },
     {
-        id: 46,
+        id: 50,
         title: '국가부도의 날',
         eventYear: 1997,
         event: 'IMF 외환위기',
@@ -4470,7 +4856,7 @@ export default [
         }
     },
     {
-        id: 47,
+        id: 51,
         title: '공작',
         event: '제15대 대통령 선거',
         summary: '서로를 믿고 싶었던\n두 남자의 ‘비즈니스’',
@@ -4586,7 +4972,102 @@ export default [
         }
     },
     {
-        id: 48,
+        id: 52,
+        title: '공동경비구역JSA',
+        eventYear: 1998,
+        event: '김훈 중위 의문사',
+        summary: '끊임없는 인간적 고뇌와 \n가장 대담한 선택',
+        imageUrl: 공동경비구역,
+        details: {
+            modalYear: 1909,
+            // 인용구 정보
+            quote: {
+                text: "그런데 그 순간에 깨달았습니다. 내 목숨은 죽은 동지들의 것이라는 것을. 나는 죽은 동지들의 목숨을 대신하여 살고 있다는 것을",
+                author: "안중근",
+                actor: "현빈"
+            },
+            // 시놉시스 (문단별로 배열로 저장)
+            synopsis: [
+                "1908년 함경북도 신아산에서 안중근이 이끄는 독립군들은 일본군과의 전투에서 큰 승리를 거둔다. 대한의군 참모중장 안중근은 만국공법에 따라 전쟁포로인 일본인들을 풀어주게 되고, 이 사건으로 인해 독립군 사이에서는 안중근에 대한 의심과 함께 균열이 일기 시작한다.",
+                "1년 후, 블라디보스토크에는 안중근을 비롯해 우덕순, 김상현, 공부인, 최재형, 이창섭 등 빼앗긴 나라를 되찾기 위해 마음을 함께하는 이들이 모이게 된다. 이토 히로부미가 러시아와 협상을 위해 하얼빈으로 향한다는 소식을 접한 안중근과 독립군들은 하얼빈으로 향하고, 내부에서 새어 나간 이들의 작전 내용을 입수한 일본군들의 추격이 시작되는데…",
+                "진심과 의심 사이,",
+                "우리는 반드시 하얼빈으로 간다"
+            ],
+            // 사건 정보
+            eventDetails: {
+                period: "1908년 ~ 1910년",
+                keywords: ["안중근", "우덕순", "최재형", "신아산전투", "하얼빈의거"],
+                timeline: [
+                    {
+                        date: "1908년 7월 10일",
+                        event: "신아산 전투 승리"
+                    },
+                    {
+                        date: "1909년 10월 26일",
+                        event: "하얼빈 역에서 이토 히로부미 저격"
+                    },
+                    {
+                        date: "1910년 2월 14일",
+                        event: "안중근 사형 선고"
+                    },
+                    {
+                        date: "1910년 3월 26일",
+                        event: "안중근 의사 순국"
+                    }
+                ]
+            },
+            // 시대상 설명
+            historicalContext: "1908년, 안중근 의사는 신아산 전투에 참여하며 본격적인 항일무장투쟁을 시작했다. 신아산 전투는 독립군이 일본군과 맞서 싸운 중요한 전투로, 당시 독립군은 일본군의 압도적인 군사력에 맞서 싸우며 조국의 자주성을 지키기 위한 희생을 감수했다. 안중근 의사는 이 전투에서 지휘관으로 활약하며 독립운동에 헌신하겠다는 굳은 결의를 다졌다. \n이듬해 10월 26일, 안중근 의사는 하얼빈역에서 대한제국 침략의 주범인 이토 히로부미를 처단하는 의거를 감행한다. 하얼빈 의거는 단순한 암살 행위가 아닌, 대한제국의 독립 의지를 세계에 알리고 일본의 제국주의 침략에 대한 단호한 항거를 선언한 역사적 사건으로 평가받는다.",
+            // 수상 내역
+            awards: [
+                {
+                    ceremony: "제61회 백상예술대상(2025)",
+                    categories: [
+                        { name: "영화 대상(홍경표)" },
+                        { name: "영화 작품상" }
+                    ]
+                },
+            ],
+            // 관련 영상
+            relatedVideos: [
+                {
+                    title: "관련 영상 1",
+                    youtubeId: "3YsJCWffyyU",
+                    params: "si=YooTJcs85-31MI14"
+                },
+                {
+                    title: "관련 영상 2",
+                    youtubeId: "ad2MabU6hFE",
+                    params: "si=YooTJcs85-31MI14"
+                },
+                {
+                    title: "관련 영상 3",
+                    youtubeId: "QY3OcKe47-w",
+                    params: "si=YooTJcs85-31MI14"
+                }
+            ],
+            // 배경음악 정보
+            backgroundMusic: {
+                youtubeId: "vQSxTonchxI"
+            },
+            // 추가된 영화 정보
+            genre: "드라마",
+            releaseDate: "2024.12.24.",
+            runtime: "114분",
+            audience: "491만명",
+            rating: "15세 이상 관람가",
+            director: "우민호",
+            cast: [
+                { name: "현빈", role: "안중근 역" },
+                { name: "박정민", role: "우덕순 역" },
+                { name: "조우진", role: "김상현 역" },
+                { name: "전여빈", role: "공부인 역" },
+                { name: "박훈", role: "모리 다쓰오 역" }
+            ]
+        }
+    },
+    {
+        id: 53,
         title: '연평해전',
         eventYear: 2002,
         event: '제2연평해전',
@@ -4677,10 +5158,10 @@ export default [
         }
     },
     {
-        id: 49,
+        id: 54,
         title: '추격자',
         eventYear: 2003,
-        event: '유영철 연쇄살인 사건',
+        event: '유영철 연쇄살인사건',
         summary: '그 아가씨가 여기 있대니깐',
         imageUrl: 추격자,
         details: {
@@ -4792,7 +5273,7 @@ export default [
         }
     },
     {
-        id: 50,
+        id: 55,
         title: '더 킹',
         eventYear: 2004,
         event: '노무현 대통령\n탄핵 소추',
@@ -4900,7 +5381,7 @@ export default [
         }
     },
     {
-        id: 51,
+        id: 56,
         title: '아이 캔 스피크',
         eventYear: 2007,
         event: '미국 하원\n위안부 결의안 통과',
@@ -5000,7 +5481,100 @@ export default [
         }
     },
     {
-        id: 52,
+        id: 57,
+        title: '마스터',
+        eventYear: 2008,
+        event: '조희팔 사기 사건',
+        summary: '건국 이래 최대의 게이트',
+        imageUrl: 마스터,
+        details: {
+            modalYear: 2008,
+            // 인용구 정보
+            quote: {
+                text: "막연하게 개새낀줄 알았는데 구제척인 씹새끼네",
+                author: "박장군",
+                actor: "김우빈"
+            },
+            // 시놉시스 (문단별로 배열로 저장)
+            synopsis: [
+                "“썩은 머리 이번에 싹 다 잘라낸다”",
+                "화려한 언변, 사람을 현혹하는 재능, 정관계를 넘나드는 인맥으로 수만 명 회원들에게 사기를 치며 승승장구해 온 원네트워크 ‘진회장’(이병헌). 반년간 그를 추적해 온 지능범죄수사팀장 ‘김재명’(강동원)은 진회장의 최측근인 ‘박장군’(김우빈)을 압박한다. 원네트워크 전산실 위치와 진회장의 로비 장부를 넘기라는 것. 뛰어난 프로그래밍 실력과 명석한 두뇌로 원네트워크를 키워 온 브레인 박장군은 계획에 차질이 생긴 것을 감지하자 빠르게 머리를 굴리기 시작한다.",
+                "진회장은 물론 그의 뒤에 숨은 권력까지 모조리 잡기 위해 포위망을 좁혀가는 재명, 오히려 이 기회를 틈타 돈도 챙기고 경찰의 압박에서도 벗어날 계획을 세우는 장군. 하지만 진회장은 간부 중에 배신자가 있음을 눈치채고, 새로운 플랜을 가동하는데…",
+                "지능범죄수사대, 희대의 사기범, 그리고 브레인서로 속고 속이는 추격이 시작된다!"
+            ],
+            // 사건 정보
+            eventDetails: {
+                period: "2004년 ~ 2011년",
+                keywords: ["조희팔", "다단계", "폰지사기"],
+                timeline: [
+                    {
+                        date: "2004년 10월",
+                        event: "조희팔 사기 시작"
+                    },
+                    {
+                        date: "2008년 10월",
+                        event: "조희팔 잠적"
+                    },
+                    {
+                        date: "2008년 12월 9일",
+                        event: "조희팔 밀항"
+                    },
+                    {
+                        date: "2011년 12월 19일",
+                        event: "조희팔 사망"
+                    }
+                ]
+            },
+            // 시대상 설명
+            historicalContext: "2000년대 중반, 한국 사회는 부동산과 주식 열풍 속에 ‘고수익 투자’에 대한 환상이 팽배하던 시기였다. 금융지식이 부족한 서민층은 안정적인 수익을 보장한다는 말에 쉽게 현혹되었고, 그 틈을 타 거대한 유사수신 사기가 사회 곳곳에 번져갔다. 조희팔 사건은 그 시대의 탐욕과 불신이 낳은 대표적 비극이었다. 2004년 의료기기 임대사업을 내세워 시작된 그의 사기 행각은 이름만 다른 동일 조직으로 전국을 장악했다. 초기에는 꾸준한 수익금 지급으로 신뢰를 쌓으며 확장했지만, 실제로는 뒤에서 받은 돈으로 앞선 투자자에게 이자를 주는 전형적인 폰지사기였다. \n2008년 금융위기와 함께 거짓이 무너지자 조희팔 일당은 전산망을 파괴하고 거액의 현금을 챙겨 밀항했다. 남겨진 것은 5조 원에 달하는 피해금과 삶이 무너진 수만 명의 서민들이었다. 한편 조희팔은 2011년 12월 사망했다는 소식이 전해졌지만 그의 실제 사망 여부는 현재까지도 논란이 되고 있다.",
+            // 수상 내역
+            awards: [
+                {
+                    ceremony: "",
+                    categories: [
+                        { name: "" },
+
+                    ]
+                },
+            ],
+            // 관련 영상
+            relatedVideos: [
+                {
+                    title: "관련 영상 1",
+                    youtubeId: "3GKx8k0V008",
+                    params: "si=YooTJcs85-31MI14"
+                },
+                {
+                    title: "관련 영상 2",
+                    youtubeId: "DhK7KAPPO00",
+                    params: "si=YooTJcs85-31MI14"
+                },
+                {
+                    title: "관련 영상 3",
+                    youtubeId: "WiydG1u0L5A",
+                    params: "si=YooTJcs85-31MI14"
+                }
+            ],
+            // 배경음악 정보
+            backgroundMusic: {
+                youtubeId: "ui4W5RrBaz0"
+            },
+            // 추가된 영화 정보
+            genre: "액션",
+            releaseDate: "2016.12.21.",
+            runtime: "143분",
+            audience: "714만명",
+            rating: "15세 이상 관람가",
+            director: "조의석",
+            cast: [
+                { name: "이병헌", role: "진회장 역" },
+                { name: "강동원", role: "김재명 역" },
+                { name: "김우빈", role: "박장군 역" }
+            ]
+        }
+    },
+    {
+        id: 58,
         title: '댓글부대',
         eventYear: 2012,
         event: '국정원·국방부\n여론조작 사건',
@@ -5083,7 +5657,93 @@ export default [
         }
     },
     {
-        id: 53,
+        id: 59,
+        title: '너와나',
+        eventYear: 2014,
+        event: '세월호 참사',
+        summary: '여전히 봄이 오는 것만으로도 \n마음 아파하시는 분들이 있다',
+        imageUrl: 너와나,
+        details: {
+            modalYear: 2014,
+            // 인용구 정보
+            quote: {
+                text: "살았다. 너가 나를 살렸어",
+                author: "정세미",
+                actor: "박혜수"
+            },
+            // 시놉시스 (문단별로 배열로 저장)
+            synopsis: [
+                "“오늘은 너한테 꼭 하고 싶은 말이 있는데” 수학여행을 하루 앞둔 오후, 세미는 이상한 꿈에서 깨어나 하은에게로 향한다. 오랫동안 눌러왔던 마음을 오늘은 반드시 전해야 할 것 같은 기분이 들었기 때문이다. 하지만 넘쳐 흐르는 마음과 달리 자꾸만 어긋나는 두 사람. 서툰 오해와 상처를 뒤로하고, 세미는 하은에게 진심을 고백할 수 있을까?",
+            ],
+            // 사건 정보
+            eventDetails: {
+                period: "2014년",
+                keywords: ["세월호참사", "단원고등학교", "2014년", "4월16일"],
+                timeline: [
+                    {
+                        date: "2014년 4월 15일",
+                        event: "세월호 인천항 출발"
+                    },
+                    {
+                        date: "2014년 4월 16일",
+                        event: "세월호 침몰"
+                    }
+                ]
+            },
+            // 시대상 설명
+            historicalContext: "영화는 불안정한 청춘과 침묵의 세대를 그리며 2010년대 한국 사회의 정서를 담아냈다. 작품의 배경이 된 ‘수학여행 전날’은 세월호 참사 이후 한국 사회가 겪은 집단적 트라우마를 은유한다. 안전에 대한 불신, 청소년기의 상실감, 어른들의 무력함이 영화 전반을 감싼다. 주인공 세미와 하은의 관계는 단순한 우정을 넘어, 말하지 못한 감정과 표현되지 못한 진심이 억눌린 사회의 모습을 비춘다.",
+            // 수상 내역
+            awards: [
+                {
+                    ceremony: "제60회 백상예술대상(2024)",
+                    categories: [
+                        { name: "구찌 임팩트 어워드" }
+                    ]
+                },
+                {
+                    ceremony: "제45회 청룡영화상(2024)",
+                    categories: [
+                        { name: "신인감독상(조현철)" },
+                        { name: "각본상(정미영)" },
+                        { name: "각본상(조현철)" }
+                    ]
+                },
+            ],
+            // 관련 영상
+            relatedVideos: [
+                {
+                    title: "관련 영상 1",
+                    youtubeId: "jYFsdgtHJOw",
+                    params: "si=YooTJcs85-31MI14"
+                },
+                {
+                    title: "관련 영상 2",
+                    youtubeId: "reVuhWdJf-4",
+                    params: "si=YooTJcs85-31MI14"
+                }
+            ],
+            // 배경음악 정보
+            backgroundMusic: {
+                youtubeId: "yikOjeRvQM4"
+            },
+            // 추가된 영화 정보
+            genre: "드라마",
+            releaseDate: "2023.10.25.",
+            runtime: "118분",
+            audience: "4만명",
+            rating: "12세 이상 관람가",
+            director: "조현철",
+            cast: [
+                { name: "박혜수", role: "정세미 역" },
+                { name: "김시은", role: "김하은 역" },
+                { name: "이도은", role: "한나 역" },
+                { name: "박서경", role: "예진 역" },
+                { name: "오우리", role: "다애 역" }
+            ]
+        }
+    },
+    {
+        id: 60,
         title: '내부자들',
         eventYear: 2016,
         event: '고위 공무원\n국민 개·돼지 발언',

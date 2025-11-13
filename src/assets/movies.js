@@ -58,6 +58,7 @@ import 마스터 from '@/assets/posters/마스터.jpg'
 import 댓글부대 from '@/assets/posters/댓글부대.jpg'
 import 너와나 from '@/assets/posters/너와나.jpg'
 import 내부자들 from '@/assets/posters/내부자들.jpg'
+//제46회 청룡영화상(2025): 하얼빈, 승부
 
 export default [
     {
@@ -167,7 +168,7 @@ export default [
         title: '영웅',
         eventYear: 1910,
         event: '안중근 의사 순국',
-        summary: '한 발의 총성으로, \n역사가 흔들렸다',
+        summary: '한 발의 총성이 역사를 흔들었다',
         imageUrl: 영웅,
         details: {
             modalYear: 1910,
@@ -250,7 +251,7 @@ export default [
         title: '항거: 유관순 이야기',
         eventYear: 1919,
         event: '3·1운동',
-        summary: '형무소 안에 울려 퍼진 \n개구리 소리?',
+        summary: '형무소에 울려 퍼진 개구리 소리?',
         imageUrl: 항거,
         details: {
             modalYear: 1919,
@@ -438,7 +439,7 @@ export default [
         id: 5,
         title: '봉오동 전투',
         event: '봉오동 전투',
-        summary: '산이 무기였다, \n적은 길을 잃었다',
+        summary: '산이 무기였다. 적은 길을 잃었다',
         imageUrl: 봉오동전투,
         details: {
             modalYear: 1920,
@@ -602,7 +603,7 @@ export default [
         id: 7,
         title: '박열',
         event: '박열 재판',
-        summary: '조선의 미친놈, \n일본 법정을 뒤집다',
+        summary: '조선의 미친놈, 일본 법정 뒤집다',
         imageUrl: 박열,
         details: {
             modalYear: 1923,
@@ -796,7 +797,7 @@ export default [
         title: '덕혜옹주',
         eventYear: 1926,
         event: '6·10 만세운동',
-        summary: '공주에서 포로로, \n그리고 이방인으로',
+        summary: '공주에서 포로, 그리고 이방인으로',
         imageUrl: 덕혜옹주,
         details: {
             modalYear: 1926,
@@ -906,7 +907,7 @@ export default [
         title: '암살',
         eventYear: 1932,
         event: '우가키 조선총독 \n암살 작전',
-        summary: '목표는 하나, \n조국을 위한 암살',
+        summary: '목표는 하나. 조국을 위한 암살',
         imageUrl: 암살,
         details: {
             modalYear: 1932,
@@ -1005,7 +1006,7 @@ export default [
         title: '마이웨이',
         eventYear: 1938,
         event: '국가총동원법 시행',
-        summary: '도쿄에서 경성, \n그리고 노르망디까지',
+        summary: '도쿄에서 경성, 노르망디까지',
         imageUrl: 마이웨이,
         details: {
             modalYear: 1938,
@@ -1073,7 +1074,7 @@ export default [
                 },
                 {
                     title: "관련 영상 2",
-                    youtubeId: "l28m529p9lo",
+                    youtubeId: "FoEwhHTMiJU",
                     params: "si=-Koc20T8SKf1ZzGi"
                 }
             ],
@@ -1179,7 +1180,7 @@ export default [
         title: '동주',
         eventYear: 1944,
         event: '윤동주 형무소 수감',
-        summary: '짧았던 청춘, 영원한 시',
+        summary: '짧았던 청춘. 영원한 시',
         imageUrl: 동주,
         details: {
             modalYear: 1944,
@@ -1376,7 +1377,7 @@ export default [
         title: '보스톤 1947',
         eventYear: 1947,
         event: '보스턴 마라톤 우승',
-        summary: '태극기로 완주하다',
+        summary: '태극기를 가슴에 새기고 완주하다',
         imageUrl: 보스톤,
         details: {
             modalYear: 1947,
@@ -1576,7 +1577,7 @@ export default [
         id: 17,
         title: '포화 속으로',
         event: '포항 전투',
-        summary: '포화 소리에 묻힌 \n그들의 청춘',
+        summary: '포화 소리에 묻혀버린 청춘들',
         imageUrl: 포화속으로,
         details: {
             modalYear: 1950,
@@ -1667,7 +1668,7 @@ export default [
         id: 18,
         title: '장사리: 잊혀진 영웅들',
         event: '장사상륙작전',
-        summary: '역사의 각주로 남게 된 \n그들의 청춘',
+        summary: '역사의 각주로 남게 된 청춘들',
         imageUrl: 장사리,
         details: {
             modalYear: 1950,
@@ -1831,7 +1832,7 @@ export default [
         id: 20,
         title: '웰컴 투 동막골',
         event: '중공군 개입',
-        summary: '총 대신 막걸리, \n수류탄 대신 감자',
+        summary: '총 대신 막걸리, 수류탄 대신 감자',
         imageUrl: 웰컴투동막골,
         details: {
             modalYear: 1950,
@@ -2029,7 +2030,7 @@ export default [
         title: '효자동 이발사',
         eventYear: 1961,
         event: '5·16군사정변',
-        summary: '‘대머리 그 남자’의 \n은밀한 헤어컷',
+        summary: '‘대머리 그 남자’의 은밀한 헤어컷',
         imageUrl: 효자동이발사,
         details: {
             modalYear: 1961,
@@ -2226,7 +2227,7 @@ export default [
         title: '실미도',
         eventYear: 1968,
         event: '1·21사태',
-        summary: '국가가 버린\n31명의 살인 병기',
+        summary: '국가가 버린 살인병기 31명',
         imageUrl: 실미도,
         details: {
             modalYear: 1968,
@@ -2328,13 +2329,13 @@ export default [
         title: '굿뉴스',
         eventYear: 1970,
         event: '일본항공 351편\n공중 납치 사건',
-        summary: '확증 편향의 시대를\n관통하는 블랙코미디',
+        summary: '부조리로부터 하이재킹된 진실',
         imageUrl: 굿뉴스,
         details: {
             modalYear: 1970,
             // 인용구 정보
             quote: {
-                text: "일어난 사실, 약간의 창의력, 그리고 믿으려는 의지, 이 세 가지가 결합하면 거짓말도 진실이 된다",
+                text: "진실은 간혹 달의 뒷면에 존재한다. 그렇다고 앞면이 거짓은 아니다",
                 author: "아무개",
                 actor: "설경구"
             },
@@ -2413,7 +2414,7 @@ export default [
         title: '하이재킹',
         eventYear: 1971,
         event: '대한항공 F27기\n납북 미수 사건',
-        summary: '88년 서울행 비행기,\n목적지는 평양!?',
+        summary: '김포가 아닌 평양으로?',
         imageUrl: 하이재킹,
         details: {
             modalYear: 1971,
@@ -2495,37 +2496,45 @@ export default [
         id: 27,
         title: '킹메이커',
         event: '제 7대 대통령 선거',
-        summary: '정치판 서커스,\n진짜 설계자는 따로 있다',
+        summary: '정치판 서커스의 진짜 설계자',
         imageUrl: 킹메이커,
         details: {
             modalYear: 1971,
             // 인용구 정보
             quote: {
-                text: "어떻게 이기는지가 아니고 왜 이겨야 하는지가 중요한 법이오",
+                text: "어떻게 이기는지가 아니고 왜 이겨야 하는지가 중요한 법이요",
                 author: "김운범",
                 actor: "설경구"
             },
             // 시놉시스 (문단별로 배열로 저장)
             synopsis: [
-                "세상을 바꾸기 위해 도전하는 정치인 ‘김운범’ 앞에 그와 뜻을 함께하고자 선거 전략가 ‘서창대’가 찾아온다. 열세인 상황 속에서 서창대는 아무도 상상하지 못한 선거 전략을 펼치고 ‘김운범’은 선거에 연이어 승리하며, 당을 대표하는 대통령 후보까지 올라서게 된다.",
-                "대통령 선거를 향한 본격적인 행보가 시작되고 그들은 당선을 위해 총력을 기울인다. 그러던 중 ‘김운범’ 자택에 폭발물이 터지는 사건이 발생하고 용의자로 ‘서창대’가 지목되면서 둘의 관계는 새로운 국면을 맞이하게 되는데... 치열한 선거판, 그 중심에 있던 두 남자의 이야기가 시작된다!"
+                "세상 바뀌는 꼴 좀 보고 싶습니다",
+                "세상을 바꾸기 위해 도전하는 정치인 ‘김운범’ 앞에 그와 뜻을 함께하고자 선거 전략가 ‘서창대’가 찾아온다.",
+                "열세인 상황 속에서 서창대는 아무도 상상하지 못한 선거 전략을 펼치고 ‘김운범’은 선거에 연이어 승리하며, 당을 대표하는 대통령 후보까지 올라서게 된다.",
+                "대통령 선거를 향한 본격적인 행보가 시작되고 그들은 당선을 위해 총력을 기울인다.",
+                "그러던 중 ‘김운범’ 자택에 폭발물이 터지는 사건이 발생하고 용의자로 ‘서창대’가 지목되면서 둘의 관계는 새로운 국면을 맞이하게 되는데...",
+                "치열한 선거판, 그 중심에 있던 두 남자의 이야기가 시작된다!"
             ],
             // 사건 정보
             eventDetails: {
-                period: "1970년대",
-                keywords: ["김대중", "선거전략", "정치적격변", "신민당경선"],
+                period: "1969년 ~ 1971년",
+                keywords: ["김대중", "김영삼", "엄창록", "신민당"],
                 timeline: [
                     {
                         date: "1969년 6월 20일",
-                        event: "김영삼 초산 테러 사건"
+                        event: "김영삼 질산 테러 사건"
                     },
                     {
                         date: "1971년 1월 27일",
-                        event: "김대중 자택 폭발 사고 발생"
+                        event: "김대중 자택 폭발 사고"
+                    },
+                    {
+                        date: "1971년 4월 17일",
+                        event: "엄창록 실종"
                     },
                     {
                         date: "1971년 4월 27일",
-                        event: "대선 직전 김대중의 측근 엄창록 실종"
+                        event: "제7대 대통령 선거"
                     }
                 ]
             },
@@ -3743,7 +3752,7 @@ export default [
         title: '헌트',
         eventYear: 1983,
         event: '아웅 산 묘소\n폭탄 테러 사건',
-        summary: '코리아 서스펜스: \n적인가, 동료인가?',
+        summary: '한국 서스펜스: 적인가, 동료인가?',
         imageUrl: 헌트,
         details: {
             modalYear: 1983,
@@ -3931,7 +3940,7 @@ export default [
         title: '비공식작전',
         eventYear: 1986,
         event: '레바논 한국 외교관\n납치 사건',
-        summary: '상부에선 “공식적으로\n이 작전이 없었다”고 한다',
+        summary: '상부에서는 “공식적으로\n이 작전이 없었다”고 한다',
         imageUrl: 비공식작전,
         details: {
             modalYear: 1986,
@@ -4161,7 +4170,7 @@ export default [
                     },
                     {
                         date: "1987년 6월 29일",
-                        event: "노태우 민주정의당 대표, 직선제 개헌 등 국민의 요구를 수용하는 '6·29 선언' 발표"
+                        event: "노태우 민주정의당 대표, 직선제 개헌을 포함한 '6·29 선언' 발표"
                     }
                 ]
             },
@@ -4243,7 +4252,7 @@ export default [
         title: '승부',
         eventYear: 1989,
         event: '이창호 프로 첫 우승',
-        summary: '소리 없이 강한 \n천재들의 승부수',
+        summary: '소리 없이 강한 천재들의 승부수',
         imageUrl: 승부,
         details: {
             modalYear: 1989,
@@ -4333,13 +4342,13 @@ export default [
         title: '범죄와의 전쟁',
         eventYear: 1990,
         event: '10·13 특별선언',
-        summary: '‘느그 서장’이랑\n친하면 다 되는 세상',
+        summary: '‘느그 서장’과 친하면 다 되는 세상',
         imageUrl: 범죄와의전쟁,
         details: {
             modalYear: 1990,
             // 인용구 정보
             quote: {
-                text: "내가 인마 느그 서장이랑 인마 어저께도 으! 같이 밥묵고 으! 싸우나도같이가고 으! 마 개이섀꺄 마 다했으..",
+                text: "내가 임마 느그 서장이랑 임마! 어저께도! 으에?! 같이 밥묵고! 으에?! 싸우나도 같이 가고! 으에?! 마 개이섀꺄 마 다했으!",
                 author: "최익현",
                 actor: "최민식"
             },
@@ -5170,14 +5179,14 @@ export default [
         title: '추격자',
         eventYear: 2003,
         event: '유영철 연쇄살인사건',
-        summary: '그 아가씨가 여기 있대니깐',
+        summary: '그 아가씨가 여기 있대니까',
         imageUrl: 추격자,
         details: {
             modalYear: 2003,
             // 인용구 정보
             quote: {
                 text: "야, 4885...너지?",
-                author: "중호",
+                author: "엄중호",
                 actor: "김윤석"
             },
             // 시놉시스 (문단별로 배열로 저장)

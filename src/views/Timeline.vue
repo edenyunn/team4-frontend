@@ -199,12 +199,12 @@ html, body {
 
 .item-left .movie-card {
   margin-right: auto;
-  margin-left: 5px;
+  margin-left: -10px;
 }
 
 .item-right .movie-card {
   margin-left: auto;
-  margin-right: 5px;
+  margin-right: -10px;
 }
 
 /* 타임라인 아이템 간격 조정 */
@@ -254,8 +254,8 @@ html, body {
   .welcome-title { font-size: 36px; }
   .welcome-subtitle { font-size: 13.5px; }
   .year { font-size: 30px; }
-  .event { font-size: 11px; }
-  .movie-summary { font-size: 9px; }
+  .event { font-size: 10px; }
+  .movie-summary { font-size: 8px; }
   .movie-card { width: 115px; }
   .timeline-item { margin-bottom: 20px; }
 }
@@ -267,7 +267,7 @@ html, body {
  .timeline-section { margin: 0 4% }
  .year { font-size: 30px; }
  .event { font-size: 12px; }
- .movie-summary { font-size: 11px; }
+ .movie-summary { font-size: 10px; }
  .movie-card { width: 140px; }
  .timeline-item { margin-bottom: 20px; }
 }
@@ -278,8 +278,8 @@ html, body {
  .welcome-subtitle { font-size: 16px; }
  .timeline-section { margin: 0 10% }
  .year { font-size: 35px; }
- .event { font-size: 17px; }
- .movie-summary { font-size: 14px; }
+ .event { font-size: 16px; }
+ .movie-summary { font-size: 12px; }
  .movie-card { width: 180px; }
  .timeline-item { margin-bottom: 20px; }
 }
@@ -291,7 +291,7 @@ html, body {
   .timeline-section { margin: 0 10% }
   .year { font-size: 40px; }
   .event { font-size: 30px; }
-  .movie-summary { font-size: 20px; }
+  .movie-summary { font-size: 17px; }
   .movie-card { width: 255px; }
   .timeline-item { margin-bottom: 20px; }
 }

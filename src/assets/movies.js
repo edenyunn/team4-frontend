@@ -58,7 +58,6 @@ import 마스터 from '@/assets/posters/마스터.jpg'
 import 댓글부대 from '@/assets/posters/댓글부대.jpg'
 import 너와나 from '@/assets/posters/너와나.jpg'
 import 내부자들 from '@/assets/posters/내부자들.jpg'
-//제46회 청룡영화상(2025): 하얼빈, 승부
 
 export default [
     {
@@ -121,9 +120,18 @@ export default [
                     ceremony: "제34회 부일영화상(2025)",
                     categories: [
                         { name: "촬영상(홍경표)" },
-                        { name: "미술/기술상(정도안)" }
+                        { name: "미술/기술상(박정우)" }
                     ]
                 },
+                {
+                    ceremony: "제46회 청룡영화상(2025)",
+                    categories: [
+                        { name: "남우주연상(현빈)" },
+                        { name: "청정원 인기스타상(현빈)" },
+                        { name: "촬영조명상(홍경표)" },
+                        { name: "촬영조명상(박정우)" }
+                    ]
+                }
             ],
             // 관련 영상
             relatedVideos: [
@@ -4306,6 +4314,13 @@ export default [
                         { name: "남우주연상(이병헌)" }
                     ]
                 },
+                {
+                    ceremony: "제46회 청룡영화상(2025)",
+                    categories: [
+                        { name: "각본상(김형주)" },
+                        { name: "각본상(윤종빈)" }
+                    ]
+                }
             ],
             // 관련 영상
             relatedVideos: [

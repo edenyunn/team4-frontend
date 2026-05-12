@@ -58,6 +58,7 @@ import 마스터 from '@/assets/posters/마스터.jpg'
 import 댓글부대 from '@/assets/posters/댓글부대.jpg'
 import 너와나 from '@/assets/posters/너와나.jpg'
 import 내부자들 from '@/assets/posters/내부자들.jpg'
+//휴민트, 국제시장2
 
 export default [
     {
@@ -2379,10 +2380,9 @@ export default [
             // 수상 내역
             awards: [
                 {
-                    ceremony: "",
+                    ceremony: "제62회 백상예술대상(2026)",
                     categories: [
-                        { name: "" },
-
+                        { name: "영화 각본상(변성현, 이진성)" }
                     ]
                 },
             ],
